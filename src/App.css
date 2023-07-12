@@ -1,0 +1,56 @@
+
+.App {
+  background-color: #282c34;
+  min-height: 100%;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.unitIcon {
+  width: 25px;
+  height: 25px;
+  margin: 0 !important;
+  position: absolute;
+  display: inline-block;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #282c34;
+}
+
+.waveHeader {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.GameBoard {
+  width: 225px;
+  height: 350px;
+  border-right: 1px solid darkgrey;
+  border-bottom: 1px solid darkgrey;
+  margin: 0;
+  padding: 0;
+  display:block;
+  position: relative;
+  background-size: 25px 25px;
+  background-image: 
+    linear-gradient(to right, darkgrey 1px, transparent 1px),
+    linear-gradient(to bottom, darkgrey 1px, transparent 1px);
+}
+
+.GameBoardContainer:first-of-type {
+  margin-left: 15px;
+}
+
+.GameBoardContainer {
+  display:inline-block;
+  margin-right: 15px;
+}
+
+.GameBoardHeader {
+  text-align: center;
+  display: block;
+}
