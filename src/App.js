@@ -30,18 +30,73 @@ const players = [
   }
 ]
 
-const getGameBoards = (units) => {
+const getWaveImage = (wave) => {
+  return !wave ? "Nothing":
+    wave > 20? "LegionLord":
+    wave > 19? "Maccabeus":
+    wave > 18? "DireToad": 
+    wave > 17? "WaleChief":
+    wave > 16? "MetalDragon":
+    wave > 15? "Cardinal":
+    wave > 14? "Quadrapus": 
+    wave > 13? "KillerSlug":
+    wave > 12? "DrillGolem":
+    wave > 11? "Mantis":
+    wave > 10? "QuillShooter":
+    wave > 9 ? "Granddaddy":
+    wave > 8 ? "Carapace":
+    wave > 7 ? "Kobra":
+    wave > 6 ? "Sludge":
+    wave > 5 ? "Rocko":
+    wave > 4 ? "Scorpion":
+    wave > 3 ? "FlyingChicken":
+    wave > 2 ? "Hopper":
+    wave > 1 ? "Wale":
+    "Crab"
+}
+
+const getEloImage = (elo) => {
+  return !elo ? "Nothing": 
+    elo > 2799 ? "Legend": 
+    elo > 2599 ? "Grandmaster":
+    elo > 2399 ? "SeniorMaster":
+    elo > 2199 ? "Master":
+    elo > 1999 ? "Expert":
+    elo > 1799 ? "Diamond":
+    elo > 1599 ? "Platinum":
+    elo > 1399 ? "Gold":
+    elo > 1199 ? "Silver":
+    elo > 999 ? "Bronze":
+    "Unranked"
+}
+
+const getGameBoards = (gamestate) => {
   let gameBoards = []
   let p = [1,2,5,6]
   let key = 0;
   p.forEach(i => {
+    let [ currentPlayer ] = gamestate?.players?.filter(p => p?.player?.toString() === i.toString()) || []
+    
+    let rank = getEloImage(currentPlayer?.rating)
     gameBoards.push(<div className='GameBoardContainer'>
       <div className='GameBoardHeader'>
-        Player {i}
+        <img src={`https://cdn.legiontd2.com/${currentPlayer?.image}`} title='Avatar' className='playerIcon headerIcons'>
+
+        </img>
+        
+        <div className={'PlayerName ' + "player" + i + ' playerInfo'}>
+          <img src={`https://cdn.legiontd2.com/flags/4x3/${currentPlayer?.countryCode}.png`} title={currentPlayer?.countryName} className='countryFlag'/>
+          {
+            currentPlayer?.name || "Player " + i
+          }
+        </div>
+
+        <img src={`https://cdn.legiontd2.com/icons/Ranks/${rank}.png`} title={rank} className='rankIcon headerIcons'/>
+        
       </div>
       <div className='GameBoard'>
       {
-        units?.filter(u => u.player == i)?.map(u => {
+        gamestate?.units?.filter(u => u.player == i)?.map(u => {
           key++
           const uri = `https://cdn.legiontd2.com/icons/${u.name}.png`
           const pconfig = players.filter(p => p.number == i)[0]
@@ -77,11 +132,12 @@ function App() {
   return (
     <div className="App">
       <div className='waveHeader'> 
-        Wave : {gamestate?.wave} 
+        Wave {gamestate?.wave}: {getWaveImage(gamestate?.wave)}
+        <img src={`https://cdn.legiontd2.com/icons/${getWaveImage(gamestate?.wave)}.png`} title={getWaveImage(gamestate?.wave)}/>
       </div>
       <div className='UnitBoard'>
         {
-          getGameBoards(gamestate?.units)
+          getGameBoards(gamestate)
         }
       </div>
       

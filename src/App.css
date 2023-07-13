@@ -1,8 +1,8 @@
 
 .App {
-  background-color: #282c34;
+  background-color: rgba(40, 44, 52, 50);
   min-height: 100%;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(3px + 2.5vmin);
   color: white;
 }
 
@@ -24,6 +24,13 @@ body {
   text-align: center;
   font-size: 30px;
   font-weight: 700;
+  align-self: center;
+  margin-top: 1vh;
+}
+
+.waveHeader img {
+  width: calc(23vw*1.555555/14);
+  margin-left: 1vh;
 }
 
 .GameBoard {
@@ -48,5 +55,26 @@ body {
 
 .GameBoardHeader {
   text-align: center;
-  display: block;
+  display: flex;
+  width: 100%;
+  margin-bottom: 1vh;
+  margin-top: 1vh;
+}
+
+.GameBoardHeader img {
+  display: inline-block;
+  
+}
+
+.playerInfo {
+  width: calc(23vw - 23vw*1.555555/14*2)
+}
+
+.headerIcons {
+  height: calc(23vw*1.555555/14);
+}
+
+.countryFlag {
+  height: calc(23vw*1.555555/14 / 2);
+  margin-right: 0.5vw;
 }
