@@ -78,3 +78,19 @@ body {
   height: calc(23vw*1.555555/14 / 2);
   margin-right: 0.5vw;
 }
+
+.player1 {
+  color: #FF4D4D;
+}
+
+.player2 {
+  color: #3C7DF4;
+}
+
+.player5 {
+  color: #FEFB00;
+}
+
+.player6 {
+  color: #1CE6B9;
+}
