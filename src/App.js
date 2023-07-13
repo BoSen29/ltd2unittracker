@@ -1,8 +1,8 @@
 import './App.css';
 import { useEffect, useState } from 'react';
-//import { db } from './utils/db'
-import Authentication from './utils/auth'
-//import { onValue, ref } from 'firebase/database';
+import { db } from './utils/db'
+// import Authentication from './utils/auth'
+import { onValue, ref } from 'firebase/database';
 
 
 const yBuildings = [77.50, 91.50]
@@ -121,40 +121,41 @@ const getGameBoards = (gamestate) => {
 
 function App() {
   const [gamestate, setGamestate] = useState({})
-  let twitch = window.Twitch ? window.Twitch.ext : null
-  const auth = new Authentication()
-
-  // useEffect(() => {
-  //   const query = ref(db, "bosen");
-  //   return onValue(query, (snapshot) => {
-  //     const data = snapshot.val()
-
-  //     if(snapshot.exists()) {
-  //       setGamestate(data)
-  //     }
-  //   })
-  // }, [])
+  // let twitch = window.Twitch ? window.Twitch.ext : null
+  // const auth = new Authentication()
 
   useEffect(() => {
-    if (twitch) {
-      console.log("This is Twitch") 
-      twitch.onAuthorized((a) => {
-        auth.setToken(a.token, a.userId)
-        
-      })
+    const query = ref(db, "bosen");
+    return onValue(query, (snapshot) => {
+      const data = snapshot.val()
 
-      twitch.listen('broadcast', (target, contentType, body) => {
-        this.twitch.rig.log(`New PubSub message!\n${target}\n${contentType}\n${body}`)
-        console.log(`New pubsub message to ${target} with contentType ${contentType} and the body ${body}`)
-
-        if (!!body)  {
-          setGamestate(JSON.parse(body))
-        }
-      })
-      // return the unsubscribe function to let react handle the magic
-      return () => twitch.unlisten('broadcast', () => console.log('Removed listeners'))
-    }
+      if(snapshot.exists()) {
+        setGamestate(data)
+      }
+    })
+    
   }, [])
+
+  // useEffect(() => {
+  //   if (twitch) {
+  //     console.log("This is Twitch") 
+  //     twitch.onAuthorized((a) => {
+  //       auth.setToken(a.token, a.userId)
+        
+  //     })
+
+  //     twitch.listen('broadcast', (target, contentType, body) => {
+  //       this.twitch.rig.log(`New PubSub message!\n${target}\n${contentType}\n${body}`)
+  //       console.log(`New pubsub message to ${target} with contentType ${contentType} and the body ${body}`)
+
+  //       if (!!body)  {
+  //         setGamestate(JSON.parse(body))
+  //       }
+  //     })
+  //     // return the unsubscribe function to let react handle the magic
+  //     return () => twitch.unlisten('broadcast', () => console.log('Removed listeners'))
+  //   }
+  // }, [])
 
   return (
     <div className='app'>
