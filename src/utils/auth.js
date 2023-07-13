@@ -1,4 +1,4 @@
-const jwt = require('jsonwebtoken')
+import { jwtDecrypt } from "jose"
 
 /**
  * Helper class for authentication against an EBS service. Allows the storage of a token to be accessed across componenents. 
@@ -48,7 +48,7 @@ export default class Authentication{
         let user_id = ""
 
         try {
-            let decoded = jwt.decode(token)
+            let decoded = jwtDecrypt(token)
             
             if(decoded.role === 'broadcaster' || decoded.role === 'moderator'){
                 isMod = true
