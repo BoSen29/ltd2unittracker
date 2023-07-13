@@ -34,11 +34,11 @@ const getWaveImage = (wave) => {
   return !wave ? "Nothing":
     wave > 20? "LegionLord":
     wave > 19? "Maccabeus":
-    wave > 18? "DireToad": 
+    wave > 18? "DireToad":
     wave > 17? "WaleChief":
     wave > 16? "MetalDragon":
     wave > 15? "Cardinal":
-    wave > 14? "Quadrapus": 
+    wave > 14? "Quadrapus":
     wave > 13? "KillerSlug":
     wave > 12? "DrillGolem":
     wave > 11? "Mantis":
@@ -56,8 +56,8 @@ const getWaveImage = (wave) => {
 }
 
 const getEloImage = (elo) => {
-  return !elo ? "Nothing": 
-    elo > 2799 ? "Legend": 
+  return !elo ? "Nothing":
+    elo > 2799 ? "Legend":
     elo > 2599 ? "Grandmaster":
     elo > 2399 ? "SeniorMaster":
     elo > 2199 ? "Master":
@@ -76,25 +76,27 @@ const getGameBoards = (gamestate) => {
   let key = 0;
   p.forEach(i => {
     let [ currentPlayer ] = gamestate?.players?.filter(p => p?.player?.toString() === i.toString()) || []
-    
+
     let rank = getEloImage(currentPlayer?.rating)
-    gameBoards.push(<div className='GameBoardContainer'>
-      <div className='GameBoardHeader'>
-        <img src={`https://cdn.legiontd2.com/${currentPlayer?.image}`} title='Avatar' className='playerIcon headerIcons'>
+    gameBoards.push(<div className='game-board__container'>
+      <div className='game-board__header'>
+        <img src={`https://cdn.legiontd2.com/${currentPlayer?.image}`} title='Avatar' className='header__icon'>
 
         </img>
-        
-        <div className={'PlayerName ' + "player" + i + ' playerInfo'}>
-          <img src={`https://cdn.legiontd2.com/flags/4x3/${currentPlayer?.countryCode}.png`} title={currentPlayer?.countryName} className='countryFlag'/>
-          {
-            currentPlayer?.name || "Player " + i
-          }
+
+        <div className={'player-info__container'}>
+          <img src={`https://cdn.legiontd2.com/flags/4x3/${currentPlayer?.countryCode}.png`} title={currentPlayer?.countryName} className='country__icon'/>
+          <div className={'player' + i}>
+            {
+              currentPlayer?.name || "Player " + i
+            }
+          </div>
         </div>
 
-        <img src={`https://cdn.legiontd2.com/icons/Ranks/${rank}.png`} title={rank} className='rankIcon headerIcons'/>
-        
+        <img src={`https://cdn.legiontd2.com/icons/Ranks/${rank}.png`} title={rank} className='header__icon'/>
+
       </div>
-      <div className='GameBoard'>
+      <div className='game-board'>
       {
         gamestate?.units?.filter(u => u.player == i)?.map(u => {
           key++
@@ -102,7 +104,7 @@ const getGameBoards = (gamestate) => {
           const pconfig = players.filter(p => p.number == i)[0]
           const left = (u.x - pconfig.xmin - 0.5) === 0 ? 0 : 100 / (pconfig.xmax - pconfig.xmin) *(u.x - pconfig.xmin - 0.5)
           const bottom = (u.y - yBuildings[0] - 0.5) === 0 ? 0 : 100 / (yBuildings[1] - yBuildings[0]) * (u.y - yBuildings[0] - 0.5)
-          return <img src={uri} title={u.name} key={key + "randomkey"} className='unitIcon' style={
+          return <img src={uri} title={u.name} key={key + "randomkey"} className='unit__icon' style={
             {
               left: left + "%",
               bottom: bottom + "%"
@@ -110,7 +112,9 @@ const getGameBoards = (gamestate) => {
           }></img>
         })
       }
-    </div></div>)
+    </div>
+      <div className={'player__color-marker player' + i + '__background'}/>
+    </div>)
   })
   return gameBoards
 }
@@ -128,19 +132,20 @@ function App() {
     })
   }, [])
 
-  let i = 0;
   return (
-    <div className="App">
-      <div className='waveHeader'> 
-        Wave {gamestate?.wave}: {getWaveImage(gamestate?.wave)}
+    <div className='app'>
+      <div className='wave__header'>
+        <div>
+          Wave {gamestate?.wave}: {getWaveImage(gamestate?.wave)}
+        </div>
         <img src={`https://cdn.legiontd2.com/icons/${getWaveImage(gamestate?.wave)}.png`} title={getWaveImage(gamestate?.wave)}/>
       </div>
-      <div className='UnitBoard'>
+      <div>
         {
           getGameBoards(gamestate)
         }
       </div>
-      
+
     </div>
   );
 }
