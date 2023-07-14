@@ -1,9 +1,6 @@
 import './App.css';
-import { useEffect, useState } from 'react';
-import { db } from './utils/db'
-// import Authentication from './utils/auth'
-import { onValue, ref } from 'firebase/database';
-
+import React, { useEffect, useState } from 'react';
+import Authentication from './utils/auth'
 
 const yBuildings = [77.50, 91.50]
 // bounds of gameboard for the players in a 2v2
@@ -29,6 +26,8 @@ const players = [
     xmax: 80
   }
 ]
+
+
 
 const getWaveImage = (wave) => {
   return !wave ? "Nothing":
@@ -69,6 +68,10 @@ const getEloImage = (elo) => {
     elo > 999 ? "Bronze":
     "Unranked"
 }
+
+const isConfig = () => {
+  return window.location.hash.startsWith('#/conf')
+} 
 
 const getGameBoards = (gamestate) => {
   let gameBoards = []
@@ -121,58 +124,117 @@ const getGameBoards = (gamestate) => {
 
 function App() {
   const [gamestate, setGamestate] = useState({})
-  // let twitch = window.Twitch ? window.Twitch.ext : null
-  // const auth = new Authentication()
+  const [config, setConfig] = useState("")
+  const [authStatus, setAuthStatus] = useState(false)
+  const [canConfig, setCanConfig] = useState(false)
+  
+  let twitch = window.Twitch ? window.Twitch.ext : null
+  const auth = new Authentication()
 
   useEffect(() => {
-    const query = ref(db, "bosen");
-    return onValue(query, (snapshot) => {
-      const data = snapshot.val()
+      if (twitch) {
+        twitch.onAuthorized((a) => {
+          auth.setToken(a.token, a.userId)
+          if (auth.isModerator() ) {setCanConfig(true)}
+          setAuthStatus(true)
 
-      if(snapshot.exists()) {
-        setGamestate(data)
-      }
-    })
-    
-  }, [])
+          window.Twitch.ext.configuration.onChanged(() => {
+            var broadcaster = window.Twitch.ext.configuration.broadcaster;
 
-  // useEffect(() => {
-  //   if (twitch) {
-  //     console.log("This is Twitch") 
-  //     twitch.onAuthorized((a) => {
-  //       auth.setToken(a.token, a.userId)
+            if (broadcaster) {
+                if (broadcaster.content) {
+                    var config = {};
+                    try {
+                      config = broadcaster.content;
+                    } catch (e) {
+                      console.log(e);
+                    }
+          
+                    console.log(window.Twitch.ext.configuration)
+                    //do stuff with config
+                }
+            }
+            console.log(broadcaster)
+          });
+
+          if (window?.Twitch?.ext?.configuration?.broadcaster?.content) {
+            const { csocket } = require( './utils/sock')
+            let socket = csocket()
+            console.log("Joining the channel", window?.Twitch?.ext?.configuration?.broadcaster?.content)
+            socket.emit("join", window?.Twitch?.ext?.configuration?.broadcaster?.content)
+  
+            socket.on("gamestate", (d) => {
+              setGamestate(d)
+            })
+          }
+          else {
+            console.log("No configuration found, awaiting configuration by the streamer.")
+          }
+        })
         
-  //     })
+        // return the unsubscribe function to let react handle the magic
+        return () => {
+          //twitch.unlisten('broadcast', () => console.log('Removed listeners'))
+          const { csocket } = require( './utils/sock')
+          let socket = csocket()
+          socket.off('gs')
+          socket.off('connect')
+        }
+      }
+    }, [])
 
-  //     twitch.listen('broadcast', (target, contentType, body) => {
-  //       this.twitch.rig.log(`New PubSub message!\n${target}\n${contentType}\n${body}`)
-  //       console.log(`New pubsub message to ${target} with contentType ${contentType} and the body ${body}`)
+  const inputRef = React.createRef()
 
-  //       if (!!body)  {
-  //         setGamestate(JSON.parse(body))
-  //       }
-  //     })
-  //     // return the unsubscribe function to let react handle the magic
-  //     return () => twitch.unlisten('broadcast', () => console.log('Removed listeners'))
-  //   }
-  // }, [])
+  const saveConfig = (conf) => {
+    window.Twitch.ext.configuration.set('broadcaster', '1.0', (conf))
+    setConfig(conf)
+  }
+
+
+  const onSubmit = (e) => {
+    e.preventDefault()
+    saveConfig(inputRef.current.value)
+  }
+  if (!authStatus && !!auth.getUserId()) {
+    return <div>
+      Loading....
+    </div>
+  }
 
   return (
     <div className='app'>
-      <div className='wave__header'>
-        <div>
-          Wave {gamestate?.wave}: {getWaveImage(gamestate?.wave)}
+      {
+        isConfig() && canConfig ? 
+        <div className='config__container'>
+          <form onSubmit={(e)=>onSubmit(e)}>
+              <input 
+                  className='form_text_input'
+                  name="name" 
+                  type="text" 
+                  placeholder="name" 
+                  ref={inputRef}
+                  defaultValue={window?.Twitch?.ext?.configuration?.broadcaster?.content}
+              />
+              <br />
+              <input className='submit_button' type="submit" value="Submit" />
+          </form>
+          <div className='config__container__footer'>
+            Credits to Pennywise for the artwork, Chilleen for the design finesse and BoSen for the magic.
+          </div>
         </div>
-        <img src={`https://cdn.legiontd2.com/icons/${getWaveImage(gamestate?.wave)}.png`} title={getWaveImage(gamestate?.wave)}/>
-      </div>
-      <div>
-        {
-          getGameBoards(gamestate)
-        }
-      </div>
-
+        :<><div className='wave__header'>
+          <div>
+            Wave {gamestate?.wave}: {getWaveImage(gamestate?.wave)}
+          </div>
+          <img src={`https://cdn.legiontd2.com/icons/${getWaveImage(gamestate?.wave)}.png`} title={getWaveImage(gamestate?.wave)}/>
+        </div>
+        <div>
+          {
+            getGameBoards(gamestate)
+          }
+        </div></>
+      }
     </div>
   );
 }
-//<script src="https://extension-files.twitch.tv/helper/v1/twitch-ext.min.js"></script>
 export default App;
