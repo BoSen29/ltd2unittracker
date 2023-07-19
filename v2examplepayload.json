@@ -302,7 +302,32 @@
                     "name": "Icons/Sakura.png"
                 }
             ],
-            "mercenaries": []
+            "mercenaries": [
+                {
+                    "image": "Icons/Kraken.png"
+                },
+                {
+                    "image": "Icons/Kraken.png"
+                },
+                {
+                    "image": "Icons/Kraken.png"
+                },
+                {
+                    "image": "Icons/Kraken.png"
+                },
+                {
+                    "image": "Icons/Kraken.png"
+                },
+                {
+                    "image": "Icons/Kraken.png"
+                },
+                {
+                    "image": "Icons/Kraken.png"
+                },
+                {
+                    "image": "Icons/Kraken.png"
+                }
+            ]
         }
     ],
     "wave": 2
