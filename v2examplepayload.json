@@ -1,0 +1,309 @@
+{
+    "players": [
+        {
+            "player": 1,
+            "name": "BoSen",
+            "guild": "Old Gamers",
+            "rating": 2448,
+            "image": "Icons/Campaign/campaign_2_6.png",
+            "avatarStacks": 0,
+            "countryCode": "no",
+            "lastSeasonRating": 0,
+            "countryName": "Norway",
+            "guildAvatar": "Icons/Atom.png",
+            "guildAvatarStacks": null,
+            "units": [
+                {
+                    "x": 1,
+                    "y": 3,
+                    "displayName": "chloropixie_unit_id",
+                    "name": "Icons/Chloropixie.png"
+                },
+                {
+                    "x": 1,
+                    "y": 5,
+                    "displayName": "seedling_unit_id",
+                    "name": "Icons/Seedling.png"
+                },
+                {
+                    "x": 1,
+                    "y": 7,
+                    "displayName": "chloropixie_unit_id",
+                    "name": "Icons/Chloropixie.png"
+                },
+                {
+                    "x": 1,
+                    "y": 11,
+                    "displayName": "chloropixie_unit_id",
+                    "name": "Icons/Chloropixie.png"
+                },
+                {
+                    "x": 1,
+                    "y": 13,
+                    "displayName": "seedling_unit_id",
+                    "name": "Icons/Seedling.png"
+                },
+                {
+                    "x": 1,
+                    "y": 15,
+                    "displayName": "chloropixie_unit_id",
+                    "name": "Icons/Chloropixie.png"
+                },
+                {
+                    "x": 1,
+                    "y": 21,
+                    "displayName": "sakura_unit_id",
+                    "name": "Icons/Sakura.png"
+                },
+                {
+                    "x": 1,
+                    "y": 23,
+                    "displayName": "sakura_unit_id",
+                    "name": "Icons/Sakura.png"
+                },
+                {
+                    "x": 1,
+                    "y": 25,
+                    "displayName": "sakura_unit_id",
+                    "name": "Icons/Sakura.png"
+                },
+                {
+                    "x": 1,
+                    "y": 27,
+                    "displayName": "sakura_unit_id",
+                    "name": "Icons/Sakura.png"
+                },
+                {
+                    "x": 3,
+                    "y": 21,
+                    "displayName": "sakura_unit_id",
+                    "name": "Icons/Sakura.png"
+                },
+                {
+                    "x": 3,
+                    "y": 23,
+                    "displayName": "sakura_unit_id",
+                    "name": "Icons/Sakura.png"
+                },
+                {
+                    "x": 3,
+                    "y": 25,
+                    "displayName": "sakura_unit_id",
+                    "name": "Icons/Sakura.png"
+                },
+                {
+                    "x": 3,
+                    "y": 27,
+                    "displayName": "sakura_unit_id",
+                    "name": "Icons/Sakura.png"
+                },
+                {
+                    "x": 5,
+                    "y": 3,
+                    "displayName": "chloropixie_unit_id",
+                    "name": "Icons/Chloropixie.png"
+                },
+                {
+                    "x": 5,
+                    "y": 5,
+                    "displayName": "seedling_unit_id",
+                    "name": "Icons/Seedling.png"
+                },
+                {
+                    "x": 5,
+                    "y": 13,
+                    "displayName": "seedling_unit_id",
+                    "name": "Icons/Seedling.png"
+                },
+                {
+                    "x": 5,
+                    "y": 15,
+                    "displayName": "chloropixie_unit_id",
+                    "name": "Icons/Chloropixie.png"
+                },
+                {
+                    "x": 5,
+                    "y": 21,
+                    "displayName": "sakura_unit_id",
+                    "name": "Icons/Sakura.png"
+                },
+                {
+                    "x": 5,
+                    "y": 23,
+                    "displayName": "sakura_unit_id",
+                    "name": "Icons/Sakura.png"
+                },
+                {
+                    "x": 5,
+                    "y": 25,
+                    "displayName": "sakura_unit_id",
+                    "name": "Icons/Sakura.png"
+                },
+                {
+                    "x": 5,
+                    "y": 27,
+                    "displayName": "sakura_unit_id",
+                    "name": "Icons/Sakura.png"
+                },
+                {
+                    "x": 7,
+                    "y": 21,
+                    "displayName": "sakura_unit_id",
+                    "name": "Icons/Sakura.png"
+                },
+                {
+                    "x": 7,
+                    "y": 23,
+                    "displayName": "sakura_unit_id",
+                    "name": "Icons/Sakura.png"
+                },
+                {
+                    "x": 7,
+                    "y": 25,
+                    "displayName": "sakura_unit_id",
+                    "name": "Icons/Sakura.png"
+                },
+                {
+                    "x": 7,
+                    "y": 27,
+                    "displayName": "sakura_unit_id",
+                    "name": "Icons/Sakura.png"
+                },
+                {
+                    "x": 9,
+                    "y": 3,
+                    "displayName": "chloropixie_unit_id",
+                    "name": "Icons/Chloropixie.png"
+                },
+                {
+                    "x": 9,
+                    "y": 5,
+                    "displayName": "seedling_unit_id",
+                    "name": "Icons/Seedling.png"
+                },
+                {
+                    "x": 9,
+                    "y": 13,
+                    "displayName": "seedling_unit_id",
+                    "name": "Icons/Seedling.png"
+                },
+                {
+                    "x": 9,
+                    "y": 15,
+                    "displayName": "chloropixie_unit_id",
+                    "name": "Icons/Chloropixie.png"
+                },
+                {
+                    "x": 9,
+                    "y": 21,
+                    "displayName": "sakura_unit_id",
+                    "name": "Icons/Sakura.png"
+                },
+                {
+                    "x": 9,
+                    "y": 23,
+                    "displayName": "sakura_unit_id",
+                    "name": "Icons/Sakura.png"
+                },
+                {
+                    "x": 9,
+                    "y": 25,
+                    "displayName": "sakura_unit_id",
+                    "name": "Icons/Sakura.png"
+                },
+                {
+                    "x": 9,
+                    "y": 27,
+                    "displayName": "sakura_unit_id",
+                    "name": "Icons/Sakura.png"
+                },
+                {
+                    "x": 11,
+                    "y": 21,
+                    "displayName": "sakura_unit_id",
+                    "name": "Icons/Sakura.png"
+                },
+                {
+                    "x": 11,
+                    "y": 23,
+                    "displayName": "sakura_unit_id",
+                    "name": "Icons/Sakura.png"
+                },
+                {
+                    "x": 11,
+                    "y": 27,
+                    "displayName": "sakura_unit_id",
+                    "name": "Icons/Sakura.png"
+                },
+                {
+                    "x": 13,
+                    "y": 3,
+                    "displayName": "chloropixie_unit_id",
+                    "name": "Icons/Chloropixie.png"
+                },
+                {
+                    "x": 13,
+                    "y": 5,
+                    "displayName": "seedling_unit_id",
+                    "name": "Icons/Seedling.png"
+                },
+                {
+                    "x": 11,
+                    "y": 25,
+                    "displayName": "sakura_unit_id",
+                    "name": "Icons/Sakura.png"
+                },
+                {
+                    "x": 13,
+                    "y": 7,
+                    "displayName": "chloropixie_unit_id",
+                    "name": "Icons/Chloropixie.png"
+                },
+                {
+                    "x": 13,
+                    "y": 11,
+                    "displayName": "chloropixie_unit_id",
+                    "name": "Icons/Chloropixie.png"
+                },
+                {
+                    "x": 13,
+                    "y": 13,
+                    "displayName": "seedling_unit_id",
+                    "name": "Icons/Seedling.png"
+                },
+                {
+                    "x": 13,
+                    "y": 15,
+                    "displayName": "chloropixie_unit_id",
+                    "name": "Icons/Chloropixie.png"
+                },
+                {
+                    "x": 13,
+                    "y": 21,
+                    "displayName": "sakura_unit_id",
+                    "name": "Icons/Sakura.png"
+                },
+                {
+                    "x": 13,
+                    "y": 23,
+                    "displayName": "sakura_unit_id",
+                    "name": "Icons/Sakura.png"
+                },
+                {
+                    "x": 13,
+                    "y": 25,
+                    "displayName": "sakura_unit_id",
+                    "name": "Icons/Sakura.png"
+                },
+                {
+                    "x": 13,
+                    "y": 27,
+                    "displayName": "sakura_unit_id",
+                    "name": "Icons/Sakura.png"
+                }
+            ],
+            "mercenaries": []
+        }
+    ],
+    "wave": 2
+}
