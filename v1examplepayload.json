@@ -1,0 +1,356 @@
+{
+    "players": [
+        {
+            "player": 1,
+            "name": "BoSen",
+            "guild": "Old Gamers",
+            "rating": 2448,
+            "image": "Icons/Campaign/campaign_2_6.png",
+            "avatarStacks": 0,
+            "countryCode": "no",
+            "lastSeasonRating": 0,
+            "countryName": "Norway",
+            "guildAvatar": "Icons/Atom.png",
+            "guildAvatarStacks": null
+        }
+    ],
+    "wave": 2,
+    "units": [
+        {
+            "x": 8.5,
+            "y": 79,
+            "displayName": "chloropixie_unit_id",
+            "name": "Chloropixie",
+            "player": 1
+        },
+        {
+            "x": 8.5,
+            "y": 80,
+            "displayName": "seedling_unit_id",
+            "name": "Seedling",
+            "player": 1
+        },
+        {
+            "x": 8.5,
+            "y": 81,
+            "displayName": "chloropixie_unit_id",
+            "name": "Chloropixie",
+            "player": 1
+        },
+        {
+            "x": 8.5,
+            "y": 83,
+            "displayName": "chloropixie_unit_id",
+            "name": "Chloropixie",
+            "player": 1
+        },
+        {
+            "x": 8.5,
+            "y": 84,
+            "displayName": "seedling_unit_id",
+            "name": "Seedling",
+            "player": 1
+        },
+        {
+            "x": 8.5,
+            "y": 85,
+            "displayName": "chloropixie_unit_id",
+            "name": "Chloropixie",
+            "player": 1
+        },
+        {
+            "x": 8.5,
+            "y": 88,
+            "displayName": "sakura_unit_id",
+            "name": "Sakura",
+            "player": 1
+        },
+        {
+            "x": 8.5,
+            "y": 89,
+            "displayName": "sakura_unit_id",
+            "name": "Sakura",
+            "player": 1
+        },
+        {
+            "x": 8.5,
+            "y": 90,
+            "displayName": "sakura_unit_id",
+            "name": "Sakura",
+            "player": 1
+        },
+        {
+            "x": 8.5,
+            "y": 91,
+            "displayName": "sakura_unit_id",
+            "name": "Sakura",
+            "player": 1
+        },
+        {
+            "x": 9.5,
+            "y": 88,
+            "displayName": "sakura_unit_id",
+            "name": "Sakura",
+            "player": 1
+        },
+        {
+            "x": 9.5,
+            "y": 89,
+            "displayName": "sakura_unit_id",
+            "name": "Sakura",
+            "player": 1
+        },
+        {
+            "x": 9.5,
+            "y": 90,
+            "displayName": "sakura_unit_id",
+            "name": "Sakura",
+            "player": 1
+        },
+        {
+            "x": 9.5,
+            "y": 91,
+            "displayName": "sakura_unit_id",
+            "name": "Sakura",
+            "player": 1
+        },
+        {
+            "x": 10.5,
+            "y": 79,
+            "displayName": "chloropixie_unit_id",
+            "name": "Chloropixie",
+            "player": 1
+        },
+        {
+            "x": 10.5,
+            "y": 80,
+            "displayName": "seedling_unit_id",
+            "name": "Seedling",
+            "player": 1
+        },
+        {
+            "x": 10.5,
+            "y": 84,
+            "displayName": "seedling_unit_id",
+            "name": "Seedling",
+            "player": 1
+        },
+        {
+            "x": 10.5,
+            "y": 85,
+            "displayName": "chloropixie_unit_id",
+            "name": "Chloropixie",
+            "player": 1
+        },
+        {
+            "x": 10.5,
+            "y": 88,
+            "displayName": "sakura_unit_id",
+            "name": "Sakura",
+            "player": 1
+        },
+        {
+            "x": 10.5,
+            "y": 89,
+            "displayName": "sakura_unit_id",
+            "name": "Sakura",
+            "player": 1
+        },
+        {
+            "x": 10.5,
+            "y": 90,
+            "displayName": "sakura_unit_id",
+            "name": "Sakura",
+            "player": 1
+        },
+        {
+            "x": 10.5,
+            "y": 91,
+            "displayName": "sakura_unit_id",
+            "name": "Sakura",
+            "player": 1
+        },
+        {
+            "x": 11.5,
+            "y": 88,
+            "displayName": "sakura_unit_id",
+            "name": "Sakura",
+            "player": 1
+        },
+        {
+            "x": 11.5,
+            "y": 89,
+            "displayName": "sakura_unit_id",
+            "name": "Sakura",
+            "player": 1
+        },
+        {
+            "x": 11.5,
+            "y": 90,
+            "displayName": "sakura_unit_id",
+            "name": "Sakura",
+            "player": 1
+        },
+        {
+            "x": 11.5,
+            "y": 91,
+            "displayName": "sakura_unit_id",
+            "name": "Sakura",
+            "player": 1
+        },
+        {
+            "x": 12.5,
+            "y": 79,
+            "displayName": "chloropixie_unit_id",
+            "name": "Chloropixie",
+            "player": 1
+        },
+        {
+            "x": 12.5,
+            "y": 80,
+            "displayName": "seedling_unit_id",
+            "name": "Seedling",
+            "player": 1
+        },
+        {
+            "x": 12.5,
+            "y": 84,
+            "displayName": "seedling_unit_id",
+            "name": "Seedling",
+            "player": 1
+        },
+        {
+            "x": 12.5,
+            "y": 85,
+            "displayName": "chloropixie_unit_id",
+            "name": "Chloropixie",
+            "player": 1
+        },
+        {
+            "x": 12.5,
+            "y": 88,
+            "displayName": "sakura_unit_id",
+            "name": "Sakura",
+            "player": 1
+        },
+        {
+            "x": 12.5,
+            "y": 89,
+            "displayName": "sakura_unit_id",
+            "name": "Sakura",
+            "player": 1
+        },
+        {
+            "x": 12.5,
+            "y": 90,
+            "displayName": "sakura_unit_id",
+            "name": "Sakura",
+            "player": 1
+        },
+        {
+            "x": 12.5,
+            "y": 91,
+            "displayName": "sakura_unit_id",
+            "name": "Sakura",
+            "player": 1
+        },
+        {
+            "x": 13.5,
+            "y": 88,
+            "displayName": "sakura_unit_id",
+            "name": "Sakura",
+            "player": 1
+        },
+        {
+            "x": 13.5,
+            "y": 89,
+            "displayName": "sakura_unit_id",
+            "name": "Sakura",
+            "player": 1
+        },
+        {
+            "x": 13.5,
+            "y": 91,
+            "displayName": "sakura_unit_id",
+            "name": "Sakura",
+            "player": 1
+        },
+        {
+            "x": 14.5,
+            "y": 79,
+            "displayName": "chloropixie_unit_id",
+            "name": "Chloropixie",
+            "player": 1
+        },
+        {
+            "x": 14.5,
+            "y": 80,
+            "displayName": "seedling_unit_id",
+            "name": "Seedling",
+            "player": 1
+        },
+        {
+            "x": 13.5,
+            "y": 90,
+            "displayName": "sakura_unit_id",
+            "name": "Sakura",
+            "player": 1
+        },
+        {
+            "x": 14.5,
+            "y": 81,
+            "displayName": "chloropixie_unit_id",
+            "name": "Chloropixie",
+            "player": 1
+        },
+        {
+            "x": 14.5,
+            "y": 83,
+            "displayName": "chloropixie_unit_id",
+            "name": "Chloropixie",
+            "player": 1
+        },
+        {
+            "x": 14.5,
+            "y": 84,
+            "displayName": "seedling_unit_id",
+            "name": "Seedling",
+            "player": 1
+        },
+        {
+            "x": 14.5,
+            "y": 85,
+            "displayName": "chloropixie_unit_id",
+            "name": "Chloropixie",
+            "player": 1
+        },
+        {
+            "x": 14.5,
+            "y": 88,
+            "displayName": "sakura_unit_id",
+            "name": "Sakura",
+            "player": 1
+        },
+        {
+            "x": 14.5,
+            "y": 89,
+            "displayName": "sakura_unit_id",
+            "name": "Sakura",
+            "player": 1
+        },
+        {
+            "x": 14.5,
+            "y": 90,
+            "displayName": "sakura_unit_id",
+            "name": "Sakura",
+            "player": 1
+        },
+        {
+            "x": 14.5,
+            "y": 91,
+            "displayName": "sakura_unit_id",
+            "name": "Sakura",
+            "player": 1
+        }
+    ]
+}
