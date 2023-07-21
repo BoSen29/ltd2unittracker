@@ -1,0 +1,16 @@
+.wave__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+.wave__header img {
+    height: 5vh;
+    aspect-ratio: inherit;
+    margin-left: 1vh;
+}

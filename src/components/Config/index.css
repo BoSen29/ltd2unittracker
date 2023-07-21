@@ -1,0 +1,27 @@
+.submit__button {
+    background-color: #3f51b5;
+    width: 100px;
+    height: 30px;
+    border: 1px solid #002984;
+    color: white;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.config-container__footer {
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+.form-text__input {
+    height: 30px;
+    width: 200px;
+    background-color: transparent;
+    font-size: 20px;
+    border: 0;
+    color: white;
+}
+
+.form-text__input:active {
+    border: 0;
+}

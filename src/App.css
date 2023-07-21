@@ -1,16 +1,20 @@
-
 .app {
   min-height: 100%;
+  min-width: 100%;
   font-size: calc(3px + 2.5vmin);
   color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.unit__icon {
-  width:  calc(23vw/9);
-  height: calc(23vw*1.555555/14);
-  margin: 0 !important;
-  position: absolute;
-  display: inline-block;
+.game-boards__area {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
 body {
@@ -18,131 +22,6 @@ body {
   padding: 0;
 }
 
-.wave__header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  font-size: 30px;
-  font-weight: 700;
-  margin-top: 1vh;
-}
-
-.wave__header img {
-  width: calc(23vw*1.555555/14);
-  margin-left: 1vh;
-}
-
-.game-board {
-  width: 23vw;
-  height: calc(23vw*1.555555);
-  border-right: 1px solid darkgrey;
-  border-bottom: 1px solid darkgrey;
-  margin: 0;
-  padding: 0;
-  display:block;
-  position: relative;
-  background-size: calc(23vw/9) calc(23vw*1.555555/14);
-  background-image:
-    linear-gradient(to right, darkgrey 1px, transparent 1px),
-    linear-gradient(to bottom, darkgrey 1px, transparent 1px);
-}
-
-.game-board__container {
-  display:inline-block;
-  margin-left: 1.5vw;
-}
-
-.game-board__header {
-  align-items: center;
-  justify-content: space-between;
-  display: flex;
-  width: 100%;
-  margin-bottom: 1vh;
-  margin-top: 1vh;
-}
-
-.header__icon {
-  height: 8vh;
-  max-height: 8vh;
-  aspect-ratio: inherit;
-}
-
-.player-info__container {
-  display: flex;
-  align-items: center;
-}
-
-.country__icon {
-  height: 4vh;
-  max-height: 4vh;
-}
-
-.player1 {
-  color: #FF4D4D;
-}
-
-.player2 {
-  color: #3C7DF4;
-}
-
-.player5 {
-  color: #FEFB00;
-}
-
-.player6 {
-  color: #1CE6B9;
-}
-
-.player__color-marker {
-  width: 100%;
-  height: 1.25vh;
-}
-
-.player1__background {
-  background-color: #FF4D4D;
-  border-left: 1px solid #FF4D4D;
-}
-
-.player2__background {
-  background-color: #3C7DF4;
-    border-left: 1px solid #3C7DF4;
-}
-
-.player5__background {
-  background-color: #FEFB00;
-  border-left: #FEFB00;
-}
-
-.player6__background {
-  background-color: #1CE6B9;
-    border-left: 1px solid #1CE6B9;
-}
-
-.submit_button {
-  background-color: #3f51b5;
-  width: 100px;
-  height: 30px;
-  border: 1px solid #002984;
-  color: white;
-  font-size: 20px;
-  margin-top: 10px;
-}
-
-.config__container__footer {
-  margin-top: 30px;
-  font-size: 14px;
-}
-
-.form_text_input {
-  height: 30px;
-  width: 200px;
-  background-color: transparent;
-  font-size: 20px;
-  border: 0;
-  color: white;
-}
-
-.form_text_input:active {
-  border: 0;
+.development__background {
+    background-color: rgba(40, 44, 52, 50);
 }
