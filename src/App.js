@@ -23,10 +23,6 @@ const getEloImage = (elo) => {
     : 'Unranked'
 }
 
-const isConfig = () => {
-  return window.location.hash.startsWith('#/conf')
-}
-
 const isDev = () => {
   return process.env.NODE_ENV === 'development'
 }
@@ -90,6 +86,11 @@ function App() {
   const [gamestate, setGamestate] = useState({})
   const [authStatus, setAuthStatus] = useState(false)
   const [canConfig, setCanConfig] = useState(true)
+  const [isConfig, setIsConfig] = useState(window.location.hash.startsWith('#/conf'))
+
+  window.addEventListener('hashchange', () => {
+    setIsConfig(window.location.hash.startsWith('#/conf'))
+  })
 
   let twitch = window.Twitch ? window.Twitch.ext : null
   const auth = new Authentication()
@@ -165,7 +166,7 @@ function App() {
   return (
     <div className='app'>
       {
-        isConfig() && canConfig ?
+        isConfig && canConfig ?
           <div className='config__container'>
             <Config/>
           </div>
