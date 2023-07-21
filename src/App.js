@@ -85,10 +85,10 @@ const restructureData = (raw) => {
 function App() {
   const [gamestate, setGamestate] = useState({})
   const [authStatus, setAuthStatus] = useState(false)
-  const [canConfig, setCanConfig] = useState(true)
+  const [canConfig, setCanConfig] = useState(isDev())
   const [isConfig, setIsConfig] = useState(window.location.hash.startsWith('#/conf'))
 
-  window.addEventListener('hashchange', () => {
+  window.addEventListener('hashchange', (e) => {
     setIsConfig(window.location.hash.startsWith('#/conf'))
   })
 
