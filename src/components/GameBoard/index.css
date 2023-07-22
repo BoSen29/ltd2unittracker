@@ -151,3 +151,19 @@
     color: #000000;
     background-color: #FFFFFF;
 }
+
+.sends__container {
+    margin: 12px 0;
+    width: 23vw;
+    height: 10vh;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    overflow: hidden;
+}
+
+.sends__container img {
+    width:  calc(23vw/9 - 2px);
+    height: calc(23vw*1.555555/14 - 2px);
+    margin: 1px 1px;
+    aspect-ratio: 1/1;
+}

@@ -88,6 +88,10 @@ function App() {
   const [canConfig, setCanConfig] = useState(isDev())
   const [isConfig, setIsConfig] = useState(window.location.hash.startsWith('#/conf'))
 
+  const setWave = (wave) => {
+    setGamestate({...gamestate, currentWave: wave})
+  }
+
   window.addEventListener('hashchange', (e) => {
     setIsConfig(window.location.hash.startsWith('#/conf'))
   })
@@ -171,11 +175,11 @@ function App() {
             <Config/>
           </div>
           : <>
-            <WaveHeader wave={gamestate.currentWave}/>
+            <WaveHeader wave={gamestate.currentWave} setWave={setWave} finalWave={5} liveWave={5}/>
             <div className='game-boards__area'>
               {
                 gamestate.players && Object.values(gamestate.players).map((player) => {
-                  return <GameBoard player={player} units={gamestate.units[player.player]} wave={gamestate.currentWave} key={player.player}/>
+                  return <GameBoard mercsReceived={gamestate.mercsReceived[player.player]} player={player} units={gamestate.units[player.player]} wave={gamestate.currentWave} key={player.player}/>
                 })
               }
             </div>

@@ -1,7 +1,7 @@
 import './index.css'
 import {useEffect, useState} from 'react'
 
-export default function GameBoard({player, units, mercsSent, mercsReceived, wave}) {
+export default function GameBoard({player, units, mercsSent, mercsReceived = [], wave}) {
 
   const [copied, setCopied] = useState(false)
   useEffect(() => {
@@ -40,6 +40,15 @@ export default function GameBoard({player, units, mercsSent, mercsReceived, wave
           </div>
         </div>
         <img src={player.ratingIcon} title={player.rating} className='header__icon'/>
+      </div>
+      <div className='sends__container'>
+        {
+          mercsReceived.map((merc, idx) => {
+            return (
+              <img src={merc.url} className='send__icon' key={idx}/>
+            )
+          })
+        }
       </div>
       <div className='game-board'>
         {
