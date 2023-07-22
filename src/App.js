@@ -27,18 +27,6 @@ const isDev = () => {
   return process.env.NODE_ENV === 'development'
 }
 
-const getPlayerSendingTo = (player) => {
-  return player === 1 ? 5
-    : player === 2 ? 6
-    : player === 3 ? 7
-    : player === 4 ? 8
-    : player === 5 ? 2
-    : player === 6 ? 1
-    : player === 7 ? 4
-    : player === 8 ? 3
-    : 0
-}
-
 const restructureData = (raw) => {
   const gameState = {
     players: {},
@@ -69,14 +57,12 @@ const restructureData = (raw) => {
       icon: `https://cdn.legiontd2.com/${unit.name}`
     }))
 
-    const mercsSent = (playerData.mercenaries || []).map(merc => {
+    gameState.mercsReceived[playerData.player] = (playerData.mercenaries || []).map(merc => {
       return {
         name: merc.image.replace('Icons/', '').replace('.png', ''),
         url: `https://cdn.legiontd2.com/${merc.image}`
       }
     })
-    gameState.mercsSent[playerData.player] = mercsSent
-    gameState.mercsReceived[getPlayerSendingTo(playerData.player)] = mercsSent
   }
 
   return gameState

@@ -1,7 +1,7 @@
 import './index.css'
 import {useEffect, useState} from 'react'
 
-export default function GameBoard({player, units, mercsSent, mercsReceived = [], wave}) {
+export default function GameBoard({player, units, mercsReceived = [], wave}) {
 
   const [copied, setCopied] = useState(false)
   useEffect(() => {
