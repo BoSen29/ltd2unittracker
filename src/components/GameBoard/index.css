@@ -133,7 +133,7 @@
     font-size: 1vw;
     font-weight: 500;
     width: 8vw;
-    height: 3vh;
+    height: min(1.5vw, 3vh);
     padding: 0.35em 1.2em;
     border: 0.1em solid #FFFFFF;
     margin: 0.5em 0.3em 0.3em 0;
