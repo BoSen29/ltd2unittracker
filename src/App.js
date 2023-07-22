@@ -175,7 +175,7 @@ function App() {
             <div className='game-boards__area'>
               {
                 gamestate.players && Object.values(gamestate.players).map((player) => {
-                  return <GameBoard player={player} units={gamestate.units[player.player]} key={player.player}/>
+                  return <GameBoard player={player} units={gamestate.units[player.player]} wave={gamestate.currentWave} key={player.player}/>
                 })
               }
             </div>

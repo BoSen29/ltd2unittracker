@@ -1,6 +1,32 @@
 import './index.css'
+import {useEffect, useState} from 'react'
 
-export default function GameBoard({player, units, mercsSent, mercsReceived}) {
+export default function GameBoard({player, units, mercsSent, mercsReceived, wave}) {
+
+  const [copied, setCopied] = useState(false)
+  useEffect(() => {
+    const timeOut = setTimeout(() => {
+      if (copied) setCopied(false)
+    }, 1500)
+
+    return () => clearTimeout(timeOut)
+  }, [copied])
+
+  const copyToClipboard = async () => {
+    const value = {Towers: [], Wave: wave}
+    value.Towers = units.map((unit) => {
+      return {
+        T: unit.id,
+        X: unit.x / 2 - 4.5,
+        Z: unit.y / 2 - 7,
+        S: 0
+      }
+    })
+
+    await navigator.clipboard.writeText(JSON.stringify(value))
+    setCopied(true)
+  }
+
   return (
     <div className='game-board__container'>
       <div className='game-board__header'>
@@ -26,6 +52,7 @@ export default function GameBoard({player, units, mercsSent, mercsReceived}) {
         }
       </div>
       <div className={['player__color-marker', 'player'+player.player+'__background'].join(' ')}/>
+      <div className={copied ? 'copy-button copied' : 'copy-button'} onClick={copyToClipboard}>{copied ? 'Build copied' : 'Copy build'}</div>
     </div>
   )
 }
