@@ -7,25 +7,9 @@ import GameBoard from './components/GameBoard'
 import WaveHeader from './components/WaveHeader'
 import Config from './components/Config'
 import Authentication from './utils/auth'
+import { getEloImage, isDev} from './utils/misc'
+import { fetchMatches, fetchWave} from './utils/api'
 
-const getEloImage = (elo) => {
-  return !elo ? 'Nothing'
-    : elo > 2799 ? 'Legend'
-    : elo > 2599 ? 'Grandmaster'
-    : elo > 2399 ? 'SeniorMaster'
-    : elo > 2199 ? 'Master'
-    : elo > 1999 ? 'Expert'
-    : elo > 1799 ? 'Diamond'
-    : elo > 1599 ? 'Platinum'
-    : elo > 1399 ? 'Gold'
-    : elo > 1199 ? 'Silver'
-    : elo > 999 ? 'Bronze'
-    : 'Unranked'
-}
-
-const isDev = () => {
-  return process.env.NODE_ENV === 'development'
-}
 
 const restructureData = (raw) => {
   const gameState = {
@@ -73,6 +57,9 @@ function App() {
   const [authStatus, setAuthStatus] = useState(false)
   const [canConfig, setCanConfig] = useState(isDev())
   const [isConfig, setIsConfig] = useState(window.location.hash.startsWith('#/conf'))
+  const [matchUUID, setMatchUUID] = useState("")
+  const [waveNumber, setWaveNumber] = useState(0)
+  const [matchHistory, setMatcheHistory] = useState([])
 
   const setWave = (wave) => {
     setGamestate({...gamestate, currentWave: wave})
@@ -89,10 +76,16 @@ function App() {
     document.body.classList.add('development__background')
   }
 
+
   useEffect(() => {
+    (async () => {
+      setMatcheHistory(async (d) => await fetchMatches("bosen"))
+    })() 
+
     if (isDev()) {
       const mock = require('./v2examplepayload.json')
       setGamestate(restructureData(mock))
+      
       return
     }
     if (twitch) {
@@ -162,6 +155,7 @@ function App() {
           </div>
           : <>
             <WaveHeader wave={gamestate.currentWave} setWave={setWave} finalWave={5} liveWave={5}/>
+            <button onClick={() => setDrawerState(true)}>CLICK ME</button>
             <div className='game-boards__area'>
               {
                 gamestate.players && Object.values(gamestate.players).map((player) => {
