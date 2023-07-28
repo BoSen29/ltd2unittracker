@@ -202,8 +202,8 @@ function App() {
               finalWave={currentMatch?.endedOn} 
               liveWave={liveWave} 
               goToLive={goToLive}
-              westKing={waveData?.leftKingHP}
-              eastKing={waveData?.rightKingHP}
+              westKing={waveData?.leftKingHP || waveData?.leftKingStartHP}
+              eastKing={waveData?.rightKingHP || waveData?.rightKingStartHP}
               />
             <div className='game-boards__area'>
               {
