@@ -11,14 +11,11 @@ import { getEloImage, isDev, resturcturePlayerData, is2v2} from './utils/misc'
 import { fetchMatches, fetchWave, fetchMatch, fetchCurrentMatch} from './utils/api'
 import MatchHistoryOverlay from './components/MatchHistoryOverlay'
 
-
-
 function App() {
   const [gamestate, setGamestate] = useState({})
   const [authStatus, setAuthStatus] = useState(false)
   const [canConfig, setCanConfig] = useState(isDev())
   const [isConfig, setIsConfig] = useState(window.location.hash.startsWith('#/conf'))
-  const [matchUUID, setMatchUUID] = useState("")
   const [waveNumber, setWaveNumber] = useState(0)
   const [matchHistory, setMatchHistory] = useState([])
   const [currentMatch, setCurrentMatch] = useState()
@@ -36,6 +33,45 @@ function App() {
     match = match.waves
     setWaveNumber(wave)
     setWaveData(...match)
+    setIsTailing(false)
+  }
+
+  const newGameHandler = async (payload) => {
+    setLiveMatchUUID(payload.match)
+    setLiveWave(payload.wave)
+    if (isTailing) {
+      let [ current ] = await fetchMatch(streamer, payload.match)
+      setPlayerData(resturcturePlayerData(current))
+      setWaveNumber(payload.wave)
+      setCurrentMatch(payload.match)
+      let [ match ] = await fetchWave(streamer, payload.match, payload.wave)
+      match = match.waves
+      setWaveData(...match)
+    }
+  }
+  
+  const newWaveHandler = async(payload) => {
+    setLiveMatchUUID(payload.match)
+    setLiveWave(payload.wave)
+    if (isTailing) {
+      setWaveNumber(payload.wave)
+      setCurrentMatch(payload.match)
+      let [ match ] = await fetchWave(streamer, payload.match, payload.wave)
+      match = match.waves
+      setWaveData(...match)
+    }
+  }
+
+  const gameEndedHandler = async(payload) => {
+    setLiveMatchUUID(payload.match)
+    setLiveWave(payload.wave)
+    if (isTailing) {
+      setWaveNumber(payload.wave)
+      setCurrentMatch(payload.match)
+      let [ match ] = await fetchWave(streamer, payload.match, payload.wave)
+      match = match.waves
+      setWaveData(...match)
+    }
   }
 
   const goToLive = async () => {
@@ -45,6 +81,7 @@ function App() {
     setPlayerData(resturcturePlayerData(current))
     setWaveNumber(liveWave)
     setWaveData(...match)
+    setIsTailing(true)
   }
 
   window.addEventListener('hashchange', (e) => {
@@ -61,6 +98,7 @@ function App() {
 
   useEffect(() => {
     if (isDev()) {
+
       (async () => {
         setStreamer("bosen")
         let [ current ] = await fetchCurrentMatch("bosen") 
@@ -74,7 +112,6 @@ function App() {
         setLiveMatchUUID(current.uuid)
         let [ match ] = await fetchWave("bosen", current.uuid, liveWave)
         match = match.waves
-
         setWaveData(...match)
       })()
       return
@@ -98,23 +135,12 @@ function App() {
               } catch (e) {
                 console.log(e)
               }
-
-              console.log(window.Twitch.ext.configuration)
-              //do stuff with config
             }
           }
-          console.log(broadcaster)
         })
 
         if (window?.Twitch?.ext?.configuration?.broadcaster?.content) {
-          const {csocket} = require('./utils/sock')
-          let socket = csocket()
-          console.log('Joining the channel', window?.Twitch?.ext?.configuration?.broadcaster?.content)
-          socket.emit('join', window?.Twitch?.ext?.configuration?.broadcaster?.content)
-
-          socket.on('gamestate', (d) => {
-            setGamestate((d))
-          })
+          setStreamer(window?.Twitch?.ext?.configuration?.broadcaster?.content)
         } else {
           console.log('No configuration found, awaiting configuration by the streamer.')
         }
@@ -125,11 +151,35 @@ function App() {
         //twitch.unlisten('broadcast', () => console.log('Removed listeners'))
         const {csocket} = require('./utils/sock')
         let socket = csocket()
-        socket.off('gs')
+        socket.off('newWave')
+        socket.off('newGame')
+        socket.off('gameEnded')
         socket.off('connect')
       }
     }
   }, [])
+
+  useEffect(() => {
+    if (streamer?.length > 0) {
+      const {csocket} = require('./utils/sock')
+      let socket = csocket()
+      console.log("Subscribing to " + streamer)
+      socket.emit('join', streamer)
+      socket.on('newGame', newGameHandler)
+      socket.on('newWave', newWaveHandler)
+      socket.on('gameEnded', gameEndedHandler)
+      
+      return () => {
+        //twitch.unlisten('broadcast', () => console.log('Removed listeners'))
+        const {csocket} = require('./utils/sock')
+        let socket = csocket()
+        socket.off('newWave')
+        socket.off('newGame')
+        socket.off('gameEnded')
+        socket.off('connect')
+      }
+    }
+  }, streamer)
 
   if (!authStatus && !!auth.getUserId()) {
     return <div>

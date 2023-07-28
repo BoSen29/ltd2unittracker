@@ -70,7 +70,7 @@ export default function GameBoard({player, units, mercsReceived = [], wave, recc
       </div>
       <div className='game-board'>
         {
-          units?.map((unit, idx) => {
+          wave > 0 && units?.map((unit, idx) => {
             return (
               // we need to "fix" the row start since the data is in format of an actual coordinate system starting bottom left
               <img src={`https://cdn.legiontd2.com/${unit.name}`} className='unit__icon' style={{gridColumnStart: unit.x, gridRowStart: 28 - unit.y}} key={idx} title={unit.name.split('/')[1].replace(".png",'')}/>
