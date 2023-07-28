@@ -101,18 +101,31 @@ function App() {
 
       (async () => {
         setStreamer("bosen")
-        let [ current ] = await fetchCurrentMatch("bosen") 
-        setPlayerData(resturcturePlayerData(current))
-        let liveWave = current.waves.reduce((acc, value) => {
-          return (acc = acc > value.wave ? acc: value.wave)
-        })
-        setLiveWave(liveWave)
-        setWaveNumber(liveWave)
-        setCurrentMatch(current.uuid)
-        setLiveMatchUUID(current.uuid)
-        let [ match ] = await fetchWave("bosen", current.uuid, liveWave)
-        match = match.waves
-        setWaveData(...match)
+        try {
+          let [ current ] = await fetchCurrentMatch("bosen") 
+          if (!!current && current != undefined) {
+            setPlayerData(resturcturePlayerData(current))
+            let wave = current.waves.reduce((acc, value) => {
+              return (acc = acc > value.wave ? acc: value.wave)
+            })
+            if (!!!wave) { return }
+            setLiveWave(wave)
+            setWaveNumber(wave)
+            setCurrentMatch(current.uuid)
+            setLiveMatchUUID(current.uuid)
+            let [ match ] = await fetchWave("bosen", current.uuid, wave)
+            match = match.waves
+            console.log(match)
+            if (!!match) {
+              setWaveData(match[0])
+            }
+          }
+        }
+        catch (e) {
+          console.log("Issues fetching data, see error below")
+          console.error(e)
+        }
+        
       })()
       return
     }

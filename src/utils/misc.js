@@ -83,7 +83,6 @@ export const is2v2 = (players) => {
 }
 
 export const getKingHPDangerLevel = (percentage) => {
-  console.log(percentage)
   return !percentage ? 'red':
     percentage > 79? 'green': 
     percentage > 39? 'orange':

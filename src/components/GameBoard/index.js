@@ -45,7 +45,8 @@ export default function GameBoard({player, units, mercsReceived = [], wave, recc
         </div>
         <img src={player.ratingIcon} title={player.rating} className='header__icon'/>
       </div>
-      <div className='myth__region__container'>
+      {
+        wave > 0 && <span><div className='myth__region__container'>
         <div className='sends__container'>
           {
             mercsReceived?.map((merc, idx) => {
@@ -70,7 +71,7 @@ export default function GameBoard({player, units, mercsReceived = [], wave, recc
       </div>
       <div className='game-board'>
         {
-          wave > 0 && units?.map((unit, idx) => {
+          units?.map((unit, idx) => {
             return (
               // we need to "fix" the row start since the data is in format of an actual coordinate system starting bottom left
               <img src={`https://cdn.legiontd2.com/${unit.name}`} className='unit__icon' style={{gridColumnStart: unit.x, gridRowStart: 28 - unit.y}} key={idx} title={unit.name.split('/')[1].replace(".png",'')}/>
@@ -86,7 +87,9 @@ export default function GameBoard({player, units, mercsReceived = [], wave, recc
           }
         </div>
         <div className={copied ? 'copy-button copied' : 'copy-button'} onClick={copyToClipboard}>{copied ? 'Build copied' : 'Copy build'}</div>
-      </div>
+      </div></span>
+      }
+      
     </div>
   )
 }

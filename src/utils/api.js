@@ -14,7 +14,6 @@ export const fetchWave = async (streamer, matchUUID, waveNumber) => {
 
 export const fetchMatches = async (streamer) => {
     let req =  await fetch(`${BASEURL}matches/${streamer}`)
-    console.log(req)
     if (req.status == 200) {
         let { matches } = await req.json()
         return matches
