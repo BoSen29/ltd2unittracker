@@ -161,9 +161,23 @@
     overflow: hidden;
 }
 
-.sends__container img {
+.sends__container span {
     width:  calc(23vw/9 - 2px);
     height: calc(23vw*1.555555/14 - 2px);
     margin: 1px 1px;
     aspect-ratio: 1/1;
+}
+
+.sends__container span img {
+    width: 100%;
+    height: 100%;
+}
+
+.sends__count {
+    position: relative;
+    font-size: 1vw;
+    top: -90%;
+    right: -60%;
+    color: white;
+    text-shadow: 1px 1px 2px black
 }

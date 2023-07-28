@@ -1,5 +1,5 @@
 export const getEloImage = (elo) => {
-  return !elo ? 'Nothing'
+  return !elo ? 'Unranked'
     : elo > 2799 ? 'Legend'
     : elo > 2599 ? 'Grandmaster'
     : elo > 2399 ? 'SeniorMaster'
@@ -15,4 +15,25 @@ export const getEloImage = (elo) => {
 
 export const isDev = () => {
   return process.env.NODE_ENV === 'development'
+}
+
+export const resturcturePlayerData = (raw) => {
+  const gameState = {
+    players: {},
+  }
+
+  for (let playerData of raw.players) {
+    const player = {}
+    player.player = playerData.player
+    player.name = playerData.playerProfile.name
+    player.rating = playerData.playerProfile.rating
+    player.ratingIcon = `https://cdn.legiontd2.com/icons/Ranks/${getEloImage(playerData.playerProfile.rating)}.png`
+    player.image = `https://cdn.legiontd2.com/${playerData.playerProfile.image}`
+    player.countryCode = playerData.playerProfile.countryCode
+    player.countryName = playerData.playerProfile.countryName
+    player.countryFlag = `https://cdn.legiontd2.com/flags/4x3/${playerData.playerProfile.countryCode}.png`
+    gameState.players[playerData.player] = player
+  }
+
+  return gameState
 }

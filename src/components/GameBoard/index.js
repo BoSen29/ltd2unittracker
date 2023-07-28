@@ -1,5 +1,6 @@
 import './index.css'
 import {useEffect, useState} from 'react'
+import { fetchWave } from '../../utils/api'
 
 export default function GameBoard({player, units, mercsReceived = [], wave}) {
 
@@ -11,6 +12,9 @@ export default function GameBoard({player, units, mercsReceived = [], wave}) {
 
     return () => clearTimeout(timeOut)
   }, [copied])
+
+  //console.log(units)
+  console.log(mercsReceived)
 
   const copyToClipboard = async () => {
     const value = {Towers: [], Wave: wave}
@@ -43,19 +47,23 @@ export default function GameBoard({player, units, mercsReceived = [], wave}) {
       </div>
       <div className='sends__container'>
         {
-          mercsReceived.map((merc, idx) => {
+          mercsReceived?.map((merc, idx) => {
             return (
-              <img src={merc.url} className='send__icon' key={idx}/>
+              <span className='send__icon'>
+                <img src={`https://cdn.legiontd2.com/${merc.image}`} className='send__icon' key={idx}/>
+                <span className='sends__count'>{merc.count}</span>
+              </span>
+              
             )
           })
         }
       </div>
       <div className='game-board'>
         {
-          units.map((unit, idx) => {
+          units?.map((unit, idx) => {
             return (
               // we need to "fix" the row start since the data is in format of an actual coordinate system starting bottom left
-              <img src={unit.icon} className='unit__icon' style={{gridColumnStart: unit.x, gridRowStart: 28 - unit.y}} key={idx}/>
+              <img src={`https://cdn.legiontd2.com/${unit.name}`} className='unit__icon' style={{gridColumnStart: unit.x, gridRowStart: 28 - unit.y}} key={idx}/>
             )
           })
         }
