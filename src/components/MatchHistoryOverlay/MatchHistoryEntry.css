@@ -1,0 +1,41 @@
+.match-history__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: grey;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.winner-team {
+    background-color: green;
+}
+
+.loser-team {
+    background-color: red;
+}
+
+.match-history__container:hover {
+    background-color: lightgrey;
+}
+
+.match-history__header {
+    font-size: 2vh;
+    padding: 4px;
+}
+
+.match-history__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.side__container {
+    flex: 50%;
+}
+
+.players__container {
+    display: flex;
+    flex-direction: column;
+}

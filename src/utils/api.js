@@ -2,14 +2,13 @@ import { BASEURL } from "./constants"
 
 export const fetchWave = async (streamer, matchUUID, waveNumber) => {
     let req = await fetch(`${BASEURL}matches/${streamer}/${matchUUID}/wave/${waveNumber}`)
-    if (req.status == 200) {
+    if (req.status === 200) {
         let { matches } = await req.json()
         return matches
     }
     else {
         return []
     }
-    
 }
 
 export const fetchMatches = async (streamer) => {
@@ -25,7 +24,7 @@ export const fetchMatches = async (streamer) => {
 
 export const fetchMatch = async (streamer, matchUUID) => {
     let req = await fetch(`${BASEURL}matches/${streamer}/${matchUUID}`)
-    if (req.status == 200) {
+    if (req.status === 200) {
         let { matches } =  await req.json()
         return matches
     }
@@ -36,7 +35,7 @@ export const fetchMatch = async (streamer, matchUUID) => {
 
 export const fetchCurrentMatch = async (streamer) => {
     let req = await fetch(`${BASEURL}matches/${streamer}/latest`)
-    if (req.status == 200) {
+    if (req.status === 200) {
         let { matches } =  await req.json()
         return matches
     }
