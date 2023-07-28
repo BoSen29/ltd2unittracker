@@ -95,12 +95,21 @@ function App() {
   }
 
   useEffect(() => {
-    if (matchUUID) {
-      fetchMatch(streamer, matchUUID).then((match) => {
-        setPlayerData(resturcturePlayerData(match?.[0]))
+    if (currentMatch) {
+      fetchMatch(streamer, currentMatch).then(async (matchData) => {
+        setPlayerData(resturcturePlayerData(matchData?.[0]))
+        let wave = matchData?.[0].waves?.reduce((acc, value) => {
+          return (acc = acc > value.wave ? acc: value.wave)
+        })
+        if (!!!wave) { return }
+        setWaveNumber(wave)
+        let waveData = await fetchWave(streamer, matchData?.[0].uuid, wave)
+        if (waveData.length > 0) {
+          setWaveData(waveData[0].waves[0])
+        }
       })
     }
-  }, [matchUUID])
+  }, [currentMatch])
 
 
   useEffect(() => {
@@ -120,12 +129,6 @@ function App() {
             setWaveNumber(wave)
             setCurrentMatch(current.uuid)
             setLiveMatchUUID(current.uuid)
-            let [ match ] = await fetchWave("bosen", current.uuid, wave)
-            match = match.waves
-            console.log(match)
-            if (!!match) {
-              setWaveData(match[0])
-            }
           }
         }
         catch (e) {
@@ -215,7 +218,7 @@ function App() {
             <Config/>
           </div>
           : <>
-            <MatchHistoryOverlay isOpen={showHistory} setOpen={setShowHistory} player={streamer} setMatchUUID={setMatchUUID}/>
+            <MatchHistoryOverlay isOpen={showHistory} setOpen={setShowHistory} player={streamer} setMatchUUID={setCurrentMatch}/>
             <WaveHeader
               wave={waveNumber}
               setWave={setWave}
