@@ -7,50 +7,10 @@ import GameBoard from './components/GameBoard'
 import WaveHeader from './components/WaveHeader'
 import Config from './components/Config'
 import Authentication from './utils/auth'
-import { getEloImage, isDev} from './utils/misc'
-import { fetchMatches, fetchWave} from './utils/api'
+import { getEloImage, isDev, resturcturePlayerData} from './utils/misc'
+import { fetchMatches, fetchWave, fetchMatch, fetchCurrentMatch} from './utils/api'
 
 
-const restructureData = (raw) => {
-  const gameState = {
-    players: {},
-    units: {},
-    mercsSent: {},
-    mercsReceived: {},
-    currentWave: 0,
-  }
-
-  gameState.currentWave = raw.wave
-
-  for (let playerData of raw.players) {
-    const player = {}
-    player.player = playerData.player
-    player.name = playerData.name
-    player.rating = playerData.rating
-    player.ratingIcon = `https://cdn.legiontd2.com/icons/Ranks/${getEloImage(playerData.rating)}.png`
-    player.image = `https://cdn.legiontd2.com/${playerData.image}`
-    player.countryCode = playerData.countryCode
-    player.countryName = playerData.countryName
-    player.countryFlag = `https://cdn.legiontd2.com/flags/4x3/${playerData.countryCode}.png`
-    gameState.players[playerData.player] = player
-
-    gameState.units[playerData.player] = playerData.units.map(unit => ({
-      x: unit.x,
-      y: unit.y,
-      id: unit.displayName,
-      icon: `https://cdn.legiontd2.com/${unit.name}`
-    }))
-
-    gameState.mercsReceived[playerData.player] = (playerData.mercenaries || []).map(merc => {
-      return {
-        name: merc.image.replace('Icons/', '').replace('.png', ''),
-        url: `https://cdn.legiontd2.com/${merc.image}`
-      }
-    })
-  }
-
-  return gameState
-}
 
 function App() {
   const [gamestate, setGamestate] = useState({})
@@ -59,10 +19,18 @@ function App() {
   const [isConfig, setIsConfig] = useState(window.location.hash.startsWith('#/conf'))
   const [matchUUID, setMatchUUID] = useState("")
   const [waveNumber, setWaveNumber] = useState(0)
-  const [matchHistory, setMatcheHistory] = useState([])
+  const [matchHistory, setMatchHistory] = useState([])
+  const [currentMatch, setCurrentMatch] = useState()
+  const [liveMatchUUID, setLiveMatchUUID] = useState("")
+  const [liveWave, setLiveWave] = useState(1)
+  const [playerData, setPlayerData] = useState([])
+  const [waveData, setWaveData] = useState({})
 
-  const setWave = (wave) => {
-    setGamestate({...gamestate, currentWave: wave})
+  const setWave = async (wave) => {
+    let [ match ] = await fetchWave("bosen", currentMatch, wave)
+    match = match.waves
+    setWaveNumber(wave)
+    setWaveData(...match)
   }
 
   window.addEventListener('hashchange', (e) => {
@@ -78,13 +46,24 @@ function App() {
 
 
   useEffect(() => {
-    (async () => {
-      setMatcheHistory(async (d) => await fetchMatches("bosen"))
-    })() 
-
     if (isDev()) {
-      const mock = require('./v2examplepayload.json')
-      setGamestate(restructureData(mock))
+      (async () => {
+        let [ current ] = await fetchCurrentMatch("bosen") 
+        setPlayerData(resturcturePlayerData(current))
+        let liveWave = current.waves.reduce((acc, value) => {
+          return (acc = acc > value.wave ? acc: value.wave)
+        })
+        setLiveWave(liveWave)
+        setWaveNumber(liveWave)
+        setCurrentMatch(current.uuid)
+        let [ match ] = await fetchWave("bosen", current.uuid, liveWave)
+        match = match.waves
+        console.log(... match)
+
+        setWaveData(...match)
+      })()
+      //const mock = require('./v2examplepayload.json')
+      //setGamestate(restructureData(mock))
       
       return
     }
@@ -122,7 +101,7 @@ function App() {
           socket.emit('join', window?.Twitch?.ext?.configuration?.broadcaster?.content)
 
           socket.on('gamestate', (d) => {
-            setGamestate(restructureData(d))
+            setGamestate((d))
           })
         } else {
           console.log('No configuration found, awaiting configuration by the streamer.')
@@ -154,12 +133,11 @@ function App() {
             <Config/>
           </div>
           : <>
-            <WaveHeader wave={gamestate.currentWave} setWave={setWave} finalWave={5} liveWave={5}/>
-            <button onClick={() => setDrawerState(true)}>CLICK ME</button>
+            <WaveHeader wave={waveNumber} setWave={setWave} finalWave={currentMatch.endedOn} liveWave={liveWave}/>
             <div className='game-boards__area'>
               {
-                gamestate.players && Object.values(gamestate.players).map((player) => {
-                  return <GameBoard mercsReceived={gamestate.mercsReceived[player.player]} player={player} units={gamestate.units[player.player]} wave={gamestate.currentWave} key={player.player}/>
+                playerData.players && Object.values(playerData.players).map((player) => {
+                  return <GameBoard mercsReceived={waveData?.recceived?.filter(m => m.player == player.player)} player={player} units={waveData?.units?.filter(u => u.player == player.player)} wave={waveNumber} key={player.player}/>
                 })
               }
             </div>
