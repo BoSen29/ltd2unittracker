@@ -25,11 +25,21 @@ function App() {
   const [liveWave, setLiveWave] = useState(1)
   const [playerData, setPlayerData] = useState([])
   const [waveData, setWaveData] = useState({})
+  const [streamer, setStreamer] = useState()
 
   const setWave = async (wave) => {
-    let [ match ] = await fetchWave("bosen", currentMatch, wave)
+    let [ match ] = await fetchWave(streamer, currentMatch, wave)
     match = match.waves
     setWaveNumber(wave)
+    setWaveData(...match)
+  }
+
+  const goToLive = async () => {
+    let [ current ] = await fetchCurrentMatch(streamer) 
+    let [ match ] = await fetchWave(streamer, liveMatchUUID, liveWave)
+    match = match.waves
+    setPlayerData(resturcturePlayerData(current))
+    setWaveNumber(liveWave)
     setWaveData(...match)
   }
 
@@ -48,6 +58,7 @@ function App() {
   useEffect(() => {
     if (isDev()) {
       (async () => {
+        setStreamer("bosen")
         let [ current ] = await fetchCurrentMatch("bosen") 
         setPlayerData(resturcturePlayerData(current))
         let liveWave = current.waves.reduce((acc, value) => {
@@ -56,6 +67,7 @@ function App() {
         setLiveWave(liveWave)
         setWaveNumber(liveWave)
         setCurrentMatch(current.uuid)
+        setLiveMatchUUID(current.uuid)
         let [ match ] = await fetchWave("bosen", current.uuid, liveWave)
         match = match.waves
         console.log(... match)
@@ -133,7 +145,7 @@ function App() {
             <Config/>
           </div>
           : <>
-            <WaveHeader wave={waveNumber} setWave={setWave} finalWave={currentMatch?.endedOn} liveWave={liveWave}/>
+            <WaveHeader wave={waveNumber} setWave={setWave} finalWave={currentMatch?.endedOn} liveWave={liveWave} goToLive={goToLive}/>
             <div className='game-boards__area'>
               {
                 playerData.players && Object.values(playerData.players).map((player) => {

@@ -10,12 +10,10 @@
     display: flex;
     width: 100%;
     margin-bottom: 1vh;
-    margin-top: 1vh;
 }
 
 .header__icon {
-    min-height: max(3vh, 3vw);
-    max-height: max(3vh, 3vw);
+    height: calc(23vw*1.555555/14 - 2px);
     aspect-ratio: 1/1;
 }
 
@@ -155,15 +153,16 @@
 .sends__container {
     margin: 12px 0;
     width: 23vw;
-    height: 10vh;
+    height: calc(23vw*1.555555/14/1.5*2);
     display: flex;
     flex-wrap: wrap-reverse;
     overflow: hidden;
+    margin: 0px;
 }
 
 .sends__container span {
-    width:  calc(23vw/9 - 2px);
-    height: calc(23vw*1.555555/14 - 2px);
+    width:  calc(23vw/9/1.5 - 2px );
+    height: calc(23vw*1.555555/14/1.5 - 2px);
     margin: 1px 1px;
     aspect-ratio: 1/1;
 }
@@ -176,7 +175,7 @@
 .sends__count {
     position: relative;
     font-size: 1vw;
-    top: -90%;
+    top: -120%;
     right: -60%;
     color: white;
     text-shadow: 1px 1px 2px black

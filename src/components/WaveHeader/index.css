@@ -5,8 +5,8 @@
     width: 100%;
     font-size: 30px;
     font-weight: 700;
-    margin-top: 1vh;
     margin-bottom: 1vh;
+    border-bottom: 1px solid white;
 }
 
 .wave__description {
@@ -58,4 +58,10 @@
     color: green;
     position: absolute;
     right: 12px;
+}
+.wave__is-not-live {
+    color: orange;
+    position: absolute;
+    right: 12px;
+    cursor: pointer;
 }

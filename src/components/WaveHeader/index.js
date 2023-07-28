@@ -1,35 +1,17 @@
 import './index.css'
+import {getWaveImage} from '../../utils/misc'
 
-function getWaveImage(wave) {
-  return !wave ? 'Nothing' :
-    wave > 20 ? 'LegionLord' :
-    wave > 19 ? 'Maccabeus' :
-    wave > 18 ? 'DireToad' :
-    wave > 17 ? 'WaleChief' :
-    wave > 16 ? 'MetalDragon' :
-    wave > 15 ? 'Cardinal' :
-    wave > 14 ? 'Quadrapus' :
-    wave > 13 ? 'KillerSlug' :
-    wave > 12 ? 'DrillGolem' :
-    wave > 11 ? 'Mantis' :
-    wave > 10 ? 'QuillShooter' :
-    wave > 9 ? 'Granddaddy' :
-    wave > 8 ? 'Carapace' :
-    wave > 7 ? 'Kobra' :
-    wave > 6 ? 'Sludge' :
-    wave > 5 ? 'Rocko' :
-    wave > 4 ? 'Scorpion' :
-    wave > 3 ? 'FlyingChicken' :
-    wave > 2 ? 'Hopper' :
-    wave > 1 ? 'Wale' :
-      'Crab'
-}
-
-export default function WaveHeader({wave, setWave, finalWave, liveWave}) {
+export default function WaveHeader({wave, setWave, finalWave, liveWave, goToLive}) {
 
   const clickWave = (targetWave) => {
     return () => {
       setWave(targetWave)
+    }
+  }
+
+  const clickGotoLive = () => {
+    return () => {
+      goToLive()
     }
   }
 
@@ -41,7 +23,14 @@ export default function WaveHeader({wave, setWave, finalWave, liveWave}) {
       </div>
       <img src={`https://cdn.legiontd2.com/icons/${getWaveImage(wave)}.png`} title={getWaveImage(wave)}/>
       <button disabled={wave === finalWave || wave === liveWave} className={['wave-change__button', wave !== finalWave ? '': 'disabled'].join(' ')} onClick={clickWave(wave + 1)}>&gt;</button>
-      <div className={wave === finalWave ? 'wave__is-final' : wave === liveWave ? 'wave__is-live' : 'display-none'}>{wave === finalWave ? 'ended' : 'live'}</div>
+      {
+        wave === liveWave ? 
+        <div className={wave === finalWave ? 'wave__is-final' : wave === liveWave ? 'wave__is-live' : 'display-none'}>{wave === finalWave ? 'ended' : 'live'}</div> 
+        :
+        <div className='wave__is-not-live' onClick={clickGotoLive()}>Go to live game</div>
+      }
+      
+      
     </div>
   )
 }

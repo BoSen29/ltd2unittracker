@@ -32,11 +32,36 @@ export const resturcturePlayerData = (raw) => {
     player.countryCode = playerData.playerProfile.countryCode
     player.countryName = playerData.playerProfile.countryName
     if (player.countryName === "United States") {
-      player.countryCode = "US"
+      player.countryCode = "us"
     }
-    player.countryFlag = `https://cdn.legiontd2.com/flags/4x3/${playerData.playerProfile.countryCode}.png`
+    player.countryFlag = `https://cdn.legiontd2.com/flags/4x3/${player.countryCode}.png`
     gameState.players[playerData.player] = player
   }
 
   return gameState
+}
+
+export const getWaveImage = (wave) => {
+  return !wave ? 'Nothing' :
+    wave > 20 ? 'LegionLord' :
+    wave > 19 ? 'Maccabeus' :
+    wave > 18 ? 'DireToad' :
+    wave > 17 ? 'WaleChief' :
+    wave > 16 ? 'MetalDragon' :
+    wave > 15 ? 'Cardinal' :
+    wave > 14 ? 'Quadrapus' :
+    wave > 13 ? 'KillerSlug' :
+    wave > 12 ? 'DrillGolem' :
+    wave > 11 ? 'Mantis' :
+    wave > 10 ? 'QuillShooter' :
+    wave > 9 ? 'Granddaddy' :
+    wave > 8 ? 'Carapace' :
+    wave > 7 ? 'Kobra' :
+    wave > 6 ? 'Sludge' :
+    wave > 5 ? 'Rocko' :
+    wave > 4 ? 'Scorpion' :
+    wave > 3 ? 'FlyingChicken' :
+    wave > 2 ? 'Hopper' :
+    wave > 1 ? 'Wale' :
+      'Crab'
 }
