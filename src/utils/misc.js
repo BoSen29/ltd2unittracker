@@ -31,6 +31,9 @@ export const resturcturePlayerData = (raw) => {
     player.image = `https://cdn.legiontd2.com/${playerData.playerProfile.image}`
     player.countryCode = playerData.playerProfile.countryCode
     player.countryName = playerData.playerProfile.countryName
+    if (player.countryName === "United States") {
+      player.countryCode = "US"
+    }
     player.countryFlag = `https://cdn.legiontd2.com/flags/4x3/${playerData.playerProfile.countryCode}.png`
     gameState.players[playerData.player] = player
   }

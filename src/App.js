@@ -133,7 +133,7 @@ function App() {
             <Config/>
           </div>
           : <>
-            <WaveHeader wave={waveNumber} setWave={setWave} finalWave={currentMatch.endedOn} liveWave={liveWave}/>
+            <WaveHeader wave={waveNumber} setWave={setWave} finalWave={currentMatch?.endedOn} liveWave={liveWave}/>
             <div className='game-boards__area'>
               {
                 playerData.players && Object.values(playerData.players).map((player) => {
