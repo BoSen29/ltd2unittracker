@@ -8,7 +8,7 @@ import WaveHeader from './components/WaveHeader'
 import Config from './components/Config'
 import Authentication from './utils/auth'
 import { getEloImage, isDev, resturcturePlayerData, is2v2} from './utils/misc'
-import { fetchMatches, fetchWave, fetchMatch, fetchCurrentMatch} from './utils/api'
+import {fetchWave, fetchCurrentMatch, fetchMatch} from './utils/api'
 import MatchHistoryOverlay from './components/MatchHistoryOverlay'
 
 function App() {
@@ -17,7 +17,6 @@ function App() {
   const [canConfig, setCanConfig] = useState(isDev())
   const [isConfig, setIsConfig] = useState(window.location.hash.startsWith('#/conf'))
   const [waveNumber, setWaveNumber] = useState(0)
-  const [matchHistory, setMatchHistory] = useState([])
   const [currentMatch, setCurrentMatch] = useState()
   const [liveMatchUUID, setLiveMatchUUID] = useState("")
   const [liveWave, setLiveWave] = useState(1)
@@ -49,7 +48,7 @@ function App() {
       setWaveData(...match)
     }
   }
-  
+
   const newWaveHandler = async(payload) => {
     setLiveMatchUUID(payload.match)
     setLiveWave(payload.wave)
@@ -75,7 +74,7 @@ function App() {
   }
 
   const goToLive = async () => {
-    let [ current ] = await fetchCurrentMatch(streamer) 
+    let [ current ] = await fetchCurrentMatch(streamer)
     let [ match ] = await fetchWave(streamer, liveMatchUUID, liveWave)
     match = match.waves
     setPlayerData(resturcturePlayerData(current))
@@ -95,13 +94,21 @@ function App() {
     document.body.classList.add('development__background')
   }
 
+  useEffect(() => {
+    if (matchUUID) {
+      fetchMatch(streamer, matchUUID).then((match) => {
+        setPlayerData(resturcturePlayerData(match?.[0]))
+      })
+    }
+  }, [matchUUID])
+
 
   useEffect(() => {
     if (isDev()) {
 
       (async () => {
         setStreamer("bosen")
-        let [ current ] = await fetchCurrentMatch("bosen") 
+        let [ current ] = await fetchCurrentMatch("bosen")
         setPlayerData(resturcturePlayerData(current))
         let liveWave = current.waves.reduce((acc, value) => {
           return (acc = acc > value.wave ? acc: value.wave)
@@ -168,7 +175,7 @@ function App() {
       socket.on('newGame', newGameHandler)
       socket.on('newWave', newWaveHandler)
       socket.on('gameEnded', gameEndedHandler)
-      
+
       return () => {
         //twitch.unlisten('broadcast', () => console.log('Removed listeners'))
         const {csocket} = require('./utils/sock')
@@ -195,12 +202,12 @@ function App() {
             <Config/>
           </div>
           : <>
-            <MatchHistoryOverlay isOpen={showHistory} setOpen={setShowHistory}/>
-            <WaveHeader 
-              wave={waveNumber} 
-              setWave={setWave} 
-              finalWave={currentMatch?.endedOn} 
-              liveWave={liveWave} 
+            <MatchHistoryOverlay isOpen={showHistory} setOpen={setShowHistory} player={streamer} setMatchUUID={setMatchUUID}/>
+            <WaveHeader
+              wave={waveNumber}
+              setWave={setWave}
+              finalWave={currentMatch?.endedOn}
+              liveWave={liveWave}
               goToLive={goToLive}
               westKing={waveData?.leftKingHP || waveData?.leftKingStartHP}
               eastKing={waveData?.rightKingHP || waveData?.rightKingStartHP}
@@ -211,20 +218,20 @@ function App() {
                   .filter(p => {
                     if (is2v2(playerData.players)) { return true}
                     if (showEast) {
-                      return p.player > 4 
+                      return p.player > 4
                     }
                     else {
                       return p.player < 5
                     }
                   })
                   .map((player) => {
-                  return <GameBoard 
-                            mercsReceived={waveData?.recceived?.filter(m => m.player == player.player)} 
-                            player={player} 
-                            units={waveData?.units?.filter(u => u.player == player.player)} 
-                            wave={waveNumber} 
-                            recceived={waveData?.recceivedAmount?.filter(ra => ra.player === player.player)} 
-                            leaks={waveData?.leaks?.filter(l => l.player == player.player)}
+                  return <GameBoard
+                            mercsReceived={waveData?.recceived?.filter(m => m.player === player.player)}
+                            player={player}
+                            units={waveData?.units?.filter(u => u.player === player.player)}
+                            wave={waveNumber}
+                            recceived={waveData?.recceivedAmount?.filter(ra => ra.player === player.player)}
+                            leaks={waveData?.leaks?.filter(l => l.player === player.player)}
                             key={player.player}/>
                 })
               }
