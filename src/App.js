@@ -9,6 +9,7 @@ import Config from './components/Config'
 import Authentication from './utils/auth'
 import { getEloImage, isDev, resturcturePlayerData} from './utils/misc'
 import { fetchMatches, fetchWave, fetchMatch, fetchCurrentMatch} from './utils/api'
+import MatchHistoryOverlay from './components/MatchHistoryOverlay'
 
 
 
@@ -25,6 +26,7 @@ function App() {
   const [liveWave, setLiveWave] = useState(1)
   const [playerData, setPlayerData] = useState([])
   const [waveData, setWaveData] = useState({})
+  const [showHistory, setShowHistory] = useState(false)
   const [streamer, setStreamer] = useState()
 
   const setWave = async (wave) => {
@@ -76,7 +78,7 @@ function App() {
       })()
       //const mock = require('./v2examplepayload.json')
       //setGamestate(restructureData(mock))
-      
+
       return
     }
     if (twitch) {
@@ -145,6 +147,7 @@ function App() {
             <Config/>
           </div>
           : <>
+            <MatchHistoryOverlay isOpen={showHistory} setOpen={setShowHistory}/>
             <WaveHeader wave={waveNumber} setWave={setWave} finalWave={currentMatch?.endedOn} liveWave={liveWave} goToLive={goToLive}/>
             <div className='game-boards__area'>
               {

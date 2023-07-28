@@ -1,0 +1,35 @@
+.drawer__container {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: .8;
+    z-index: 9999;
+}
+
+.drawer__content {
+    position: fixed;
+    height: 75vh;
+    width: 75vw;
+    top: 50vh;
+    left: 50vw;
+    margin-left: -37.5vw;
+    margin-top: -37.5vh;
+}
+
+.drawer__button {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    height: 32px;
+    width: 32px;
+}
+
+.drawer__menu-icon {
+    fill: white;
+    cursor: pointer;
+    height: 32px;
+    width: 32px;
+}
