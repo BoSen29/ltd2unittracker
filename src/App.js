@@ -7,7 +7,7 @@ import GameBoard from './components/GameBoard'
 import WaveHeader from './components/WaveHeader'
 import Config from './components/Config'
 import Authentication from './utils/auth'
-import { getEloImage, isDev, resturcturePlayerData} from './utils/misc'
+import { getEloImage, isDev, resturcturePlayerData, is2v2} from './utils/misc'
 import { fetchMatches, fetchWave, fetchMatch, fetchCurrentMatch} from './utils/api'
 import MatchHistoryOverlay from './components/MatchHistoryOverlay'
 
@@ -28,6 +28,8 @@ function App() {
   const [waveData, setWaveData] = useState({})
   const [showHistory, setShowHistory] = useState(false)
   const [streamer, setStreamer] = useState()
+  const [showEast, setShowEast] = useState(false)
+  const [isTailing, setIsTailing] = useState(true)
 
   const setWave = async (wave) => {
     let [ match ] = await fetchWave(streamer, currentMatch, wave)
@@ -72,13 +74,9 @@ function App() {
         setLiveMatchUUID(current.uuid)
         let [ match ] = await fetchWave("bosen", current.uuid, liveWave)
         match = match.waves
-        console.log(... match)
 
         setWaveData(...match)
       })()
-      //const mock = require('./v2examplepayload.json')
-      //setGamestate(restructureData(mock))
-
       return
     }
     if (twitch) {
@@ -148,14 +146,42 @@ function App() {
           </div>
           : <>
             <MatchHistoryOverlay isOpen={showHistory} setOpen={setShowHistory}/>
-            <WaveHeader wave={waveNumber} setWave={setWave} finalWave={currentMatch?.endedOn} liveWave={liveWave} goToLive={goToLive}/>
+            <WaveHeader 
+              wave={waveNumber} 
+              setWave={setWave} 
+              finalWave={currentMatch?.endedOn} 
+              liveWave={liveWave} 
+              goToLive={goToLive}
+              westKing={waveData?.leftKingHP}
+              eastKing={waveData?.rightKingHP}
+              />
             <div className='game-boards__area'>
               {
-                playerData.players && Object.values(playerData.players).map((player) => {
-                  return <GameBoard mercsReceived={waveData?.recceived?.filter(m => m.player == player.player)} player={player} units={waveData?.units?.filter(u => u.player == player.player)} wave={waveNumber} key={player.player}/>
+                playerData.players && Object.values(playerData.players)
+                  .filter(p => {
+                    if (is2v2(playerData.players)) { return true}
+                    if (showEast) {
+                      return p.player > 4 
+                    }
+                    else {
+                      return p.player < 5
+                    }
+                  })
+                  .map((player) => {
+                  return <GameBoard 
+                            mercsReceived={waveData?.recceived?.filter(m => m.player == player.player)} 
+                            player={player} 
+                            units={waveData?.units?.filter(u => u.player == player.player)} 
+                            wave={waveNumber} 
+                            recceived={waveData?.recceivedAmount?.filter(ra => ra.player === player.player)} 
+                            leaks={waveData?.leaks?.filter(l => l.player == player.player)}
+                            key={player.player}/>
                 })
               }
             </div>
+            {
+              !is2v2(playerData.players) && <div className='showEastToggle' onClick={() => setShowEast(e => !e)}>Swap</div>
+            }
           </>
       }
     </div>

@@ -130,11 +130,11 @@
     cursor: pointer;
     font-size: 1vw;
     font-weight: 500;
-    width: 8vw;
+    width: 9vw;
     height: min(1.5vw, 3vh);
     padding: 0.35em 1.2em;
     border: 0.1em solid #FFFFFF;
-    margin: 0.5em 0.3em 0.3em 0;
+    margin: 0.5em 0 0.3em 0.3em;
     border-radius: 0.12em;
     color: #ffffff;
     text-align: center;
@@ -152,7 +152,17 @@
 
 .sends__container {
     margin: 12px 0;
-    width: 23vw;
+    width: 18.5vw;
+    height: calc(23vw*1.555555/14/1.5*2);
+    display: flex;
+    flex-wrap: wrap-reverse;
+    overflow: hidden;
+    margin: 0px;
+}
+
+.mythium__container {
+    margin: 12px 0;
+    width: 4.5vw;
     height: calc(23vw*1.555555/14/1.5*2);
     display: flex;
     flex-wrap: wrap-reverse;
@@ -178,5 +188,46 @@
     top: -120%;
     right: -60%;
     color: white;
-    text-shadow: 1px 1px 2px black
+    text-shadow: 1px 1px 2px black;
+    font-weight: 400;
+}
+
+.myth__icon {
+    aspect-ratio: 1/1;
+    height: 1.5vw;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.myth__region__container {
+    margin: 12px 0;
+    width: 23vw;
+    height: calc(23vw*1.555555/14/1.5*2);
+    display: flex;
+    flex-wrap: wrap-reverse;
+    overflow: hidden;
+    margin: 0px;
+}
+
+.mythium__text {
+    max-width: 3vw;
+    max-height: 3vw;
+    aspect-ratio: 1/1;
+    margin: auto;
+    font-size: calc(3px + 1.9vmin);
+    font-weight: 500;
+}
+
+.game-board__footer {
+    width: 23vw;
+    display: inline-flex;
+}
+
+.leak__container {
+    width: 11.5vw;
+    text-align: center;
+}
+
+.leak__container div{
+    margin-top: 1vh;
 }

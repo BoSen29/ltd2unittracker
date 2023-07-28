@@ -25,3 +25,22 @@ body {
 .development__background {
     background-color: rgba(40, 44, 52, 50);
 }
+
+.showEastToggle {
+  position: fixed;
+  left: 50vw;
+  top: 0;
+  left: 5vw;
+  cursor: pointer;
+  margin-top: 0.5vh;
+  text-align: center;
+  transition: all 0.2s;
+  border-radius: 0.12em;
+  padding-left: 0.12em;
+  padding-right: 0.12em;
+}
+
+.showEastToggle:hover {
+  color: #000000;
+  background-color: #FFFFFF;
+}

@@ -65,3 +65,27 @@ export const getWaveImage = (wave) => {
     wave > 1 ? 'Wale' :
       'Crab'
 }
+
+export const getLeakDangerLevel = (percentage) => {
+  return !percentage ? 'White':
+    percentage > 79? 'red': 
+    percentage > 39? 'orange':
+    'yellow'
+}
+
+export const is2v2 = (players) => {
+  try {
+    return Object.keys(players).length > 4? false: true
+  }
+  catch {
+    return true
+  }
+}
+
+export const getKingHPDangerLevel = (percentage) => {
+  console.log(percentage)
+  return !percentage ? 'red':
+    percentage > 79? 'green': 
+    percentage > 39? 'orange':
+    'red'
+}

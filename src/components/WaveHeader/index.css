@@ -30,6 +30,17 @@
     font: inherit;
     color: inherit;
     cursor: pointer;
+    transition: all 0.2s;
+    border-radius: 0.12em;
+    padding-left: 0.12em;
+    padding-right: 0.12em;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.wave-change__button:hover {
+    color: #000000;
+    background-color: #FFFFFF;
 }
 
 .double {
@@ -64,4 +75,83 @@
     position: absolute;
     right: 12px;
     cursor: pointer;
+    transition: all 0.2s;
+    border-radius: 0.12em;
+    padding-left: 0.12em;
+    padding-right: 0.12em;
+}
+
+.wave__is-not-live:hover {
+    color: #000000;
+    background-color: #FFFFFF;
+}
+
+.wave__king_hp_tooltip {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+   
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+}
+
+.wave__kingHP:hover .wave__king_hp_tooltip {
+    visibility: hidden;
+    
+}
+
+.wave__kingHP {
+    width: 10vw;
+    transition: all 0.2s;
+    height: 3vh;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+.wave__health_bar {
+    transition: all 0.2s;
+    height: 3vh;
+}
+
+.wave__health_text {
+    transition: all 0.2s;
+    text-align: center;
+    font-size: 2.3vh;
+    top: 1vh;
+    position: absolute;
+    width: 10vw;
+}
+
+.wave__king__icon  {
+    height: 3vh !important;
+    aspect-ratio: 1/1;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+.wave__westKing__icon {
+    margin-left: 0px !important;
+    aspect-ratio: 1/1;
+    border-right: 1px solid white;
+}
+
+.wave__eastKing__icon {
+    margin-left: 0px !important;
+    aspect-ratio: 1/1;
+    border-left: 1px solid white;
+}
+
+.wave__westKing__health_bar, .wave__westKing {
+    border-radius: 0.12em 0 0 0.12em;
+    border-left: 1px solid white;
+}
+
+.wave__eastKing__health_bar, .wave__eastKing {
+    border-radius: 0 0.12em 0.12em 0;
+    border-right: 1px solid white;
 }
