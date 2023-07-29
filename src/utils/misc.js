@@ -21,8 +21,8 @@ export const resturcturePlayerData = (raw) => {
   const gameState = {
     players: {},
   }
-
-  for (let playerData of raw.players) {
+  if (!!!raw?.players) { return gameState}
+  for (let playerData of raw?.players) {
     const player = {}
     player.player = playerData.player
     player.name = playerData.playerProfile.name

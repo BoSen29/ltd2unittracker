@@ -31,11 +31,16 @@ function App() {
   const [availableWaves, setAvailableWaves] = useState([])
 
   const setWave = async (wave) => {
-    let [ match ] = await fetchWave(streamer, currentMatch, wave)
-    match = match.waves
-    setWaveNumber(wave)
-    setWaveData(...match)
-    setIsTailing(false)
+    try {
+      let [ match ] = await fetchWave(streamer, currentMatch, wave)
+      match = match.waves
+      setWaveNumber(wave)
+      setWaveData(...match)
+      setIsTailing(false)
+    }
+    catch {
+      console.log("Error fetching data")
+    }
   }
 
   const newGameHandler = async (payload) => {
@@ -94,12 +99,18 @@ function App() {
   useEffect(() => {
     if (isTailing && streamer?.length > 0) {
       (async () => {
-        let [ current ] = await fetchCurrentMatch(streamer)
-        let [ match ] = await fetchWave(streamer, liveMatchUUID, liveWave)
-        match = match?.waves
-        setPlayerData(resturcturePlayerData(current))
-        setWaveNumber(liveWave)
-        setWaveData(...match)
+        try {
+          let [ current ] = await fetchCurrentMatch(streamer)
+          let [ match ] = await fetchWave(streamer, liveMatchUUID, liveWave)
+          match = match?.waves
+          setPlayerData(resturcturePlayerData(current))
+          setWaveNumber(liveWave)
+          setWaveData(...match)
+        }
+        catch {
+          console.log("Issues fetching data from the API")
+        }
+        
       })()
     }
   }, [isTailing])
@@ -145,7 +156,7 @@ function App() {
         }
         catch (e) {
           console.log("Issues fetching data, see error below")
-          console.error(e)
+          console.error(e.message)
         }
         
       })()
@@ -230,7 +241,10 @@ function App() {
             <Config/>
           </div>
           : !hidden &&<>
-            <button className='button__toggle_tailing button_bottomrow' onClick={() => setIsTailing(e => !e)}>{isTailing ? "Following": "Follow"}</button>
+            {
+              !!isTailing && <button className='button__toggle_tailing button_bottomrow' onClick={() => setIsTailing(e => !e)}>{isTailing ? "Jump to present": "Follow"}</button>
+            }
+            
             <MatchHistoryOverlay isOpen={showHistory} setOpen={setShowHistory} player={streamer} setMatchUUID={setCurrentMatch}/>
             <WaveHeader
               wave={waveNumber}
