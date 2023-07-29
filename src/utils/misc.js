@@ -68,7 +68,7 @@ export const getWaveImage = (wave) => {
 
 export const getLeakDangerLevel = (percentage) => {
   return !percentage ? 'White':
-    percentage > 79? 'red': 
+    percentage > 79? 'red':
     percentage > 39? 'orange':
     'yellow'
 }
@@ -84,7 +84,32 @@ export const is2v2 = (players) => {
 
 export const getKingHPDangerLevel = (percentage) => {
   return !percentage ? 'red':
-    percentage > 79? 'green': 
+    percentage > 79? 'green':
     percentage > 39? 'orange':
     'red'
+}
+
+export const getLegionImage = (legion) => {
+  switch (legion) {
+    case 'Lock-In':
+      return 'MastermindVariant1'
+    case 'Greed':
+      return 'MastermindVariant2'
+    case 'Redraw':
+      return 'MastermindVariant3'
+    case 'Yolo':
+      return 'MastermindVariant4'
+    case 'Chaos':
+      return 'MastermindVariant5'
+    case 'Hybrid':
+      return 'MastermindVariant6'
+    case 'Fiesta':
+      return 'MastermindVariant7'
+    case 'Cash Out':
+      return 'MastermindVariant8'
+    case 'Castle':
+      return 'MastermindVariant9'
+    case 'Cartel':
+      return 'MastermindVariant10'
+  }
 }

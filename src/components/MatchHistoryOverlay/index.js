@@ -17,7 +17,7 @@ export default function MatchHistoryOverlay({isOpen, player, setOpen, setMatchUU
     return <div className='drawer__container' onClick={() => setOpen(false)}>
       <div className='drawer__content' onClick={(e) => e.stopPropagation()}>
         {
-          history?.map(match => <MatchHistoryEntry match={match} player={player} setMatchUUID={setMatchUUID} close={() => setOpen(false)}/>)
+          history?.map((match, idx) => <MatchHistoryEntry match={match} player={player} setMatchUUID={setMatchUUID} close={() => setOpen(false)} idx={idx}/>)
         }
       </div>
     </div>
