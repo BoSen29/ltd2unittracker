@@ -31,11 +31,16 @@ function App() {
   const [availableWaves, setAvailableWaves] = useState([])
 
   const setWave = async (wave) => {
-    let [ match ] = await fetchWave(streamer, currentMatch, wave)
-    match = match.waves
-    setWaveNumber(wave)
-    setWaveData(...match)
-    setIsTailing(false)
+    try {
+      let [ match ] = await fetchWave(streamer, currentMatch, wave)
+      match = match.waves
+      setWaveNumber(wave)
+      setWaveData(...match)
+      setIsTailing(false)
+    }
+    catch {
+      console.log("Error fetching data")
+    }
   }
 
   const newGameHandler = async (payload) => {
@@ -236,7 +241,10 @@ function App() {
             <Config/>
           </div>
           : !hidden &&<>
-            <button className='button__toggle_tailing button_bottomrow' onClick={() => setIsTailing(e => !e)}>{isTailing ? "Following": "Follow"}</button>
+            {
+              !!isTailing && <button className='button__toggle_tailing button_bottomrow' onClick={() => setIsTailing(e => !e)}>{isTailing ? "Jump to present": "Follow"}</button>
+            }
+            
             <MatchHistoryOverlay isOpen={showHistory} setOpen={setShowHistory} player={streamer} setMatchUUID={setCurrentMatch}/>
             <WaveHeader
               wave={waveNumber}
