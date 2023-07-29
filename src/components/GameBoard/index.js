@@ -51,7 +51,7 @@ export default function GameBoard({player, units, mercsReceived = [], wave, recc
           {
             mercsReceived?.map((merc, idx) => {
               return (
-                <span className='send__icon'>
+                <span className='send__icon__container'>
                   <img src={`https://cdn.legiontd2.com/${merc.image}`} className='send__icon' key={idx}/>
                   <span className='sends__count'>{merc.count}</span>
                 </span>
