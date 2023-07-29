@@ -94,12 +94,18 @@ function App() {
   useEffect(() => {
     if (isTailing && streamer?.length > 0) {
       (async () => {
-        let [ current ] = await fetchCurrentMatch(streamer)
-        let [ match ] = await fetchWave(streamer, liveMatchUUID, liveWave)
-        match = match?.waves
-        setPlayerData(resturcturePlayerData(current))
-        setWaveNumber(liveWave)
-        setWaveData(...match)
+        try {
+          let [ current ] = await fetchCurrentMatch(streamer)
+          let [ match ] = await fetchWave(streamer, liveMatchUUID, liveWave)
+          match = match?.waves
+          setPlayerData(resturcturePlayerData(current))
+          setWaveNumber(liveWave)
+          setWaveData(...match)
+        }
+        catch {
+          console.log("Issues fetching data from the API")
+        }
+        
       })()
     }
   }, [isTailing])
@@ -145,7 +151,7 @@ function App() {
         }
         catch (e) {
           console.log("Issues fetching data, see error below")
-          console.error(e)
+          console.error(e.message)
         }
         
       })()
