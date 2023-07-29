@@ -1,4 +1,6 @@
 .drawer__container {
+    display: flex;
+    justify-content: center;
     position: fixed;
     height: 100%;
     width: 100%;
@@ -7,17 +9,37 @@
     background-color: black;
     opacity: .95;
     z-index: 9999;
-    overflow-y: scroll;
+    animation: show-overlay .3s ease-in-out;
+}
+
+@keyframes show-overlay {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: .95;
+    }
+}
+
+@keyframes show-overlay-content {
+    0% {
+        overflow: hidden;
+        top: 16px;
+        left: 16px;
+        transform: scale(.1);
+    }
 }
 
 .drawer__content {
-    position: fixed;
-    height: 85vh;
+    cursor: pointer;
+    margin: 10vh 0;
+    animation: show-overlay-content .5s ease-in-out;
     width: 75vw;
-    top: 50vh;
-    left: 50vw;
-    margin-left: -37.5vw;
-    margin-top: -42.5vh;
+    overflow-y: scroll;
+}
+
+.drawer__content::-webkit-scrollbar {
+    width: 0;
 }
 
 .drawer__button {
