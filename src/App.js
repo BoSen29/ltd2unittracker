@@ -28,6 +28,7 @@ function App() {
   const [isTailing, setIsTailing] = useState(true)
   const [currentMaxWave, setCurrentMaxWave] = useState(1)
   const [hidden, setHidden] = useState(false)
+  const [availableWaves, setAvailableWaves] = useState([])
 
   const setWave = async (wave) => {
     let [ match ] = await fetchWave(streamer, currentMatch, wave)
@@ -76,12 +77,7 @@ function App() {
   }
 
   const goToLive = async () => {
-    let [ current ] = await fetchCurrentMatch(streamer)
-    let [ match ] = await fetchWave(streamer, liveMatchUUID, liveWave)
-    match = match?.waves
-    setPlayerData(resturcturePlayerData(current))
-    setWaveNumber(liveWave)
-    setWaveData(...match)
+
     setIsTailing(true)
   }
 
@@ -95,6 +91,18 @@ function App() {
   if (isDev()) {
     //document.body.classList.add('development__background')
   }
+  useEffect(() => {
+    if (isTailing && streamer?.length > 0) {
+      (async () => {
+        let [ current ] = await fetchCurrentMatch(streamer)
+        let [ match ] = await fetchWave(streamer, liveMatchUUID, liveWave)
+        match = match?.waves
+        setPlayerData(resturcturePlayerData(current))
+        setWaveNumber(liveWave)
+        setWaveData(...match)
+      })()
+    }
+  }, [isTailing])
 
   useEffect(() => {
     if (currentMatch) {
@@ -103,6 +111,7 @@ function App() {
         let wave = matchData?.[0].waves?.reduce((acc, value) => {
           return (acc = acc > value.wave ? acc: value.wave)
         })
+        setAvailableWaves((matchData?.[0].waves.map(w => w.wave)?.sort((a,b) => {return a > b ? 1: -1})?.filter(f => f > 0) || []))
         if (!!!wave) { return }
         setCurrentMaxWave(wave)
         setWaveNumber(wave)
@@ -221,6 +230,7 @@ function App() {
             <Config/>
           </div>
           : !hidden &&<>
+            <button className='button__toggle_tailing button_bottomrow' onClick={() => setIsTailing(e => !e)}>{isTailing ? "Following": "Follow"}</button>
             <MatchHistoryOverlay isOpen={showHistory} setOpen={setShowHistory} player={streamer} setMatchUUID={setCurrentMatch}/>
             <WaveHeader
               wave={waveNumber}
@@ -230,7 +240,7 @@ function App() {
               goToLive={goToLive}
               westKing={waveData?.leftKingHP || waveData?.leftKingStartHP}
               eastKing={waveData?.rightKingHP || waveData?.rightKingStartHP}
-              isTailing={isTailing}
+              availableWaves={availableWaves}
               />
             <div className='game-boards__area'>
               {

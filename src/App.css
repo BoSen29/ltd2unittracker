@@ -50,11 +50,10 @@ body {
   position: absolute;
   right: 1vw;
   bottom: 2vh;
-  background-color: transparent;
   border: 1px solid white
 }
 
-.button__toggle_visibility:hover {
+.button_bottomrow:hover {
   color: #000000;
   background-color: #FFFFFF;
 }
@@ -65,7 +64,7 @@ body {
   font-weight: 500;
   width: 5vw;
   height: min(1.5vw, 3vh);
-  padding: 0.35em 1.2em;
+  padding: 0.35em;
   border: 0.1em solid #FFFFFF;
   margin: 0.5em 0 0.3em 0.3em;
   border-radius: 0.12em;
@@ -73,4 +72,12 @@ body {
   text-align: center;
   transition: all 0.2s;
   background-color: rgba(0, 0, 0, 0.4);
+  bottom: 5vh;
+}
+
+.button__toggle_tailing {
+  position: absolute;
+  right: 13vw;
+
+  border: 1px solid white
 }

@@ -171,3 +171,35 @@
 .icon__recording {
     color: red;
 }
+
+.wave__selector {
+    position: absolute;
+    top: 5vh;
+    height: 5vh;
+    align-self: center;
+    left: 50%;
+    transform: translate(-50%, 0);
+    flex-direction:row;
+    display:flex;
+}
+
+.wave__select__container {
+    width: 5vh;
+    border: 1px solid black;
+    cursor: pointer;
+    height: 5vh;
+    display: flex;
+    margin: 0;
+}
+
+.wave__select__icon {
+    width: 5vh;
+    height: 5vh;
+}
+
+.wave__select__text {
+    position: relative;
+    left: -2.5vw;
+    font-size: 1vw;
+    text-shadow: 1px 1px 1px black;
+}

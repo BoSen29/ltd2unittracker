@@ -1,7 +1,9 @@
 import './index.css'
 import {getKingHPDangerLevel, getWaveImage} from '../../utils/misc'
+import { useState } from 'react'
 
-export default function WaveHeader({wave, setWave, goToLive, westKing, eastKing, isTailing}) {
+export default function WaveHeader({wave, setWave, goToLive, westKing, eastKing, availableWaves = []}) {
+  const [selectorHidden, setSelectorHidden] = useState(true)
 
   const clickWave = (targetWave) => {
     return () => {
@@ -29,17 +31,30 @@ export default function WaveHeader({wave, setWave, goToLive, westKing, eastKing,
         </div>  
       </div>
       <img src='https://cdn.legiontd2.com/icons/EarthKing.png' title='EarthKing' className='wave__king__icon wave__westKing__icon'/>
-      <span className='wave__title__panel'>
+      <span className='wave__title__panel' onMouseEnter={() => setSelectorHidden(false)} onMouseLeave={() => {setSelectorHidden(true)}}>
         ↓
       <div className='wave__description'>
+        <div className='wave__selector__container' hidden={selectorHidden}>
+          <div className='wave__selector'>
+          {
+            (availableWaves || [])?.map(a => {
+              return <div className='wave__select__container'  onClick={() => {
+                clickWave(a)()
+                console.log("SETWAVE", a)
+                }
+              }>
+                  <img src={`https://cdn.legiontd2.com/icons/${getWaveImage(a)}.png`} title={"Wave " + a} className='wave__select__icon'/>
+                  <div className='wave__select__text'>{a}</div>
+                </div>
+            })
+          }
+          </div>
+        </div>
         Wave {wave}: {getWaveImage(wave)}
       </div>
       <img src={`https://cdn.legiontd2.com/icons/${getWaveImage(wave)}.png`} title={getWaveImage(wave)} className='wave__creep__icon'/>
         ↓
       </span>
-      {
-        isTailing && <span className='icon__recording'></span>
-      }
       <img src='https://cdn.legiontd2.com/icons/SkyKing.png' title='Skyking' className='wave__king__icon wave__eastKing__icon'/>
       <div className='wave__kingHP wave__eastKing'>
         <div className='wave__health_bar wave__eastKing__health_bar'
@@ -53,6 +68,7 @@ export default function WaveHeader({wave, setWave, goToLive, westKing, eastKing,
         </div>
         
       </div>
+
     </div>
   )
 }
