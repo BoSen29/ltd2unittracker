@@ -2,10 +2,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 1px solid black;
+    
 }
 
 .game-board__container span{
-    height: 85vh;
+    height: 78vh;
 }
 
 .game-board__header {
@@ -14,6 +17,7 @@
     display: flex;
     width: 100%;
     margin-bottom: 1vh;
+
 }
 
 .header__icon {
@@ -24,6 +28,7 @@
 .player-info__container {
     display: flex;
     align-items: center;
+    font-weight: 500;
 }
 
 .country__icon {
@@ -86,6 +91,7 @@
             linear-gradient(to right, darkgrey 1px, transparent 1px),
             linear-gradient(to bottom, darkgrey 1px, transparent 1px);
     margin-top: 0.5vh;
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 .unit__icon {
@@ -163,6 +169,7 @@
     flex-wrap: wrap-reverse;
     overflow: hidden;
     margin: 0px;
+    
 }
 
 .mythium__container {
@@ -211,6 +218,7 @@
     flex-wrap: wrap-reverse;
     overflow: hidden;
     margin: 0px;
+
 }
 
 .mythium__text {
@@ -231,8 +239,10 @@
 .leak__container {
     width: 11.5vw;
     text-align: center;
+    
 }
 
 .leak__container div{
     margin-top: 1vh;
+    font-weight: 500;
 }

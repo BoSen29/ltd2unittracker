@@ -20,6 +20,8 @@
 body {
   margin: 0;
   padding: 0;
+  width:100vw;
+  height:100vh;
 }
 
 .development__background {
@@ -43,4 +45,32 @@ body {
 .showEastToggle:hover {
   color: #000000;
   background-color: #FFFFFF;
+}
+.button__toggle_visibility {
+  position: absolute;
+  right: 1vw;
+  bottom: 2vh;
+  background-color: transparent;
+  border: 1px solid white
+}
+
+.button__toggle_visibility:hover {
+  color: #000000;
+  background-color: #FFFFFF;
+}
+
+.button_bottomrow {
+  cursor: pointer;
+  font-size: 0.8vw;
+  font-weight: 500;
+  width: 5vw;
+  height: min(1.5vw, 3vh);
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #FFFFFF;
+  margin: 0.5em 0 0.3em 0.3em;
+  border-radius: 0.12em;
+  color: #ffffff;
+  text-align: center;
+  transition: all 0.2s;
+  background-color: rgba(0, 0, 0, 0.4);
 }

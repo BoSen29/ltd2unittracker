@@ -1,7 +1,7 @@
 import './index.css'
 import {getKingHPDangerLevel, getWaveImage} from '../../utils/misc'
 
-export default function WaveHeader({wave, setWave, finalWave, liveWave, goToLive, westKing, eastKing}) {
+export default function WaveHeader({wave, setWave, goToLive, westKing, eastKing, isTailing}) {
 
   const clickWave = (targetWave) => {
     return () => {
@@ -29,17 +29,16 @@ export default function WaveHeader({wave, setWave, finalWave, liveWave, goToLive
         </div>  
       </div>
       <img src='https://cdn.legiontd2.com/icons/EarthKing.png' title='EarthKing' className='wave__king__icon wave__westKing__icon'/>
-      <button disabled={wave <= 1} className={['wave-change__button', wave > 1 ? '' : 'disabled'].join(' ')} onClick={clickWave(wave - 1)}>&lt;</button>
+      <span className='wave__title__panel'>
+        ↓
       <div className='wave__description'>
         Wave {wave}: {getWaveImage(wave)}
       </div>
-      <img src={`https://cdn.legiontd2.com/icons/${getWaveImage(wave)}.png`} title={getWaveImage(wave)}/>
-      <button disabled={wave === finalWave || wave === liveWave} className={['wave-change__button', wave !== finalWave ? '': 'disabled'].join(' ')} onClick={clickWave(wave + 1)}>&gt;</button>
+      <img src={`https://cdn.legiontd2.com/icons/${getWaveImage(wave)}.png`} title={getWaveImage(wave)} className='wave__creep__icon'/>
+        ↓
+      </span>
       {
-        wave === liveWave ? 
-        <div className={wave === finalWave ? 'wave__is-final' : wave === liveWave ? 'wave__is-live' : 'display-none'}>{wave === finalWave ? 'ended' : 'live'}</div> 
-        :
-        <div className='wave__is-not-live' onClick={clickGotoLive()}>Go to live game</div>
+        isTailing && <span className='icon__recording'></span>
       }
       <img src='https://cdn.legiontd2.com/icons/SkyKing.png' title='Skyking' className='wave__king__icon wave__eastKing__icon'/>
       <div className='wave__kingHP wave__eastKing'>

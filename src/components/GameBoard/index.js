@@ -83,7 +83,7 @@ export default function GameBoard({player, units, mercsReceived = [], wave, recc
       <div className='game-board__footer'>
         <div className='leak__container'>
           {
-            leakedNum > 0 && <div style={{color: getLeakDangerLevel(leakedNum)}}>{leakedNum}% leak</div>
+            leakedNum > 0 && <div style={{color: getLeakDangerLevel(leakedNum)}} className='leak__number'>{leakedNum}% leak</div>
           }
         </div>
         <div className={copied ? 'copy-button copied' : 'copy-button'} onClick={copyToClipboard}>{copied ? 'Build copied' : 'Copy build'}</div>

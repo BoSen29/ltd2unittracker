@@ -27,6 +27,7 @@ function App() {
   const [showEast, setShowEast] = useState(false)
   const [isTailing, setIsTailing] = useState(true)
   const [currentMaxWave, setCurrentMaxWave] = useState(1)
+  const [hidden, setHidden] = useState(false)
 
   const setWave = async (wave) => {
     let [ match ] = await fetchWave(streamer, currentMatch, wave)
@@ -77,7 +78,7 @@ function App() {
   const goToLive = async () => {
     let [ current ] = await fetchCurrentMatch(streamer)
     let [ match ] = await fetchWave(streamer, liveMatchUUID, liveWave)
-    match = match.waves
+    match = match?.waves
     setPlayerData(resturcturePlayerData(current))
     setWaveNumber(liveWave)
     setWaveData(...match)
@@ -92,7 +93,7 @@ function App() {
   const auth = new Authentication()
 
   if (isDev()) {
-    document.body.classList.add('development__background')
+    //document.body.classList.add('development__background')
   }
 
   useEffect(() => {
@@ -106,7 +107,7 @@ function App() {
         setCurrentMaxWave(wave)
         setWaveNumber(wave)
         let waveData = await fetchWave(streamer, matchData?.[0].uuid, wave)
-        if (waveData.length > 0) {
+        if (waveData?.length > 0) {
           setWaveData(waveData[0].waves[0])
         }
       })
@@ -219,7 +220,7 @@ function App() {
           <div className='config__container'>
             <Config/>
           </div>
-          : <>
+          : !hidden &&<>
             <MatchHistoryOverlay isOpen={showHistory} setOpen={setShowHistory} player={streamer} setMatchUUID={setCurrentMatch}/>
             <WaveHeader
               wave={waveNumber}
@@ -229,6 +230,7 @@ function App() {
               goToLive={goToLive}
               westKing={waveData?.leftKingHP || waveData?.leftKingStartHP}
               eastKing={waveData?.rightKingHP || waveData?.rightKingStartHP}
+              isTailing={isTailing}
               />
             <div className='game-boards__area'>
               {
@@ -259,6 +261,7 @@ function App() {
             }
           </>
       }
+      <button className='button__toggle_visibility button_bottomrow' onClick={() => setHidden(d => !d)}>{hidden ? "Show": "Hide"}</button>
     </div>
   )
 }

@@ -44,15 +44,13 @@
 
 .drawer__button {
     position: absolute;
-    top: 16px;
-    left: 16px;
-    height: 32px;
-    width: 32px;
+    bottom: 2vh;
+    right: 7vw;    
 }
 
 .drawer__menu-icon {
     fill: white;
     cursor: pointer;
-    height: 32px;
-    width: 32px;
+    aspect-ratio: 1/1;
+    width: 2vw;
 }

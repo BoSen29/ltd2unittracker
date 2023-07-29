@@ -6,20 +6,31 @@
     font-size: 30px;
     font-weight: 700;
     margin-bottom: 1vh;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid black;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .wave__description {
-    width: 360px;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    font-size: 3vh;
 }
 
-.wave__header img {
+.wave__title__panel {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 3vh;
+    margin-left: 6vw;
+    margin-right: 6vw;
+}
+
+.wave__creep__icon {
     height: 5vh;
     aspect-ratio: inherit;
-    margin-left: 1vh;
+    margin-left: 1vw;
 }
 
 .wave-change__button {
@@ -107,15 +118,16 @@
 }
 
 .wave__kingHP {
-    width: 10vw;
+    width: 15vw;
     transition: all 0.2s;
-    height: 3vh;
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
+    height: 4vh;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    background-color: black;
 }
 .wave__health_bar {
     transition: all 0.2s;
-    height: 3vh;
+    height: 4vh;
 }
 
 .wave__health_text {
@@ -124,34 +136,38 @@
     font-size: 2.3vh;
     top: 1vh;
     position: absolute;
-    width: 10vw;
+    width: 15vw;
 }
 
 .wave__king__icon  {
-    height: 3vh !important;
+    height: 4vh !important;
     aspect-ratio: 1/1;
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
 }
 
 .wave__westKing__icon {
     margin-left: 0px !important;
     aspect-ratio: 1/1;
-    border-right: 1px solid white;
+    border-right: 1px solid black;
 }
 
 .wave__eastKing__icon {
     margin-left: 0px !important;
     aspect-ratio: 1/1;
-    border-left: 1px solid white;
+    border-left: 1px solid black;
 }
 
 .wave__westKing__health_bar, .wave__westKing {
     border-radius: 0.12em 0 0 0.12em;
-    border-left: 1px solid white;
+    border-left: 1px solid black;
 }
 
 .wave__eastKing__health_bar, .wave__eastKing {
     border-radius: 0 0.12em 0.12em 0;
-    border-right: 1px solid white;
+    border-right: 1px solid black;
+}
+
+.icon__recording {
+    color: red;
 }
