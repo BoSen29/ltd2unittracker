@@ -26,6 +26,7 @@ function App() {
   const [streamer, setStreamer] = useState()
   const [showEast, setShowEast] = useState(false)
   const [isTailing, setIsTailing] = useState(true)
+  const [currentMaxWave, setCurrentMaxWave] = useState(1)
 
   const setWave = async (wave) => {
     let [ match ] = await fetchWave(streamer, currentMatch, wave)
@@ -102,6 +103,7 @@ function App() {
           return (acc = acc > value.wave ? acc: value.wave)
         })
         if (!!!wave) { return }
+        setCurrentMaxWave(wave)
         setWaveNumber(wave)
         let waveData = await fetchWave(streamer, matchData?.[0].uuid, wave)
         if (waveData.length > 0) {
@@ -222,7 +224,7 @@ function App() {
             <WaveHeader
               wave={waveNumber}
               setWave={setWave}
-              finalWave={currentMatch?.endedOn}
+              finalWave={currentMaxWave}
               liveWave={liveWave}
               goToLive={goToLive}
               westKing={waveData?.leftKingHP || waveData?.leftKingStartHP}

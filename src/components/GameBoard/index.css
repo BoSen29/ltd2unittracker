@@ -4,6 +4,10 @@
     align-items: center;
 }
 
+.game-board__container span{
+    height: 85vh;
+}
+
 .game-board__header {
     align-items: center;
     justify-content: space-between;
@@ -81,6 +85,7 @@
     background-image:
             linear-gradient(to right, darkgrey 1px, transparent 1px),
             linear-gradient(to bottom, darkgrey 1px, transparent 1px);
+    margin-top: 0.5vh;
 }
 
 .unit__icon {
@@ -185,8 +190,8 @@
 .sends__count {
     position: relative;
     font-size: 1vw;
-    top: -120%;
-    right: -60%;
+    top: -4vh;
+    right: -1.5vh;
     color: white;
     text-shadow: 1px 1px 2px black;
     font-weight: 400;
@@ -200,7 +205,6 @@
 }
 
 .myth__region__container {
-    margin: 12px 0;
     width: 23vw;
     height: calc(23vw*1.555555/14/1.5*2);
     display: flex;
@@ -221,6 +225,7 @@
 .game-board__footer {
     width: 23vw;
     display: inline-flex;
+    height: 6vh;
 }
 
 .leak__container {
