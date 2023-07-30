@@ -1,14 +1,15 @@
 .match-history__container {
-    width: 100%;
+    width: 74.8vw;
     display: flex;
     flex-direction: column;
     background-color: rgb(26, 26, 26);
     margin-bottom: 10px;
-    border-radius: 4px;
+    border: .1vw solid rgba(255, 255, 255, .0);
 }
 
 .match-history__container:hover {
     background-color: rgb(39, 39, 39);
+    border: .1vw solid rgba(255, 255, 255, .6);
 }
 
 .match-history__header {
@@ -16,7 +17,8 @@
     justify-content: space-between;
     font-size: 2vh;
     padding: 4px;
-    border-bottom: 1px solid rgba(255, 255, 255, .5);
+    border: 1px solid rgba(255, 255, 255, .6);
+    background-color: rgb(10,10,10, .5);
 }
 
 .match-history__content {
@@ -33,7 +35,7 @@
 
 .side__container {
     width: 32vw;
-    border-radius: .5vh;
+    
     padding: 0 4px;
 }
 
@@ -54,11 +56,13 @@
 }
 
 .won {
-    background-color: rgba(0, 255, 0, .25);
+    background-color: rgba(0, 255, 0, .02);
+    border: 1px solid rgba(0, 255, 0, .30);
 }
 
 .lost {
-    background-color: rgba(255, 0, 0, .25);
+    background-color: rgba(255, 0, 0, .02);
+    border: 1px solid rgba(255, 0, 0, .30);
 }
 
 .legion__container {

@@ -42,10 +42,6 @@ body {
   padding-right: 0.12em;
 }
 
-.showEastToggle:hover {
-  color: #000000;
-  background-color: #FFFFFF;
-}
 .button__toggle_visibility {
   position: absolute;
   right: 1vw;
@@ -79,5 +75,11 @@ body {
   position: absolute;
   right: 13vw;
 
+  border: 1px solid white
+}
+
+.button_showEastToggle {
+  position: absolute;
+  right: 19vw;
   border: 1px solid white
 }

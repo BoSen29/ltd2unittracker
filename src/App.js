@@ -32,11 +32,11 @@ function App() {
 
   const setWave = async (wave) => {
     try {
+      setIsTailing(false)
       let [ match ] = await fetchWave(streamer, currentMatch, wave)
       match = match.waves
       setWaveNumber(wave)
       setWaveData(...match)
-      setIsTailing(false)
     }
     catch {
       console.log("Error fetching data")
@@ -47,13 +47,8 @@ function App() {
     setLiveMatchUUID(payload.match)
     setLiveWave(payload.wave)
     if (isTailing) {
-      let [ current ] = await fetchMatch(streamer, payload.match)
-      setPlayerData(resturcturePlayerData(current))
       setWaveNumber(payload.wave)
       setCurrentMatch(payload.match)
-      let [ match ] = await fetchWave(streamer, payload.match, payload.wave)
-      match = match.waves
-      setWaveData(...match)
     }
   }
 
@@ -63,9 +58,6 @@ function App() {
     if (isTailing) {
       setWaveNumber(payload.wave)
       setCurrentMatch(payload.match)
-      let [ match ] = await fetchWave(streamer, payload.match, payload.wave)
-      match = match.waves
-      setWaveData(...match)
     }
   }
 
@@ -75,14 +67,10 @@ function App() {
     if (isTailing) {
       setWaveNumber(payload.wave)
       setCurrentMatch(payload.match)
-      let [ match ] = await fetchWave(streamer, payload.match, payload.wave)
-      match = match.waves
-      setWaveData(...match)
     }
   }
 
   const goToLive = async () => {
-
     setIsTailing(true)
   }
 
@@ -110,29 +98,51 @@ function App() {
         catch {
           console.log("Issues fetching data from the API")
         }
-        
+
       })()
+      console.log("IS TAILING!")
+    }
+    else {
+      console.log("IS NOT TAILING!")
     }
   }, [isTailing])
 
   useEffect(() => {
+    if (currentMatch === liveMatchUUID) {
+      if (availableWaves.indexOf(liveWave) === -1) {
+        setAvailableWaves([...availableWaves, liveWave])
+      }
+    }
+  }, [liveWave])
+
+  useEffect(() => {
     if (currentMatch) {
       fetchMatch(streamer, currentMatch).then(async (matchData) => {
-        setPlayerData(resturcturePlayerData(matchData?.[0]))
-        let wave = matchData?.[0].waves?.reduce((acc, value) => {
-          return (acc = acc > value.wave ? acc: value.wave)
-        })
-        setAvailableWaves((matchData?.[0].waves.map(w => w.wave)?.sort((a,b) => {return a > b ? 1: -1})?.filter(f => f > 0) || []))
-        if (!!!wave) { return }
-        setCurrentMaxWave(wave)
-        setWaveNumber(wave)
-        let waveData = await fetchWave(streamer, matchData?.[0].uuid, wave)
-        if (waveData?.length > 0) {
-          setWaveData(waveData[0].waves[0])
+        try {
+          setPlayerData(resturcturePlayerData(matchData?.[0]))
+          let wave = matchData?.[0].waves?.reduce((acc, value) => {
+            return (acc = acc > value.wave ? acc: value.wave)
+          })
+          setAvailableWaves((matchData?.[0].waves.map(w => w.wave)?.sort((a,b) => {return a > b ? 1: -1})?.filter(f => f > 0) || []))
+          if (!!!wave) { return }
+          setCurrentMaxWave(e => wave)
+          setWaveNumber(e => wave)
+          
+        }
+        catch {
+          console.log("Issues fetching match data")
         }
       })
     }
   }, [currentMatch])
+
+  useEffect(() => {
+    fetchWave(streamer, currentMatch, waveNumber).then(waveData => {
+      if (waveData?.length > 0) {
+        setWaveData(waveData[0].waves[0])
+      }
+    })
+  }, [waveNumber])
 
 
   useEffect(() => {
@@ -225,7 +235,7 @@ function App() {
         socket.off('connect')
       }
     }
-  }, streamer)
+  }, [streamer])
 
   if (!authStatus && !!auth.getUserId()) {
     return <div>
@@ -241,10 +251,6 @@ function App() {
             <Config/>
           </div>
           : !hidden &&<>
-            {
-              !!isTailing && <button className='button__toggle_tailing button_bottomrow' onClick={() => setIsTailing(e => !e)}>{isTailing ? "Jump to present": "Follow"}</button>
-            }
-            
             <MatchHistoryOverlay isOpen={showHistory} setOpen={setShowHistory} player={streamer} setMatchUUID={setCurrentMatch}/>
             <WaveHeader
               wave={waveNumber}
@@ -280,10 +286,13 @@ function App() {
                 })
               }
             </div>
-            {
-              !is2v2(playerData.players) && <div className='showEastToggle' onClick={() => setShowEast(e => !e)}>Swap</div>
-            }
           </>
+      }
+      {
+        !is2v2(playerData.players) && <button className='button_bottomrow button_showEastToggle' onClick={() => setShowEast(e => !e)}>Swap</button>
+      }
+      {
+        !isTailing && <button className='button__toggle_tailing button_bottomrow' onClick={() => setIsTailing(e => !e)}>{"To live"}</button>
       }
       <button className='button__toggle_visibility button_bottomrow' onClick={() => setHidden(d => !d)}>{hidden ? "Show": "Hide"}</button>
     </div>

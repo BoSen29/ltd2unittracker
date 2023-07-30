@@ -93,6 +93,28 @@
     background-color: rgba(0, 0, 0, 0.6);
 }
 
+.clipboard {
+    width: 23vw;
+    height: calc(23vw*1.555555);
+    margin: 0;
+    padding: 0;
+    display: block;
+    margin-top: 0.5vh;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.clipboard textarea {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    color:white;
+    line-break:auto;
+    border: none;
+    padding: none;
+    resize: none;
+    font-size: 1.5vh;
+}
+
 .unit__icon {
     width:  calc(23vw/9 - 2px);
     height: calc(23vw*1.555555/14 - 2px);

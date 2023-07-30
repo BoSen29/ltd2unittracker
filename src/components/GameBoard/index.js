@@ -1,18 +1,13 @@
 import './index.css'
-import {useEffect, useState} from 'react'
+import {useEffect, useRef, useState} from 'react'
 import {getLeakDangerLevel } from '../../utils/misc'
 
 export default function GameBoard({player, units, mercsReceived = [], wave, recceived = [], leaks = []}) {
-  const [copied, setCopied] = useState(false)
-  useEffect(() => {
-    const timeOut = setTimeout(() => {
-      if (copied) setCopied(false)
-    }, 1500)
+  const [clipboardData, setClipboardData] = useState("")
+  const [showClipboard, setShowClipboard] = useState(false)
 
-    return () => clearTimeout(timeOut)
-  }, [copied])
-
-  const copyToClipboard = async () => {
+  const copyToClipboard = () => {
+    setShowClipboard(true)
     const value = {Towers: [], Wave: wave}
     value.Towers = units.map((unit) => {
       return {
@@ -24,13 +19,21 @@ export default function GameBoard({player, units, mercsReceived = [], wave, recc
     })
     value.Mythium = recceived?.map(r => r.amount)[0]
     value.Gold = 0
+    setClipboardData(JSON.stringify(value))
 
-    await navigator.clipboard.writeText(JSON.stringify(value))
-    setCopied(true)
+    const timeOut = setTimeout(() => {
+      setShowClipboard(false)
+    }, 10000)
+
+    return () => clearTimeout(timeOut)
+    
+    //await navigator.clipboard.writeText(JSON.stringify(value))
   }
 
   let recceivedNum = recceived?.map(r => r.amount)
   let leakedNum = leaks?.map(l => l.percentage)
+  if (!!!player.name) { return }
+
   return (
     <div className='game-board__container'>
       <div className='game-board__header'>
@@ -69,6 +72,11 @@ export default function GameBoard({player, units, mercsReceived = [], wave, recc
           <img src={`https://cdn.legiontd2.com/Icons/Mythium.png`} className='myth__icon' key={"mythium"}/>
         </div>
       </div>
+      {
+        showClipboard? 
+      <div className='clipboard'>
+        <textarea value={clipboardData} readOnly onMouseEnter={(e) => e.target.select()} onMouseLeave={(e) => setShowClipboard(false)}/>
+      </div> :
       <div className='game-board'>
         {
           units?.map((unit, idx) => {
@@ -79,6 +87,7 @@ export default function GameBoard({player, units, mercsReceived = [], wave, recc
           })
         }
       </div>
+      }
       <div className={['player__color-marker', 'player'+player.player+'__background'].join(' ')}/>
       <div className='game-board__footer'>
         <div className='leak__container'>
@@ -86,7 +95,10 @@ export default function GameBoard({player, units, mercsReceived = [], wave, recc
             leakedNum > 0 && <div style={{color: getLeakDangerLevel(leakedNum)}} className='leak__number'>{leakedNum}% leak</div>
           }
         </div>
-        <div className={copied ? 'copy-button copied' : 'copy-button'} onClick={copyToClipboard}>{copied ? 'Build copied' : 'Copy build'}</div>
+        {
+          !showClipboard ? <div className={'copy-button'} onClick={copyToClipboard}>{'Copy build'}</div>:
+          <div className={'copy-button'} onClick={() => setShowClipboard(false)}>{'Hide'}</div>
+        }
       </div></span>
       }
       

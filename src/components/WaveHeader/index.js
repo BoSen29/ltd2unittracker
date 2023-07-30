@@ -10,13 +10,13 @@ export default function WaveHeader({wave, setWave, goToLive, westKing, eastKing,
       setWave(targetWave)
     }
   }
-
   const clickGotoLive = () => {
     return () => {
       goToLive()
     }
   }
 
+  if (!!!wave) { return}
   return (
     <div className='wave__header'>
       <div className='wave__kingHP wave__westKing'>
@@ -37,10 +37,9 @@ export default function WaveHeader({wave, setWave, goToLive, westKing, eastKing,
         <div className='wave__selector__container' hidden={selectorHidden}>
           <div className='wave__selector'>
           {
-            (availableWaves || [])?.map(a => {
+            availableWaves && (availableWaves || [])?.map(a => {
               return <div className='wave__select__container'  onClick={() => {
                 clickWave(a)()
-                console.log("SETWAVE", a)
                 }
               }>
                   <img src={`https://cdn.legiontd2.com/icons/${getWaveImage(a)}.png`} title={"Wave " + a} className='wave__select__icon'/>
@@ -50,7 +49,11 @@ export default function WaveHeader({wave, setWave, goToLive, westKing, eastKing,
           }
           </div>
         </div>
-        Wave {wave}: {getWaveImage(wave)}
+        { wave && 
+          <span>
+          Wave {wave}: {getWaveImage(wave)}
+          </span>
+          }
       </div>
       <img src={`https://cdn.legiontd2.com/icons/${getWaveImage(wave)}.png`} title={getWaveImage(wave)} className='wave__creep__icon'/>
         ↓
