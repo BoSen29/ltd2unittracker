@@ -28,7 +28,10 @@ export default function MatchHistoryEntry({match, setMatchUUID, close, idx}) {
         <div className={['side__container', match.leftWon ? 'won' : 'lost'].join(' ')}>
           <div className='players__container'>
           {
-            leftSide.map((p) =>
+            leftSide.map((p, i) =>
+            <>
+            { i > 0 && <hr style={{width:"100%"}}/>
+            } 
               <div className='player__entry'>
                 <img src={`https://cdn.legiontd2.com/icons/Ranks/${getEloImage(p.playerProfile.rating)}.png`}/>
                 <div className={'player' + p.player}>{p.playerProfile.name}</div>
@@ -41,6 +44,7 @@ export default function MatchHistoryEntry({match, setMatchUUID, close, idx}) {
                   <img src={`https://cdn.legiontd2.com/icons/${p.mastermind}.png`}/>
                 </div>
               </div>
+              </>
             )
           }
           </div>
@@ -48,19 +52,23 @@ export default function MatchHistoryEntry({match, setMatchUUID, close, idx}) {
         <div className={['side__container', match.rightWon ? 'won' : 'lost'].join(' ')}>
           <div className='players__container'>
           {
-            rightSide.map((p) =>
-              <div className='player__entry'>
-                <img src={`https://cdn.legiontd2.com/icons/Ranks/${getEloImage(p.playerProfile.rating)}.png`}/>
-                <div className={'player' + p.player}>{p.playerProfile.name}</div>
-                <div className='legion__container'>
-                  <div>Legion</div>
-                  <img src='https://cdn.legiontd2.com/icons/Units/legion.png'/>
+            rightSide.map((p, i) =>
+              <>
+                { i > 0 && <hr style={{width:"100%"}}/>
+                } 
+                <div className='player__entry'>
+                  <img src={`https://cdn.legiontd2.com/icons/Ranks/${getEloImage(p.playerProfile.rating)}.png`}/>
+                  <div className={'player' + p.player}>{p.playerProfile.name}</div>
+                  <div className='legion__container'>
+                    <div>Legion</div>
+                    <img src='https://cdn.legiontd2.com/icons/Units/legion.png'/>
+                  </div>
+                  <div className='spell__container'>
+                    <div>Spell</div>
+                    <img src='https://cdn.legiontd2.com/icons/Units/spell.png'/>
+                  </div>
                 </div>
-                <div className='spell__container'>
-                  <div>Spell</div>
-                  <img src='https://cdn.legiontd2.com/icons/Units/spell.png'/>
-                </div>
-              </div>
+              </>
             )
           }
           </div>

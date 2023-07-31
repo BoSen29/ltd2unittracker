@@ -6,8 +6,8 @@
     width: 100%;
     top: 0;
     left: 0;
-    background-color: black;
-    opacity: .95;
+    backdrop-filter: blur(8px);
+    background: rgba(0,0,0,.7);
     z-index: 9999;
     animation: show-overlay .3s ease-in-out;
 }

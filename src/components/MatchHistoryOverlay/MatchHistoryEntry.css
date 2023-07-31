@@ -5,19 +5,19 @@
     background-color: rgb(26, 26, 26);
     margin-bottom: 10px;
     border: .1vw solid rgba(255, 255, 255, .0);
+    backdrop-filter: blur(8px);
 }
 
 .match-history__container:hover {
-    background-color: rgb(39, 39, 39);
-    border: .1vw solid rgba(255, 255, 255, .6);
+    background-color: rgb(39, 39, 39)
 }
 
 .match-history__header {
     display: flex;
     justify-content: space-between;
     font-size: 2vh;
-    padding: 4px;
-    border: 1px solid rgba(255, 255, 255, .6);
+    padding: 8px;
+    border: 1px solid rgba(255, 255, 255, .2);
     background-color: rgb(10,10,10, .5);
 }
 
@@ -42,6 +42,7 @@
 .players__container {
     display: flex;
     flex-direction: column;
+    padding: 4px;
 }
 .players__container img {
     margin-top: .5vh;
@@ -53,6 +54,13 @@
 .player__entry {
     display: flex;
     align-items: center;
+    padding: 0;
+}
+
+hr {
+    margin: 4px 0 0 0;
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+    opacity: 0.5;
 }
 
 .won {
