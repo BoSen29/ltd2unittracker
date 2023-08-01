@@ -90,26 +90,10 @@ export const getKingHPDangerLevel = (percentage) => {
 }
 
 export const getLegionImage = (legion) => {
-  switch (legion) {
-    case 'Lock-In':
-      return 'MastermindVariant1'
-    case 'Greed':
-      return 'MastermindVariant2'
-    case 'Redraw':
-      return 'MastermindVariant3'
-    case 'Yolo':
-      return 'MastermindVariant4'
-    case 'Chaos':
-      return 'MastermindVariant5'
-    case 'Hybrid':
-      return 'MastermindVariant6'
-    case 'Fiesta':
-      return 'MastermindVariant7'
-    case 'Cash Out':
-      return 'MastermindVariant8'
-    case 'Castle':
-      return 'MastermindVariant9'
-    case 'Cartel':
-      return 'MastermindVariant10'
+  try {
+    return legion?.split('/').slice(2,3).join('') || 'nothing.png'
+  }
+  catch {
+    return 'nothing.png'
   }
 }

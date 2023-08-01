@@ -73,27 +73,44 @@ hr {
     border: 1px solid rgba(255, 0, 0, .30);
 }
 
-.legion__container {
+.spell__container {
     display: flex;
     align-items: center;
-    margin-left: auto;
-    margin-right: 1vw;
     font-size: 2vh;
 }
 
 .legion__container img {
-    max-height: 2vh;
-    margin-left: .5vw;
+    max-height: 3vh;
+    padding-left: 0.4vh
 }
 
-.spell__container {
+.legion__container {
     display: flex;
     align-items: center;
-    margin-right: 1vw;
     font-size: 2vh;
 }
 
 .spell__container img {
-    max-height: 2vh;
-    margin-left: .5vw;
+    max-height: 3vh;
+
+}
+
+.mvp {
+    font-size: 1.7vh;
+    margin-left: 0.5vh;
+}
+
+.opener__container {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    font-size: 2vh;
+    margin-right: 1.4vh;
+    padding-right: 1vh;
+    border-right: 0.1vh solid rgba(255, 255, 255, .2);
+    height: 3vh;
+}
+
+.opener__container img {
+    max-height: 3vh;
 }

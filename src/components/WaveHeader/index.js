@@ -33,29 +33,29 @@ export default function WaveHeader({wave, setWave, goToLive, westKing, eastKing,
       <img src='https://cdn.legiontd2.com/icons/EarthKing.png' title='EarthKing' className='wave__king__icon wave__westKing__icon'/>
       <span className='wave__title__panel' onMouseEnter={() => setSelectorHidden(false)} onMouseLeave={() => {setSelectorHidden(true)}}>
         ↓
-      <div className='wave__description'>
-        <div className='wave__selector__container' hidden={selectorHidden}>
-          <div className='wave__selector'>
-          {
-            availableWaves && (availableWaves || [])?.map(a => {
-              return <div className='wave__select__container'  onClick={() => {
-                clickWave(a)()
-                }
-              }>
-                  <img src={`https://cdn.legiontd2.com/icons/${getWaveImage(a)}.png`} title={"Wave " + a} className='wave__select__icon'/>
-                  <div className='wave__select__text'>{a}</div>
-                </div>
-            })
-          }
+        <div className='wave__description'>
+          <div className='wave__selector__container' hidden={selectorHidden}>
+            <div className='wave__selector'>
+            {
+              availableWaves && (availableWaves || [])?.map(a => {
+                return <div className='wave__select__container'  onClick={() => {
+                  clickWave(a)()
+                  }
+                }>
+                    <img src={`https://cdn.legiontd2.com/icons/${getWaveImage(a)}.png`} title={"Wave " + a} className='wave__select__icon'/>
+                    <div className='wave__select__text'>{a}</div>
+                  </div>
+              })
+            }
+            </div>
           </div>
+          { !!wave && 
+            <span>
+            Wave {wave || 0}: {getWaveImage(wave || 0)}
+            </span>
+            }
         </div>
-        { wave && 
-          <span>
-          Wave {wave}: {getWaveImage(wave)}
-          </span>
-          }
-      </div>
-      <img src={`https://cdn.legiontd2.com/icons/${getWaveImage(wave)}.png`} title={getWaveImage(wave)} className='wave__creep__icon'/>
+        <img src={`https://cdn.legiontd2.com/icons/${getWaveImage(wave)}.png`} title={getWaveImage(wave)} className='wave__creep__icon'/>
         ↓
       </span>
       <img src='https://cdn.legiontd2.com/icons/SkyKing.png' title='Skyking' className='wave__king__icon wave__eastKing__icon'/>

@@ -32,16 +32,24 @@ export default function MatchHistoryEntry({match, setMatchUUID, close, idx}) {
             <>
             { i > 0 && <hr style={{width:"100%"}}/>
             } 
-              <div className='player__entry'>
+              <div className='player__entry' key={i}>
                 <img src={`https://cdn.legiontd2.com/icons/Ranks/${getEloImage(p.playerProfile.rating)}.png`}/>
                 <div className={'player' + p.player}>{p.playerProfile.name}</div>
-                <div className='legion__container'>
-                  <div>Legion</div>
-                  <img src={`https://cdn.legiontd2.com/icons/Items/${getLegionImage(p.legion)}.png`}/>
+                {
+                  !!p.mvpScore && !!leftSide.find(l => l.mvpScore > p.mvpScore) && <div className='mvp'>[MVP]</div>
+                }
+                <div className='opener__container'>
+                  {
+                    !!p.opener && p.opener.map((o, ix) => {
+                      return <img src={`https://cdn.legiontd2.com/${o}`} key={i + 'opener' + ix }/>
+                    })
+                  }
                 </div>
-                <div className='spell__container'>
-                  <div>Spell</div>
-                  <img src={`https://cdn.legiontd2.com/icons/${p.mastermind}.png`}/>
+                <div className='spell__container scoreboard__container'>
+                  <img src={`https://cdn.legiontd2.com/${p.spellIcon || 'unknown'}`} title={p.spell || 'unknown'}/>
+                </div>
+                <div className='legion__container scoreboard__container'>
+                  <img src={`https://cdn.legiontd2.com/icons/Items/${getLegionImage(p.playstyleIcon)}`} title={p.playstyle || 'Unknown'}/>
                 </div>
               </div>
               </>
@@ -56,16 +64,24 @@ export default function MatchHistoryEntry({match, setMatchUUID, close, idx}) {
               <>
                 { i > 0 && <hr style={{width:"100%"}}/>
                 } 
-                <div className='player__entry'>
+                <div className='player__entry' key={i}>
                   <img src={`https://cdn.legiontd2.com/icons/Ranks/${getEloImage(p.playerProfile.rating)}.png`}/>
                   <div className={'player' + p.player}>{p.playerProfile.name}</div>
-                  <div className='legion__container'>
-                    <div>Legion</div>
-                    <img src='https://cdn.legiontd2.com/icons/Units/legion.png'/>
+                  {
+                  !!p.mvpScore && !!rightSide.find(l => l.mvpScore > p.mvpScore) && <div className='mvp'>[MVP]</div>
+                  }
+                  <div className='opener__container'>
+                  {
+                    !!p.opener && p.opener.map((o, ix) => {
+                      return <img src={`https://cdn.legiontd2.com/${o}`} key={i + 'opener' + ix }/>
+                    })
+                  }
+                </div>
+                  <div className='spell__container scoreboard__container'>
+                    <img src={`https://cdn.legiontd2.com/${p.spellIcon || 'unknown'}`} title={p.spell || 'unknown'}/>
                   </div>
-                  <div className='spell__container'>
-                    <div>Spell</div>
-                    <img src='https://cdn.legiontd2.com/icons/Units/spell.png'/>
+                  <div className='legion__container scoreboard__container'>
+                    <img src={`https://cdn.legiontd2.com/icons/Items/${getLegionImage(p.playstyleIcon)}`} title={p.playstyle || 'Unknown'}/>
                   </div>
                 </div>
               </>

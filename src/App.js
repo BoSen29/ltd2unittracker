@@ -276,12 +276,12 @@ function App() {
                   })
                   .map((player) => {
                   return <GameBoard
-                            mercsReceived={waveData?.recceived?.filter(m => m.player === player.player)}
+                            mercsReceived={waveData?.recceived?.filter(m => m.player === player.player) || []}
                             player={player}
-                            units={waveData?.units?.filter(u => u.player === player.player)}
-                            wave={waveNumber}
-                            recceived={waveData?.recceivedAmount?.filter(ra => ra.player === player.player)}
-                            leaks={waveData?.leaks?.filter(l => l.player === player.player)}
+                            units={waveData?.units?.filter(u => u.player === player.player) || []}
+                            wave={waveNumber || 0}
+                            recceived={waveData?.recceivedAmount?.filter(ra => ra.player === player.player) || []}
+                            leaks={waveData?.leaks?.filter(l => l.player === player.player) || []}
                             key={player.player}/>
                 })
               }
