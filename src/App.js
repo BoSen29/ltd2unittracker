@@ -282,6 +282,7 @@ function App() {
                             wave={waveNumber || 0}
                             recceived={waveData?.recceivedAmount?.filter(ra => ra.player === player.player) || []}
                             leaks={waveData?.leaks?.filter(l => l.player === player.player) || []}
+                            postGameStats={waveData?.postGameStats?.filter(pgs => pgs.player === player.player) || []}
                             key={player.player}/>
                 })
               }

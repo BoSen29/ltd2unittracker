@@ -44,7 +44,7 @@
     flex-direction: column;
     padding: 4px;
 }
-.players__container img {
+.elo__img {
     margin-top: .5vh;
     max-height: 2vh;
     margin-right: .2vw;
@@ -113,4 +113,25 @@ hr {
 
 .opener__container img {
     max-height: 3vh;
+}
+
+.opener__count {
+    position: relative;
+    font-size: 1vw;
+    bottom: 3vh;
+    right: -2.3vh;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    font-weight: 400;
+}
+
+.opener__img {
+    margin-left: 0.5vh;
+}
+
+.opener__entry {
+    width: 3vh;
+    height: 3vh;
+    margin: 0.1vh 0.1vh;
+    aspect-ratio: 1/1;
 }

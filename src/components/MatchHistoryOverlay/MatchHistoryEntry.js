@@ -3,11 +3,26 @@ import { timeSince } from '../../utils/time'
 import { getWaveImage, getEloImage, getLegionImage } from '../../utils/misc'
 
 export default function MatchHistoryEntry({match, setMatchUUID, close, idx}) {
+  match?.players?.map(p => {
+    let temp = {}
+    p.opener?.map(o => {
+      temp[o] = (temp[o] || 0) +1
+    })
+    p.openerClean = [...Object.keys(temp).map(d => {
+      return {
+        "unit": d,
+        "count": temp[d]
+      }
+    })]
+  })  
 
+  console.log(match.players)
   const leftSide = match.players.filter(p => p.player <= 4)
   const rightSide = match.players.filter(p => p.player > 4)
   const averageElo = Math.floor(match.players.reduce((acc, p) => acc + p.playerProfile.rating, 0) / match.players.length)
   const headerCurrentWave = match.endedOn || idx !== 0 ? <div>{match.endedOn && `Wave ${match.endedOn}`}</div> : <div style={{color: 'red', fontWeight: 700}}>Live</div>
+
+
 
   return (
     <div className='match-history__container' onClick={() => {
@@ -33,15 +48,18 @@ export default function MatchHistoryEntry({match, setMatchUUID, close, idx}) {
             { i > 0 && <hr style={{width:"100%"}}/>
             } 
               <div className='player__entry' key={i}>
-                <img src={`https://cdn.legiontd2.com/icons/Ranks/${getEloImage(p.playerProfile.rating)}.png`}/>
+                <img src={`https://cdn.legiontd2.com/icons/Ranks/${getEloImage(p.playerProfile.rating)}.png`} className='elo__img'/>
                 <div className={'player' + p.player}>{p.playerProfile.name}</div>
                 {
                   !!p.mvpScore && !!leftSide.find(l => l.mvpScore > p.mvpScore) && <div className='mvp'>[MVP]</div>
                 }
                 <div className='opener__container'>
                   {
-                    !!p.opener && p.opener.map((o, ix) => {
-                      return <img src={`https://cdn.legiontd2.com/${o}`} key={i + 'opener' + ix }/>
+                    !!p.openerClean && p.openerClean.map((o, ix) => {
+                      return <span className='opener__entry'>
+                          <img src={`https://cdn.legiontd2.com/${o.unit}`} key={i + 'opener' + ix } className='opener__img'/>
+                          <span className='opener__count'>{o.count}</span>
+                        </span>
                     })
                   }
                 </div>
@@ -65,15 +83,18 @@ export default function MatchHistoryEntry({match, setMatchUUID, close, idx}) {
                 { i > 0 && <hr style={{width:"100%"}}/>
                 } 
                 <div className='player__entry' key={i}>
-                  <img src={`https://cdn.legiontd2.com/icons/Ranks/${getEloImage(p.playerProfile.rating)}.png`}/>
+                  <img src={`https://cdn.legiontd2.com/icons/Ranks/${getEloImage(p.playerProfile.rating)}.png`}  className='elo__img'/>
                   <div className={'player' + p.player}>{p.playerProfile.name}</div>
                   {
                   !!p.mvpScore && !!rightSide.find(l => l.mvpScore > p.mvpScore) && <div className='mvp'>[MVP]</div>
                   }
-                  <div className='opener__container'>
+                <div className='opener__container'>
                   {
-                    !!p.opener && p.opener.map((o, ix) => {
-                      return <img src={`https://cdn.legiontd2.com/${o}`} key={i + 'opener' + ix }/>
+                    !!p.openerClean && p.openerClean.map((o, ix) => {
+                      return <span className='opener__entry'>
+                          <img src={`https://cdn.legiontd2.com/${o.unit}`} key={i + 'opener' + ix } className='opener__img'/>
+                          <span className='opener__count'>{o.count}</span>
+                        </span>
                     })
                   }
                 </div>
