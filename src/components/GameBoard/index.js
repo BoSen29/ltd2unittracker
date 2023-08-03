@@ -52,7 +52,7 @@ export default function GameBoard({player, units, mercsReceived = [], wave, recc
         <img src={player.ratingIcon} title={player.rating} className='header__icon'/>
       </div>
       {
-        wave > 0 && <span className='game-board-body'>
+        !isNaN(wave) && <span className='game-board-body'>
         <div className='myth__region__container'>
         <div className='sends__container'>
           {

@@ -89,21 +89,25 @@ function App() {
       (async () => {
         try {
           let [ current ] = await fetchCurrentMatch(streamer)
-          let [ match ] = await fetchWave(streamer, liveMatchUUID, liveWave)
-          match = match?.waves
+          let wave = current?.waves?.reduce((acc, value) => {
+            return (acc = acc > value.wave ? acc: value.wave)
+          })
+          let [ match ] = await fetchWave(streamer, current?.uuid, wave?.wave)
+          let waveData = match?.waves
           setPlayerData(resturcturePlayerData(current))
-          setWaveNumber(liveWave)
-          setWaveData(...match)
+          setWaveNumber(wave?.wave)
+          setWaveData(...waveData)
         }
-        catch {
-          console.log("Issues fetching data from the API")
+        catch (ex) {
+          console.log("Issues fetching data from the API, please reload")
+          console.log(ex)
         }
 
       })()
-      console.log("IS TAILING!")
+      console.log("Tailing changes to the gamestate")
     }
     else {
-      console.log("IS NOT TAILING!")
+      console.log("Is not tailing changes made to gamestate")
     }
   }, [isTailing])
 
@@ -150,24 +154,25 @@ function App() {
 
       (async () => {
         setStreamer("bosen")
-        try {
-          let [ current ] = await fetchCurrentMatch("bosen") 
-          if (!!current && current != undefined) {
-            setPlayerData(resturcturePlayerData(current))
-            let wave = current.waves.reduce((acc, value) => {
-              return (acc = acc > value.wave ? acc: value.wave)
-            })
-            if (!!!wave) { return }
-            setLiveWave(wave)
-            setWaveNumber(wave)
-            setCurrentMatch(current.uuid)
-            setLiveMatchUUID(current.uuid)
-          }
-        }
-        catch (e) {
-          console.log("Issues fetching data, see error below")
-          console.error(e.message)
-        }
+
+        // try {
+        //   let [ current ] = await fetchCurrentMatch("bosen") 
+        //   if (!!current && current != undefined) {
+        //     setPlayerData(resturcturePlayerData(current))
+        //     let wave = current.waves.reduce((acc, value) => {
+        //       return (acc = acc > value.wave ? acc: value.wave)
+        //     })
+        //     if (!!!wave) { return }
+        //     setLiveWave(wave)
+        //     setWaveNumber(wave)
+        //     setCurrentMatch(current.uuid)
+        //     setLiveMatchUUID(current.uuid)
+        //   }
+        // }
+        // catch (e) {
+        //   console.log("Issues fetching data, see error below")
+        //   console.error(e.message)
+        // }
         
       })()
       return
