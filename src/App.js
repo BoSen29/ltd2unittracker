@@ -107,7 +107,7 @@ function App() {
     //document.body.classList.add('development__background')
   }
   useEffect(() => {
-    if (isTailing && streamer?.length > 0) {
+    if (isTailing && streamer.length > 0) {
       (async () => {
         try {
           let [ current ] = await fetchCurrentMatch(streamer)
@@ -216,6 +216,8 @@ function App() {
       socket.on('newGame', newGameHandler)
       socket.on('newWave', newWaveHandler)
       socket.on('gameEnded', gameEndedHandler)
+
+      setIsTailing(true)
 
       return () => {
         //twitch.unlisten('broadcast', () => console.log('Removed listeners'))
