@@ -43,6 +43,11 @@ function App() {
     }
   }
 
+  const setMatchAndRemoveTailing = (matchUUID) => {
+    setIsTailing(false)
+    setCurrentMatch(matchUUID)
+  }
+
   const newGameHandler = async (payload) => {
     setLiveMatchUUID(payload.match)
     setLiveWave(payload.wave)
@@ -107,7 +112,7 @@ function App() {
     //document.body.classList.add('development__background')
   }
   useEffect(() => {
-    if (isTailing && streamer.length > 0) {
+    if (isTailing && streamer?.length > 0) {
       (async () => {
         try {
           let [ current ] = await fetchCurrentMatch(streamer)
@@ -134,7 +139,7 @@ function App() {
     else {
       console.log("Is not tailing changes made to gamestate")
     }
-  }, [isTailing])
+  }, [isTailing, streamer])
 
   useEffect(() => {
     if (currentMatch) {
@@ -200,6 +205,7 @@ function App() {
 
         if (window?.Twitch?.ext?.configuration?.broadcaster?.content) {
           setStreamer(window?.Twitch?.ext?.configuration?.broadcaster?.content)
+          console.log("Found configuration, connecting to " + window?.Twitch?.ext?.configuration?.broadcaster?.content)
         } else {
           console.log('No configuration found, awaiting configuration by the streamer.')
         }
@@ -244,7 +250,7 @@ function App() {
             <Config/>
           </div>
           : !hidden &&<>
-            <MatchHistoryOverlay isOpen={showHistory} setOpen={setShowHistory} player={streamer} setMatchUUID={setCurrentMatch}/>
+            <MatchHistoryOverlay isOpen={showHistory} setOpen={setShowHistory} player={streamer} setMatchUUID={setMatchAndRemoveTailing}/>
             <WaveHeader
               wave={waveNumber}
               setWave={setWave}
