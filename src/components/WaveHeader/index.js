@@ -34,6 +34,11 @@ export default function WaveHeader({wave, setWave, goToLive, westKing, eastKing,
       <span className='wave__title__panel' onMouseEnter={() => setSelectorHidden(false)} onMouseLeave={() => {setSelectorHidden(true)}}>
         ↓
         <div className='wave__description'>
+        { !!wave && 
+            <span className='wave__name'>
+            Wave {wave || 0}: {getWaveImage(wave || 0)}
+            </span>
+            }
           <div className='wave__selector__container' hidden={selectorHidden}>
             <div className='wave__selector'>
             {
@@ -49,11 +54,7 @@ export default function WaveHeader({wave, setWave, goToLive, westKing, eastKing,
             }
             </div>
           </div>
-          { !!wave && 
-            <span>
-            Wave {wave || 0}: {getWaveImage(wave || 0)}
-            </span>
-            }
+
         </div>
         <img src={`https://cdn.legiontd2.com/icons/${getWaveImage(wave)}.png`} title={getWaveImage(wave)} className='wave__creep__icon'/>
         ↓

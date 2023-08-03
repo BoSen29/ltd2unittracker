@@ -16,6 +16,7 @@
     justify-content: space-around;
     align-items: center;
     font-size: 3vh;
+    flex-direction: column;
 }
 
 .wave__title__panel {
