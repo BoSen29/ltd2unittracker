@@ -46,28 +46,50 @@ function App() {
   const newGameHandler = async (payload) => {
     setLiveMatchUUID(payload.match)
     setLiveWave(payload.wave)
-    if (isTailing) {
-      setWaveNumber(payload.wave)
-      setCurrentMatch(payload.match)
-    }
+    setIsTailing(e => {
+      if (e) {
+        setWaveNumber(payload.wave)
+        setCurrentMatch(payload.match)
+      }
+      return e
+    })
   }
 
   const newWaveHandler = async(payload) => {
+    console.log("NEW WAVE PAYLOAD", payload.wave)
     setLiveMatchUUID(payload.match)
     setLiveWave(payload.wave)
-    if (isTailing) {
-      setWaveNumber(payload.wave)
-      setCurrentMatch(payload.match)
-    }
+    setIsTailing(e => {
+      if (e) {
+        setWaveNumber(payload.wave)
+      }
+      return e
+    })
+    setCurrentMatch(m => {
+      if (m == payload.match) {
+        setAvailableWaves(i => {
+          if (i.indexOf(payload.wave) != -1) {
+            return i
+          }
+          else {
+            return [...i, payload.wave]
+          }
+        })
+      }
+      return m
+    })
+
   }
 
   const gameEndedHandler = async(payload) => {
     setLiveMatchUUID(payload.match)
     setLiveWave(payload.wave)
-    if (isTailing) {
-      setWaveNumber(payload.wave)
-      setCurrentMatch(payload.match)
-    }
+    setIsTailing(e => {
+      if (e) {
+        setWaveNumber(payload.wave)
+      }
+      return e
+    })
   }
 
   const goToLive = async () => {
@@ -92,10 +114,13 @@ function App() {
           let wave = current?.waves?.reduce((acc, value) => {
             return (acc = acc > value.wave ? acc: value.wave)
           })
-          let [ match ] = await fetchWave(streamer, current?.uuid, wave?.wave)
+          if (isNaN(wave)) {
+            wave = wave.wave
+          }
+          let [ match ] = await fetchWave(streamer, current?.uuid, wave)
           let waveData = match?.waves
           setPlayerData(resturcturePlayerData(current))
-          setWaveNumber(wave?.wave)
+          setWaveNumber(wave)
           setWaveData(...waveData)
         }
         catch (ex) {
@@ -112,14 +137,6 @@ function App() {
   }, [isTailing])
 
   useEffect(() => {
-    if (currentMatch === liveMatchUUID) {
-      if (availableWaves.indexOf(liveWave) === -1) {
-        setAvailableWaves([...availableWaves, liveWave])
-      }
-    }
-  }, [liveWave])
-
-  useEffect(() => {
     if (currentMatch) {
       fetchMatch(streamer, currentMatch).then(async (matchData) => {
         try {
@@ -127,8 +144,12 @@ function App() {
           let wave = matchData?.[0].waves?.reduce((acc, value) => {
             return (acc = acc > value.wave ? acc: value.wave)
           })
-          setAvailableWaves((matchData?.[0].waves.map(w => w.wave)?.sort((a,b) => {return a > b ? 1: -1})?.filter(f => f > 0) || []))
+          let avWaves = (matchData?.[0].waves.map(w => w.wave)?.sort((a,b) => {return a > b ? 1: -1})?.filter(f => f > 0) || [])
+          setAvailableWaves(avWaves)
           if (!!!wave) { return }
+          if (isNaN(wave)) {
+            wave = wave.wave
+          }
           setCurrentMaxWave(e => wave)
           setWaveNumber(e => wave)
           
@@ -151,30 +172,7 @@ function App() {
 
   useEffect(() => {
     if (isDev()) {
-
-      (async () => {
-        setStreamer("bosen")
-
-        // try {
-        //   let [ current ] = await fetchCurrentMatch("bosen") 
-        //   if (!!current && current != undefined) {
-        //     setPlayerData(resturcturePlayerData(current))
-        //     let wave = current.waves.reduce((acc, value) => {
-        //       return (acc = acc > value.wave ? acc: value.wave)
-        //     })
-        //     if (!!!wave) { return }
-        //     setLiveWave(wave)
-        //     setWaveNumber(wave)
-        //     setCurrentMatch(current.uuid)
-        //     setLiveMatchUUID(current.uuid)
-        //   }
-        // }
-        // catch (e) {
-        //   console.log("Issues fetching data, see error below")
-        //   console.error(e.message)
-        // }
-        
-      })()
+      setStreamer("bosen")
       return
     }
     if (twitch) {
@@ -206,17 +204,6 @@ function App() {
           console.log('No configuration found, awaiting configuration by the streamer.')
         }
       })
-
-      // return the unsubscribe function to let react handle the magic
-      return () => {
-        //twitch.unlisten('broadcast', () => console.log('Removed listeners'))
-        const {csocket} = require('./utils/sock')
-        let socket = csocket()
-        socket.off('newWave')
-        socket.off('newGame')
-        socket.off('gameEnded')
-        socket.off('connect')
-      }
     }
   }, [])
 
@@ -247,7 +234,6 @@ function App() {
       Loading....
     </div>
   }
-
   return (
     <div className='app'>
       {

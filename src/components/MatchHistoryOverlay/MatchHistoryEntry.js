@@ -16,7 +16,6 @@ export default function MatchHistoryEntry({match, setMatchUUID, close, idx}) {
     })]
   })  
 
-  console.log(match.players)
   const leftSide = match.players.filter(p => p.player <= 4)
   const rightSide = match.players.filter(p => p.player > 4)
   const averageElo = Math.floor(match.players.reduce((acc, p) => acc + p.playerProfile.rating, 0) / match.players.length)

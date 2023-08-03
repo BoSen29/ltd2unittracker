@@ -4,7 +4,6 @@ import { useState } from 'react'
 
 export default function WaveHeader({wave, setWave, goToLive, westKing, eastKing, availableWaves = []}) {
   const [selectorHidden, setSelectorHidden] = useState(true)
-
   const clickWave = (targetWave) => {
     return () => {
       setWave(targetWave)
