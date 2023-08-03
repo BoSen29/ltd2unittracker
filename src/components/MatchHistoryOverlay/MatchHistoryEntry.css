@@ -33,6 +33,11 @@
     margin: auto 0;
 }
 
+.match-history__result img {
+    height: 100%;
+    width: 100%;
+}
+
 .side__container {
     width: 32vw;
     

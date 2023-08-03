@@ -258,8 +258,8 @@ function App() {
               finalWave={currentMaxWave}
               liveWave={liveWave}
               goToLive={goToLive}
-              westKing={waveData?.leftKingHP || waveData?.leftKingStartHP}
-              eastKing={waveData?.rightKingHP || waveData?.rightKingStartHP}
+              westKing={waveData?.leftKingHP === 0? 0: waveData?.leftKingHP || waveData?.leftKingStartHP}
+              eastKing={waveData?.rightKingHP === 0? 0: waveData?.rightKingHP || waveData?.rightKingStartHP}
               availableWaves={availableWaves}
               />
             <div className='game-boards__area'>
