@@ -128,7 +128,7 @@ export default function GameBoard({player, units, mercsReceived = [], wave, recc
               <span hidden={!leakedCreeps}>
                 <span className='leaked__creeps__container'>
                 {
-                  pgs.unitsLeaked.map(l => {
+                  pgs?.unitsLeaked?.map(l => {
                     return <img src={`https://cdn.legiontd2.com/${l.replace('hud/img/', '')}`} className='img__leaked__unit'/>
                   }) 
                 }
