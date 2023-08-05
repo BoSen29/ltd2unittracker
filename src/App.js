@@ -160,7 +160,9 @@ function App() {
               return i
             }
             else {
-              return [...i, waveNumber]
+              if (waveNumber > 0) {
+                return [...i, waveNumber]
+              }
             }
           })
         }
