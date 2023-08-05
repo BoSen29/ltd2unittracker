@@ -111,7 +111,7 @@ function App() {
             wave = wave.wave
           }
           setCurrentMatch(current.uuid)
-          setWave(wave)
+          setWaveNumber(wave)
         }
         catch (ex) {
           console.log("Issues fetching data from the API, please reload")
