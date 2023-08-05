@@ -160,8 +160,14 @@ function App() {
               return i
             }
             else {
+              if (waveNumber === 1) {
+                return [i]
+              }
               if (waveNumber > 0) {
                 return [...i, waveNumber]
+              }
+              else {
+                return i
               }
             }
           })
@@ -300,7 +306,7 @@ function App() {
         !is2v2(playerData.players) && <button className='button_bottomrow button_showEastToggle' onClick={() => setShowEast(e => !e)}>Swap</button>
       }
       {
-        !isTailing && <button className='button__toggle_tailing button_bottomrow' onClick={() => setIsTailing(e => !e)}>{"To live"}</button>
+        !isTailing && !hidden && <button className='button__toggle_tailing button_bottomrow' onClick={() => setIsTailing(e => !e)}>{"To live"}</button>
       }
       <button className='button__toggle_visibility button_bottomrow' hidden={isStandalone() && !isConfig} onClick={() => setHidden(d => !d)}>{hidden ? "Show": "Hide"}</button>
     </div>
