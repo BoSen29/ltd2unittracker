@@ -156,7 +156,7 @@ function App() {
         if (waveData?.length > 0) {
           setWaveData(waveData[0].waves[0])
           setAvailableWaves(i => {
-            if (i.indexOf(waveNumber) != -1) {
+            if (i?.indexOf(waveNumber) != -1) {
               return i
             }
             else {
