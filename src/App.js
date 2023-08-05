@@ -7,18 +7,16 @@ import GameBoard from './components/GameBoard'
 import WaveHeader from './components/WaveHeader'
 import Config from './components/Config'
 import Authentication from './utils/auth'
-import { getEloImage, isDev, resturcturePlayerData, is2v2} from './utils/misc'
+import { getEloImage, isDev, resturcturePlayerData, is2v2, isStandalone} from './utils/misc'
 import {fetchWave, fetchCurrentMatch, fetchMatch} from './utils/api'
 import MatchHistoryOverlay from './components/MatchHistoryOverlay'
 
 function App() {
-  const [gamestate, setGamestate] = useState({})
   const [authStatus, setAuthStatus] = useState(false)
   const [canConfig, setCanConfig] = useState(isDev())
   const [isConfig, setIsConfig] = useState(window.location.hash.startsWith('#/conf'))
   const [waveNumber, setWaveNumber] = useState(0)
   const [currentMatch, setCurrentMatch] = useState()
-  const [liveMatchUUID, setLiveMatchUUID] = useState("")
   const [liveWave, setLiveWave] = useState(1)
   const [playerData, setPlayerData] = useState([])
   const [waveData, setWaveData] = useState({})
@@ -26,17 +24,13 @@ function App() {
   const [streamer, setStreamer] = useState()
   const [showEast, setShowEast] = useState(false)
   const [isTailing, setIsTailing] = useState(true)
-  const [currentMaxWave, setCurrentMaxWave] = useState(1)
   const [hidden, setHidden] = useState(false)
   const [availableWaves, setAvailableWaves] = useState([])
 
   const setWave = async (wave) => {
     try {
       setIsTailing(false)
-      let [ match ] = await fetchWave(streamer, currentMatch, wave)
-      match = match.waves
       setWaveNumber(wave)
-      setWaveData(...match)
     }
     catch {
       console.log("Error fetching data")
@@ -49,11 +43,8 @@ function App() {
   }
 
   const newGameHandler = async (payload) => {
-    setLiveMatchUUID(payload.match)
-    setLiveWave(payload.wave)
     setIsTailing(e => {
       if (e) {
-        setWaveNumber(payload.wave)
         setCurrentMatch(payload.match)
       }
       return e
@@ -61,37 +52,34 @@ function App() {
   }
 
   const newWaveHandler = async(payload) => {
-    console.log("NEW WAVE PAYLOAD", payload.wave)
-    setLiveMatchUUID(payload.match)
-    setLiveWave(payload.wave)
     setIsTailing(e => {
       if (e) {
-        setWaveNumber(payload.wave)
+        setCurrentMatch(m => {
+          if (m == payload.match) {
+            setWaveNumber(payload.wave)
+          }
+          else {
+            return payload.match
+          }
+          return m
+        })
       }
       return e
     })
-    setCurrentMatch(m => {
-      if (m == payload.match) {
-        setAvailableWaves(i => {
-          if (i.indexOf(payload.wave) != -1) {
-            return i
-          }
-          else {
-            return [...i, payload.wave]
-          }
-        })
-      }
-      return m
-    })
-
   }
 
   const gameEndedHandler = async(payload) => {
-    setLiveMatchUUID(payload.match)
-    setLiveWave(payload.wave)
     setIsTailing(e => {
       if (e) {
-        setWaveNumber(payload.wave)
+        setCurrentMatch(m => {
+          if (m == payload.match) {
+            setWaveNumber(payload.wave)
+          }
+          else {
+            return payload.match
+          }
+          return m
+        })
       }
       return e
     })
@@ -103,14 +91,14 @@ function App() {
 
   window.addEventListener('hashchange', (e) => {
     setIsConfig(window.location.hash.startsWith('#/conf'))
+    if (!window.location.hash.startsWith('#/conf') && isStandalone()) {
+      setStreamer(window.location.hash.split('#/')[1])  
+    }
   })
 
   let twitch = window.Twitch ? window.Twitch.ext : null
   const auth = new Authentication()
 
-  if (isDev()) {
-    //document.body.classList.add('development__background')
-  }
   useEffect(() => {
     if (isTailing && streamer?.length > 0) {
       (async () => {
@@ -122,11 +110,8 @@ function App() {
           if (isNaN(wave)) {
             wave = wave.wave
           }
-          let [ match ] = await fetchWave(streamer, current?.uuid, wave)
-          let waveData = match?.waves
-          setPlayerData(resturcturePlayerData(current))
-          setWaveNumber(wave)
-          setWaveData(...waveData)
+          setCurrentMatch(current.uuid)
+          setWave(wave)
         }
         catch (ex) {
           console.log("Issues fetching data from the API, please reload")
@@ -134,15 +119,15 @@ function App() {
         }
 
       })()
-      console.log("Tailing changes to the gamestate")
+      console.log("Tailing enabled")
     }
     else {
-      console.log("Is not tailing changes made to gamestate")
+      console.log("Tailing disabled")
     }
   }, [isTailing, streamer])
 
   useEffect(() => {
-    if (currentMatch) {
+    if (currentMatch != undefined) {
       fetchMatch(streamer, currentMatch).then(async (matchData) => {
         try {
           setPlayerData(resturcturePlayerData(matchData?.[0]))
@@ -155,7 +140,6 @@ function App() {
           if (isNaN(wave)) {
             wave = wave.wave
           }
-          setCurrentMaxWave(e => wave)
           setWaveNumber(e => wave)
           
         }
@@ -167,12 +151,23 @@ function App() {
   }, [currentMatch])
 
   useEffect(() => {
-    fetchWave(streamer, currentMatch, waveNumber).then(waveData => {
-      if (waveData?.length > 0) {
-        setWaveData(waveData[0].waves[0])
-      }
-    })
-  }, [waveNumber])
+    if (currentMatch != undefined) {
+      fetchWave(streamer, currentMatch, waveNumber).then(waveData => {
+        if (waveData?.length > 0) {
+          setWaveData(waveData[0].waves[0])
+          setAvailableWaves(i => {
+            if (i.indexOf(waveNumber) != -1) {
+              return i
+            }
+            else {
+              return [...i, waveNumber]
+            }
+          })
+        }
+      })
+    }
+    
+  }, [waveNumber, currentMatch])
 
 
   useEffect(() => {
@@ -209,8 +204,9 @@ function App() {
         }
       })
 
-      if (window.location.hostname === 'ltd2.krettur.no' || window.location.hostname === 'localhost') {
+      if (isStandalone()) {
         setStreamer(window.location.hash.split('#/')[1])    
+        document.body.classList.add('development__background')
       }
     }
   }, [])
@@ -244,6 +240,15 @@ function App() {
       Loading....
     </div>
   }
+
+  if (isStandalone() && window.location.hash === '') {
+    return <>
+      <div style={{color: 'white'}}>
+
+        No streamer specified, please add '/#/%streamername% to your url.'
+      </div>
+    </>
+  }
   return (
     <div className='app'>
       {
@@ -256,7 +261,6 @@ function App() {
             <WaveHeader
               wave={waveNumber}
               setWave={setWave}
-              finalWave={currentMaxWave}
               liveWave={liveWave}
               goToLive={goToLive}
               westKing={waveData?.leftKingHP === 0? 0: waveData?.leftKingHP || waveData?.leftKingStartHP}
@@ -296,7 +300,7 @@ function App() {
       {
         !isTailing && <button className='button__toggle_tailing button_bottomrow' onClick={() => setIsTailing(e => !e)}>{"To live"}</button>
       }
-      <button className='button__toggle_visibility button_bottomrow' onClick={() => setHidden(d => !d)}>{hidden ? "Show": "Hide"}</button>
+      <button className='button__toggle_visibility button_bottomrow' hidden={isStandalone() && !isConfig} onClick={() => setHidden(d => !d)}>{hidden ? "Show": "Hide"}</button>
     </div>
   )
 }
