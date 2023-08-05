@@ -177,8 +177,6 @@ function App() {
 
   useEffect(() => {
     if (isDev()) {
-      setStreamer("bosen")
-      return
     }
     if (twitch) {
       twitch.onAuthorized((a) => {
@@ -206,10 +204,14 @@ function App() {
         if (window?.Twitch?.ext?.configuration?.broadcaster?.content) {
           setStreamer(window?.Twitch?.ext?.configuration?.broadcaster?.content)
           console.log("Found configuration, connecting to " + window?.Twitch?.ext?.configuration?.broadcaster?.content)
-        } else {
+        } else {    
           console.log('No configuration found, awaiting configuration by the streamer.')
         }
       })
+
+      if (window.location.hostname === 'ltd2.krettur.no' || window.location.hostname === 'localhost') {
+        setStreamer(window.location.hash.split('#/')[1])    
+      }
     }
   }, [])
 
