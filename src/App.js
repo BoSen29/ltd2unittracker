@@ -93,6 +93,9 @@ function App() {
         setShowGuide(false)      
       }, 5000);
     }
+    else {
+      setHidden(false)
+    }
   },[])
 
   const goToLive = async () => {
@@ -273,7 +276,7 @@ function App() {
           <div className='config__container'>
             <Config/>
           </div>
-          : hidden && showGuide ?
+          : hidden && showGuide?
             <div className='guideArrow'>
               ↓
             </div>
@@ -321,7 +324,7 @@ function App() {
       {
         !isTailing && !hidden && <button className='button__toggle_tailing button_bottomrow' onClick={() => setIsTailing(e => !e)}>{"To live"}</button>
       }
-      <button className='button__toggle_visibility button_bottomrow' hidden={isStandalone() && !isConfig} onClick={() => {
+      <button className='button__toggle_visibility button_bottomrow' hidden={isStandalone() || !isConfig} onClick={() => {
         setHidden(d => !d)
         setShowGuide(false)
       }}>{hidden ? "Show": "Hide"}</button>

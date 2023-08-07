@@ -6,6 +6,7 @@ export default function Config() {
 
   const inputRef = createRef()
   const [config, setConfig] = useState('')
+  const [submitted, setSubmitted] = useState(false)
 
   const saveConfig = (conf) => {
     window.Twitch.ext.configuration.set('broadcaster', '1.0', (conf))
