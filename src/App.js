@@ -24,8 +24,9 @@ function App() {
   const [streamer, setStreamer] = useState()
   const [showEast, setShowEast] = useState(false)
   const [isTailing, setIsTailing] = useState(true)
-  const [hidden, setHidden] = useState(false)
+  const [hidden, setHidden] = useState(true)
   const [availableWaves, setAvailableWaves] = useState([])
+  const [showGuide, setShowGuide] = useState(false)
 
   const setWave = async (wave) => {
     try {
@@ -84,6 +85,15 @@ function App() {
       return e
     })
   }
+
+  useEffect(() => {
+    if (!isStandalone()) {
+      setShowGuide(true)
+      setTimeout(() => {
+        setShowGuide(false)      
+      }, 5000);
+    }
+  },[])
 
   const goToLive = async () => {
     setIsTailing(true)
@@ -151,7 +161,7 @@ function App() {
   }, [currentMatch])
 
   useEffect(() => {
-    if (currentMatch != undefined) {
+    if (currentMatch != undefined && !isNaN(waveNumber)) {
       fetchWave(streamer, currentMatch, waveNumber).then(waveData => {
         if (waveData?.length > 0) {
           setWaveData(waveData[0].waves[0])
@@ -161,7 +171,7 @@ function App() {
             }
             else {
               if (waveNumber === 1) {
-                return [i]
+                return [waveNumber]
               }
               if (waveNumber > 0) {
                 return [...i, waveNumber]
@@ -174,7 +184,6 @@ function App() {
         }
       })
     }
-    
   }, [waveNumber, currentMatch])
 
 
@@ -264,7 +273,11 @@ function App() {
           <div className='config__container'>
             <Config/>
           </div>
-          : !hidden &&<>
+          : hidden && showGuide ?
+            <div className='guideArrow'>
+              ↓
+            </div>
+           : !hidden &&<>
             <MatchHistoryOverlay isOpen={showHistory} setOpen={setShowHistory} player={streamer} setMatchUUID={setMatchAndRemoveTailing}/>
             <WaveHeader
               wave={waveNumber}
@@ -308,7 +321,10 @@ function App() {
       {
         !isTailing && !hidden && <button className='button__toggle_tailing button_bottomrow' onClick={() => setIsTailing(e => !e)}>{"To live"}</button>
       }
-      <button className='button__toggle_visibility button_bottomrow' hidden={isStandalone() && !isConfig} onClick={() => setHidden(d => !d)}>{hidden ? "Show": "Hide"}</button>
+      <button className='button__toggle_visibility button_bottomrow' hidden={isStandalone() && !isConfig} onClick={() => {
+        setHidden(d => !d)
+        setShowGuide(false)
+      }}>{hidden ? "Show": "Hide"}</button>
     </div>
   )
 }

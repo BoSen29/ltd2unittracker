@@ -88,3 +88,22 @@ body {
   right: 19vw;
   border: 1px solid white
 }
+
+.guideArrow {
+  font-size: 20vh;
+  text-shadow: 1px 1px 1px black;
+  right: 1vw;
+  bottom: 10vh;
+  position: absolute;
+  animation: MoveUpDown 1s linear infinite;
+  position: absolute;
+}
+
+@keyframes MoveUpDown {
+  0%, 100% {
+    bottom: 7vh;
+  }
+  50% {
+    bottom: 13vh;
+  }
+}
