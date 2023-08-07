@@ -110,4 +110,6 @@ body {
 
 .config__container {
   margin-top: 5vh;
+  width: 100%;
+  margin-left: 5vw;
 }

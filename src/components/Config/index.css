@@ -26,3 +26,12 @@
 .form-text__input:active {
     border: 0;
 }
+
+.submitted__button {
+    background-color: green !important;
+    border: 1px solid darkgreen !important;
+}
+
+.submitted__field {
+    border: 1px solid darkgreen;
+}
