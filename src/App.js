@@ -324,7 +324,7 @@ function App() {
       {
         !isTailing && !hidden && <button className='button__toggle_tailing button_bottomrow' onClick={() => setIsTailing(e => !e)}>{"To live"}</button>
       }
-      <button className='button__toggle_visibility button_bottomrow' hidden={isStandalone() || !isConfig} onClick={() => {
+      <button className='button__toggle_visibility button_bottomrow' hidden={isStandalone() || isConfig} onClick={() => {
         setHidden(d => !d)
         setShowGuide(false)
       }}>{hidden ? "Show": "Hide"}</button>
