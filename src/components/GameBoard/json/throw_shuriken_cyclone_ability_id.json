@@ -1,0 +1,7 @@
+{
+    "_id":  "throw_shuriken_cyclone_ability_id",
+    "baseDamage":  "35.00000",
+    "category":  "abilities",
+    "iconPath":  "Icons/ThrowShurikenCyclone.png",
+    "name":  "Throw Shuriken Cyclone"
+}

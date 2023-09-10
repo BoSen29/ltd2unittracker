@@ -1,0 +1,11 @@
+{
+    "_id":  "blue_wind_ability_id",
+    "aoeRange":  "500",
+    "baseDamage":  "80.00000",
+    "category":  "abilities",
+    "description":  "Shocks up to $1 nearby enemies for $2 + $3% max health damage. |img(icons/Magic.png) |proper(MagicAttack) ability damage.",
+    "descriptionId":  "blue_wind_description",
+    "iconPath":  "Icons/LightningStrike.png",
+    "name":  "Lightning Strike",
+    "tooltip":  "Shocks up to 5 nearby enemies for 80 + 0.15% max health damage. \u0026lt;img class=\u0027tooltip-icon\u0027 src=\u0027hud/img/icons/Magic.png\u0027 /\u0026gt; Magic ability damage."
+}

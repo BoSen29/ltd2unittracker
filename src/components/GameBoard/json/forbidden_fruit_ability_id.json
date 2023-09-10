@@ -1,0 +1,11 @@
+{
+    "_id":  "forbidden_fruit_ability_id",
+    "aoeRange":  "300",
+    "baseDamage":  "0.00000",
+    "category":  "abilities",
+    "description":  "Gains mana every time it attacks and is attacked. When this unit dies or reaches max mana, deals up to $1 damage to nearby enemies, based on its current mana. |img(icons/Magic.png) |proper(MagicAttack) ability damage.",
+    "descriptionId":  "forbidden_fruit_description",
+    "iconPath":  "Icons/ForbiddenFruit.png",
+    "name":  "Forbidden Fruit",
+    "tooltip":  "Gains mana every time it attacks and is attacked. When this unit dies or reaches max mana, deals up to 600 damage to nearby enemies, based on its current mana. \u0026lt;img class=\u0027tooltip-icon\u0027 src=\u0027hud/img/icons/Magic.png\u0027 /\u0026gt; Magic ability damage."
+}

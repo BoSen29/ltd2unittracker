@@ -1,0 +1,8 @@
+{
+    "_id":  "death_stare_boss_ability_id",
+    "bounces":  "0",
+    "category":  "abilities",
+    "duration":  "5.0000",
+    "iconPath":  "Icons/DeathStare.png",
+    "name":  "Death Stare"
+}

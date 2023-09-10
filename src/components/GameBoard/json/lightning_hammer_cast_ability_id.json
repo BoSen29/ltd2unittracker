@@ -1,0 +1,11 @@
+{
+    "_id":  "lightning_hammer_cast_ability_id",
+    "aoeRange":  "1000",
+    "bounces":  "999",
+    "category":  "abilities",
+    "description":  "Uses mana to unleash bouncing lightning bolts that deal Pure damage.",
+    "descriptionId":  "lightning_hammer_description",
+    "iconPath":  "Icons/LightningHammerBounce.png",
+    "name":  "Lightning Hammer Bounce",
+    "tooltip":  "Uses mana to unleash bouncing lightning bolts that deal Pure damage."
+}

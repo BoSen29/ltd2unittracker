@@ -1,0 +1,10 @@
+{
+    "_id":  "plasma_burst_ability_id",
+    "category":  "abilities",
+    "description":  "|desc(burst_attack,2,100)",
+    "descriptionId":  "plasma_burst_description",
+    "duration":  "3.00000",
+    "iconPath":  "Icons/PlasmaBurst.png",
+    "name":  "Plasma Burst",
+    "tooltip":  "Each attack launches 2 extra missiles, each dealing 100% base damage. Ability damage."
+}

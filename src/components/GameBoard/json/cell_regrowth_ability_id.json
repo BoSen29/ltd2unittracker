@@ -1,0 +1,9 @@
+{
+    "_id":  "cell_regrowth_ability_id",
+    "category":  "abilities",
+    "description":  "Starts with $1% health, but regenerates $2% of missing health per second",
+    "descriptionId":  "cell_regrowth_description",
+    "iconPath":  "Icons/CellRegrowth.png",
+    "name":  "Cell Regrowth",
+    "tooltip":  "Starts with 60% health, but regenerates 0.6% of missing health per second"
+}

@@ -1,0 +1,10 @@
+{
+    "_id":  "summon_imp_ability_id",
+    "category":  "abilities",
+    "description":  "Summons an Imp (magic/arcane)",
+    "descriptionId":  "summon_imp_description",
+    "duration":  "180.0000",
+    "iconPath":  "Icons/RaiseImp.png",
+    "name":  "Raise Imp",
+    "tooltip":  "Summons an Imp (magic/arcane)"
+}

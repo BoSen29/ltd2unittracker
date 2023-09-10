@@ -1,0 +1,11 @@
+{
+    "_id":  "chain_heal_ability_id",
+    "aoeRange":  "1000",
+    "bounces":  "3",
+    "category":  "abilities",
+    "description":  "Heals a nearby ally for $1 health, bouncing to $2 nearby allies",
+    "descriptionId":  "chain_heal_description",
+    "iconPath":  "Icons/ChainHeal.png",
+    "name":  "Chain Heal",
+    "tooltip":  "Heals a nearby ally for 130 health, bouncing to 3 nearby allies"
+}

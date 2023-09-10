@@ -1,0 +1,10 @@
+{
+    "_id":  "noxious_scent_ability_id",
+    "aoeRange":  "250",
+    "category":  "abilities",
+    "description":  "|desc(fragrance,30,0.06,0.06)",
+    "descriptionId":  "noxious_scent_description",
+    "iconPath":  "Icons/NoxiousScent.png",
+    "name":  "Noxious Scent",
+    "tooltip":  "Deals 30 + 0.06% max health magic damage to nearby enemies. Stacks with itself. Ability damage. "
+}

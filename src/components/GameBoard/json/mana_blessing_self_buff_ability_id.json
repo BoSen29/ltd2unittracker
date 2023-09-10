@@ -1,0 +1,7 @@
+{
+    "_id":  "mana_blessing_self_buff_ability_id",
+    "category":  "abilities",
+    "duration":  "5.0000",
+    "iconPath":  "Icons/ManaBlessing.png",
+    "name":  "Mana Blessing"
+}

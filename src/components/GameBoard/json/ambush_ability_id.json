@@ -1,0 +1,10 @@
+{
+    "_id":  "ambush_ability_id",
+    "category":  "abilities",
+    "description":  "Starts the battle burrowed and unburrows $1 seconds after being aggro\u0027d",
+    "descriptionId":  "ambush_description",
+    "duration":  "5.0000",
+    "iconPath":  "Icons/Ambush.png",
+    "name":  "Ambush",
+    "tooltip":  "Starts the battle burrowed and unburrows 5 seconds after being aggro\u0027d"
+}

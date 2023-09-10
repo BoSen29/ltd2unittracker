@@ -1,0 +1,9 @@
+{
+    "_id":  "guardian_angel_ability_id",
+    "category":  "abilities",
+    "description":  "Gives this fighter a guardian angel, which brings it back to life after it dies. It will revive with up to $1 health.",
+    "descriptionId":  "guardian_angel_description",
+    "iconPath":  "Icons/GuardianAngel.png",
+    "name":  "Guardian Angel",
+    "tooltip":  "Gives this fighter a guardian angel, which brings it back to life after it dies. It will revive with up to 1500 health."
+}

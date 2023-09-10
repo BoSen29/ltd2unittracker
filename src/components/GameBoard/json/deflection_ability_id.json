@@ -1,0 +1,9 @@
+{
+    "_id":  "deflection_ability_id",
+    "category":  "abilities",
+    "description":  "Reduces damage taken from ranged units by $1%",
+    "descriptionId":  "deflection_description",
+    "iconPath":  "Icons/Deflection.png",
+    "name":  "Deflection",
+    "tooltip":  "Reduces damage taken from ranged units by 15%"
+}

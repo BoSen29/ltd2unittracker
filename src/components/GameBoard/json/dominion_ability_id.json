@@ -1,0 +1,10 @@
+{
+    "_id":  "dominion_ability_id",
+    "aoeRange":  "120",
+    "category":  "abilities",
+    "description":  "Has $3% damage reduction. Damage and damage reduction are decreased by $1% for each adjacently-built unit that is equal or higher total fighter value than Alpha Male ($2 value)",
+    "descriptionId":  "dominion_description",
+    "iconPath":  "Icons/Dominion.png",
+    "name":  "Dominion",
+    "tooltip":  "Has 20% damage reduction. Damage and damage reduction are decreased by 7% for each adjacently-built unit that is equal or higher total fighter value than Alpha Male (285 value)"
+}

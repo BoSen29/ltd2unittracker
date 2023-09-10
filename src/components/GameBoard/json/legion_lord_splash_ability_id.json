@@ -1,0 +1,10 @@
+{
+    "_id":  "legion_lord_splash_ability_id",
+    "aoeRange":  "140",
+    "category":  "abilities",
+    "description":  "Each attack deals $1% damage to up to $2 nearby enemies",
+    "descriptionId":  "hell_fire_description",
+    "iconPath":  "Icons/Inferno.png",
+    "name":  "Inferno",
+    "tooltip":  "Each attack deals 5% damage to up to 5 nearby enemies"
+}

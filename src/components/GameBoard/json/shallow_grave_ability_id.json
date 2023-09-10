@@ -1,0 +1,10 @@
+{
+    "_id":  "shallow_grave_ability_id",
+    "category":  "abilities",
+    "description":  "Comes back to life $1 seconds after dying and gains $2% attack speed.",
+    "descriptionId":  "shallow_grave_description",
+    "duration":  "2.00000",
+    "iconPath":  "Icons/ShallowGrave.png",
+    "name":  "Shallow Grave",
+    "tooltip":  "Comes back to life 2 seconds after dying and gains 50% attack speed."
+}

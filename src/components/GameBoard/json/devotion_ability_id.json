@@ -1,0 +1,9 @@
+{
+    "_id":  "devotion_ability_id",
+    "category":  "abilities",
+    "description":  "Grants $2% missing health regeneration to the unit built directly behind it.",
+    "descriptionId":  "devotion_description",
+    "iconPath":  "Icons/Devotion.png",
+    "name":  "Devotion",
+    "tooltip":  "Grants 4.75% missing health regeneration to the unit built directly behind it."
+}

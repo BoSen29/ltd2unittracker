@@ -75,6 +75,10 @@ body {
   background-color: rgba(0, 0, 0, 0.4);
   bottom: 5vh;
 }
+.bottomrow {
+  position:absolute;
+  left:50vw;
+}
 
 .button__toggle_tailing {
   position: absolute;

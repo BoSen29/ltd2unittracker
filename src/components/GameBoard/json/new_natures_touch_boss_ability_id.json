@@ -1,0 +1,8 @@
+{
+    "_id":  "new_natures_touch_boss_ability_id",
+    "bounces":  "0",
+    "category":  "abilities",
+    "duration":  "3.000",
+    "iconPath":  "Icons/NaturesTouch.png",
+    "name":  "Nature\u0027s Touch"
+}

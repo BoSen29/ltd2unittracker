@@ -1,0 +1,9 @@
+{
+    "_id":  "crimson_claws_ability_id",
+    "category":  "abilities",
+    "description":  "|desc(high_voltage,0.7)",
+    "descriptionId":  "crimson_claws_description",
+    "iconPath":  "Icons/CrimsonClaws.png",
+    "name":  "Crimson Claws",
+    "tooltip":  "Restores 0.7 mana with each attack"
+}

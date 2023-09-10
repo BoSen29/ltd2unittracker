@@ -1,0 +1,10 @@
+{
+    "_id":  "dimensional_chasm_ability_id",
+    "category":  "abilities",
+    "description":  "Alternates between summoning an Elite Hellion and Elite Nightcrawler",
+    "descriptionId":  "dimensional_chasm_description",
+    "duration":  "180.00000",
+    "iconPath":  "Icons/DimensionalChasm.png",
+    "name":  "Dimensional Chasm",
+    "tooltip":  "Alternates between summoning an Elite Hellion and Elite Nightcrawler"
+}

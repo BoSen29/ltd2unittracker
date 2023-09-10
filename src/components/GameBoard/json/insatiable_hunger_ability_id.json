@@ -1,0 +1,9 @@
+{
+    "_id":  "insatiable_hunger_ability_id",
+    "category":  "abilities",
+    "description":  "Gains 1% bonus damage and heals by $2 whenever it kills a unit. ",
+    "descriptionId":  "insatiable_hunger_description",
+    "iconPath":  "Icons/InsatiableHunger.png",
+    "name":  "Insatiable Hunger",
+    "tooltip":  "Gains 1% bonus damage and heals by 100 whenever it kills a unit. "
+}

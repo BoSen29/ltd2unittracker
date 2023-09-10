@@ -1,0 +1,10 @@
+{
+    "_id":  "kraken_poison_ability_id",
+    "category":  "abilities",
+    "description":  "Each attack stuns its target for $1 second",
+    "descriptionId":  "kraken_poison_description",
+    "duration":  "1.0000",
+    "iconPath":  "Icons/ParalyzingGrasp.png",
+    "name":  "Paralyzing Grasp",
+    "tooltip":  "Each attack stuns its target for 1 second"
+}

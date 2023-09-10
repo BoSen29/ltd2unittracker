@@ -1,0 +1,10 @@
+{
+    "_id":  "aerial_command_oracle_ability_id",
+    "aoeRange":  "120",
+    "category":  "abilities",
+    "description":  "Increases the damage and ability damage of adjacently-built flying units by $2%, stacking up to $3 times.",
+    "descriptionId":  "aerial_command_description",
+    "iconPath":  "Icons/AerialCommand.png",
+    "name":  "Aerial Command",
+    "tooltip":  "Increases the damage and ability damage of adjacently-built flying units by 18%, stacking up to 2 times."
+}

@@ -1,0 +1,12 @@
+{
+    "_id":  "bombardier_ability_id",
+    "aoeRange":  "400",
+    "baseDamage":  "85.00000",
+    "category":  "abilities",
+    "cooldown":  "1.5000",
+    "description":  "Shoots a nearby non-flying enemy for $1 pierce damage every $2 seconds. Ability damage.",
+    "descriptionId":  "bombardier_description",
+    "iconPath":  "Icons/Bombardier.png",
+    "name":  "Bombardier",
+    "tooltip":  "Shoots a nearby non-flying enemy for 85 pierce damage every 1.5 seconds. Ability damage."
+}

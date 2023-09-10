@@ -1,0 +1,8 @@
+{
+    "_id":  "villainy_ranged_boss_ability_id",
+    "bounces":  "0",
+    "category":  "abilities",
+    "duration":  "3.00000",
+    "iconPath":  "Icons/Villainy.png",
+    "name":  "Villainy"
+}

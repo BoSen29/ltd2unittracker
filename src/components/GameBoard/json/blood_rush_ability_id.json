@@ -1,0 +1,10 @@
+{
+    "_id":  "blood_rush_ability_id",
+    "category":  "abilities",
+    "description":  "Increases attack speed of an ally by $1% and damage by $2 for $4 seconds",
+    "descriptionId":  "blood_rush_description",
+    "duration":  "5.00000",
+    "iconPath":  "Icons/BloodRush.png",
+    "name":  "Blood Rush",
+    "tooltip":  "Increases attack speed of an ally by 10% and damage by 40 for 5 seconds"
+}

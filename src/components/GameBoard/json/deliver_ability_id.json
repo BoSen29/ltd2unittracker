@@ -1,0 +1,7 @@
+{
+    "_id":  "deliver_ability_id",
+    "category":  "abilities",
+    "descriptionId":  "none_description",
+    "iconPath":  "Icons/Deliver.png",
+    "name":  "Deliver"
+}

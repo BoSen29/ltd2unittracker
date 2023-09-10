@@ -1,0 +1,10 @@
+{
+    "_id":  "harbinger_ability_ability_id",
+    "category":  "abilities",
+    "description":  "Each attack has a $1% ($2% for ranged) chance to stun its target for $3 second ($4 to bosses)",
+    "descriptionId":  "crushing_blow_description",
+    "duration":  "1.000",
+    "iconPath":  "Icons/CrushingBlow.png",
+    "name":  "Crushing Blow",
+    "tooltip":  "Each attack has a 25% (15% for ranged) chance to stun its target for 1 second (0.50 to bosses)"
+}

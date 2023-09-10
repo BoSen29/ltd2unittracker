@@ -1,0 +1,10 @@
+{
+    "_id":  "advanced_necromancy_ability_id",
+    "aoeRange":  "800",
+    "category":  "abilities",
+    "description":  "Restores $1 mana when a nearby unit dies, excluding Froggos",
+    "descriptionId":  "witchcraft_description",
+    "iconPath":  "Icons/Witchcraft.png",
+    "name":  "Witchcraft",
+    "tooltip":  "Restores 3 mana when a nearby unit dies, excluding Froggos"
+}

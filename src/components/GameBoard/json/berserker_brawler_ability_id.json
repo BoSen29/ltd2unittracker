@@ -1,0 +1,10 @@
+{
+    "_id":  "berserker_brawler_ability_id",
+    "baseDamage":  "30.0000",
+    "category":  "abilities",
+    "description":  "Deals $1 ($2 to bosses) damage per attack. |img(icons/Magic.png) |proper(MagicAttack) ability damage.",
+    "descriptionId":  "brawler_description",
+    "iconPath":  "Icons/Brawler.png",
+    "name":  "Brawler",
+    "tooltip":  "Deals 30 (91 to bosses) damage per attack. \u0026lt;img class=\u0027tooltip-icon\u0027 src=\u0027hud/img/icons/Magic.png\u0027 /\u0026gt; Magic ability damage."
+}

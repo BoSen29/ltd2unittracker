@@ -1,0 +1,10 @@
+{
+    "_id":  "aegis_ability_id",
+    "category":  "abilities",
+    "description":  "Gains mana every time it attacks and is attacked. Each $2% mana increases attack speed by $3% and health by $1. At max mana, attacks deal $4% splash damage in a small radius for $5 attacks.",
+    "descriptionId":  "aegis_description",
+    "duration":  "25.00000",
+    "iconPath":  "Icons/Aegis.png",
+    "name":  "Aegis",
+    "tooltip":  "Gains mana every time it attacks and is attacked. Each 10% mana increases attack speed by 4% and health by 80. At max mana, attacks deal 25% splash damage in a small radius for 25 attacks."
+}

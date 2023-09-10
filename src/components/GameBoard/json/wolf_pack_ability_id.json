@@ -1,0 +1,11 @@
+{
+    "_id":  "wolf_pack_ability_id",
+    "bounces":  "0",
+    "category":  "abilities",
+    "description":  "Each attack applies a stack of |proper(wolf_prey) for $3 seconds (stacking up to $4 times). Deals $1 ($2 to bosses) bonus damage for each stack of |proper(wolf_prey) on its attack target.",
+    "descriptionId":  "wolf_pack_description",
+    "duration":  "3.000",
+    "iconPath":  "Icons/WolfPack.png",
+    "name":  "Wolf Pack",
+    "tooltip":  "Each attack applies a stack of Wolf Prey for 3 seconds (stacking up to 10 times). Deals 6% (3% to bosses) bonus damage for each stack of Wolf Prey on its attack target."
+}

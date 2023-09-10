@@ -1,0 +1,7 @@
+{
+    "_id":  "council_antler_ability_id",
+    "aoeRange":  "120",
+    "category":  "abilities",
+    "iconPath":  "Icons/Council.png",
+    "name":  "Council"
+}

@@ -1,0 +1,9 @@
+{
+    "_id":  "arm_with_shuriken_ability_id",
+    "category":  "abilities",
+    "description":  "Pay gold to equip with a shuriken for the next wave only. Each shuriken deals $1 bonus damage from range. Ability damage.",
+    "descriptionId":  "arm_with_shuriken_description",
+    "iconPath":  "Icons/ArmWithShuriken.png",
+    "name":  "Arm With Shuriken",
+    "tooltip":  "Pay gold to equip with a shuriken for the next wave only. Each shuriken deals 35 bonus damage from range. Ability damage."
+}

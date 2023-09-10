@@ -1,0 +1,11 @@
+{
+    "_id":  "pulverize_melee_ability_id",
+    "bounces":  "0",
+    "category":  "abilities",
+    "description":  "This unit is a Pulverizer. It has +$5% attack speed and a $1% ($2% for ranged) chance to stun its target for $3 seconds ($4 to bosses)",
+    "descriptionId":  "pulverize_description",
+    "duration":  "2.00000",
+    "iconPath":  "Icons/Pulverize.png",
+    "name":  "Pulverize",
+    "tooltip":  "This unit is a Pulverizer. It has +4% attack speed and a 34% (17% for ranged) chance to stun its target for 2 seconds (0.3 to bosses)"
+}

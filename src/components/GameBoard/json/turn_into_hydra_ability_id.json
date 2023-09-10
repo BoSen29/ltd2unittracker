@@ -1,0 +1,7 @@
+{
+    "_id":  "turn_into_hydra_ability_id",
+    "category":  "abilities",
+    "descriptionId":  "none_description",
+    "iconPath":  "Icons/TurnIntoHydra.png",
+    "name":  "Turn Into Hydra"
+}

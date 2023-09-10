@@ -1,0 +1,7 @@
+{
+    "_id":  "duelist_boss_ability_id",
+    "baseDamage":  "240.0000",
+    "category":  "abilities",
+    "iconPath":  "Icons/Duelist.png",
+    "name":  "Duelist"
+}

@@ -1,0 +1,6 @@
+{
+    "_id":  "reset_mana_on_becomes_tower_ability_id",
+    "category":  "abilities",
+    "iconPath":  "Icons/ResetManaOnBecomesTower.png",
+    "name":  "Reset Mana On Becomes Tower"
+}

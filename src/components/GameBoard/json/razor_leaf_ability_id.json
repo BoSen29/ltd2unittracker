@@ -1,0 +1,10 @@
+{
+    "_id":  "razor_leaf_ability_id",
+    "aoeRange":  "250",
+    "category":  "abilities",
+    "description":  "Each attack deals $1 damage to nearby enemies. Ability damage.",
+    "descriptionId":  "razor_leaf_description",
+    "iconPath":  "Icons/RazorLeaf.png",
+    "name":  "Razor Leaf",
+    "tooltip":  "Each attack deals 100% damage to nearby enemies. Ability damage."
+}

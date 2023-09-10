@@ -1,0 +1,7 @@
+{
+    "_id":  "move_ability_id",
+    "category":  "abilities",
+    "descriptionId":  "none_description",
+    "iconPath":  "Icons/Move.png",
+    "name":  "Move"
+}

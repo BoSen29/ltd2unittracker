@@ -1,0 +1,9 @@
+{
+    "_id":  "Vampire_ability_id",
+    "category":  "abilities",
+    "description":  "Makes this fighter a vampire, giving it Vampirism Aura.|n|n|c(ff8800):Vampirism Aura:|r Adjacently-built units gain $3% lifesteal and ability vamp",
+    "descriptionId":  "vampire_description",
+    "iconPath":  "Icons/Vampire.png",
+    "name":  "Vampire",
+    "tooltip":  "Makes this fighter a vampire, giving it Vampirism Aura.\u0026lt;br\u0026gt;\u0026lt;br\u0026gt;\u0026lt;span style=\u0027color: #ff8800\u0027\u0026gt;Vampirism Aura:\u0026lt;/span\u0026gt; Adjacently-built units gain 24% lifesteal and ability vamp"
+}

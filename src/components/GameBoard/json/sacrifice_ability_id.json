@@ -1,0 +1,9 @@
+{
+    "_id":  "sacrifice_ability_id",
+    "category":  "abilities",
+    "description":  "Sells this fighter for $1% value",
+    "descriptionId":  "sacrifice_description",
+    "iconPath":  "Icons/Sacrifice.png",
+    "name":  "Sacrifice",
+    "tooltip":  "Sells this fighter for 100% value"
+}

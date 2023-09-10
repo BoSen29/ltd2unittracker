@@ -1,0 +1,9 @@
+{
+    "_id":  "shuriken_cyclone_ability_id",
+    "category":  "abilities",
+    "description":  "Pay gold to equip with $1 shurikens for next wave only. Each shuriken deals $2 bonus damage from range and attacks $3x as fast. Ability damage.",
+    "descriptionId":  "shuriken_cyclone_description",
+    "iconPath":  "Icons/ShurikenCyclone.png",
+    "name":  "Shuriken Cyclone",
+    "tooltip":  "Pay gold to equip with 3 shurikens for next wave only. Each shuriken deals 35 bonus damage from range and attacks 1.85x as fast. Ability damage."
+}

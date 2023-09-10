@@ -1,0 +1,10 @@
+{
+    "_id":  "split_shot_ability_id",
+    "bounces":  "0",
+    "category":  "abilities",
+    "description":  "Fires $1 additional attacks at enemies near its attack target. Multiple strikes can hit the same target. Ability damage.",
+    "descriptionId":  "split_shot_description",
+    "iconPath":  "Icons/SplitShot.png",
+    "name":  "Split Shot",
+    "tooltip":  "Fires 2 additional attacks at enemies near its attack target. Multiple strikes can hit the same target. Ability damage."
+}

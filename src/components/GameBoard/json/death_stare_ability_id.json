@@ -1,0 +1,11 @@
+{
+    "_id":  "death_stare_ability_id",
+    "bounces":  "0",
+    "category":  "abilities",
+    "description":  "Each attack amplifies damage taken by $1% ($2% against the king), stacking up to $3 times",
+    "descriptionId":  "death_stare_description",
+    "duration":  "5.0000",
+    "iconPath":  "Icons/DeathStare.png",
+    "name":  "Death Stare",
+    "tooltip":  "Each attack amplifies damage taken by 8% (2% against the king), stacking up to 9 times"
+}

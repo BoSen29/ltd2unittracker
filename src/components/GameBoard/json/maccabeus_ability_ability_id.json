@@ -1,0 +1,10 @@
+{
+    "_id":  "maccabeus_ability_ability_id",
+    "aoeRange":  "140",
+    "category":  "abilities",
+    "description":  "Each attack deals $1% damage to up to $2 nearby enemies",
+    "descriptionId":  "immolate_description",
+    "iconPath":  "Icons/Immolate.png",
+    "name":  "Immolate",
+    "tooltip":  "Each attack deals 10% damage to up to 5 nearby enemies"
+}

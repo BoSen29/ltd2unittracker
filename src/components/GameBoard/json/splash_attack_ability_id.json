@@ -1,0 +1,10 @@
+{
+    "_id":  "splash_attack_ability_id",
+    "aoeRange":  "200",
+    "category":  "abilities",
+    "description":  "Each attack deals $1% damage in $2 area.",
+    "descriptionId":  "splash_attack_description",
+    "iconPath":  "Icons/GenericSplashAttack.png",
+    "name":  "Generic Splash Attack",
+    "tooltip":  "Each attack deals 50% damage in 200 area."
+}

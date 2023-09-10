@@ -1,0 +1,7 @@
+{
+    "_id":  "mana_miracle_self_buff_ability_id",
+    "category":  "abilities",
+    "duration":  "5.0000",
+    "iconPath":  "Icons/ManaMiracle.png",
+    "name":  "Mana Miracle"
+}

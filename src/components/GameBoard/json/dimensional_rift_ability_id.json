@@ -1,0 +1,10 @@
+{
+    "_id":  "dimensional_rift_ability_id",
+    "category":  "abilities",
+    "description":  "Summons a Hellion and Nightcrawler",
+    "descriptionId":  "dimensional_rift_description",
+    "duration":  "180.00000",
+    "iconPath":  "Icons/DimensionalRift.png",
+    "name":  "Dimensional Rift",
+    "tooltip":  "Summons a Hellion and Nightcrawler"
+}

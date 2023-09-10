@@ -1,0 +1,10 @@
+{
+    "_id":  "raise_juggernaut_ability_id",
+    "category":  "abilities",
+    "description":  "Summons an Undead Dragon (magic/arcane)",
+    "descriptionId":  "raise_juggernaut_description",
+    "duration":  "40.00000",
+    "iconPath":  "Icons/ConjureDragon.png",
+    "name":  "Conjure Dragon",
+    "tooltip":  "Summons an Undead Dragon (magic/arcane)"
+}

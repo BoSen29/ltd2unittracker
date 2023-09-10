@@ -1,0 +1,10 @@
+{
+    "_id":  "conjure_thanatos_ability_id",
+    "category":  "abilities",
+    "description":  "Summons |proper(thanatos) (|proper(MagicAttack)/|proper(ArcaneArmor))",
+    "descriptionId":  "conjure_thanatos_description",
+    "duration":  "40.00000",
+    "iconPath":  "Icons/ConjureThanatos.png",
+    "name":  "Conjure Thanatos",
+    "tooltip":  "Summons Thanatos (Magic/Arcane)"
+}

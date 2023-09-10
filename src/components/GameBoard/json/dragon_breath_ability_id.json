@@ -1,0 +1,10 @@
+{
+    "_id":  "dragon_breath_ability_id",
+    "aoeRange":  "150",
+    "category":  "abilities",
+    "description":  "Deals splash damage.",
+    "descriptionId":  "dragon_breath_description",
+    "iconPath":  "Icons/DragonBreath.png",
+    "name":  "Dragon Breath",
+    "tooltip":  "Deals splash damage."
+}

@@ -1,0 +1,10 @@
+{
+    "_id":  "mana_blessing_ability_id",
+    "aoeRange":  "1000",
+    "category":  "abilities",
+    "description":  "Restore the mana of nearby allies. Each point of mana restores $1 mana. Extra mana will bounce to nearby allies. If there are no nearby allies in need of mana, instead boosts its own attack speed and damage reduction by $3% for 5 seconds.",
+    "descriptionId":  "mana_blessing_description",
+    "iconPath":  "Icons/ManaBlessing.png",
+    "name":  "Mana Blessing",
+    "tooltip":  "Restore the mana of nearby allies. Each point of mana restores 0.9 mana. Extra mana will bounce to nearby allies. If there are no nearby allies in need of mana, instead boosts its own attack speed and damage reduction by 20% for 5 seconds."
+}

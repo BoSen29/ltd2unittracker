@@ -1,0 +1,7 @@
+{
+    "_id":  "overcharge_ability_id",
+    "aoeRange":  "120",
+    "category":  "abilities",
+    "iconPath":  "Icons/MythiumCore.png",
+    "name":  "Mythium Core"
+}

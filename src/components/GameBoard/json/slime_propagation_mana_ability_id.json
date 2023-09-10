@@ -1,0 +1,7 @@
+{
+    "_id":  "slime_propagation_mana_ability_id",
+    "category":  "abilities",
+    "descriptionId":  "none_description",
+    "iconPath":  "Icons/SlimePropagationManaOnAttacked.png",
+    "name":  "Slime Propagation Mana On Attacked"
+}

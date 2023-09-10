@@ -1,0 +1,10 @@
+{
+    "_id":  "healing_aura_ability_id",
+    "aoeRange":  "1000",
+    "category":  "abilities",
+    "description":  "Nearby allies recover $1 ($3 for bosses) health per second. Does not stack.",
+    "descriptionId":  "healing_aura_description",
+    "iconPath":  "Icons/HealingAura.png",
+    "name":  "Healing Aura",
+    "tooltip":  "Nearby allies recover 7 (14 for bosses) health per second. Does not stack."
+}

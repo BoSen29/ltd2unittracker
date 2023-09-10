@@ -1,0 +1,10 @@
+{
+    "_id":  "mindwarp_ability_id",
+    "category":  "abilities",
+    "description":  "Increase the attack speed of the highest DPS nearby unit by $1% for $3 seconds",
+    "descriptionId":  "mindwarp_description",
+    "duration":  "5.00000",
+    "iconPath":  "Icons/MindWarp.png",
+    "name":  "Mind Warp",
+    "tooltip":  "Increase the attack speed of the highest DPS nearby unit by 35% for 5 seconds"
+}

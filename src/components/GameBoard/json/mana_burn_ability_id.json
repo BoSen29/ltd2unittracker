@@ -1,0 +1,9 @@
+{
+    "_id":  "mana_burn_ability_id",
+    "category":  "abilities",
+    "description":  "Burns $1% of the target\u0027s max mana with each attack.|n|n|c(cccccc):Only affects units with natural mana regen.|r",
+    "descriptionId":  "mana_burn_description",
+    "iconPath":  "Icons/ManaBurn.png",
+    "name":  "Mana Burn",
+    "tooltip":  "Burns 5% of the target\u0027s max mana with each attack.\u0026lt;br\u0026gt;\u0026lt;br\u0026gt;\u0026lt;span style=\u0027color: #cccccc\u0027\u0026gt;Only affects units with natural mana regen.\u0026lt;/span\u0026gt;"
+}

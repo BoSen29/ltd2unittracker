@@ -1,0 +1,10 @@
+{
+    "_id":  "sorcery_mana_regen_oracle_ability_id",
+    "aoeRange":  "120",
+    "category":  "abilities",
+    "description":  "This unit has bonus mana regen",
+    "descriptionId":  "magic_aura_description",
+    "iconPath":  "Icons/MagicAura.png",
+    "name":  "Magic Aura",
+    "tooltip":  "This unit has bonus mana regen"
+}

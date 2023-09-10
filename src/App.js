@@ -3,6 +3,7 @@ import React, {useEffect, useState} from 'react'
 import './variables.css'
 import './App.css'
 
+import $ from "jquery";
 import GameBoard from './components/GameBoard'
 import WaveHeader from './components/WaveHeader'
 import Config from './components/Config'
@@ -10,12 +11,18 @@ import Authentication from './utils/auth'
 import { getEloImage, isDev, resturcturePlayerData, is2v2, isStandalone} from './utils/misc'
 import {fetchWave, fetchCurrentMatch, fetchMatch} from './utils/api'
 import MatchHistoryOverlay from './components/MatchHistoryOverlay'
+import UnitOverlayConfig from './components/UnitOverlayConfig'
+import { SelectProvider } from '@mui/base';
+import { formControlClasses } from '@mui/material';
 
 function App() {
+
+
   const [authStatus, setAuthStatus] = useState(false)
   const [canConfig, setCanConfig] = useState(isDev())
   const [isConfig, setIsConfig] = useState(window.location.hash.startsWith('#/conf'))
   const [waveNumber, setWaveNumber] = useState(0)
+  
   const [currentMatch, setCurrentMatch] = useState()
   const [liveWave, setLiveWave] = useState(1)
   const [playerData, setPlayerData] = useState([])
@@ -27,6 +34,22 @@ function App() {
   const [hidden, setHidden] = useState(true)
   const [availableWaves, setAvailableWaves] = useState([])
   const [showGuide, setShowGuide] = useState(false)
+
+  const [showOverlay, setShowOverlay] = useState(false)
+
+  
+
+  const [overlayConfigValues, setOverlayConfigValues] = React.useState({
+    AttackDefense:false,
+    Cost:false,
+  });
+
+//   function sleep(ms) 
+//   {
+//     var e = new Date().getTime() + (1);
+//     while (new Date().getTime() <= e) {}
+//   }
+// //  sleep(500); 
 
   const setWave = async (wave) => {
     try {
@@ -167,7 +190,9 @@ function App() {
     if (currentMatch != undefined && !isNaN(waveNumber)) {
       fetchWave(streamer, currentMatch, waveNumber).then(waveData => {
         if (waveData?.length > 0) {
+          console.log("pre- wavedata set")
           setWaveData(waveData[0].waves[0])
+          console.log("post- wavedata set")
           setAvailableWaves(i => {
             if (i?.indexOf(waveNumber) != -1) {
               return i
@@ -225,7 +250,7 @@ function App() {
       })
 
       if (isStandalone()) {
-        setStreamer(window.location.hash.split('#/')[1])    
+        setStreamer('gerksterr')    
         document.body.classList.add('development__background')
       }
     }
@@ -255,13 +280,204 @@ function App() {
     }
   }, [streamer])
 
+
+// let m;
+//   useEffect(() =>{
+//     (async () => {
+      
+//   try {
+//   // let unitsJson = await (await fetch("http://localhost:3001/json/units/u")).json();
+//   //     for(let i = 0; i <unitsJson.length; i++){
+//   //       let json = unitsJson[i];
+//   //       unitId_UnitDesc.set(json.unitId, json);
+//   //     }
+//   let resp = await fetch("https://ltd2.krettur.no/units/harpy_unit_id.json");
+//   let text = await resp.text();
+//  let unitsJson = await (await fetch("ltd2.krettur.no/units/harpy_unit_id.json")).json();
+//       for(let i = 0; i <unitsJson.length; i++){
+//         let json = unitsJson[i];
+//         unitId_UnitDesc.set(json.unitId, json);
+//       }
+//     } catch(e){
+//       e=e;
+//     }
+
+//     let req =  await fetch("ltd2.krettur.no/units/harpy_unit_id.json")
+//     if (req.status == 200) {
+//       try {
+//         let { matches } = await req.json();
+//         matches=matches;
+//         m = matches;
+//       } catch(e){
+//         e=e;
+//       }
+//         //return matches
+//     }
+//     else {
+//         //return []
+//     }
+//   })();
+//   });
+// m = m;
+
+// const [auras, setAuras] = useState(new Set(    
+//   [
+//     "aerial_command",
+//     "cannibalism",
+//     "leech",
+//     "overcharge",
+//     "energize",
+// "council",
+// "resonance",
+// "amplify_magic",
+//   ]));
+// const [auraIdToDisplayName, setAuraIdToDisplayName] = useState(new Map([
+//   ["aerial_command", "AerialCommand"],
+//   ["cannibalism", "Cannibalism"],
+//   ["leech", "Leech"],
+//   ["overcharge", "Overcharge"],
+//   ["energize", "Energize"],
+//   ["council", "Council"],
+//   ["resonance", "Resonance"],
+//   ["amplify_magic", "AmplifyMagic"],
+// ]));
+// const [unitIdToUnitDesc, setUnitIdToUnitDesc] = useState(new Map());
+const [auras, setAuras] = useState(new Set(    
+  [
+    "aerial_command_ability_id",
+    "cannibalism_ability_id",
+    "leech_ability_id",
+    "overcharge_ability_id",
+    "energize_ability_id",
+"council_ability_id",
+"resonance_ability_id",
+"amplify_magic_ability_id",
+  ]));
+const [auraIdToDisplayName, setAuraIdToDisplayName] = useState(new Map([
+  ["aerial_command_ability_id", "AerialCommand"],
+  ["cannibalism_ability_id", "Cannibalism"],
+  ["leech_ability_id", "Leech"],
+  ["overcharge_ability_id", "Overcharge"],
+  ["energize_ability_id", "Energize"],
+  ["council_ability_id", "Council"],
+  ["resonance_ability_id", "Resonance"],
+  ["amplify_magic_ability_id", "AmplifyMagic"],
+]));
+const [unitIdToUnitDesc, setUnitIdToUnitDesc] = useState(new Map());
+
+
+// useEffect(() => {
+//   auras = new Set(    
+//     [
+//       "aerial_command_ability_id",
+//       "cannibalism_ability_id",
+//       "leech_ability_id",
+//       "overcharge_ability_id",
+//       "energize_ability_id",
+//   "council_ability_id",
+// "resonance_ability_id",
+// "amplify_magic_ability_id",
+//     ]);
+//     auraIdToDisplayName = new Map([
+//       ["aerial_command_ability_id", "AerialCommand"],
+//       ["cannibalism_ability_id", "Cannibalism"],
+//       ["leech_ability_id", "Leech"],
+//       ["overcharge_ability_id", "Overcharge"],
+//       ["energize_ability_id", "Energize"],
+//       ["council_ability_id", "Council"],
+//       ["resonance_ability_id", "Resonance"],
+//       ["amplify_magic_ability_id", "AmplifyMagic"],
+//     ]);
+
+//     setAuras(auras); setAuraIdToDisplayName(auraIdToDisplayName);
+// },[]);
+const [overlayData, setOverlayData] = useState( {  
+  unitIdToUnitDesc: unitIdToUnitDesc,
+  auras: auras,
+  auraIdToDisplayName: auraIdToDisplayName,
+ });
+  console.log("auras.size: " + auras.size);
+//  console.log("auraIdToDisplayName.size: " + auraIdToDisplayName.size);
+
+useEffect(() =>  {
+//   let unitsJson = require("./units.json");
+//   for(let i = 0; i <unitsJson.length; i++){
+//     let json = unitsJson[i];
+//     unitIdToUnitDesc.set(json.unitId, json);
+//   }
+//  //setUnitIdToUnitDesc(unitIdToUnitDesc);
+//   setOverlayData({
+//     unitIdToUnitDesc: unitIdToUnitDesc,
+//     auras: auras,
+//     auraIdToDisplayName: auraIdToDisplayName,
+//   });
+// return;
+
+(async () => {
+  try {
+  let unitsJson = await (await fetch(`http://localhost:3001/units`)).json();
+  for(let i = 0; i <unitsJson.length; i++){
+    let json = unitsJson[i];    
+    json.unitId += "_unit_id";
+    for(let i_auras = 0; i_auras < json.abilities.length; i_auras++)
+      json.abilities[i_auras] += "_ability_id";
+    json.ingameName = json.iconPath.split("Icons/")[1].split(".png")[0];
+    unitIdToUnitDesc.set(json.unitId, json);
+
+  }
+ //setUnitIdToUnitDesc(unitIdToUnitDesc);
+  setOverlayData({
+    unitIdToUnitDesc: unitIdToUnitDesc,
+    auras: overlayData.auras,
+    auraIdToDisplayName: overlayData.auraIdToDisplayName,
+  });
+} catch(e){
+  e= e;
+  console.log(e);
+}
+})();
+return;
+
+  (async () => {
+    try{
+    if(waveData == null){
+     return;
+    }
+    
+    console.log("391");
+  for(let unit of waveData?.units){
+    console.log("beenhit");
+    if(!unitIdToUnitDesc.has(unit.displayName)){
+
+      unitIdToUnitDesc.set(unit.displayName, await (await fetch(`https://ltd2.krettur.no/units/${unit.displayName}.json`)).json());
+    }
+  }
+} catch(e){
+  e=e;
+}
+  //setUnitIdToUnitDesc(unitIdToUnitDesc);
+  console.log("auras.size: " + auras.size);
+  console.log("auraIdToDisplayName.size: " + auraIdToDisplayName.size);
+  setOverlayData({
+    unitIdToUnitDesc: unitIdToUnitDesc,
+    auras: auras,
+    auraIdToDisplayName: auraIdToDisplayName,
+  });
+})();
+
+  }, waveData.units);
+useEffect(() =>{
+  console.log(waveData?.units?.length);
+}, waveData.units);
+
+
   if (!authStatus && !!auth.getUserId()) {
     return <div>
       Loading....
     </div>
   }
 
-  if (isStandalone() && window.location.hash === '') {
+  if (false && isStandalone() && window.location.hash === '') {
     return <>
       <div style={{color: 'white'}}>
 
@@ -269,6 +485,14 @@ function App() {
       </div>
     </>
   }
+  $.ajaxSetup({
+    async: false
+});
+
+
+// let q = $.getJSON("C:/Users/User/Documents/GitHub/ltd2unittracker/src/index.js");
+// let jsonn = q.responseText;
+// let w = jsonn;
   return (
     <div className='app'>
       {
@@ -293,8 +517,18 @@ function App() {
               />
             <div className='game-boards__area'>
               {
+                (() => {
+                if(waveData?.units != undefined){
+                  return;
+                }  
+                })()
+              }
+              {
                 playerData.players && Object.values(playerData.players)
                   .filter(p => {
+                    if(waveData?.units != null){
+                      let k = 1;
+                    }
                     if (is2v2(playerData.players)) { return true}
                     if (showEast) {
                       return p.player > 4
@@ -312,7 +546,10 @@ function App() {
                             recceived={waveData?.recceivedAmount?.filter(ra => ra.player === player.player) || []}
                             leaks={waveData?.leaks?.filter(l => l.player === player.player) || []}
                             postGameStats={waveData?.postGameStats?.filter(pgs => pgs.player === player.player) || []}
-                            key={player.player}/>
+                            key={player.player}
+                            overlayConfigValues={overlayConfigValues}
+                            overlayData = {overlayData}
+                            />
                 })
               }
             </div>
@@ -328,6 +565,12 @@ function App() {
         setHidden(d => !d)
         setShowGuide(false)
       }}>{hidden ? "Show": "Hide"}</button>
+      <button className='button__toggle_visibility button_bottomrow' onClick={() => {
+        setShowOverlay(!showOverlay)
+      }}>Toggle Overlay</button>      
+      <UnitOverlayConfig overlayConfigValues={overlayConfigValues} setOverlayConfigValues={setOverlayConfigValues} className="bottomrow"></UnitOverlayConfig>
+      <div className="button__toggle_visibility button_bottomrow">FFFF</div>
+
     </div>
   )
 }

@@ -1,0 +1,6 @@
+{
+    "_id":  "disable_mana_regen_tower_only_ability_id",
+    "category":  "abilities",
+    "iconPath":  "Icons/DisableManaRegen(TowerOnly).png",
+    "name":  "Disable Mana Regen (Tower Only)"
+}

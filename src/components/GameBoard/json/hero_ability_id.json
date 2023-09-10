@@ -1,0 +1,9 @@
+{
+    "_id":  "hero_ability_id",
+    "category":  "abilities",
+    "description":  "Makes this fighter a hero, giving it Heroism Aura.|n|n|c(ff8800):Heroism Aura:|r Adjacently-built units gain +$2% damage and damage reduction",
+    "descriptionId":  "hero_description",
+    "iconPath":  "Icons/Hero.png",
+    "name":  "Hero",
+    "tooltip":  "Makes this fighter a hero, giving it Heroism Aura.\u0026lt;br\u0026gt;\u0026lt;br\u0026gt;\u0026lt;span style=\u0027color: #ff8800\u0027\u0026gt;Heroism Aura:\u0026lt;/span\u0026gt; Adjacently-built units gain +4.5% damage and damage reduction"
+}

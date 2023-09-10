@@ -1,0 +1,11 @@
+{
+    "_id":  "iron_hail_ability_id",
+    "aoeRange":  "150",
+    "baseDamage":  "20.00000",
+    "category":  "abilities",
+    "description":  "Unleashes a volley of cursed swords, dealing $1 |proper(PierceAttack) damage in a small area around the target. Ability damage.",
+    "descriptionId":  "iron_hail_description",
+    "iconPath":  "Icons/IronHail.png",
+    "name":  "Iron Hail",
+    "tooltip":  "Unleashes a volley of cursed swords, dealing 20x3 Pierce damage in a small area around the target. Ability damage."
+}

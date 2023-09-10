@@ -1,0 +1,10 @@
+{
+    "_id":  "precision_ability_id",
+    "baseDamage":  "15.00000",
+    "category":  "abilities",
+    "description":  "|desc(accuracy,15)",
+    "descriptionId":  "precision_description",
+    "iconPath":  "Icons/Precision.png",
+    "name":  "Precision",
+    "tooltip":  "Deals 15 bonus damage to bosses. \u0026lt;img class=\u0027tooltip-icon\u0027 src=\u0027hud/img/icons/Pure.png\u0027 /\u0026gt; Pure ability damage."
+}

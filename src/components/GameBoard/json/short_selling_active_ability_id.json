@@ -1,0 +1,9 @@
+{
+    "_id":  "short_selling_active_ability_id",
+    "category":  "abilities",
+    "description":  "Does not gain mana or gold from |proper(aggressive_portfolio) this wave, but also does not lose mana if it dies.",
+    "descriptionId":  "short_selling_description",
+    "iconPath":  "Icons/ShortSelling.png",
+    "name":  "Short Selling",
+    "tooltip":  "Does not gain mana or gold from Aggressive Portfolio this wave, but also does not lose mana if it dies."
+}

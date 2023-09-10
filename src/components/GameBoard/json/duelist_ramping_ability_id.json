@@ -1,0 +1,10 @@
+{
+    "_id":  "duelist_ramping_ability_id",
+    "baseDamage":  "5.0000",
+    "category":  "abilities",
+    "description":  "|desc(brawler_ramping,5)",
+    "descriptionId":  "death_stare_ramping_description",
+    "iconPath":  "Icons/DeathStare.png",
+    "name":  "Death Stare",
+    "tooltip":  "Deals 5 bonus magic damage for each consecutive attack against the same target. Ability damage."
+}

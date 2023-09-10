@@ -1,0 +1,10 @@
+{
+    "_id":  "decimation_ability_id",
+    "aoeRange":  "150",
+    "category":  "abilities",
+    "description":  "When dealing the killing blow, deals Pure damage to nearby enemies.",
+    "descriptionId":  "decimation_description",
+    "iconPath":  "Icons/Decimation.png",
+    "name":  "Decimation",
+    "tooltip":  "When dealing the killing blow, deals Pure damage to nearby enemies."
+}

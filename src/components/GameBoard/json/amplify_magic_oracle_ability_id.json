@@ -1,0 +1,10 @@
+{
+    "_id":  "amplify_magic_oracle_ability_id",
+    "aoeRange":  "120",
+    "category":  "abilities",
+    "description":  "Increases the mana regeneration of adjacently-built units by $2 per second.  Does not stack.",
+    "descriptionId":  "amplify_magic_description",
+    "iconPath":  "Icons/AmplifyMagic.png",
+    "name":  "Amplify Magic",
+    "tooltip":  "Increases the mana regeneration of adjacently-built units by 0.7 per second.  Does not stack."
+}

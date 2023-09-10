@@ -1,0 +1,7 @@
+{
+    "_id":  "kraken_poison_boss_ability_id",
+    "category":  "abilities",
+    "duration":  "3.0000",
+    "iconPath":  "Icons/KrakenPoison.png",
+    "name":  "Kraken Poison"
+}

@@ -1,0 +1,10 @@
+{
+    "_id":  "fury_multiplicative_ability_id",
+    "baseDamage":  "0.00000",
+    "category":  "abilities",
+    "description":  "Deals bonus Pure damage for each consecutive attack against the same target",
+    "descriptionId":  "fury_description",
+    "iconPath":  "Icons/Fury.png",
+    "name":  "Fury",
+    "tooltip":  "Deals bonus Pure damage for each consecutive attack against the same target"
+}

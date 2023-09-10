@@ -1,0 +1,12 @@
+{
+    "_id":  "chain_frost_ability_id",
+    "aoeRange":  "1000",
+    "bounces":  "999",
+    "category":  "abilities",
+    "description":  "Releases an orb of frost that jumps to nearby enemies, dealing Pure damage and slowing attack speed by $1%.",
+    "descriptionId":  "chain_frost_description",
+    "duration":  "3.00000",
+    "iconPath":  "Icons/ChainFrost.png",
+    "name":  "Chain Frost",
+    "tooltip":  "Releases an orb of frost that jumps to nearby enemies, dealing Pure damage and slowing attack speed by 15%."
+}

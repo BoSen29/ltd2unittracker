@@ -1,0 +1,10 @@
+{
+    "_id":  "cannibalism_oracle_ability_id",
+    "aoeRange":  "120",
+    "category":  "abilities",
+    "description":  "|desc(leech,0,30,100)",
+    "descriptionId":  "cannibalism_description",
+    "iconPath":  "Icons/Cannibalism.png",
+    "name":  "Cannibalism",
+    "tooltip":  "Grants 30% lifesteal and ability vamp to adjacently-built units. Does not stack."
+}

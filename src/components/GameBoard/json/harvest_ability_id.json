@@ -1,0 +1,7 @@
+{
+    "_id":  "harvest_ability_id",
+    "category":  "abilities",
+    "descriptionId":  "none_description",
+    "iconPath":  "Icons/Harvest.png",
+    "name":  "Harvest"
+}

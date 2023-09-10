@@ -1,0 +1,11 @@
+{
+    "_id":  "eggsplosion_ability_id",
+    "aoeRange":  "150",
+    "baseDamage":  "80.00000",
+    "category":  "abilities",
+    "description":  "When this unit dies, it explodes, dealing $1 damage to nearby enemies. |img(icons/Pure.png) |proper(PureAttack) ability damage.",
+    "descriptionId":  "eggsplosion_description",
+    "iconPath":  "Icons/Eggsplosion.png",
+    "name":  "Eggsplosion",
+    "tooltip":  "When this unit dies, it explodes, dealing 80 damage to nearby enemies. \u0026lt;img class=\u0027tooltip-icon\u0027 src=\u0027hud/img/icons/Pure.png\u0027 /\u0026gt; Pure ability damage."
+}

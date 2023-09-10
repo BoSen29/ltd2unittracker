@@ -1,0 +1,10 @@
+{
+    "_id":  "summon_cerberus_ability_id",
+    "category":  "abilities",
+    "description":  "Summons a Cerberus",
+    "descriptionId":  "summon_cerberus_description",
+    "duration":  "40.00000",
+    "iconPath":  "Icons/SummonCerberus.png",
+    "name":  "Summon Cerberus",
+    "tooltip":  "Summons a Cerberus"
+}

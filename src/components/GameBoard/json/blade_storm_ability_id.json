@@ -1,0 +1,12 @@
+{
+    "_id":  "blade_storm_ability_id",
+    "aoeRange":  "150",
+    "baseDamage":  "43.00000",
+    "category":  "abilities",
+    "description":  "|desc(iron_hail,$1) Also reduces damage of units hit by the swords by $2 for $3 seconds, stacking up to $4 times. Ability damage.",
+    "descriptionId":  "blade_storm_description",
+    "duration":  "3.00000",
+    "iconPath":  "Icons/BladeStorm.png",
+    "name":  "Blade Storm",
+    "tooltip":  "Unleashes a volley of cursed swords, dealing 43x3 Pierce damage in a small area around the target. Ability damage. Also reduces damage of units hit by the swords by 1 for 3 seconds, stacking up to 10 times. Ability damage."
+}

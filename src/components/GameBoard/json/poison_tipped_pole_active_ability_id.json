@@ -1,0 +1,10 @@
+{
+    "_id":  "poison_tipped_pole_active_ability_id",
+    "baseDamage":  "240.00000",
+    "category":  "abilities",
+    "description":  "Deals $2 single-target and $1 splash damage every fourth attack. |img(icons/Magic.png) |proper(MagicAttack) ability damage.",
+    "descriptionId":  "poison_tipped_pole_description",
+    "iconPath":  "Icons/Poison-TippedPole.png",
+    "name":  "Poison-Tipped Pole",
+    "tooltip":  "Deals 240 single-target and 20 splash damage every fourth attack. \u0026lt;img class=\u0027tooltip-icon\u0027 src=\u0027hud/img/icons/Magic.png\u0027 /\u0026gt; Magic ability damage."
+}

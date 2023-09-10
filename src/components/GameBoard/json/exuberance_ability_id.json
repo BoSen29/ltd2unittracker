@@ -1,0 +1,9 @@
+{
+    "_id":  "exuberance_ability_id",
+    "category":  "abilities",
+    "description":  "Starts off with +$1 damage |amp damage reduction, but this bonus decreases by $2 after each wave until the bonus is lost.",
+    "descriptionId":  "exuberance_description",
+    "iconPath":  "Icons/Exuberance.png",
+    "name":  "Exuberance",
+    "tooltip":  "Starts off with +20% damage |amp damage reduction, but this bonus decreases by 5% after each wave until the bonus is lost."
+}

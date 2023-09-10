@@ -1,0 +1,93 @@
+{
+    "_id":  "64d15d106ccdd3ad6b6d3fb5",
+    "unitId":  "dwarf_banker_unit_id",
+    "version":  "10.07",
+    "abilities":  [
+                      {
+                          "_id":  "disable_mana_regen_ability_id",
+                          "category":  "abilities",
+                          "iconPath":  "Icons/DisableManaRegen.png",
+                          "name":  "Disable Mana Regen"
+                      },
+                      {
+                          "_id":  "start_with_0_mana_ability_id",
+                          "category":  "abilities",
+                          "iconPath":  "Icons/StartWith0Mana.png",
+                          "name":  "Start With 0 Mana"
+                      },
+                      {
+                          "_id":  "mana_transfer_on_becomes_fighter_ability_id",
+                          "category":  "abilities",
+                          "iconPath":  "Icons/ManaTransferOnBecomesFighter.png",
+                          "name":  "Mana Transfer On Becomes Fighter"
+                      },
+                      {
+                          "_id":  "mana_transfer_on_upgrade_ability_id",
+                          "category":  "abilities",
+                          "iconPath":  "Icons/ManaTransferOnUpgrade.png",
+                          "name":  "Mana Transfer On Upgrade"
+                      },
+                      {
+                          "_id":  "compound_interest_ability_id",
+                          "category":  "abilities",
+                          "description":  "If it survives the wave, it gains $1 mana based on the wave number and earns |img(icons/Gold.png) $2 per mana. If it dies, it loses half mana. Mana transfers when upgraded.",
+                          "descriptionId":  "compound_interest_description",
+                          "iconPath":  "Icons/CompoundInterest.png",
+                          "name":  "Compound Interest",
+                          "tooltip":  "If it survives the wave, it gains 1-6 mana based on the wave number and earns \u0026lt;img class=\u0027tooltip-icon\u0027 src=\u0027hud/img/icons/Gold.png\u0027 /\u0026gt; 1 per mana. If it dies, it loses half mana. Mana transfers when upgraded."
+                      }
+                  ],
+    "armorType":  "Natural",
+    "aspdInverted":  ".88",
+    "attackMode":  "Ranged",
+    "attackRange":  "500",
+    "attackSpeed":  "1.13000",
+    "attackType":  "Impact",
+    "avgAspd":  "1.02",
+    "avgAspdDiff":  "-13.93",
+    "avgCost":  "90.45",
+    "avgCostDiff":  "5.03",
+    "avgDmg":  "41.64",
+    "avgDmgDiff":  "5.68",
+    "avgHp":  "833.64",
+    "avgHpDiff":  "-16.03",
+    "avgMspd":  "275.81",
+    "avgMspdDiff":  "8.77",
+    "categoryClass":  "Standard",
+    "description":  "Every wave it stays alive, it earns increasing amounts of bonus gold. But if it dies, the bonus drops significantly.",
+    "descriptionId":  "dwarf_banker_unit_description",
+    "dmgBase":  "44",
+    "dmgExpected":  "44.00",
+    "dmgMax":  "44",
+    "dps":  "38.94",
+    "flags":  "flags_ground",
+    "goldBounty":  "",
+    "goldCost":  "95",
+    "goldValue":  "",
+    "hp":  "700",
+    "iconPath":  "Icons/DwarfBanker.png",
+    "incomeBonus":  "",
+    "infoSketchfab":  "",
+    "infoTier":  "Tier-3",
+    "isEnabled":  true,
+    "legionId":  "mastermind_legion_id",
+    "modelScale":  "1.03000",
+    "moveSpeed":  "300",
+    "moveType":  "Ground",
+    "mp":  "10",
+    "mspdText":  "Average",
+    "mythiumCost":  "",
+    "name":  "Dwarf Banker",
+    "radius":  "Tiny",
+    "rangeText":  "Medium",
+    "sortOrder":  "mastermind_legion_id.C3.95.Dwarf Banker",
+    "splashPath":  "Splashes/DwarfBanker.png",
+    "stockMax":  "",
+    "stockTime":  "",
+    "tooltip":  "Every wave it stays alive, it earns increasing amounts of bonus gold. But if it dies, the bonus drops significantly.",
+    "totalValue":  "95",
+    "unitClass":  "Fighter",
+    "upgradesFrom":  [
+
+                     ]
+}

@@ -1,0 +1,10 @@
+{
+    "_id":  "flaming_arrows_ability_id",
+    "baseDamage":  "40.000",
+    "category":  "abilities",
+    "description":  "Each attack deals $1 bonus damage. |img(icons/Magic.png) |proper(MagicAttack) ability damage.",
+    "descriptionId":  "flaming_arrows_description",
+    "iconPath":  "Icons/FlamingArrows.png",
+    "name":  "Flaming Arrows",
+    "tooltip":  "Each attack deals 40 bonus damage. \u0026lt;img class=\u0027tooltip-icon\u0027 src=\u0027hud/img/icons/Magic.png\u0027 /\u0026gt; Magic ability damage."
+}

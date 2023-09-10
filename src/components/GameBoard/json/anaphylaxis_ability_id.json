@@ -1,0 +1,10 @@
+{
+    "_id":  "anaphylaxis_ability_id",
+    "category":  "abilities",
+    "description":  "Deals $1 damage over $2 seconds to its killer. |img(icons/Magic.png) |proper(MagicAttack) ability damage.",
+    "descriptionId":  "anaphylaxis_description",
+    "duration":  "2.0000",
+    "iconPath":  "Icons/Anaphylaxis.png",
+    "name":  "Anaphylaxis",
+    "tooltip":  "Deals 50 damage over 2 seconds to its killer. \u0026lt;img class=\u0027tooltip-icon\u0027 src=\u0027hud/img/icons/Magic.png\u0027 /\u0026gt; Magic ability damage."
+}

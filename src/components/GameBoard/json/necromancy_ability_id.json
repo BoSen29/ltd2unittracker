@@ -1,0 +1,10 @@
+{
+    "_id":  "necromancy_ability_id",
+    "aoeRange":  "800",
+    "category":  "abilities",
+    "description":  "Restores $1 mana when a nearby enemy dies, excluding Froggos.",
+    "descriptionId":  "necromancy_description",
+    "iconPath":  "Icons/Necromancy.png",
+    "name":  "Necromancy",
+    "tooltip":  "Restores 3 mana when a nearby enemy dies, excluding Froggos."
+}

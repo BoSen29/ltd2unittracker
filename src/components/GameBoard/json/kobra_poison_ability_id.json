@@ -1,0 +1,11 @@
+{
+    "_id":  "kobra_poison_ability_id",
+    "bounces":  "0",
+    "category":  "abilities",
+    "description":  "Attacks deal $1 Magic damage over $2 seconds",
+    "descriptionId":  "venomous_spit_description",
+    "duration":  "2.0000",
+    "iconPath":  "Icons/Bufotoxin.png",
+    "name":  "Bufotoxin",
+    "tooltip":  "Attacks deal 300 Magic damage over 2 seconds"
+}

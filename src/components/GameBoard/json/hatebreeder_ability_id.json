@@ -1,0 +1,10 @@
+{
+    "_id":  "hatebreeder_ability_id",
+    "category":  "abilities",
+    "description":  "|desc(shadowbreeder,20%,25%,25%,5)",
+    "descriptionId":  "hatebreeder_description",
+    "iconPath":  "Icons/Hatebreeder.png",
+    "name":  "Hatebreeder",
+    "tooltip":  "Creates a clone of itself every 5 attacks that deal 25% damage as Magic damage and spawns with 25% health. Clones cannot clone themselves.",
+    "duration":  "40.00000"
+}

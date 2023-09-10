@@ -1,0 +1,11 @@
+{
+    "_id":  "power_surge_ability_id",
+    "baseDamage":  "160.00000",
+    "category":  "abilities",
+    "cooldown":  "1.00000",
+    "description":  "Deal $1 bonus magic damage to a single target. |img(icons/Magic.png) |proper(MagicAttack) ability damage.",
+    "descriptionId":  "power_surge_description",
+    "iconPath":  "Icons/PowerSurge.png",
+    "name":  "Power Surge",
+    "tooltip":  "Deal 160 bonus magic damage to a single target. \u0026lt;img class=\u0027tooltip-icon\u0027 src=\u0027hud/img/icons/Magic.png\u0027 /\u0026gt; Magic ability damage."
+}

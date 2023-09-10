@@ -1,0 +1,10 @@
+{
+    "_id":  "council_antler_oracle_ability_id",
+    "aoeRange":  "120",
+    "category":  "abilities",
+    "description":  "Adjacently-built units take $1 + $2% ($3% for Antlers) reduced damage from all sources.  Does not stack.",
+    "descriptionId":  "council_description",
+    "iconPath":  "Icons/Council.png",
+    "name":  "Council",
+    "tooltip":  "Adjacently-built units take 5 + 10% (20% for Antlers) reduced damage from all sources.  Does not stack."
+}

@@ -1,0 +1,10 @@
+{
+    "_id":  "giga_boomstick_ability_id",
+    "baseDamage":  "100.00000",
+    "category":  "abilities",
+    "description":  "Every $1 attacks or whenever it gets a kill, its next attack fires an oversized rocket that deals $2 |img(icons/Impact.png) |proper(ImpactAttack) damage.",
+    "descriptionId":  "giga_boomstick_description",
+    "iconPath":  "Icons/GigaBoomstick.png",
+    "name":  "Giga Boomstick",
+    "tooltip":  "Every 3 attacks or whenever it gets a kill, its next attack fires an oversized rocket that deals 100 \u0026lt;img class=\u0027tooltip-icon\u0027 src=\u0027hud/img/icons/Impact.png\u0027 /\u0026gt; Impact damage."
+}

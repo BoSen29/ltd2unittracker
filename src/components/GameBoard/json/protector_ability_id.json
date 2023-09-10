@@ -1,0 +1,9 @@
+{
+    "_id":  "protector_ability_id",
+    "category":  "abilities",
+    "description":  "Designates this fighter as a Protector, increasing its max health by $1 and giving it Protection Aura.|n|n|c(ff8800):Protection Aura:|r Nearby allies in a large area have $3% missing health regeneration while the Protector is alive",
+    "descriptionId":  "protector_description",
+    "iconPath":  "Icons/Protector.png",
+    "name":  "Protector",
+    "tooltip":  "Designates this fighter as a Protector, increasing its max health by 650 and giving it Protection Aura.\u0026lt;br\u0026gt;\u0026lt;br\u0026gt;\u0026lt;span style=\u0027color: #ff8800\u0027\u0026gt;Protection Aura:\u0026lt;/span\u0026gt; Nearby allies in a large area have 0.8% missing health regeneration while the Protector is alive"
+}

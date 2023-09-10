@@ -1,0 +1,10 @@
+{
+    "_id":  "lightning_hammer_bounce_ability_id",
+    "bounces":  "999",
+    "category":  "abilities",
+    "description":  "Each attack bounces to all nearby enemies.",
+    "descriptionId":  "lightning_hammer_bounce_description",
+    "iconPath":  "Icons/LightningHammerBounce.png",
+    "name":  "Lightning Hammer Bounce",
+    "tooltip":  "Each attack bounces to all nearby enemies."
+}
