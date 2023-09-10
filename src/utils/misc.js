@@ -13,6 +13,10 @@ export const getEloImage = (elo) => {
     : 'Unranked'
 }
 
+export const isStandalone = () => {
+  return window.location.hostname === 'ltd2.krettur.no' || window.location.hostname === 'localhost'
+}
+
 export const isDev = () => {
   return process.env.NODE_ENV === 'development'
 }

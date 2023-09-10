@@ -9,12 +9,12 @@
 }
 
 .game-boards__area {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 body {
@@ -25,7 +25,12 @@ body {
 }
 
 .development__background {
-    background-color: rgba(40, 44, 52, 50);
+  background-color: rgba(40, 44, 52, 50);
+  display: block;
+  max-width: 100vw;
+  max-height: 100vw;
+  aspect-ratio: 16/9;
+  overflow: hidden;
 }
 
 .showEastToggle {
@@ -82,4 +87,29 @@ body {
   position: absolute;
   right: 19vw;
   border: 1px solid white
+}
+
+.guideArrow {
+  font-size: 20vh;
+  text-shadow: 1px 1px 1px black;
+  right: 1vw;
+  bottom: 10vh;
+  position: absolute;
+  animation: MoveUpDown 1s linear infinite;
+  position: absolute;
+}
+
+@keyframes MoveUpDown {
+  0%, 100% {
+    bottom: 7vh;
+  }
+  50% {
+    bottom: 13vh;
+  }
+}
+
+.config__container {
+  margin-top: 5vh;
+  width: 80vw;
+  margin-left: 5vw;
 }
