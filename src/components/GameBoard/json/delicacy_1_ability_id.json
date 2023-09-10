@@ -1,0 +1,9 @@
+{
+    "_id":  "delicacy_1_ability_id",
+    "category":  "abilities",
+    "description":  "Sells this fighter for $1% of its total cost",
+    "descriptionId":  "delicacy_1_description",
+    "iconPath":  "Icons/Delicacy(90%).png",
+    "name":  "Delicacy (90%)",
+    "tooltip":  "Sells this fighter for 90% of its total cost"
+}

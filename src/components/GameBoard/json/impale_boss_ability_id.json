@@ -1,0 +1,8 @@
+{
+    "_id":  "impale_boss_ability_id",
+    "bounces":  "0",
+    "category":  "abilities",
+    "duration":  "3.000",
+    "iconPath":  "Icons/Impale.png",
+    "name":  "Impale"
+}

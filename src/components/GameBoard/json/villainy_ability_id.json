@@ -1,0 +1,11 @@
+{
+    "_id":  "villainy_ability_id",
+    "bounces":  "0",
+    "category":  "abilities",
+    "description":  "This unit is a Villain. Attacks amplify its target\u0027s damage taken by $2% ($3% for ranged) (half against bosses) from all sources.",
+    "descriptionId":  "villainy_description",
+    "duration":  "3.00000",
+    "iconPath":  "Icons/Villainy.png",
+    "name":  "Villainy",
+    "tooltip":  "This unit is a Villain. Attacks amplify its target\u0027s damage taken by 26% (13% for ranged) (half against bosses) from all sources."
+}

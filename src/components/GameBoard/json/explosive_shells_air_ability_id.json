@@ -1,0 +1,8 @@
+{
+    "_id":  "explosive_shells_air_ability_id",
+    "aoeRange":  "150",
+    "baseDamage":  "30.00000",
+    "category":  "abilities",
+    "iconPath":  "Icons/ExplosiveShells.png",
+    "name":  "Explosive Shells"
+}

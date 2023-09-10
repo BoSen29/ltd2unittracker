@@ -1,0 +1,10 @@
+{
+    "_id":  "shadowbreeder_ability_id",
+    "category":  "abilities",
+    "description":  "Creates a clone of itself every $4 attacks that deal $2 damage as |proper(MagicAttack) damage and spawns with $3 health. Clones cannot clone themselves.",
+    "descriptionId":  "shadowbreeder_description",
+    "iconPath":  "Icons/Shadowbreeder.png",
+    "name":  "Shadowbreeder",
+    "tooltip":  "Creates a clone of itself every 6 attacks that deal 25% damage as Magic damage and spawns with 25% health. Clones cannot clone themselves.",
+    "duration":  "40.00000"
+}

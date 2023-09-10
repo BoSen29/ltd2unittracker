@@ -1,0 +1,11 @@
+{
+    "_id":  "judgment_ability_id",
+    "aoeRange":  "775",
+    "category":  "abilities",
+    "cooldown":  "10.000",
+    "description":  "Slams his staff on the ground, dealing Pure damage to all nearby enemies",
+    "descriptionId":  "judgment_description",
+    "iconPath":  "Icons/Judgment.png",
+    "name":  "Judgment",
+    "tooltip":  "Slams his staff on the ground, dealing Pure damage to all nearby enemies"
+}

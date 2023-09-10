@@ -1,0 +1,10 @@
+{
+    "_id":  "energize_oracle_ability_id",
+    "aoeRange":  "120",
+    "category":  "abilities",
+    "description":  "Grants adjacently-built units +$2% attack speed. Does not stack.",
+    "descriptionId":  "energize_description",
+    "iconPath":  "Icons/Energize.png",
+    "name":  "Energize",
+    "tooltip":  "Grants adjacently-built units +12% attack speed. Does not stack."
+}

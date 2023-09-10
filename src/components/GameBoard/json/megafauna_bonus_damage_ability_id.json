@@ -1,0 +1,10 @@
+{
+    "_id":  "megafauna_bonus_damage_ability_id",
+    "baseDamage":  "25.00000",
+    "category":  "abilities",
+    "description":  "Bosses and mini-bosses have +$1 damage and health. |proper(campaign_2_5)\u0027s units deal $2 bonus damage to bosses and mini-bosses.",
+    "descriptionId":  "megafauna_description",
+    "iconPath":  "Icons/Megafauna.png",
+    "name":  "Megafauna",
+    "tooltip":  "Bosses and mini-bosses have +55% damage and health. Sven\u0027s units deal 200% bonus damage to bosses and mini-bosses."
+}

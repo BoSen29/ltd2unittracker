@@ -1,0 +1,9 @@
+{
+    "_id":  "pulverizer_ability_id",
+    "category":  "abilities",
+    "description":  "Makes this fighter a pulverizer, giving it +$5% attack speed and Pulverize.|n|n|c(ff8800):Pulverize:|r Each attack has a $1% ($2% for ranged) chance to stun its target for $3 seconds ($4 to bosses). Does not work on summons or clones.",
+    "descriptionId":  "pulverizer_description",
+    "iconPath":  "Icons/Pulverizer.png",
+    "name":  "Pulverizer",
+    "tooltip":  "Makes this fighter a pulverizer, giving it +4% attack speed and Pulverize.\u0026lt;br\u0026gt;\u0026lt;br\u0026gt;\u0026lt;span style=\u0027color: #ff8800\u0027\u0026gt;Pulverize:\u0026lt;/span\u0026gt; Each attack has a 34% (17% for ranged) chance to stun its target for 2 seconds (0.3 to bosses). Does not work on summons or clones."
+}

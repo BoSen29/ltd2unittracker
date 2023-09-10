@@ -1,0 +1,9 @@
+{
+    "_id":  "gigantism_bonus_damage_ability_id",
+    "category":  "abilities",
+    "description":  "Bosses and mini-bosses have +$1 damage and health. |proper(campaign_2_5)\u0027s units deal $2 bonus damage to bosses and mini-bosses.",
+    "descriptionId":  "gigantism_description",
+    "iconPath":  "Icons/Gigantism.png",
+    "name":  "Gigantism",
+    "tooltip":  "Bosses and mini-bosses have +20% damage and health. Sven\u0027s units deal 33% bonus damage to bosses and mini-bosses."
+}

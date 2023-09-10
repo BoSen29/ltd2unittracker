@@ -1,0 +1,10 @@
+{
+    "_id":  "particle_wave_ability_id",
+    "baseDamage":  "9.00000",
+    "category":  "abilities",
+    "description":  "Deals $1 bonus damage ($2 to bosses) for each consecutive attack against the same target. |img(icons/Pure.png) |proper(PureAttack) ability damage.",
+    "descriptionId":  "particle_wave_description",
+    "iconPath":  "Icons/ParticleWave.png",
+    "name":  "Particle Wave",
+    "tooltip":  "Deals 9 bonus damage (3 to bosses) for each consecutive attack against the same target. \u0026lt;img class=\u0027tooltip-icon\u0027 src=\u0027hud/img/icons/Pure.png\u0027 /\u0026gt; Pure ability damage."
+}

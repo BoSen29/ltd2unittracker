@@ -35,7 +35,7 @@ export const fetchMatch = async (streamer, matchUUID) => {
 
 export const fetchCurrentMatch = async (streamer) => {
     let req = await fetch(`${BASEURL}matches/${streamer}/latest`)
-    if (req.status === 200) {
+    if (req?.status === 200) {
         let { matches } =  await req.json()
         return matches
     }

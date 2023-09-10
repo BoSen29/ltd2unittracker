@@ -1,0 +1,10 @@
+{
+    "_id":  "necromancy_head_chef_ability_id",
+    "aoeRange":  "800",
+    "category":  "abilities",
+    "description":  "|desc(witchcraft,0.5)",
+    "descriptionId":  "necromancy_head_chef_description",
+    "iconPath":  "Icons/Necromancy.png",
+    "name":  "Necromancy",
+    "tooltip":  "Restores 0.5 mana when a nearby unit dies, excluding Froggos"
+}

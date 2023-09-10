@@ -1,0 +1,11 @@
+{
+    "_id":  "detonation_ability_id",
+    "aoeRange":  "150",
+    "baseDamage":  "75.00000",
+    "category":  "abilities",
+    "description":  "|desc(explosive_shells,75,75)",
+    "descriptionId":  "detonation_description",
+    "iconPath":  "Icons/Detonation.png",
+    "name":  "Detonation",
+    "tooltip":  "When dealing the killing blow, deals 75 impact damage to enemies in an area around the dying unit. Ability damage."
+}

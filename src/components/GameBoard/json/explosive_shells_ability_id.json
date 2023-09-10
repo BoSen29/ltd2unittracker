@@ -1,0 +1,11 @@
+{
+    "_id":  "explosive_shells_ability_id",
+    "aoeRange":  "150",
+    "baseDamage":  "30.00000",
+    "category":  "abilities",
+    "description":  "When dealing the killing blow, deals $1 impact damage to enemies in an area around the dying unit. Ability damage.",
+    "descriptionId":  "explosive_shells_description",
+    "iconPath":  "Icons/ExplosiveShells.png",
+    "name":  "Explosive Shells",
+    "tooltip":  "When dealing the killing blow, deals 30 impact damage to enemies in an area around the dying unit. Ability damage."
+}

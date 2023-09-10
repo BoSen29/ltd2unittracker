@@ -1,0 +1,9 @@
+{
+    "_id":  "ionic_force_aspd_ability_id",
+    "category":  "abilities",
+    "description":  "Increases attack speed by $1% for each $2% current mana",
+    "descriptionId":  "ionic_force_aspd_description",
+    "iconPath":  "Icons/IonicForce.png",
+    "name":  "Ionic Force",
+    "tooltip":  "Increases attack speed by 30% for each 10% current mana"
+}

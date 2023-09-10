@@ -1,0 +1,9 @@
+{
+    "_id":  "sell_95_ability_id",
+    "category":  "abilities",
+    "description":  "|desc(sell,90)",
+    "descriptionId":  "sell_95_description",
+    "iconPath":  "Icons/Undeploy90.png",
+    "name":  "Undeploy90",
+    "tooltip":  "Sells this fighter for 90% value"
+}

@@ -1,0 +1,10 @@
+{
+    "_id":  "mini_slime_ability_id",
+    "category":  "abilities",
+    "description":  "When this unit dies, it leaves behind a |proper(mini_slime_unit).",
+    "descriptionId":  "mini_slime_ability_description",
+    "duration":  "2.00000",
+    "iconPath":  "Icons/MiniSlime.png",
+    "name":  "Mini Slime",
+    "tooltip":  "When this unit dies, it leaves behind a Mini Slime."
+}

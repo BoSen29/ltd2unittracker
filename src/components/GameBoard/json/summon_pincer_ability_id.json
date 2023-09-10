@@ -1,0 +1,10 @@
+{
+    "_id":  "summon_pincer_ability_id",
+    "category":  "abilities",
+    "description":  "Summons a |desc(pincer_unit)",
+    "descriptionId":  "summon_pincer_description",
+    "duration":  "60.00000",
+    "iconPath":  "Icons/SummonPincer.png",
+    "name":  "Summon Pincer",
+    "tooltip":  "Summons a Tanky melee pet"
+}

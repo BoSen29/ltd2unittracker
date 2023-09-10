@@ -1,0 +1,7 @@
+{
+    "_id":  "sorcery_mana_regen_ability_id",
+    "aoeRange":  "120",
+    "category":  "abilities",
+    "iconPath":  "Icons/MagicAura.png",
+    "name":  "Magic Aura"
+}

@@ -1,0 +1,11 @@
+{
+    "_id":  "knock_out_ability_id",
+    "baseDamage":  "400.0000",
+    "category":  "abilities",
+    "description":  "Its first attack deals $1 bonus damage and stuns its target for $2 seconds.|n|n|c(ffcc00):If Knock Out kills the target, it can be used again|r",
+    "descriptionId":  "knock_out_description",
+    "duration":  "1.5000",
+    "iconPath":  "Icons/KnockOut.png",
+    "name":  "Knock Out",
+    "tooltip":  "Its first attack deals 400 bonus damage and stuns its target for 1.5 seconds.\u0026lt;br\u0026gt;\u0026lt;br\u0026gt;\u0026lt;span style=\u0027color: #ffcc00\u0027\u0026gt;If Knock Out kills the target, it can be used again\u0026lt;/span\u0026gt;"
+}

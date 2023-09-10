@@ -1,3 +1,10 @@
+
+
+.gridCanvas{
+    width:500px;
+    height:500px;
+}
+
 .game-board__container {
     display: flex;
     flex-direction: column;
@@ -75,7 +82,11 @@
     aspect-ratio: inherit;
 }
 
+:root{
+    --grid-color: #383838
+}
 .game-board {
+
     width: 23vw;
     height: calc(23vw*1.555555);
     margin: 0;
@@ -83,12 +94,12 @@
     display: grid;
     grid-template-rows: repeat(28, calc((23vw * 1.555555) / 28));
     grid-template-columns: repeat(18, calc(23vw / 18));
-    background-size: calc(23vw/9) calc(23vw*1.555555/14);
-    border-right: 1px solid darkgrey;
-    border-bottom: 1px solid darkgrey;
+    background-size: calc(23vw/18) calc(23vw*1.555555/28);
+    border-right: 1px solid var(--grid-color);
+    border-bottom: 1px solid var(--grid-color);
     background-image:
-            linear-gradient(to right, darkgrey 1px, transparent 1px),
-            linear-gradient(to bottom, darkgrey 1px, transparent 1px);
+    linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
     margin-top: 0.5vh;
     background-color: rgba(0, 0, 0, 0.6);
 }
@@ -115,10 +126,134 @@
     font-size: 1.5vh;
 }
 
-.unit__icon {
+.parent {
     width:  calc(23vw/9 - 2px);
     height: calc(23vw*1.555555/14 - 2px);
-    margin: 1px 1px;
+    position:relative;    
+}
+.unit__icon {
+    width:  calc(23vw/9);
+    height: calc(23vw*1.555555/14);
+  
+}
+.unit__overlay__topleft {
+    pointer-events: none;
+    width:  calc((23vw/9)/3);
+    height: calc((23vw*1.555555/14)/3);
+    top:0;
+    left:0;
+    position:absolute;    
+}
+.unit__overlay__topright {
+    pointer-events: none;
+    width:  calc((23vw/9)/3);
+    height: calc((23vw*1.555555/14)/3);
+    top:0;
+    left:calc((23vw/9)/3*2);
+    position:absolute;    
+}
+.unit__overlay__midright {
+    pointer-events: none;
+    width:  calc((23vw/9)/3);
+    height: calc((23vw*1.555555/14)/3);
+    top:calc((23vw*1.555555/14)/3);
+    left:calc((23vw/9)/3*2);
+    position:absolute;    
+}
+.unit__overlay__botright {
+    pointer-events: none;
+    width:  calc((23vw/9)/3);
+    height: calc((23vw*1.555555/14)/3);
+    top:calc((23vw*1.555555/14)/3*2);
+    left:calc((23vw/9)/3*2);
+    position:absolute;    
+}
+.unit__overlay__topmid {
+    pointer-events: none;
+    width:  calc((23vw/9)/3);
+    height: calc((23vw*1.555555/14)/3);
+    top:0;
+    left:calc((23vw*1.555555/14)/3);
+    position:absolute;    
+}
+.unit__overlay__botleft {
+    pointer-events: none;
+    width:  calc((23vw/9)/3);
+    height: calc((23vw*1.555555/14)/3);
+    top:calc((23vw*1.555555/14)/3*2);
+    left:0;
+    position:absolute;
+    filter:brightness(100%);
+}
+.unit__overlay__botmidleft {
+    pointer-events: none;
+    width:  calc((23vw/9)/3*2+1);
+    height: calc((23vw*1.555555/14)/3);
+    top:calc((23vw*1.555555/14)/3*2);
+    left:0;
+    text-anchor: start;
+    position:absolute;    
+}
+.unit__overlay__text{
+    pointer-events: none;
+    font-size: 1vw;
+    z-index:11;
+    background-color: rgba(0,0,0,0.75);
+    font-family: 'Courier New';
+}
+.leftLine{
+    height: calc((23vw/9)/3*2+1);
+    width:2px;
+    fill:#ffff00;
+    stroke-width:2px;
+    z-index: 10;
+}
+
+
+  .line_left {
+    pointer-events: none;
+    position:relative;
+    left:0; top:0;
+    width: 2px;
+    height: calc((23vw/9)/3*2+1);
+    background: rgb(229, 255, 0);
+    z-index:10;
+  }
+  .line_right {
+    pointer-events: none;
+    position:relative;
+    left: calc((23vw/9/2)); top:0;
+    width: 2px;
+    height: calc((23vw/9)/2);
+    background: rgb(229, 255, 0);
+    z-index:10;
+  }
+  .line_top {
+    pointer-events: none;
+    position:relative;
+    left:0; top:0;
+    width: calc(calc(((23vw/9)/2)) + 2px);
+    height:2px;
+    background: rgb(229, 255, 0);
+    z-index:10;
+  }
+  .line_bot {
+    pointer-events: none;
+    position:relative;
+    left:0; top:calc((23vw/9/2) - 2px);
+    width: calc(calc(((23vw/9)/2)) + 2px);
+    height: 2px;
+    background: rgb(229, 255, 0);
+    z-index:10;
+  }
+
+.unit__overlay_cost {
+    width:  calc((23vw/9)/3*2);
+    height: calc((23vw*1.555555/14)/3);
+    top:calc((23vw*1.555555/14)/3*2);
+    left:calc((23vw/9)/3);
+    position:absolute;
+    
 }
 
 .player__color-marker {
@@ -182,6 +317,9 @@
     background-color: #FFFFFF;
 }
 
+
+
+
 .sends__container {
     margin:  0;
     width: 18.5vw;
@@ -191,6 +329,29 @@
     overflow: hidden;
     margin: 0px;
 }
+.unit-info-window{
+
+    border-color: aquamarine;
+
+    display: flex;
+    flex-direction: column;
+
+    border-color: aquamarine;
+    border-style: solid;
+    border-width: 2px;
+
+    background-color: rgba(0,0,0,1);
+    
+    z-index: 100;
+    /*background-color: #ffff00;*/
+
+} 
+.transparentBackground{
+    background-color: rgba(255,0,0,0.1);
+    width: 1vw;
+    height: (16/9)vh;
+}
+
 
 .stats__container {
     margin: 12px 0;

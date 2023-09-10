@@ -1,0 +1,9 @@
+{
+    "_id":  "sour_flower_ability_id",
+    "category":  "abilities",
+    "description":  "Upon death, infects its killer with a poison that deals $1% of its maximum health per second as magic damage for $2 seconds. |n|n|c(ffcc00):The poison refreshes on subsequent application. |n|n10% effectiveness against the King.|r",
+    "descriptionId":  "sour_flower_description",
+    "iconPath":  "Icons/SourFlower.png",
+    "name":  "Sour Flower",
+    "tooltip":  "Upon death, infects its killer with a poison that deals 3% of its maximum health per second as magic damage for 20 seconds. \u0026lt;br\u0026gt;\u0026lt;br\u0026gt;\u0026lt;span style=\u0027color: #ffcc00\u0027\u0026gt;The poison refreshes on subsequent application. \u0026lt;br\u0026gt;\u0026lt;br\u0026gt;10% effectiveness against the King.\u0026lt;/span\u0026gt;"
+}

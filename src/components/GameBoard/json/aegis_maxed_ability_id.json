@@ -1,0 +1,10 @@
+{
+    "_id":  "aegis_maxed_ability_id",
+    "aoeRange":  "150",
+    "category":  "abilities",
+    "description":  "Each attack deals $1% damage to nearby enemies. Ability damage.",
+    "descriptionId":  "aegis_maxed_description",
+    "iconPath":  "Icons/AegisMaxed.png",
+    "name":  "Aegis Maxed",
+    "tooltip":  "Each attack deals 25% damage to nearby enemies. Ability damage."
+}

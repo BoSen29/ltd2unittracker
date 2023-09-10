@@ -1,0 +1,10 @@
+{
+    "_id":  "protection_aura_ability_id",
+    "aoeRange":  "1000",
+    "category":  "abilities",
+    "description":  "Nearby allies take $1 reduced damage from all sources. Does not stack.",
+    "descriptionId":  "protection_aura_description",
+    "iconPath":  "Icons/SafetyAura.png",
+    "name":  "Safety Aura",
+    "tooltip":  "Nearby allies take 4 reduced damage from all sources. Does not stack."
+}

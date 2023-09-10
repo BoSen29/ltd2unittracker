@@ -1,0 +1,10 @@
+{
+    "_id":  "invigorate_azeria_ability_id",
+    "category":  "abilities",
+    "description":  "Increases her attack speed by $1% and heals for $2% missing health/sec for $3 seconds",
+    "descriptionId":  "invigorate_description",
+    "duration":  "5.0000",
+    "iconPath":  "Icons/Invigorate.png",
+    "name":  "Invigorate",
+    "tooltip":  "Increases her attack speed by 100% and heals for 8% missing health/sec for 5 seconds"
+}

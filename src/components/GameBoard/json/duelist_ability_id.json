@@ -1,0 +1,10 @@
+{
+    "_id":  "duelist_ability_id",
+    "baseDamage":  "80.0000",
+    "category":  "abilities",
+    "description":  "Deals $1 ($2 to bosses) damage per attack. |img(icons/Magic.png) |proper(MagicAttack) ability damage.",
+    "descriptionId":  "duelist_description",
+    "iconPath":  "Icons/Duelist.png",
+    "name":  "Duelist",
+    "tooltip":  "Deals 80 (240 to bosses) damage per attack. \u0026lt;img class=\u0027tooltip-icon\u0027 src=\u0027hud/img/icons/Magic.png\u0027 /\u0026gt; Magic ability damage."
+}

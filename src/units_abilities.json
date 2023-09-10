@@ -1,0 +1,5008 @@
+{
+    "units": [
+        {
+            "unitId": "proton",
+            "abilities": [
+                "generator",
+                "ionic_force_proton"
+            ],
+            "armorType": "Immaterial",
+            "attackMode": "Ranged",
+            "attackRange": "300",
+            "attackType": "Pure",
+            "dps": "9.36",
+            "flags": "flags_flying",
+            "hp": "140",
+            "iconPath": "Icons/Proton.png",
+            "tooltip": "Flying. Passively gains attack speed the longer it survives.",
+            "totalValue": "20"
+        },
+        {
+            "unitId": "atom",
+            "abilities": [
+                "generator",
+                "ionic_force_aspd"
+            ],
+            "armorType": "Immaterial",
+            "attackMode": "Ranged",
+            "attackRange": "300",
+            "attackType": "Pure",
+            "dps": "44.44",
+            "flags": "flags_flying",
+            "hp": "670",
+            "iconPath": "Icons/Atom.png",
+            "tooltip": "Now charged with electricity, an all-around upgrade.",
+            "totalValue": "90"
+        },
+        {
+            "unitId": "aqua_spirit",
+            "abilities": [
+                "water_bounce"
+            ],
+            "armorType": "Arcane",
+            "attackMode": "Ranged",
+            "attackRange": "400",
+            "attackType": "Pierce",
+            "dps": "20.00",
+            "flags": "flags_ground",
+            "hp": "370",
+            "iconPath": "Icons/AquaSpirit.png",
+            "tooltip": "Has a bouncing attack. ",
+            "totalValue": "50"
+        },
+        {
+            "unitId": "rogue_wave",
+            "abilities": [
+                "deluge"
+            ],
+            "armorType": "Arcane",
+            "attackMode": "Ranged",
+            "attackRange": "400",
+            "attackType": "Pierce",
+            "dps": "36.64",
+            "flags": "flags_ground",
+            "hp": "1200",
+            "iconPath": "Icons/RogueWave.png",
+            "tooltip": "Has a bouncing attack that makes enemies more vulnerable to ability damage.",
+            "totalValue": "165"
+        },
+        {
+            "unitId": "windhawk",
+            "abilities": [],
+            "armorType": "Natural",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Impact",
+            "dps": "42.68",
+            "flags": "flags_flying",
+            "hp": "760",
+            "iconPath": "Icons/Windhawk.png",
+            "tooltip": "Flying. Attacks enemies with gusts of wind.",
+            "totalValue": "85"
+        },
+        {
+            "unitId": "violet",
+            "abilities": [
+                "blue_wind"
+            ],
+            "armorType": "Natural",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Impact",
+            "dps": "69.19",
+            "flags": "flags_flying",
+            "hp": "2350",
+            "iconPath": "Icons/Violet.png",
+            "tooltip": "Flying. Now periodically shocks enemies with lightning.",
+            "totalValue": "265"
+        },
+        {
+            "unitId": "mudman",
+            "abilities": [
+                "harden"
+            ],
+            "armorType": "Fortified",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Impact",
+            "dps": "39.26",
+            "flags": "flags_ground",
+            "hp": "1570",
+            "iconPath": "Icons/Mudman.png",
+            "tooltip": "Tanky. You can activate Harden, which grants damage reduction for the next wave, but weakens it the following wave.",
+            "totalValue": "140"
+        },
+        {
+            "unitId": "golem",
+            "abilities": [
+                "harden_golem"
+            ],
+            "armorType": "Fortified",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Impact",
+            "dps": "113.53",
+            "flags": "flags_ground",
+            "hp": "4700",
+            "iconPath": "Icons/Golem.png",
+            "tooltip": "Encases its body in metal to become even tankier.",
+            "totalValue": "405"
+        },
+        {
+            "unitId": "disciple",
+            "abilities": [
+                "mana_burst",
+                "intellect",
+                "start_with_0_mana"
+            ],
+            "armorType": "Swift",
+            "attackMode": "Ranged",
+            "attackRange": "500",
+            "attackType": "Pierce",
+            "dps": "63.48",
+            "flags": "flags_ground,flags_organic",
+            "hp": "1150",
+            "iconPath": "Icons/Disciple.png",
+            "tooltip": "Periodically deals massive damage to a single target.",
+            "totalValue": "195"
+        },
+        {
+            "unitId": "starcaller",
+            "abilities": [
+                "enhanced_mana_burst",
+                "amplify_magic",
+                "intellect",
+                "start_with_0_mana"
+            ],
+            "armorType": "Swift",
+            "attackMode": "Ranged",
+            "attackRange": "500",
+            "attackType": "Pierce",
+            "dps": "156.52",
+            "flags": "flags_ground,flags_organic",
+            "hp": "2850",
+            "iconPath": "Icons/Starcaller.png",
+            "tooltip": "Aura. Boosts the mana regeneration of adjacently-built units",
+            "totalValue": "530"
+        },
+        {
+            "unitId": "fire_elemental",
+            "abilities": [
+                "combustion"
+            ],
+            "armorType": "Arcane",
+            "attackMode": "Ranged",
+            "attackRange": "400",
+            "attackType": "Pierce",
+            "dps": "24.59",
+            "flags": "flags_ground",
+            "hp": "1400",
+            "iconPath": "Icons/FireElemental.png",
+            "tooltip": "Has a bouncing attack that burns enemies.",
+            "totalValue": "190"
+        },
+        {
+            "unitId": "fenix",
+            "abilities": [
+                "enhanced_molten_shield",
+                "overheat"
+            ],
+            "armorType": "Swift",
+            "attackMode": "Ranged",
+            "attackRange": "200",
+            "attackType": "Magic",
+            "dps": "301.03",
+            "flags": "flags_flying",
+            "hp": "4650",
+            "iconPath": "Icons/Fenix.png",
+            "tooltip": "Flying. A mythical creature, now with an even more powerful mana shield.",
+            "totalValue": "705"
+        },
+        {
+            "unitId": "peewee",
+            "abilities": [
+                "booster"
+            ],
+            "armorType": "Arcane",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Pierce",
+            "dps": "8.08",
+            "flags": "flags_flying,flags_organic",
+            "hp": "260",
+            "iconPath": "Icons/Peewee.png",
+            "tooltip": "Flying. You can pay gold to activate Booster, which powers it up for the next wave only.",
+            "totalValue": "25"
+        },
+        {
+            "unitId": "veteran",
+            "abilities": [
+                "stimpack"
+            ],
+            "armorType": "Arcane",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Pierce",
+            "dps": "39.13",
+            "flags": "flags_ground,flags_organic",
+            "hp": "1380",
+            "iconPath": "Icons/Veteran.png",
+            "tooltip": "No longer flying. A combat suit provides all-around better stats.",
+            "totalValue": "115"
+        },
+        {
+            "unitId": "bazooka",
+            "abilities": [],
+            "armorType": "Swift",
+            "attackMode": "Ranged",
+            "attackRange": "600",
+            "attackType": "Impact",
+            "dps": "27.07",
+            "flags": "flags_ground,flags_organic",
+            "hp": "320",
+            "iconPath": "Icons/Bazooka.png",
+            "tooltip": "Long-ranged. Has two very different upgrade paths.",
+            "totalValue": "45"
+        },
+        {
+            "unitId": "pyro",
+            "abilities": [
+                "pyro_splash",
+                "pyromancy_air"
+            ],
+            "armorType": "Fortified",
+            "attackMode": "Ranged",
+            "attackRange": "300",
+            "attackType": "Magic",
+            "dps": "49.67",
+            "flags": "flags_ground,flags_organic",
+            "hp": "1780",
+            "iconPath": "Icons/Pyro.png",
+            "tooltip": "Wields a flamethrower that deals splash damage.",
+            "totalValue": "220"
+        },
+        {
+            "unitId": "zeus",
+            "abilities": [
+                "power_surge",
+                "high_voltage"
+            ],
+            "armorType": "Swift",
+            "attackMode": "Ranged",
+            "attackRange": "800",
+            "attackType": "Impact",
+            "dps": "49.38",
+            "flags": "flags_ground,flags_organic",
+            "hp": "940",
+            "iconPath": "Icons/Zeus.png",
+            "tooltip": "Ultra long-ranged sniper. Unleashes lightning bolts every few attacks.",
+            "totalValue": "175"
+        },
+        {
+            "unitId": "aps",
+            "abilities": [
+                "energize"
+            ],
+            "armorType": "Fortified",
+            "attackMode": "Ranged",
+            "attackRange": "400",
+            "attackType": "Pierce",
+            "dps": "52.78",
+            "flags": "flags_ground,flags_mechanical",
+            "hp": "870",
+            "iconPath": "Icons/APS.png",
+            "tooltip": "Aura. Provides an attack speed aura to adjacently-built units",
+            "totalValue": "150"
+        },
+        {
+            "unitId": "mps",
+            "abilities": [
+                "overcharge"
+            ],
+            "armorType": "Fortified",
+            "attackMode": "Ranged",
+            "attackRange": "400",
+            "attackType": "Pierce",
+            "dps": "140.28",
+            "flags": "flags_ground,flags_mechanical",
+            "hp": "2320",
+            "iconPath": "Icons/MPS.png",
+            "tooltip": "Aura. Provides an even more powerful attack speed aura to adjacently-built units",
+            "totalValue": "400"
+        },
+        {
+            "unitId": "tempest",
+            "abilities": [
+                "anti_air_turret"
+            ],
+            "armorType": "Fortified",
+            "attackMode": "Ranged",
+            "attackRange": "300",
+            "attackType": "Pierce",
+            "dps": "32.63",
+            "flags": "flags_flying,flags_mechanical",
+            "hp": "770",
+            "iconPath": "Icons/Tempest.png",
+            "tooltip": "Flying. Has a machine-gunner on-board that randomly hits ground enemies.",
+            "totalValue": "90"
+        },
+        {
+            "unitId": "leviathan",
+            "abilities": [
+                "bombardier",
+                "aerial_command"
+            ],
+            "armorType": "Fortified",
+            "attackMode": "Ranged",
+            "attackRange": "300",
+            "attackType": "Pierce",
+            "dps": "71.58",
+            "flags": "flags_flying,flags_mechanical",
+            "hp": "1770",
+            "iconPath": "Icons/Leviathan.png",
+            "tooltip": "Flying aura. Boosts damage of adjacently-built flying units. Also, it has a bombardier on-board.",
+            "totalValue": "280"
+        },
+        {
+            "unitId": "berserker",
+            "abilities": [
+                "brawler_ramping"
+            ],
+            "armorType": "Swift",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Pierce",
+            "dps": "48.98",
+            "flags": "flags_ground,flags_organic",
+            "hp": "1900",
+            "iconPath": "Icons/Berserker.png",
+            "tooltip": "Excellent boss-killer. Metal claws deal ramping damage when attacking the same target.",
+            "totalValue": "190"
+        },
+        {
+            "unitId": "fatalizer",
+            "abilities": [
+                "death_stare_ramping"
+            ],
+            "armorType": "Swift",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Pierce",
+            "dps": "138.78",
+            "flags": "flags_ground,flags_organic",
+            "hp": "5400",
+            "iconPath": "Icons/Fatalizer.png",
+            "tooltip": "Now wields energy blades, making it deal massive ramping damage.",
+            "totalValue": "545"
+        },
+        {
+            "unitId": "millennium",
+            "abilities": [
+                "explosive_shells",
+                "explosive_shells_air"
+            ],
+            "armorType": "Arcane",
+            "attackMode": "Ranged",
+            "attackRange": "550",
+            "attackType": "Impact",
+            "dps": "170.00",
+            "flags": "flags_ground,flags_mechanical",
+            "hp": "2100",
+            "iconPath": "Icons/Millennium.png",
+            "tooltip": "Creates explosions whenever it lands a killing blow.",
+            "totalValue": "290"
+        },
+        {
+            "unitId": "doomsday_machine",
+            "abilities": [
+                "detonation",
+                "detonation_flying"
+            ],
+            "armorType": "Arcane",
+            "attackMode": "Ranged",
+            "attackRange": "550",
+            "attackType": "Impact",
+            "dps": "415.00",
+            "flags": "flags_ground,flags_mechanical",
+            "hp": "5140",
+            "iconPath": "Icons/DoomsdayMachine.png",
+            "tooltip": "Unmatched power, unmatched price tag.",
+            "totalValue": "715"
+        },
+        {
+            "unitId": "buzz",
+            "abilities": [
+                "anaphylaxis"
+            ],
+            "armorType": "Natural",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Pierce",
+            "dps": "8.91",
+            "flags": "flags_flying,flags_organic",
+            "hp": "150",
+            "iconPath": "Icons/Buzz.png",
+            "tooltip": "Flying. Poisons enemies when it dies.",
+            "totalValue": "20"
+        },
+        {
+            "unitId": "consort",
+            "abilities": [
+                "paraphylaxis"
+            ],
+            "armorType": "Natural",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Pierce",
+            "dps": "49.50",
+            "flags": "flags_flying,flags_organic",
+            "hp": "900",
+            "iconPath": "Icons/Consort.png",
+            "tooltip": "Flying. Its claws and carapace make it much more formidable. It also posseses a more potent poison.",
+            "totalValue": "105"
+        },
+        {
+            "unitId": "ranger",
+            "abilities": [
+                "accuracy"
+            ],
+            "armorType": "Swift",
+            "attackMode": "Ranged",
+            "attackRange": "700",
+            "attackType": "Pierce",
+            "dps": "31.03",
+            "flags": "flags_ground,flags_organic",
+            "hp": "330",
+            "iconPath": "Icons/Ranger.png",
+            "tooltip": "Long-ranged. Deals extra damage to bosses.",
+            "totalValue": "55"
+        },
+        {
+            "unitId": "daphne",
+            "abilities": [
+                "precision",
+                "mark_target"
+            ],
+            "armorType": "Swift",
+            "attackMode": "Ranged",
+            "attackRange": "700",
+            "attackType": "Pierce",
+            "dps": "93.75",
+            "flags": "flags_ground,flags_organic",
+            "hp": "1050",
+            "iconPath": "Icons/Daphne.png",
+            "tooltip": "Synergizes with many units and fast attackers.",
+            "totalValue": "180"
+        },
+        {
+            "unitId": "wileshroom",
+            "abilities": [
+                "cell_regrowth"
+            ],
+            "armorType": "Arcane",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Impact",
+            "dps": "45.30",
+            "flags": "flags_ground,flags_organic",
+            "hp": "1450",
+            "iconPath": "Icons/Wileshroom.png",
+            "tooltip": "Starts with half health, but slowly regenerates.",
+            "totalValue": "95"
+        },
+        {
+            "unitId": "canopie",
+            "abilities": [
+                "cell_regrowth_canopie"
+            ],
+            "armorType": "Arcane",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Impact",
+            "dps": "130.43",
+            "flags": "flags_flying,flags_organic",
+            "hp": "4000",
+            "iconPath": "Icons/Canopie.png",
+            "tooltip": "Flying. Now a fully grown adult, it\u0027s tankier and hits harder.",
+            "totalValue": "275"
+        },
+        {
+            "unitId": "honeyflower",
+            "abilities": [
+                "fragrance_splash_damage"
+            ],
+            "armorType": "Natural",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Magic",
+            "dps": "10.05",
+            "flags": "flags_ground,flags_organic",
+            "hp": "1370",
+            "iconPath": "Icons/Honeyflower.png",
+            "tooltip": "Damages all nearby enemies with its sickly sweet scent.",
+            "totalValue": "130"
+        },
+        {
+            "unitId": "deathcap",
+            "abilities": [
+                "noxious_scent_splash_damage"
+            ],
+            "armorType": "Natural",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Magic",
+            "dps": "30.77",
+            "flags": "flags_ground,flags_organic",
+            "hp": "4190",
+            "iconPath": "Icons/Deathcap.png",
+            "tooltip": "Now even more toxic.",
+            "totalValue": "395"
+        },
+        {
+            "unitId": "antler",
+            "abilities": [
+                "thick_hide"
+            ],
+            "armorType": "Natural",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Impact",
+            "dps": "68.57",
+            "flags": "flags_ground,flags_organic",
+            "hp": "2350",
+            "iconPath": "Icons/Antler.png",
+            "tooltip": "Tanky. Strong when paired with Whitemane.",
+            "totalValue": "200"
+        },
+        {
+            "unitId": "whitemane",
+            "abilities": [
+                "council",
+                "council_antler"
+            ],
+            "armorType": "Natural",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Impact",
+            "dps": "132.59",
+            "flags": "flags_ground,flags_organic",
+            "hp": "4550",
+            "iconPath": "Icons/Whitemane.png",
+            "tooltip": "Aura. Adjacently-built units take less damage.",
+            "totalValue": "555"
+        },
+        {
+            "unitId": "banana_bunk",
+            "abilities": [
+                "barbs"
+            ],
+            "armorType": "Fortified",
+            "attackMode": "Ranged",
+            "attackRange": "200",
+            "attackType": "Pierce",
+            "dps": "81.93",
+            "flags": "flags_ground,flags_organic",
+            "hp": "3050",
+            "iconPath": "Icons/BananaBunk.png",
+            "tooltip": "Ranged, but very tanky. Reflects damage whenever it is attacked.",
+            "totalValue": "280"
+        },
+        {
+            "unitId": "banana_haven",
+            "abilities": [
+                "thorns",
+                "tribal_warfare"
+            ],
+            "armorType": "Fortified",
+            "attackMode": "Ranged",
+            "attackRange": "200",
+            "attackType": "Pierce",
+            "dps": "69.88",
+            "flags": "flags_ground,flags_organic",
+            "hp": "7600",
+            "iconPath": "Icons/BananaHaven.png",
+            "tooltip": "Now throws 3 bananas per attack. Plus, its thorns reflect tons more damage.",
+            "totalValue": "700"
+        },
+        {
+            "unitId": "bone_warrior",
+            "abilities": [
+                "frenzy"
+            ],
+            "armorType": "Swift",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Impact",
+            "dps": "3.85",
+            "flags": "flags_ground,flags_organic",
+            "hp": "140",
+            "iconPath": "Icons/BoneWarrior.png",
+            "tooltip": "Passively regenerates health. Has three upgrade paths, making it incredibly versatile.",
+            "totalValue": "15"
+        },
+        {
+            "unitId": "bone_crusher",
+            "abilities": [
+                "frenzy"
+            ],
+            "armorType": "Fortified",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Impact",
+            "dps": "36.46",
+            "flags": "flags_ground,flags_organic",
+            "hp": "1140",
+            "iconPath": "Icons/BoneCrusher.png",
+            "tooltip": "The only tanky skeleton. The weaker it is, the faster it regenerates.",
+            "totalValue": "110"
+        },
+        {
+            "unitId": "fire_archer",
+            "abilities": [
+                "flaming_arrows",
+                "frenzy"
+            ],
+            "armorType": "Swift",
+            "attackMode": "Ranged",
+            "attackRange": "550",
+            "attackType": "Pierce",
+            "dps": "25.45",
+            "flags": "flags_ground,flags_organic",
+            "hp": "450",
+            "iconPath": "Icons/FireArcher.png",
+            "tooltip": "Long-ranged. In addition to passively regenerating health, it uses mana to ignite its arrows, dealing bonus damage.",
+            "totalValue": "80"
+        },
+        {
+            "unitId": "dark_mage",
+            "abilities": [
+                "mindwarp",
+                "frenzy",
+                "start_with_0_mana"
+            ],
+            "armorType": "Swift",
+            "attackMode": "Ranged",
+            "attackRange": "400",
+            "attackType": "Magic",
+            "dps": "28.57",
+            "flags": "flags_ground,flags_organic",
+            "hp": "500",
+            "iconPath": "Icons/DarkMage.png",
+            "tooltip": "Gives an ally a huge attack-speed boost",
+            "totalValue": "95"
+        },
+        {
+            "unitId": "gargoyle",
+            "abilities": [
+                "stone_form_new"
+            ],
+            "armorType": "Arcane",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Magic",
+            "dps": "15.45",
+            "flags": "flags_flying,flags_organic",
+            "hp": "280",
+            "iconPath": "Icons/Gargoyle.png",
+            "tooltip": "Flying. Takes reduced damage.",
+            "totalValue": "40"
+        },
+        {
+            "unitId": "green_devil",
+            "abilities": [
+                "granite_skin"
+            ],
+            "armorType": "Arcane",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Magic",
+            "dps": "62.34",
+            "flags": "flags_ground,flags_organic",
+            "hp": "1050",
+            "iconPath": "Icons/GreenDevil.png",
+            "tooltip": "No longer flying. Takes further reduced damage.",
+            "totalValue": "160"
+        },
+        {
+            "unitId": "gateguard",
+            "abilities": [
+                "hound"
+            ],
+            "armorType": "Fortified",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Impact",
+            "dps": "26.60",
+            "flags": "flags_ground,flags_organic",
+            "hp": "550",
+            "iconPath": "Icons/Gateguard.png",
+            "tooltip": "Summons a Chaos Hound to do its bidding.",
+            "totalValue": "100"
+        },
+        {
+            "unitId": "harbinger",
+            "abilities": [
+                "summon_cerberus"
+            ],
+            "armorType": "Fortified",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Impact",
+            "dps": "76.85",
+            "flags": "flags_ground,flags_organic",
+            "hp": "1580",
+            "iconPath": "Icons/Harbinger.png",
+            "tooltip": "Now summons a fearsome Cerberus.",
+            "totalValue": "290"
+        },
+        {
+            "unitId": "butcher",
+            "abilities": [
+                "leech"
+            ],
+            "armorType": "Natural",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Impact",
+            "dps": "44.55",
+            "flags": "flags_ground,flags_organic",
+            "hp": "1310",
+            "iconPath": "Icons/Butcher.png",
+            "tooltip": "Aura. Grants adjacently-built units lifesteal and ability vamp",
+            "totalValue": "150"
+        },
+        {
+            "unitId": "head_chef",
+            "abilities": [
+                "cannibalism",
+                "skull_stew"
+            ],
+            "armorType": "Natural",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Impact",
+            "dps": "124.75",
+            "flags": "flags_ground,flags_organic",
+            "hp": "3670",
+            "iconPath": "Icons/HeadChef.png",
+            "tooltip": "Aura. Grants adjacently-built units lifesteal and ability vamp, plus an active heal.",
+            "totalValue": "415"
+        },
+        {
+            "unitId": "nightmare",
+            "abilities": [],
+            "armorType": "Swift",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Pierce",
+            "dps": "125.00",
+            "flags": "flags_ground,flags_organic",
+            "hp": "1180",
+            "iconPath": "Icons/Nightmare.png",
+            "tooltip": "Deals tons of damage, but lacks defense.",
+            "totalValue": "185"
+        },
+        {
+            "unitId": "doppelganger",
+            "abilities": [
+                "shadow_walker"
+            ],
+            "armorType": "Swift",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Pierce",
+            "dps": "252.43",
+            "flags": "flags_ground,flags_organic",
+            "hp": "3300",
+            "iconPath": "Icons/Doppelganger.png",
+            "tooltip": "Every time it attacks, its reaper\u0027s scythe grows stronger.",
+            "totalValue": "525"
+        },
+        {
+            "unitId": "lord_of_death",
+            "abilities": [
+                "raise_juggernaut",
+                "intellect_lod"
+            ],
+            "armorType": "Arcane",
+            "attackMode": "Ranged",
+            "attackRange": "500",
+            "attackType": "Magic",
+            "dps": "59.00",
+            "flags": "flags_ground,flags_organic",
+            "hp": "1240",
+            "iconPath": "Icons/LordOfDeath.png",
+            "tooltip": "Conjures a dragon that devours its foes.",
+            "totalValue": "265"
+        },
+        {
+            "unitId": "hades",
+            "abilities": [
+                "conjure_thanatos",
+                "necromancy",
+                "intellect_hades"
+            ],
+            "armorType": "Arcane",
+            "attackMode": "Ranged",
+            "attackRange": "500",
+            "attackType": "Magic",
+            "dps": "148.00",
+            "flags": "flags_ground,flags_organic",
+            "hp": "3100",
+            "iconPath": "Icons/Hades.png",
+            "tooltip": "Summons a dragon of unrivaled power. Gains mana when enemy units die.",
+            "totalValue": "675"
+        },
+        {
+            "unitId": "chaos_hound",
+            "abilities": [],
+            "armorType": "Fortified",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Impact",
+            "dps": "28.13",
+            "flags": "flags_ground,flags_organic,flags_summoned",
+            "hp": "300",
+            "iconPath": "Icons/ChaosHound.png",
+            "tooltip": "High damage melee pet",
+            "totalValue": ""
+        },
+        {
+            "unitId": "crab",
+            "abilities": [],
+            "armorType": "Fortified",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Pierce",
+            "dps": "5.22",
+            "flags": "flags_ground,flags_organic",
+            "hp": "120",
+            "iconPath": "Icons/Crab.png",
+            "tooltip": "Its shell is pretty soft, and its claws aren\u0027t that sharp.",
+            "totalValue": ""
+        },
+        {
+            "unitId": "hopper",
+            "abilities": [],
+            "armorType": "Natural",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Magic",
+            "dps": "6.67",
+            "flags": "flags_ground,flags_organic",
+            "hp": "120",
+            "iconPath": "Icons/Hopper.png",
+            "tooltip": "Has a tendency to attack in swarms.",
+            "totalValue": ""
+        },
+        {
+            "unitId": "scorpion",
+            "abilities": [],
+            "armorType": "Natural",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Pierce",
+            "dps": "14.85",
+            "flags": "flags_ground,flags_organic",
+            "hp": "340",
+            "iconPath": "Icons/Scorpion.png",
+            "tooltip": "Pierces enemies with its sharp tail.",
+            "totalValue": ""
+        },
+        {
+            "unitId": "quill_shooter",
+            "abilities": [],
+            "armorType": "Natural",
+            "attackMode": "Ranged",
+            "attackRange": "550",
+            "attackType": "Pierce",
+            "dps": "55.28",
+            "flags": "flags_ground,flags_organic",
+            "hp": "1080",
+            "iconPath": "Icons/QuillShooter.png",
+            "tooltip": "Long-ranged. Launches quills from its back.",
+            "totalValue": ""
+        },
+        {
+            "unitId": "flying_chicken",
+            "abilities": [],
+            "armorType": "Swift",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Impact",
+            "dps": "12.90",
+            "flags": "flags_flying,flags_organic",
+            "hp": "230",
+            "iconPath": "Icons/FlyingChicken.png",
+            "tooltip": "Flying. Its claws are blunt, but powerful.",
+            "totalValue": ""
+        },
+        {
+            "unitId": "rocko",
+            "abilities": [
+                "impale_villain"
+            ],
+            "armorType": "Fortified",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Impact",
+            "dps": "29.92",
+            "flags": "flags_ground,flags_organic",
+            "hp": "830",
+            "iconPath": "Icons/Rocko.png",
+            "tooltip": "Its attacks can critically strike. Strong, but few in number.",
+            "totalValue": ""
+        },
+        {
+            "unitId": "mantis",
+            "abilities": [],
+            "armorType": "Swift",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Pierce",
+            "dps": "79.73",
+            "flags": "flags_ground,flags_organic",
+            "hp": "1290",
+            "iconPath": "Icons/Mantis.png",
+            "tooltip": "Deals high damage with sharp claws.",
+            "totalValue": ""
+        },
+        {
+            "unitId": "dire_toad",
+            "abilities": [
+                "split_shot"
+            ],
+            "armorType": "Swift",
+            "attackMode": "Ranged",
+            "attackRange": "400",
+            "attackType": "Pierce",
+            "dps": "88.37",
+            "flags": "flags_ground,flags_organic",
+            "hp": "4350",
+            "iconPath": "Icons/DireToad.png",
+            "tooltip": "Medium-ranged. Spits poison that pierces through armor.",
+            "totalValue": ""
+        },
+        {
+            "unitId": "wale",
+            "abilities": [],
+            "armorType": "Arcane",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Impact",
+            "dps": "7.14",
+            "flags": "flags_ground,flags_organic",
+            "hp": "140",
+            "iconPath": "Icons/Wale.png",
+            "tooltip": "Tusked creature that whacks enemies with a stick.",
+            "totalValue": ""
+        },
+        {
+            "unitId": "granddaddy",
+            "abilities": [
+                "boss_status"
+            ],
+            "armorType": "Arcane",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Impact",
+            "dps": "425.93",
+            "flags": "flags_boss,flags_ground,flags_organic",
+            "hp": "10000",
+            "iconPath": "Icons/Granddaddy.png",
+            "tooltip": "Boss. Impales foes with its head spike.",
+            "totalValue": ""
+        },
+        {
+            "unitId": "carapace",
+            "abilities": [
+                "deflection"
+            ],
+            "armorType": "Fortified",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Pierce",
+            "dps": "34.59",
+            "flags": "flags_ground,flags_organic",
+            "hp": "740",
+            "iconPath": "Icons/Carapace.png",
+            "tooltip": "Its hard exoskeleton protects it from ranged attacks.",
+            "totalValue": ""
+        },
+        {
+            "unitId": "kobra",
+            "abilities": [],
+            "armorType": "Swift",
+            "attackMode": "Ranged",
+            "attackRange": "400",
+            "attackType": "Magic",
+            "dps": "31.25",
+            "flags": "flags_ground,flags_organic",
+            "hp": "600",
+            "iconPath": "Icons/Kobra.png",
+            "tooltip": "Medium-ranged. Spits magical venom.",
+            "totalValue": ""
+        },
+        {
+            "unitId": "skyfish",
+            "abilities": [],
+            "armorType": "Arcane",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Pierce",
+            "dps": "184.87",
+            "flags": "flags_flying,flags_organic",
+            "hp": "3300",
+            "iconPath": "Icons/MetalDragon.png",
+            "tooltip": "Flying. Its dragon blood is resistant to magic.",
+            "totalValue": ""
+        },
+        {
+            "unitId": "wale_chief",
+            "abilities": [
+                "poison_tipped_pole_active",
+                "start_with_0_mana",
+                "mana_on_attack"
+            ],
+            "armorType": "Natural",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Impact",
+            "dps": "250.00",
+            "flags": "flags_ground,flags_organic",
+            "hp": "8100",
+            "iconPath": "Icons/WaleChief.png",
+            "tooltip": "Wields a fish basket better than many would wield a sword.",
+            "totalValue": ""
+        },
+        {
+            "unitId": "killer_slug",
+            "abilities": [],
+            "armorType": "Arcane",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Magic",
+            "dps": "95.24",
+            "flags": "flags_ground,flags_organic",
+            "hp": "2070",
+            "iconPath": "Icons/KillerSlug.png",
+            "tooltip": "Overgrown pest with a magic-resistant shell.",
+            "totalValue": ""
+        },
+        {
+            "unitId": "octopus",
+            "abilities": [
+                "dual_shot"
+            ],
+            "armorType": "Natural",
+            "attackMode": "Ranged",
+            "attackRange": "400",
+            "attackType": "Magic",
+            "dps": "60.15",
+            "flags": "flags_ground,flags_organic",
+            "hp": "2230",
+            "iconPath": "Icons/Quadrapus.png",
+            "tooltip": "Short-ranged. Shoots magical ink from oversized nostrils.",
+            "totalValue": ""
+        },
+        {
+            "unitId": "drill_golem",
+            "abilities": [],
+            "armorType": "Fortified",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Impact",
+            "dps": "155.04",
+            "flags": "flags_ground,flags_mechanical",
+            "hp": "3210",
+            "iconPath": "Icons/DrillGolem.png",
+            "tooltip": "Tanky and hits hard, but few in number.",
+            "totalValue": ""
+        },
+        {
+            "unitId": "sludge",
+            "abilities": [
+                "blobs"
+            ],
+            "armorType": "Arcane",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Magic",
+            "dps": "27.54",
+            "flags": "flags_ground,flags_organic",
+            "hp": "560",
+            "iconPath": "Icons/Sludge.png",
+            "tooltip": "Surviving in sewers has made it resistant to magic.",
+            "totalValue": ""
+        },
+        {
+            "unitId": "cardinal",
+            "abilities": [],
+            "armorType": "Swift",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Impact",
+            "dps": "104.05",
+            "flags": "flags_ground,flags_organic",
+            "hp": "1990",
+            "iconPath": "Icons/Cardinal.png",
+            "tooltip": "High damage dealer. Known to swarm in large numbers.",
+            "totalValue": ""
+        },
+        {
+            "unitId": "maccabeus",
+            "abilities": [
+                "insatiable_hunger",
+                "boss_status",
+                "devour_maccabeus"
+            ],
+            "armorType": "Fortified",
+            "attackMode": "Ranged",
+            "attackRange": "250",
+            "attackType": "Magic",
+            "dps": "2000.00",
+            "flags": "flags_boss,flags_ground,flags_organic",
+            "hp": "65000",
+            "iconPath": "Icons/Maccabeus.png",
+            "tooltip": "Powerful boss. Each kill restores health and increases its damage.",
+            "totalValue": ""
+        },
+        {
+            "unitId": "snail",
+            "abilities": [],
+            "armorType": "Fortified",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Impact",
+            "dps": "11.54",
+            "flags": "flags_ground,flags_organic",
+            "hp": "290",
+            "iconPath": "Icons/Snail.png",
+            "tooltip": "Weak. Mainly used as a source of income.",
+            "totalValue": ""
+        },
+        {
+            "unitId": "lizard",
+            "abilities": [],
+            "armorType": "Natural",
+            "attackMode": "Ranged",
+            "attackRange": "550",
+            "attackType": "Pierce",
+            "dps": "26.12",
+            "flags": "flags_ground,flags_organic",
+            "hp": "320",
+            "iconPath": "Icons/Lizard.png",
+            "tooltip": "Long-ranged. Throws spears at its enemies from afar.",
+            "totalValue": ""
+        },
+        {
+            "unitId": "fiend",
+            "abilities": [],
+            "armorType": "Swift",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Pierce",
+            "dps": "36.00",
+            "flags": "flags_ground,flags_organic",
+            "hp": "950",
+            "iconPath": "Icons/Fiend.png",
+            "tooltip": "Tanky, despite its thin limbs.",
+            "totalValue": ""
+        },
+        {
+            "unitId": "brute",
+            "abilities": [
+                "maul"
+            ],
+            "armorType": "Natural",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Impact",
+            "dps": "55.56",
+            "flags": "flags_ground,flags_organic",
+            "hp": "880",
+            "iconPath": "Icons/Brute.png",
+            "tooltip": "Mauls enemies, slowing their attack speed.",
+            "totalValue": ""
+        },
+        {
+            "unitId": "dragon_turtle",
+            "abilities": [],
+            "armorType": "Arcane",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Magic",
+            "dps": "23.81",
+            "flags": "flags_flying,flags_organic",
+            "hp": "600",
+            "iconPath": "Icons/DragonTurtle.png",
+            "tooltip": "Its hard shell makes it a great tank.",
+            "totalValue": ""
+        },
+        {
+            "unitId": "hermit",
+            "abilities": [
+                "healing_aura"
+            ],
+            "armorType": "Natural",
+            "attackMode": "Ranged",
+            "attackRange": "550",
+            "attackType": "Magic",
+            "dps": "43.96",
+            "flags": "flags_ground,flags_organic",
+            "hp": "700",
+            "iconPath": "Icons/Hermit.png",
+            "tooltip": "Its strange seeds passively heal allies.",
+            "totalValue": ""
+        },
+        {
+            "unitId": "dino",
+            "abilities": [],
+            "armorType": "Natural",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Pierce",
+            "dps": "45.93",
+            "flags": "flags_ground,flags_organic",
+            "hp": "1300",
+            "iconPath": "Icons/Dino.png",
+            "tooltip": "Not too smart, but very tanky.",
+            "totalValue": ""
+        },
+        {
+            "unitId": "safety_mole",
+            "abilities": [
+                "protection_aura"
+            ],
+            "armorType": "Natural",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Impact",
+            "dps": "76.52",
+            "flags": "flags_ground,flags_organic",
+            "hp": "1700",
+            "iconPath": "Icons/SafetyMole.png",
+            "tooltip": "Safety first! Passively reduces incoming damage for nearby allies.",
+            "totalValue": ""
+        },
+        {
+            "unitId": "drake",
+            "abilities": [],
+            "armorType": "Swift",
+            "attackMode": "Ranged",
+            "attackRange": "550",
+            "attackType": "Magic",
+            "dps": "90.32",
+            "flags": "flags_flying,flags_organic",
+            "hp": "1320",
+            "iconPath": "Icons/Drake.png",
+            "tooltip": "Though young, its fiery breath deals high damage.",
+            "totalValue": ""
+        },
+        {
+            "unitId": "mimic",
+            "abilities": [
+                "plunder"
+            ],
+            "armorType": "Arcane",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Pierce",
+            "dps": "147.93",
+            "flags": "flags_ground,flags_organic",
+            "hp": "2350",
+            "iconPath": "Icons/Mimic.png",
+            "tooltip": "Deals high damage and gains gold on kill.",
+            "totalValue": ""
+        },
+        {
+            "unitId": "pack_leader",
+            "abilities": [
+                "leadership"
+            ],
+            "armorType": "Fortified",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Impact",
+            "dps": "88.00",
+            "flags": "flags_ground,flags_organic",
+            "hp": "2000",
+            "iconPath": "Icons/PackLeader.png",
+            "tooltip": "War drums passively boost the damage of allies.",
+            "totalValue": ""
+        },
+        {
+            "unitId": "centaur",
+            "abilities": [
+                "cleave"
+            ],
+            "armorType": "Natural",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Pierce",
+            "dps": "155.56",
+            "flags": "flags_ground,flags_organic",
+            "hp": "4200",
+            "iconPath": "Icons/Centaur.png",
+            "tooltip": "High damage dealer. Cleaves up to 3 enemies.",
+            "totalValue": ""
+        },
+        {
+            "unitId": "four_eyes",
+            "abilities": [
+                "duelist_ramping"
+            ],
+            "armorType": "Natural",
+            "attackMode": "Ranged",
+            "attackRange": "550",
+            "attackType": "Magic",
+            "dps": "146.07",
+            "flags": "flags_ground,flags_organic",
+            "hp": "2500",
+            "iconPath": "Icons/FourEyes.png",
+            "tooltip": "Deals more damage the more it attacks the same target.",
+            "totalValue": ""
+        },
+        {
+            "unitId": "shaman",
+            "abilities": [
+                "blood_rush"
+            ],
+            "armorType": "Swift",
+            "attackMode": "Ranged",
+            "attackRange": "550",
+            "attackType": "Magic",
+            "dps": "142.86",
+            "flags": "flags_ground,flags_organic",
+            "hp": "3000",
+            "iconPath": "Icons/Shaman.png",
+            "tooltip": "Boosts the damage and attack speed of nearby allies.",
+            "totalValue": ""
+        },
+        {
+            "unitId": "ghost_knight",
+            "abilities": [
+                "evasion"
+            ],
+            "armorType": "Swift",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Impact",
+            "dps": "168.18",
+            "flags": "flags_ground,flags_organic",
+            "hp": "4050",
+            "iconPath": "Icons/GhostKnight.png",
+            "tooltip": "Takes reduced damage from all autoattacks (non-ability damage).",
+            "totalValue": ""
+        },
+        {
+            "unitId": "kraken",
+            "abilities": [
+                "ancient_power"
+            ],
+            "armorType": "Arcane",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Impact",
+            "dps": "253.04",
+            "flags": "flags_ground,flags_organic",
+            "hp": "6950",
+            "iconPath": "Icons/Kraken.png",
+            "tooltip": "Tanky. Grows stronger as the game progresses.",
+            "totalValue": ""
+        },
+        {
+            "unitId": "legion_lord",
+            "abilities": [],
+            "armorType": "Immaterial",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Pure",
+            "dps": "355.26",
+            "flags": "flags_ground",
+            "hp": "8250",
+            "iconPath": "Icons/LegionLord.png",
+            "tooltip": "Demonic overlord that comes back stronger after it is killed.",
+            "totalValue": ""
+        },
+        {
+            "unitId": "element_builder",
+            "abilities": [],
+            "armorType": "",
+            "attackMode": "",
+            "attackRange": "",
+            "attackType": "",
+            "dps": "",
+            "flags": "flags_ghost,flags_invulnerable,flags_unselectable",
+            "hp": "10000",
+            "iconPath": "Icons/Element.png",
+            "tooltip": "Default description for Element Builder",
+            "totalValue": ""
+        },
+        {
+            "unitId": "forsaken_builder",
+            "abilities": [],
+            "armorType": "",
+            "attackMode": "",
+            "attackRange": "",
+            "attackType": "",
+            "dps": "",
+            "flags": "flags_ghost,flags_invulnerable,flags_unselectable",
+            "hp": "10000",
+            "iconPath": "Icons/Forsaken.png",
+            "tooltip": "Default description for Forsaken Builder",
+            "totalValue": ""
+        },
+        {
+            "unitId": "grove_builder",
+            "abilities": [],
+            "armorType": "",
+            "attackMode": "",
+            "attackRange": "",
+            "attackType": "",
+            "dps": "",
+            "flags": "flags_ghost,flags_invulnerable,flags_unselectable",
+            "hp": "10000",
+            "iconPath": "Icons/Grove.png",
+            "tooltip": "Default description for Grove Builder",
+            "totalValue": ""
+        },
+        {
+            "unitId": "mech_builder",
+            "abilities": [],
+            "armorType": "",
+            "attackMode": "",
+            "attackRange": "",
+            "attackType": "",
+            "dps": "",
+            "flags": "flags_ghost,flags_invulnerable,flags_unselectable",
+            "hp": "10000",
+            "iconPath": "Icons/Mech.png",
+            "tooltip": "Default description for Mech Builder",
+            "totalValue": ""
+        },
+        {
+            "unitId": "undead_dragon",
+            "abilities": [
+                "intellect_pet"
+            ],
+            "armorType": "Arcane",
+            "attackMode": "Ranged",
+            "attackRange": "350",
+            "attackType": "Magic",
+            "dps": "78.74",
+            "flags": "flags_flying,flags_organic,flags_summoned",
+            "hp": "800",
+            "iconPath": "Icons/UndeadDragon.png",
+            "tooltip": "Ranged summon with high damage.",
+            "totalValue": ""
+        },
+        {
+            "unitId": "fire_lord",
+            "abilities": [
+                "molten_shield",
+                "overheat"
+            ],
+            "armorType": "Swift",
+            "attackMode": "Ranged",
+            "attackRange": "200",
+            "attackType": "Magic",
+            "dps": "138.14",
+            "flags": "flags_ground",
+            "hp": "1820",
+            "iconPath": "Icons/FireLord.png",
+            "tooltip": "Uses mana to block incoming damage and deals bonus damage based on missing mana.",
+            "totalValue": "275"
+        },
+        {
+            "unitId": "scorpion_king",
+            "abilities": [
+                "boss_status"
+            ],
+            "armorType": "Natural",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Pierce",
+            "dps": "59.41",
+            "flags": "flags_boss,flags_ground,flags_organic",
+            "hp": "1360",
+            "iconPath": "Icons/ScorpionKing.png",
+            "tooltip": "Mini-boss. A giant, red scorpion.",
+            "totalValue": ""
+        },
+        {
+            "unitId": "giant_quadrapus",
+            "abilities": [
+                "boss_status",
+                "dual_shot_giant_quadrapus"
+            ],
+            "armorType": "Natural",
+            "attackMode": "Ranged",
+            "attackRange": "450",
+            "attackType": "Magic",
+            "dps": "240.60",
+            "flags": "flags_boss,flags_ground,flags_organic",
+            "hp": "8920",
+            "iconPath": "Icons/GiantQuadrapus.png",
+            "tooltip": "Mini-boss. A giant, red Quadrapus.",
+            "totalValue": ""
+        },
+        {
+            "unitId": "skyking",
+            "abilities": [
+                "boss_status",
+                "tenacity"
+            ],
+            "armorType": "Immaterial",
+            "attackMode": "Ranged",
+            "attackRange": "575",
+            "attackType": "Pure",
+            "dps": "52.50",
+            "flags": "flags_boss,flags_building,flags_ground",
+            "hp": "2700",
+            "iconPath": "Icons/SkyKing.png",
+            "tooltip": "The great Sky King of Nova.",
+            "totalValue": ""
+        },
+        {
+            "unitId": "earthking",
+            "abilities": [
+                "boss_status",
+                "tenacity"
+            ],
+            "armorType": "Immaterial",
+            "attackMode": "Ranged",
+            "attackRange": "575",
+            "attackType": "Pure",
+            "dps": "52.50",
+            "flags": "flags_boss,flags_building,flags_ground",
+            "hp": "2700",
+            "iconPath": "Icons/EarthKing.png",
+            "tooltip": "The great Earth King of Nova.",
+            "totalValue": ""
+        },
+        {
+            "unitId": "mastermind_builder",
+            "abilities": [],
+            "armorType": "",
+            "attackMode": "",
+            "attackRange": "",
+            "attackType": "",
+            "dps": "",
+            "flags": "flags_ghost,flags_invulnerable,flags_unselectable",
+            "hp": "10000",
+            "iconPath": "Icons/Mastermind.png",
+            "tooltip": "Default description for Element Builder",
+            "totalValue": ""
+        },
+        {
+            "unitId": "legion_king",
+            "abilities": [
+                "boss_status"
+            ],
+            "armorType": "Immaterial",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Pure",
+            "dps": "1421.05",
+            "flags": "flags_boss,flags_ground",
+            "hp": "33000",
+            "iconPath": "Icons/LegionKing.png",
+            "tooltip": "Final Boss. Leads a horde of Legion Lords.",
+            "totalValue": ""
+        },
+        {
+            "unitId": "chaos_hound_harbinger",
+            "abilities": [],
+            "armorType": "Fortified",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Impact",
+            "dps": "81.25",
+            "flags": "flags_ground,flags_organic,flags_summoned",
+            "hp": "860",
+            "iconPath": "Icons/Cerberus.png",
+            "tooltip": "High damage melee pet",
+            "totalValue": ""
+        },
+        {
+            "unitId": "giant_snail",
+            "abilities": [],
+            "armorType": "Fortified",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Impact",
+            "dps": "22.12",
+            "flags": "flags_ground,flags_organic",
+            "hp": "550",
+            "iconPath": "Icons/GiantSnail.png",
+            "tooltip": "Melee tank (Available when the Legion Spell \u0027Giant Snail\u0027 is used)",
+            "totalValue": ""
+        },
+        {
+            "unitId": "sea_serpent",
+            "abilities": [
+                "ambush"
+            ],
+            "armorType": "Swift",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Pierce",
+            "dps": "66.37",
+            "flags": "flags_ground,flags_organic",
+            "hp": "680",
+            "iconPath": "Icons/SeaSerpent.png",
+            "tooltip": "Burrows into the ground, then unburrows itself 5 seconds later. Good when placed up front.",
+            "totalValue": "90"
+        },
+        {
+            "unitId": "deepcoiler",
+            "abilities": [
+                "ambush"
+            ],
+            "armorType": "Swift",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Pierce",
+            "dps": "203.23",
+            "flags": "flags_ground,flags_organic",
+            "hp": "2070",
+            "iconPath": "Icons/Deepcoiler.png",
+            "tooltip": "Its teeth deal massive damage, but it is greatly lacking in health.",
+            "totalValue": "275"
+        },
+        {
+            "unitId": "pollywog",
+            "abilities": [],
+            "armorType": "Swift",
+            "attackMode": "Ranged",
+            "attackRange": "350",
+            "attackType": "Magic",
+            "dps": "8.60",
+            "flags": "flags_flying",
+            "hp": "80",
+            "iconPath": "Icons/Pollywog.png",
+            "tooltip": "Flying. Can upgrade into two different forms.",
+            "totalValue": "15"
+        },
+        {
+            "unitId": "seraphin",
+            "abilities": [
+                "adapt_into_devilfish"
+            ],
+            "armorType": "Swift",
+            "attackMode": "Ranged",
+            "attackRange": "350",
+            "attackType": "Magic",
+            "dps": "53.76",
+            "flags": "flags_flying",
+            "hp": "660",
+            "iconPath": "Icons/Seraphin.png",
+            "tooltip": "Flying. Ranged damage-dealer. Can be Adapted into a Devilfish.",
+            "totalValue": "95"
+        },
+        {
+            "unitId": "devilfish",
+            "abilities": [
+                "adapt_into_seraphin"
+            ],
+            "armorType": "Swift",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Magic",
+            "dps": "34.55",
+            "flags": "flags_flying",
+            "hp": "1120",
+            "iconPath": "Icons/Devilfish.png",
+            "tooltip": "Flying. Melee tank. Can be Adapted into a Seraphin.",
+            "totalValue": "95"
+        },
+        {
+            "unitId": "angler",
+            "abilities": [
+                "junior_fisherman",
+                "mana_transfer_on_upgrade",
+                "disable_mana_regen_tower_only"
+            ],
+            "armorType": "Fortified",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Pierce",
+            "dps": "15.18",
+            "flags": "flags_ground",
+            "hp": "380",
+            "iconPath": "Icons/Angler.png",
+            "tooltip": "Accumulates \u0022stacks\u0022 when enemies die. The more stacks it has, the stronger its final form will be.",
+            "totalValue": "40"
+        },
+        {
+            "unitId": "bounty_hunter",
+            "abilities": [
+                "commercial_fisherman",
+                "mana_transfer_on_upgrade",
+                "disable_mana_regen_tower_only"
+            ],
+            "armorType": "Fortified",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Pierce",
+            "dps": "69.64",
+            "flags": "flags_ground",
+            "hp": "1730",
+            "iconPath": "Icons/BountyHunter.png",
+            "tooltip": "A more proficient fisherman, it can now accumulate more stacks.",
+            "totalValue": "165"
+        },
+        {
+            "unitId": "kingpin",
+            "abilities": [
+                "elite_fisherman",
+                "mana_transfer_on_upgrade",
+                "disable_mana_regen"
+            ],
+            "armorType": "Fortified",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Pierce",
+            "dps": "162.86",
+            "flags": "flags_ground",
+            "hp": "4150",
+            "iconPath": "Icons/Kingpin.png",
+            "tooltip": "The more stacks it has, the stronger its attack. However, it no longer accumulates new stacks. ",
+            "totalValue": "415"
+        },
+        {
+            "unitId": "grarl",
+            "abilities": [
+                "delicacy_hardcoded"
+            ],
+            "armorType": "Natural",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Impact",
+            "dps": "51.69",
+            "flags": "flags_ground,flags_organic",
+            "hp": "1310",
+            "iconPath": "Icons/Grarl.png",
+            "tooltip": "Owing to its tasty meat, it can be sold for a high percentage of its original cost. Weak stats.",
+            "totalValue": "145"
+        },
+        {
+            "unitId": "king_claw",
+            "abilities": [
+                "shell_shock"
+            ],
+            "armorType": "Natural",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Impact",
+            "dps": "101.69",
+            "flags": "flags_ground,flags_organic",
+            "hp": "4450",
+            "iconPath": "Icons/KingClaw.png",
+            "tooltip": "Tanky. Stomps the ground to damage and slow enemies.",
+            "totalValue": "420"
+        },
+        {
+            "unitId": "ocean_templar",
+            "abilities": [
+                "resonance",
+                "resonance_oracle_gate",
+                "resonance_gate"
+            ],
+            "armorType": "Natural",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Impact",
+            "dps": "101.69",
+            "flags": "flags_ground,flags_organic",
+            "hp": "3000",
+            "iconPath": "Icons/OceanTemplar.png",
+            "tooltip": "Aura. Passively heals and grants magic resistance to adjacently-built units",
+            "totalValue": "395"
+        },
+        {
+            "unitId": "priestess_of_the_abyss",
+            "abilities": [
+                "burst_attack",
+                "invigorate"
+            ],
+            "armorType": "Arcane",
+            "attackMode": "Ranged",
+            "attackRange": "600",
+            "attackType": "Magic",
+            "dps": "23.30",
+            "flags": "flags_ground",
+            "hp": "1000",
+            "iconPath": "Icons/PriestessOfTheAbyss.png",
+            "tooltip": "Periodically boosts its attack speed and heals itself.",
+            "totalValue": "190"
+        },
+        {
+            "unitId": "azeria",
+            "abilities": [
+                "invigorate_azeria",
+                "echostrike_azeria"
+            ],
+            "armorType": "Arcane",
+            "attackMode": "Ranged",
+            "attackRange": "600",
+            "attackType": "Magic",
+            "dps": "65.05",
+            "flags": "flags_ground",
+            "hp": "3300",
+            "iconPath": "Icons/Azeria.png",
+            "tooltip": "Its attacks now also deal % health damage.",
+            "totalValue": "540"
+        },
+        {
+            "unitId": "eggsack",
+            "abilities": [
+                "incubation",
+                "ambernite_shell",
+                "eggsplosion"
+            ],
+            "armorType": "Natural",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Impact",
+            "dps": ".00",
+            "flags": "flags_ground",
+            "hp": "2500",
+            "iconPath": "Icons/Eggsack.png",
+            "tooltip": "Unique fighter. It can\u0027t move or attack, but it reflects damage. It evolves into a Hydra after 2 waves, or earlier - in a weakened form - if the egg is destroyed.",
+            "totalValue": "275"
+        },
+        {
+            "unitId": "hydra",
+            "abilities": [
+                "hydralings",
+                "hydra_hidden"
+            ],
+            "armorType": "Natural",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Impact",
+            "dps": "91.74",
+            "flags": "flags_ground",
+            "hp": "1860",
+            "iconPath": "Icons/Hydra.png",
+            "tooltip": "An ancient diety. When it dies, it splits into 3 hydralings.",
+            "totalValue": "420"
+        },
+        {
+            "unitId": "atlantean_builder",
+            "abilities": [],
+            "armorType": "",
+            "attackMode": "",
+            "attackRange": "",
+            "attackType": "",
+            "dps": "",
+            "flags": "flags_ghost,flags_invulnerable,flags_unselectable",
+            "hp": "10000",
+            "iconPath": "Icons/Atlantean.png",
+            "tooltip": "Default description for Element Builder",
+            "totalValue": ""
+        },
+        {
+            "unitId": "siege_ram",
+            "abilities": [
+                "deflection"
+            ],
+            "armorType": "Fortified",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Pierce",
+            "dps": "226.15",
+            "flags": "flags_ground,flags_organic",
+            "hp": "5600",
+            "iconPath": "Icons/SiegeRam.png",
+            "tooltip": "Takes reduced damage from ranged units.",
+            "totalValue": ""
+        },
+        {
+            "unitId": "hydraling",
+            "abilities": [
+                "hydra_hidden"
+            ],
+            "armorType": "Natural",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Impact",
+            "dps": "30.58",
+            "flags": "flags_ground",
+            "hp": "620",
+            "iconPath": "Icons/Hydraling.png",
+            "tooltip": "A mini version of a Hydra that spawns when a Hydra dies.",
+            "totalValue": "250"
+        },
+        {
+            "unitId": "looter",
+            "abilities": [],
+            "armorType": "Swift",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Impact",
+            "dps": "6.12",
+            "flags": "flags_ground,flags_organic",
+            "hp": "80",
+            "iconPath": "Icons/Looter.png",
+            "tooltip": "High damage, but incredibly weak.",
+            "totalValue": "10"
+        },
+        {
+            "unitId": "pack_rat",
+            "abilities": [
+                "treasure_hunt"
+            ],
+            "armorType": "Swift",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Impact",
+            "dps": "41.84",
+            "flags": "flags_ground,flags_organic",
+            "hp": "640",
+            "iconPath": "Icons/PackRat.png",
+            "tooltip": "You can activate Treasure Hunt, which will send it away to gather mythium.",
+            "totalValue": "75"
+        },
+        {
+            "unitId": "nomad_builder",
+            "abilities": [],
+            "armorType": "",
+            "attackMode": "",
+            "attackRange": "",
+            "attackType": "",
+            "dps": "",
+            "flags": "flags_ghost,flags_invulnerable,flags_unselectable",
+            "hp": "10000",
+            "iconPath": "Icons/Nomad.png",
+            "tooltip": "Default description for Element Builder",
+            "totalValue": ""
+        },
+        {
+            "unitId": "ogre",
+            "abilities": [
+                "knock_out_new",
+                "mana_on_attack_and_on_kill",
+                "start_with_0_mana"
+            ],
+            "armorType": "Fortified",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Impact",
+            "dps": "134.23",
+            "flags": "flags_ground,flags_organic",
+            "hp": "2950",
+            "iconPath": "Icons/Ogre.png",
+            "tooltip": "Every third attack, deals bonus damage. Refreshes when it gets a kill.",
+            "totalValue": ""
+        },
+        {
+            "unitId": "harpy",
+            "abilities": [
+                "acrobatics_harpy",
+                "start_with_0_mana"
+            ],
+            "armorType": "Natural",
+            "attackMode": "Ranged",
+            "attackRange": "450",
+            "attackType": "Pierce",
+            "dps": "20.44",
+            "flags": "flags_flying",
+            "hp": "220",
+            "iconPath": "Icons/Harpy.png",
+            "tooltip": "Flying. The longer it flies before entering battle, the faster it will attack.",
+            "totalValue": "35"
+        },
+        {
+            "unitId": "sky_queen",
+            "abilities": [
+                "acrobatics",
+                "crimson_claws",
+                "start_with_0_mana"
+            ],
+            "armorType": "Natural",
+            "attackMode": "Ranged",
+            "attackRange": "450",
+            "attackType": "Pierce",
+            "dps": "84.67",
+            "flags": "flags_flying",
+            "hp": "1250",
+            "iconPath": "Icons/SkyQueen.png",
+            "tooltip": "Flying. Now gains attack speed whenever it attacks.",
+            "totalValue": "200"
+        },
+        {
+            "unitId": "froggo",
+            "abilities": [],
+            "armorType": "Arcane",
+            "attackMode": "Ranged",
+            "attackRange": "400",
+            "attackType": "Magic",
+            "dps": "42.35",
+            "flags": "flags_ground,flags_organic,flags_summoned,flags_undead",
+            "hp": "500",
+            "iconPath": "Icons/Froggo.png",
+            "tooltip": "High damage ranged pet",
+            "totalValue": ""
+        },
+        {
+            "unitId": "witch",
+            "abilities": [
+                "summon_froggo",
+                "advanced_necromancy"
+            ],
+            "armorType": "Arcane",
+            "attackMode": "Ranged",
+            "attackRange": "550",
+            "attackType": "Magic",
+            "dps": "105.26",
+            "flags": "flags_ground,flags_organic",
+            "hp": "1800",
+            "iconPath": "Icons/Witch.png",
+            "tooltip": "Summons an endless supply of Froggos.",
+            "totalValue": ""
+        },
+        {
+            "unitId": "warg",
+            "abilities": [],
+            "armorType": "Natural",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Pierce",
+            "dps": "33.70",
+            "flags": "flags_ground,flags_organic",
+            "hp": "950",
+            "iconPath": "Icons/Warg.png",
+            "tooltip": "Depending on its upgrade path, it will prefer to be near cheap fighters or expensive fighters.",
+            "totalValue": "85"
+        },
+        {
+            "unitId": "lioness",
+            "abilities": [
+                "entourage"
+            ],
+            "armorType": "Natural",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Pierce",
+            "dps": "105.43",
+            "flags": "flags_ground,flags_organic",
+            "hp": "2250",
+            "iconPath": "Icons/Lioness.png",
+            "tooltip": "Gets stronger when built next to expensive units.",
+            "totalValue": "260"
+        },
+        {
+            "unitId": "alpha_male",
+            "abilities": [
+                "dominion",
+                "dominion_hidden"
+            ],
+            "armorType": "Natural",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Pierce",
+            "dps": "110.87",
+            "flags": "flags_ground,flags_organic",
+            "hp": "2680",
+            "iconPath": "Icons/AlphaMale.png",
+            "tooltip": "Powerful, but gets weaker when built next to expensive units.",
+            "totalValue": "285"
+        },
+        {
+            "unitId": "desert_pilgrim",
+            "abilities": [
+                "chain_heal"
+            ],
+            "armorType": "Fortified",
+            "attackMode": "Ranged",
+            "attackRange": "350",
+            "attackType": "Magic",
+            "dps": "51.28",
+            "flags": "flags_ground,flags_organic",
+            "hp": "870",
+            "iconPath": "Icons/DesertPilgrim.png",
+            "tooltip": "Has a bouncing heal.",
+            "totalValue": "135"
+        },
+        {
+            "unitId": "lost_chieftain",
+            "abilities": [
+                "gaia_shield"
+            ],
+            "armorType": "Fortified",
+            "attackMode": "Ranged",
+            "attackRange": "350",
+            "attackType": "Magic",
+            "dps": "176.92",
+            "flags": "flags_ground,flags_organic",
+            "hp": "2350",
+            "iconPath": "Icons/LostChieftain.png",
+            "tooltip": "Blesses an ally with the spirit of earth, increasing its max health.",
+            "totalValue": "390"
+        },
+        {
+            "unitId": "sand_badger",
+            "abilities": [],
+            "armorType": "Arcane",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Impact",
+            "dps": "58.46",
+            "flags": "flags_ground,flags_organic",
+            "hp": "2530",
+            "iconPath": "Icons/SandBadger.png",
+            "tooltip": "Tanky. Not known for its offense.",
+            "totalValue": "195"
+        },
+        {
+            "unitId": "iron_scales",
+            "abilities": [],
+            "armorType": "Arcane",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Impact",
+            "dps": "156.92",
+            "flags": "flags_ground,flags_organic",
+            "hp": "6800",
+            "iconPath": "Icons/IronScales.png",
+            "tooltip": "The ultimate arcane tank.",
+            "totalValue": "530"
+        },
+        {
+            "unitId": "red_eyes",
+            "abilities": [
+                "thunderous_charge",
+                "start_with_0_mana"
+            ],
+            "armorType": "Fortified",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Pierce",
+            "dps": "162.00",
+            "flags": "flags_ground,flags_organic",
+            "hp": "8170",
+            "iconPath": "Icons/RedEyes.png",
+            "tooltip": "Even tankier and charges with even greater ferocity.",
+            "totalValue": "690"
+        },
+        {
+            "unitId": "great_boar",
+            "abilities": [
+                "stampede",
+                "start_with_0_mana"
+            ],
+            "armorType": "Fortified",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Pierce",
+            "dps": "64.00",
+            "flags": "flags_ground,flags_organic",
+            "hp": "3230",
+            "iconPath": "Icons/GreatBoar.png",
+            "tooltip": "Tanky. Charges into battle, accelerating with each step. Deals splash damage when it hits.",
+            "totalValue": "270"
+        },
+        {
+            "unitId": "cannoneer",
+            "abilities": [],
+            "armorType": "Swift",
+            "attackMode": "Ranged",
+            "attackRange": "550",
+            "attackType": "Impact",
+            "dps": "74.34",
+            "flags": "flags_ground,flags_organic",
+            "hp": "950",
+            "iconPath": "Icons/Cannoneer.png",
+            "tooltip": "Her long-range cannon packs a punch.",
+            "totalValue": ""
+        },
+        {
+            "unitId": "masked_spirit",
+            "abilities": [
+                "spectral_scream"
+            ],
+            "armorType": "Swift",
+            "attackMode": "Ranged",
+            "attackRange": "600",
+            "attackType": "Pierce",
+            "dps": "7.22",
+            "flags": "flags_flying",
+            "hp": "130",
+            "iconPath": "Icons/MaskedSpirit.png",
+            "tooltip": "Flying. Each attack hits up to 3 random targets at a long range.",
+            "totalValue": "25"
+        },
+        {
+            "unitId": "hell_raiser",
+            "abilities": [
+                "tantrum",
+                "spectral_scream"
+            ],
+            "armorType": "Swift",
+            "attackMode": "Ranged",
+            "attackRange": "600",
+            "attackType": "Pierce",
+            "dps": "52.58",
+            "flags": "flags_flying",
+            "hp": "1500",
+            "iconPath": "Icons/HellRaiser.png",
+            "tooltip": "Has a fiery temper. Alternates between stronger and weaker forms.",
+            "totalValue": "215"
+        },
+        {
+            "unitId": "false_maiden",
+            "abilities": [
+                "spectral_scream"
+            ],
+            "armorType": "Swift",
+            "attackMode": "Ranged",
+            "attackRange": "600",
+            "attackType": "Pierce",
+            "dps": "26.80",
+            "flags": "flags_flying",
+            "hp": "670",
+            "iconPath": "Icons/FalseMaiden.png",
+            "tooltip": "A new mask gives it a stronger attack.",
+            "totalValue": "95"
+        },
+        {
+            "unitId": "shrine_builder",
+            "abilities": [],
+            "armorType": "",
+            "attackMode": "",
+            "attackRange": "",
+            "attackType": "",
+            "dps": "",
+            "flags": "flags_ghost,flags_invulnerable,flags_unselectable",
+            "hp": "10000",
+            "iconPath": "Icons/Shrine.png",
+            "tooltip": "Default description for Element Builder",
+            "totalValue": ""
+        },
+        {
+            "unitId": "nekomata",
+            "abilities": [
+                "spirit_offering"
+            ],
+            "armorType": "Arcane",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Pierce",
+            "dps": "29.52",
+            "flags": "flags_ground,flags_organic",
+            "hp": "600",
+            "iconPath": "Icons/Nekomata.png",
+            "tooltip": "Can activate Spirit Offering to permanently upgrade its stats.",
+            "totalValue": "60"
+        },
+        {
+            "unitId": "infiltrator",
+            "abilities": [
+                "arm_with_shuriken",
+                "throw_shuriken",
+                "mana_transfer_on_becomes_fighter",
+                "reset_mana_on_becomes_tower",
+                "start_with_0_mana",
+                "disable_mana_regen"
+            ],
+            "armorType": "Swift",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Magic",
+            "dps": "40.84",
+            "flags": "flags_ground,flags_organic",
+            "hp": "720",
+            "iconPath": "Icons/Infiltrator.png",
+            "tooltip": "You can pay gold to activate Arm With Shuriken, which powers it up for the next wave only.",
+            "totalValue": "80"
+        },
+        {
+            "unitId": "orchid",
+            "abilities": [
+                "shuriken_cyclone",
+                "throw_shuriken_cyclone",
+                "mana_transfer_on_becomes_fighter",
+                "reset_mana_on_becomes_tower",
+                "start_with_0_mana",
+                "disable_mana_regen"
+            ],
+            "armorType": "Swift",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Magic",
+            "dps": "141.36",
+            "flags": "flags_ground,flags_organic",
+            "hp": "2500",
+            "iconPath": "Icons/Orchid.png",
+            "tooltip": "Now throws three times as many shurikens in the same amount of time.",
+            "totalValue": "280"
+        },
+        {
+            "unitId": "blob",
+            "abilities": [],
+            "armorType": "Arcane",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Magic",
+            "dps": "6.90",
+            "flags": "flags_ground,flags_organic",
+            "hp": "140",
+            "iconPath": "Icons/Blob.png",
+            "tooltip": "A mini version of a Sludge that spawns when a Sludge dies.",
+            "totalValue": ""
+        },
+        {
+            "unitId": "eternal_wanderer",
+            "abilities": [
+                "shallow_grave"
+            ],
+            "armorType": "Fortified",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Impact",
+            "dps": "31.58",
+            "flags": "flags_ground,flags_organic",
+            "hp": "750",
+            "iconPath": "Icons/EternalWanderer.png",
+            "tooltip": "Comes back to life after it dies.",
+            "totalValue": "125"
+        },
+        {
+            "unitId": "samurai_soul",
+            "abilities": [
+                "shallow_grave_red"
+            ],
+            "armorType": "Fortified",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Impact",
+            "dps": "105.26",
+            "flags": "flags_ground,flags_organic",
+            "hp": "2500",
+            "iconPath": "Icons/SamuraiSoul.png",
+            "tooltip": "Has red plate armor and a legendary sword. Comes back to life after it dies.",
+            "totalValue": "400"
+        },
+        {
+            "unitId": "yozora",
+            "abilities": [
+                "wintry_touch",
+                "nimble_feet"
+            ],
+            "armorType": "Swift",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Pure",
+            "dps": "55.29",
+            "flags": "flags_ground,flags_organic",
+            "hp": "1510",
+            "iconPath": "Icons/Yozora.png",
+            "tooltip": "Deceptively tanky and chills nearby enemies.",
+            "totalValue": "190"
+        },
+        {
+            "unitId": "arctaire",
+            "abilities": [
+                "frozen_veil",
+                "nimble_feet"
+            ],
+            "armorType": "Swift",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Pure",
+            "dps": "157.65",
+            "flags": "flags_ground,flags_organic",
+            "hp": "4320",
+            "iconPath": "Icons/Arctaire.png",
+            "tooltip": "Deceptively tanky and chills nearby enemies.",
+            "totalValue": "550"
+        },
+        {
+            "unitId": "soul_gate",
+            "abilities": [
+                "dimensional_rift",
+                "blood_price",
+                "soul_gate_reduced_healing"
+            ],
+            "armorType": "Natural",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Impact",
+            "dps": ".00",
+            "flags": "flags_ground",
+            "hp": "2000",
+            "iconPath": "Icons/SoulGate.png",
+            "tooltip": "Unique fighter. It can\u0027t move or attack, but summons minions.",
+            "totalValue": "260"
+        },
+        {
+            "unitId": "hell_gate",
+            "abilities": [
+                "dimensional_chasm",
+                "blood_price",
+                "soul_gate_reduced_healing"
+            ],
+            "armorType": "Natural",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Impact",
+            "dps": ".00",
+            "flags": "flags_ground",
+            "hp": "5200",
+            "iconPath": "Icons/HellGate.png",
+            "tooltip": "Summons even stronger minions.",
+            "totalValue": "680"
+        },
+        {
+            "unitId": "hellion",
+            "abilities": [],
+            "armorType": "Natural",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Impact",
+            "dps": "67.57",
+            "flags": "flags_ground,flags_organic,flags_summoned",
+            "hp": "780",
+            "iconPath": "Icons/Hellion.png",
+            "tooltip": "A melee minion summoned by Soul Gate",
+            "totalValue": ""
+        },
+        {
+            "unitId": "elite_hellion",
+            "abilities": [],
+            "armorType": "Natural",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Impact",
+            "dps": "172.41",
+            "flags": "flags_ground,flags_organic,flags_summoned",
+            "hp": "2000",
+            "iconPath": "Icons/EliteHellion.png",
+            "tooltip": "A melee minion summoned by Hell Gate",
+            "totalValue": ""
+        },
+        {
+            "unitId": "nightcrawler",
+            "abilities": [],
+            "armorType": "Natural",
+            "attackMode": "Ranged",
+            "attackRange": "400",
+            "attackType": "Magic",
+            "dps": "56.18",
+            "flags": "flags_ground,flags_organic,flags_summoned",
+            "hp": "420",
+            "iconPath": "Icons/Nightcrawler.png",
+            "tooltip": "A ranged minion summoned by Soul Gate",
+            "totalValue": ""
+        },
+        {
+            "unitId": "elite_nightcrawler",
+            "abilities": [],
+            "armorType": "Natural",
+            "attackMode": "Ranged",
+            "attackRange": "400",
+            "attackType": "Magic",
+            "dps": "142.86",
+            "flags": "flags_ground,flags_organic,flags_summoned",
+            "hp": "1080",
+            "iconPath": "Icons/EliteNightcrawler.png",
+            "tooltip": "A ranged minion summoned by Hell Gate",
+            "totalValue": ""
+        },
+        {
+            "unitId": "chained_fist",
+            "abilities": [],
+            "armorType": "Fortified",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Impact",
+            "dps": "7.48",
+            "flags": "flags_ground,flags_organic",
+            "hp": "220",
+            "iconPath": "Icons/ChainedFist.png",
+            "tooltip": "Cheap tank.",
+            "totalValue": "20"
+        },
+        {
+            "unitId": "oathbreaker",
+            "abilities": [
+                "unchained_rage_activation"
+            ],
+            "armorType": "Fortified",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Impact",
+            "dps": "25.23",
+            "flags": "flags_ground,flags_organic",
+            "hp": "1130",
+            "iconPath": "Icons/Oathbreaker.png",
+            "tooltip": "Tanky. Attacks quickly when low life.",
+            "totalValue": "95"
+        },
+        {
+            "unitId": "divine_builder",
+            "abilities": [],
+            "armorType": "",
+            "attackMode": "",
+            "attackRange": "",
+            "attackType": "",
+            "dps": "",
+            "flags": "flags_ghost,flags_invulnerable,flags_unselectable",
+            "hp": "10000",
+            "iconPath": "Icons/Divine.png",
+            "tooltip": "Default description for Element Builder",
+            "totalValue": ""
+        },
+        {
+            "unitId": "golden_buckler",
+            "abilities": [],
+            "armorType": "Natural",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Impact",
+            "dps": "15.67",
+            "flags": "flags_ground,flags_organic",
+            "hp": "550",
+            "iconPath": "Icons/GoldenBuckler.png",
+            "tooltip": "Tanky. Takes reduced damage from ranged units.",
+            "totalValue": "50"
+        },
+        {
+            "unitId": "royal_guard",
+            "abilities": [
+                "deflection"
+            ],
+            "armorType": "Natural",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Impact",
+            "dps": "57.39",
+            "flags": "flags_ground,flags_organic",
+            "hp": "2050",
+            "iconPath": "Icons/RoyalGuard.png",
+            "tooltip": "Tanky. Takes reduced damage from ranged units.",
+            "totalValue": "185"
+        },
+        {
+            "unitId": "sacred_steed",
+            "abilities": [
+                "mana_blessing",
+                "mana_blessing_self_buff"
+            ],
+            "armorType": "Arcane",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Magic",
+            "dps": "27.50",
+            "flags": "flags_ground,flags_organic",
+            "hp": "740",
+            "iconPath": "Icons/SacredSteed.png",
+            "tooltip": "Restores mana to nearby allies",
+            "totalValue": "80"
+        },
+        {
+            "unitId": "pegasus",
+            "abilities": [
+                "mana_miracle",
+                "mana_miracle_self_buff"
+            ],
+            "armorType": "Arcane",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Magic",
+            "dps": "91.67",
+            "flags": "flags_ground,flags_organic",
+            "hp": "2470",
+            "iconPath": "Icons/Pegasus.png",
+            "tooltip": "Faithful devotion has heightened its restorative powers",
+            "totalValue": "270"
+        },
+        {
+            "unitId": "hybrid_builder",
+            "abilities": [],
+            "armorType": "",
+            "attackMode": "",
+            "attackRange": "",
+            "attackType": "",
+            "dps": "",
+            "flags": "flags_ghost,flags_invulnerable,flags_unselectable",
+            "hp": "10000",
+            "iconPath": "Icons/Hybrid.png",
+            "tooltip": "Default description for Element Builder",
+            "totalValue": ""
+        },
+        {
+            "unitId": "chaos_builder",
+            "abilities": [],
+            "armorType": "",
+            "attackMode": "",
+            "attackRange": "",
+            "attackType": "",
+            "dps": "",
+            "flags": "flags_ghost,flags_invulnerable,flags_unselectable",
+            "hp": "10000",
+            "iconPath": "Icons/Chaos.png",
+            "tooltip": "Default description for Element Builder",
+            "totalValue": ""
+        },
+        {
+            "unitId": "elite_archer",
+            "abilities": [
+                "Multishot"
+            ],
+            "armorType": "Arcane",
+            "attackMode": "Ranged",
+            "attackRange": "450",
+            "attackType": "Pierce",
+            "dps": "25.77",
+            "flags": "flags_flying,flags_organic",
+            "hp": "900",
+            "iconPath": "Icons/EliteArcher.png",
+            "tooltip": "Fires four arrows every attack.",
+            "totalValue": "145"
+        },
+        {
+            "unitId": "trinity_archer",
+            "abilities": [
+                "hypershot"
+            ],
+            "armorType": "Arcane",
+            "attackMode": "Ranged",
+            "attackRange": "450",
+            "attackType": "Pierce",
+            "dps": "57.73",
+            "flags": "flags_flying,flags_organic",
+            "hp": "2530",
+            "iconPath": "Icons/TrinityArcher.png",
+            "tooltip": "Wielding an arbalest, it now fires five arrows.",
+            "totalValue": "410"
+        },
+        {
+            "unitId": "thanatos",
+            "abilities": [
+                "intellect_thanatos"
+            ],
+            "armorType": "Arcane",
+            "attackMode": "Ranged",
+            "attackRange": "350",
+            "attackType": "Magic",
+            "dps": "196.85",
+            "flags": "flags_flying,flags_organic,flags_summoned",
+            "hp": "2000",
+            "iconPath": "Icons/Thanatos.png",
+            "tooltip": "Ranged summon with high damage.",
+            "totalValue": ""
+        },
+        {
+            "unitId": "imp_mercenary",
+            "abilities": [
+                "diabolic_duo"
+            ],
+            "armorType": "Natural",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Magic",
+            "dps": "46.94",
+            "flags": "flags_ground,flags_organic",
+            "hp": "760",
+            "iconPath": "Icons/Imp.png",
+            "tooltip": "Spawns an extra Imp when sent. Deals high damage.",
+            "totalValue": ""
+        },
+        {
+            "unitId": "radiant_halo",
+            "abilities": [
+                "particle_wave",
+                "solar_flare"
+            ],
+            "armorType": "Fortified",
+            "attackMode": "Ranged",
+            "attackRange": "650",
+            "attackType": "Pure",
+            "dps": "50.85",
+            "flags": "flags_flying",
+            "hp": "1200",
+            "iconPath": "Icons/RadiantHalo.png",
+            "tooltip": "Flying. Long-ranged unit with ramping damage.",
+            "totalValue": "200"
+        },
+        {
+            "unitId": "arc_of_justice",
+            "abilities": [
+                "purification_beam",
+                "solar_flare_arc_of_justice"
+            ],
+            "armorType": "Fortified",
+            "attackMode": "Ranged",
+            "attackRange": "650",
+            "attackType": "Pure",
+            "dps": "137.85",
+            "flags": "flags_flying",
+            "hp": "3250",
+            "iconPath": "Icons/ArcOfJustice.png",
+            "tooltip": "Long-ranged unit with ramping damage",
+            "totalValue": "545"
+        },
+        {
+            "unitId": "holy_avenger",
+            "abilities": [
+                "aegis",
+                "disable_mana_regen_tower_only",
+                "aegis_hidden_effect"
+            ],
+            "armorType": "Swift",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Impact",
+            "dps": "103.95",
+            "flags": "flags_ground,flags_organic",
+            "hp": "2510",
+            "iconPath": "Icons/HolyAvenger.png",
+            "tooltip": "Gains mana whenever attacking or being attacked. The more mana she has, the stronger she becomes.",
+            "totalValue": "270"
+        },
+        {
+            "unitId": "sovereign",
+            "abilities": [
+                "final_judgment",
+                "disable_mana_regen_tower_only",
+                "final_judgment_hidden_effect"
+            ],
+            "armorType": "Swift",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Impact",
+            "dps": "255.37",
+            "flags": "flags_ground,flags_organic",
+            "hp": "6400",
+            "iconPath": "Icons/Sovereign.png",
+            "tooltip": "Millennia have passed; his divine authority remains unchallenged.",
+            "totalValue": "700"
+        },
+        {
+            "unitId": "gatling_gun",
+            "abilities": [
+                "full_throttle",
+                "gatling_hidden"
+            ],
+            "armorType": "Fortified",
+            "attackMode": "Ranged",
+            "attackRange": "800",
+            "attackType": "Pierce",
+            "dps": "84.78",
+            "flags": "flags_ghost,flags_ground",
+            "hp": "1080",
+            "iconPath": "Icons/GatlingGun.png",
+            "tooltip": "DOES NOT MOVE. Long-ranged, but attacks faster the closer it is to the target.",
+            "totalValue": "190"
+        },
+        {
+            "unitId": "vulcan_cannon",
+            "abilities": [
+                "bullet_rain",
+                "vulcan_hidden"
+            ],
+            "armorType": "Fortified",
+            "attackMode": "Ranged",
+            "attackRange": "800",
+            "attackType": "Pierce",
+            "dps": "221.74",
+            "flags": "flags_ghost,flags_ground",
+            "hp": "3030",
+            "iconPath": "Icons/VulcanCannon.png",
+            "tooltip": "Redesigned from the ground up, its twin cannons deliver far more punch while firing just as fast.",
+            "totalValue": "530"
+        },
+        {
+            "unitId": "seadragon",
+            "abilities": [
+                "life_exchange"
+            ],
+            "armorType": "Natural",
+            "attackMode": "Ranged",
+            "attackRange": "450",
+            "attackType": "Magic",
+            "dps": "33.64",
+            "flags": "flags_flying",
+            "hp": "870",
+            "iconPath": "Icons/Seadragon.png",
+            "tooltip": "Heals allies by consuming its own life force.",
+            "totalValue": "95"
+        },
+        {
+            "unitId": "lifebinder",
+            "abilities": [
+                "soul_transfer"
+            ],
+            "armorType": "Natural",
+            "attackMode": "Ranged",
+            "attackRange": "450",
+            "attackType": "Magic",
+            "dps": "100.91",
+            "flags": "flags_flying",
+            "hp": "2610",
+            "iconPath": "Icons/Lifebinder.png",
+            "tooltip": "Wields heightened powers honed from years of devotion.",
+            "totalValue": "290"
+        },
+        {
+            "unitId": "seedling",
+            "abilities": [
+                "razor_leaf"
+            ],
+            "armorType": "Natural",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Magic",
+            "dps": "2.00",
+            "flags": "flags_ground,flags_organic",
+            "hp": "100",
+            "iconPath": "Icons/Seedling.png",
+            "tooltip": "Deals splash damage, but its true strength lies in its upgraded forms.",
+            "totalValue": "15"
+        },
+        {
+            "unitId": "chloropixie",
+            "abilities": [
+                "early_harvest"
+            ],
+            "armorType": "Natural",
+            "attackMode": "Ranged",
+            "attackRange": "400",
+            "attackType": "Magic",
+            "dps": "55.06",
+            "flags": "flags_ground,flags_organic",
+            "hp": "570",
+            "iconPath": "Icons/Chloropixie.png",
+            "tooltip": "Its mysterious bulb produces a small amount of mythium if it dies in battle.",
+            "totalValue": "100"
+        },
+        {
+            "unitId": "sakura",
+            "abilities": [
+                "superbloom"
+            ],
+            "armorType": "Natural",
+            "attackMode": "Ranged",
+            "attackRange": "400",
+            "attackType": "Magic",
+            "dps": "110.11",
+            "flags": "flags_ground,flags_organic",
+            "hp": "1350",
+            "iconPath": "Icons/Sakura.png",
+            "tooltip": "Now fully bloomed, it grows more powerful every wave it survives.",
+            "totalValue": "250"
+        },
+        {
+            "unitId": "cursed_casket",
+            "abilities": [
+                "start_with_0_mana",
+                "iron_hail"
+            ],
+            "armorType": "Arcane",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Pierce",
+            "dps": "21.54",
+            "flags": "flags_ground",
+            "hp": "1500",
+            "iconPath": "Icons/CursedCasket.png",
+            "tooltip": "Tanky. Periodically unleashes volleys of cursed swords, dealing area of effect damage.",
+            "totalValue": "130"
+        },
+        {
+            "unitId": "cage_of_pain",
+            "abilities": [
+                "start_with_0_mana",
+                "sword_rain"
+            ],
+            "armorType": "Arcane",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Pierce",
+            "dps": "37.69",
+            "flags": "flags_ground",
+            "hp": "2650",
+            "iconPath": "Icons/CageOfPain.png",
+            "tooltip": "As bloody blades pierce her side, she has all but lost hope of escape.",
+            "totalValue": "230"
+        },
+        {
+            "unitId": "iron_maiden",
+            "abilities": [
+                "start_with_0_mana",
+                "blade_storm"
+            ],
+            "armorType": "Arcane",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Pierce",
+            "dps": "53.85",
+            "flags": "flags_ground",
+            "hp": "3770",
+            "iconPath": "Icons/IronMaiden.png",
+            "tooltip": "When pain cannot be escaped, the only choice is to embrace it.",
+            "totalValue": "330"
+        },
+        {
+            "unitId": "dancing_snake",
+            "abilities": [],
+            "armorType": "Immaterial",
+            "attackMode": "Ranged",
+            "attackRange": "550",
+            "attackType": "Pure",
+            "dps": "7.83",
+            "flags": "flags_ground,flags_organic",
+            "hp": "120",
+            "iconPath": "Icons/DancingSnake.png",
+            "tooltip": "Summoned by Father Juju",
+            "totalValue": ""
+        },
+        {
+            "unitId": "slime_larva",
+            "abilities": [
+                "mini_slime"
+            ],
+            "armorType": "Arcane",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Impact",
+            "dps": "23.85",
+            "flags": "flags_ground",
+            "hp": "310",
+            "iconPath": "Icons/SlimeLarva.png",
+            "tooltip": "When it dies, it leaves behind a weaker version of itself.",
+            "totalValue": "50"
+        },
+        {
+            "unitId": "slime_siren",
+            "abilities": [
+                "slime_propagation",
+                "slime_propagation_mana_on_attack",
+                "slime_propagation_mana",
+                "disable_mana_regen_tower_only"
+            ],
+            "armorType": "Arcane",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Impact",
+            "dps": "87.25",
+            "flags": "flags_ground",
+            "hp": "1150",
+            "iconPath": "Icons/SlimeSiren.png",
+            "tooltip": "Leaves behind Slime Larva when it dies. If it fights long enough before dying, it spawns 3 Slime Larva.",
+            "totalValue": "175"
+        },
+        {
+            "unitId": "needler",
+            "abilities": [
+                "needle_spray",
+                "rapid_fire",
+                "start_with_0_mana",
+                "needler_mana_on_kill"
+            ],
+            "armorType": "Fortified",
+            "attackMode": "Ranged",
+            "attackRange": "550",
+            "attackType": "Pierce",
+            "dps": "104.76",
+            "flags": "flags_flying,flags_organic",
+            "hp": "3700",
+            "iconPath": "Icons/Needler.png",
+            "tooltip": "Sprays a trio of needles with each attack.",
+            "totalValue": ""
+        },
+        {
+            "unitId": "shadow_dancer",
+            "abilities": [
+                "shadowbreeder"
+            ],
+            "armorType": "Fortified",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Pierce",
+            "dps": "88.24",
+            "flags": "flags_ground",
+            "hp": "1700",
+            "iconPath": "Icons/ShadowDancer.png",
+            "tooltip": "Has a chance to clone itself with every attack.",
+            "totalValue": "270"
+        },
+        {
+            "unitId": "dread_knight",
+            "abilities": [
+                "hatebreeder"
+            ],
+            "armorType": "Fortified",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Pierce",
+            "dps": "194.12",
+            "flags": "flags_ground",
+            "hp": "3740",
+            "iconPath": "Icons/DreadKnight.png",
+            "tooltip": "Wields a massive greatsword that cleaves the fabric of reality.",
+            "totalValue": "685"
+        },
+        {
+            "unitId": "treant",
+            "abilities": [
+                "exuberance"
+            ],
+            "armorType": "Fortified",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Impact",
+            "dps": "42.06",
+            "flags": "flags_ground",
+            "hp": "980",
+            "iconPath": "Icons/Treant.png",
+            "tooltip": "Starts off with bonus stats, but weakens back to normal over the next few waves.",
+            "totalValue": "100"
+        },
+        {
+            "unitId": "tree_of_life",
+            "abilities": [
+                "devotion"
+            ],
+            "armorType": "Fortified",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Impact",
+            "dps": "103.17",
+            "flags": "flags_ground",
+            "hp": "2400",
+            "iconPath": "Icons/TreeOfLife.png",
+            "tooltip": "Grants health regeneration to the unit built behind it.",
+            "totalValue": "295"
+        },
+        {
+            "unitId": "tree_of_knowledge",
+            "abilities": [
+                "forbidden_fruit",
+                "forbidden_fruit_mana_on_attack",
+                "forbidden_fruit_mana_on_attacked",
+                "disable_mana_regen_tower_only"
+            ],
+            "armorType": "Fortified",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Impact",
+            "dps": "94.44",
+            "flags": "flags_ground",
+            "hp": "2280",
+            "iconPath": "Icons/TreeOfKnowledge.png",
+            "tooltip": "When it dies or reaches max mana, it deals a burst of damage to nearby enemies.",
+            "totalValue": "280"
+        },
+        {
+            "unitId": "howler",
+            "abilities": [
+                "wolf_pack"
+            ],
+            "armorType": "Natural",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Pierce",
+            "dps": "14.95",
+            "flags": "flags_ground",
+            "hp": "380",
+            "iconPath": "Icons/Howler.png",
+            "tooltip": "Fights best in a pack, rather than alone. Deals more damage when multiple Howlers/Sunfangs attack the same target",
+            "totalValue": "35"
+        },
+        {
+            "unitId": "sunfang",
+            "abilities": [
+                "wolf_pack"
+            ],
+            "armorType": "Natural",
+            "attackMode": "Melee",
+            "attackRange": "100",
+            "attackType": "Pierce",
+            "dps": "78.50",
+            "flags": "flags_ground",
+            "hp": "2000",
+            "iconPath": "Icons/Sunfang.png",
+            "tooltip": "Its golden fur marks it as the fiercest of predators. Deals more damage when multiple Howlers/Sunfangs attack the same target.",
+            "totalValue": "195"
+        },
+        {
+            "unitId": "dwarf_banker",
+            "abilities": [
+                "disable_mana_regen",
+                "start_with_0_mana",
+                "mana_transfer_on_becomes_fighter",
+                "mana_transfer_on_upgrade",
+                "compound_interest"
+            ],
+            "armorType": "Natural",
+            "attackMode": "Ranged",
+            "attackRange": "500",
+            "attackType": "Impact",
+            "dps": "38.94",
+            "flags": "flags_ground",
+            "hp": "700",
+            "iconPath": "Icons/DwarfBanker.png",
+            "tooltip": "Every wave it stays alive, it earns increasing amounts of bonus gold. But if it dies, the bonus drops significantly.",
+            "totalValue": "95"
+        },
+        {
+            "unitId": "big_wig",
+            "abilities": [
+                "disable_mana_regen",
+                "start_with_0_mana",
+                "mana_transfer_on_becomes_fighter",
+                "mana_transfer_on_upgrade",
+                "aggressive_portfolio",
+                "short_selling"
+            ],
+            "armorType": "Natural",
+            "attackMode": "Ranged",
+            "attackRange": "500",
+            "attackType": "Impact",
+            "dps": "113.27",
+            "flags": "flags_ground",
+            "hp": "2040",
+            "iconPath": "Icons/BigWig.png",
+            "tooltip": "With bold new investment strategy, it has greater potential for profits\u2026and losses.",
+            "totalValue": "280"
+        }
+    ],
+    "abilities": [
+        {
+            "_id": "water_bounce",
+            "name": "Water Bounce",
+            "tooltip": "Each attack bounces to a nearby enemy. Ability damage."
+        },
+        {
+            "_id": "deluge",
+            "name": "Delusion",
+            "tooltip": "Each attack bounces to 2 nearby enemies, amplifying ability damage taken by 20% (10% against bosses). Does not stack. Ability damage."
+        },
+        {
+            "_id": "blue_wind",
+            "name": "Lightning Strike",
+            "tooltip": "Shocks up to 5 nearby enemies for 80 \u002B 0.15% max health damage. \u0026lt;img class=\u0027tooltip-icon\u0027 src=\u0027hud/img/icons/Magic.png\u0027 /\u0026gt; Magic ability damage."
+        },
+        {
+            "_id": "mana_burst",
+            "name": "Mana Burst",
+            "tooltip": "Deals 320 damage to a single target. \u0026lt;img class=\u0027tooltip-icon\u0027 src=\u0027hud/img/icons/Pure.png\u0027 /\u0026gt; Pure ability damage."
+        },
+        {
+            "_id": "amplify_magic",
+            "name": "Amplify Magic"
+        },
+        {
+            "_id": "molten_shield",
+            "name": "Molten Shield",
+            "tooltip": "Absorbs 60% of incoming damage from each attack"
+        },
+        {
+            "_id": "overheat",
+            "name": "Overheat",
+            "tooltip": "Deals 1% bonus damage for each 2% missing mana"
+        },
+        {
+            "_id": "power_surge",
+            "name": "Power Surge",
+            "tooltip": "Deal 160 bonus magic damage to a single target. \u0026lt;img class=\u0027tooltip-icon\u0027 src=\u0027hud/img/icons/Magic.png\u0027 /\u0026gt; Magic ability damage."
+        },
+        {
+            "_id": "energize",
+            "name": "Energize"
+        },
+        {
+            "_id": "overcharge",
+            "name": "Mythium Core"
+        },
+        {
+            "_id": "shrapnel",
+            "name": "Shrapnel",
+            "tooltip": "Each attack hits up to 3 nearby non-flying enemies for 35 Pierce damage"
+        },
+        {
+            "_id": "natures_touch",
+            "name": "Nature\u0027s Touch",
+            "tooltip": "Reduces an enemy\u0027s damage by 10 (5 to bosses), stacking up to 9 times"
+        },
+        {
+            "_id": "fragrance",
+            "name": "Fragrance",
+            "tooltip": "Deals 10 \u002B 0.02% max health magic damage to nearby enemies. Stacks with itself. Ability damage. "
+        },
+        {
+            "_id": "noxious_scent",
+            "name": "Noxious Scent",
+            "tooltip": "Deals 30 \u002B 0.06% max health magic damage to nearby enemies. Stacks with itself. Ability damage. "
+        },
+        {
+            "_id": "frenzy",
+            "name": "Skeletal Regeneration",
+            "tooltip": "Regenerates 3 \u002B 3% missing health per second"
+        },
+        {
+            "_id": "killing_spree",
+            "name": "Killing Spree",
+            "tooltip": "Each attack, it has a chance to gain 33% ATK for 5 seconds.\u0026lt;br\u0026gt;\u0026lt;br\u0026gt;\u0026lt;span style=\u0027color: #ffcc00\u0027\u0026gt;If the attack is a killing blow, the chance is increased to 100%\u0026lt;/span\u0026gt;"
+        },
+        {
+            "_id": "flaming_arrows",
+            "name": "Flaming Arrows",
+            "tooltip": "Each attack deals 40 bonus damage. \u0026lt;img class=\u0027tooltip-icon\u0027 src=\u0027hud/img/icons/Magic.png\u0027 /\u0026gt; Magic ability damage."
+        },
+        {
+            "_id": "mindwarp",
+            "name": "Mind Warp",
+            "tooltip": "Increase the attack speed of the highest DPS nearby unit by 35% for 5 seconds"
+        },
+        {
+            "_id": "brawler",
+            "name": "Stone Form",
+            "tooltip": "Deals 30 (91 to bosses) damage per attack. \u0026lt;img class=\u0027tooltip-icon\u0027 src=\u0027hud/img/icons/Magic.png\u0027 /\u0026gt; Magic ability damage."
+        },
+        {
+            "_id": "hound",
+            "name": "Summon Hound",
+            "tooltip": "Summons a Chaos Hound"
+        },
+        {
+            "_id": "cannibalism",
+            "name": "Cannibalism"
+        },
+        {
+            "_id": "skull_stew",
+            "name": "Skull Stew",
+            "tooltip": "Heals a nearby ally for 200 health over 1 seconds"
+        },
+        {
+            "_id": "shadow_walker",
+            "name": "Fatality",
+            "tooltip": "Each attack increases attack damage by 2"
+        },
+        {
+            "_id": "raise_juggernaut",
+            "name": "Conjure Dragon",
+            "tooltip": "Summons an Undead Dragon (magic/arcane)"
+        },
+        {
+            "_id": "summon_imp",
+            "name": "Raise Imp",
+            "tooltip": "Summons an Imp (magic/arcane)"
+        },
+        {
+            "_id": "maul",
+            "name": "Maul",
+            "tooltip": "Each attack slows attack speed by 4% (1% against the king), stacking up to 6 times"
+        },
+        {
+            "_id": "healing_aura",
+            "name": "Healing Aura",
+            "tooltip": "Nearby allies recover 7 (14 for bosses) health per second. Does not stack."
+        },
+        {
+            "_id": "protection_aura",
+            "name": "Safety Aura",
+            "tooltip": "Nearby allies take 4 reduced damage from all sources. Does not stack."
+        },
+        {
+            "_id": "leadership",
+            "name": "Leadership Aura",
+            "tooltip": "Increases the attack damage of nearby allies by 5 (15 for bosses). Does not stack."
+        },
+        {
+            "_id": "death_stare",
+            "name": "Death Stare",
+            "tooltip": "Each attack amplifies damage taken by 8% (2% against the king), stacking up to 9 times"
+        },
+        {
+            "_id": "blood_rush",
+            "name": "Blood Rush",
+            "tooltip": "Increases attack speed of an ally by 10% and damage by 40 for 5 seconds"
+        },
+        {
+            "_id": "kraken_poison",
+            "name": "Paralyzing Grasp",
+            "tooltip": "Each attack stuns its target for 1 second"
+        },
+        {
+            "_id": "attackmove",
+            "name": "Attack Move"
+        },
+        {
+            "_id": "sell",
+            "name": "Undeploy",
+            "tooltip": "Sells this fighter for 60% value"
+        },
+        {
+            "_id": "move",
+            "name": "Move"
+        },
+        {
+            "_id": "attack",
+            "name": "Attack"
+        },
+        {
+            "_id": "build",
+            "name": "Build"
+        },
+        {
+            "_id": "cancel",
+            "name": "Cancel Construction"
+        },
+        {
+            "_id": "cancel_upgrade",
+            "name": "Cancel Upgrade"
+        },
+        {
+            "_id": "harvest",
+            "name": "Harvest"
+        },
+        {
+            "_id": "deliver",
+            "name": "Deliver"
+        },
+        {
+            "_id": "holdposition",
+            "name": "Hold Position"
+        },
+        {
+            "_id": "tribal_warfare",
+            "name": "Tribal Warfare",
+            "tooltip": "Attacks up to 3 units at once but can still strike the same unit with multiple bananas. Ability damage."
+        },
+        {
+            "_id": "anaphylaxis",
+            "name": "Anaphylaxis",
+            "tooltip": "Deals 50 damage over 2 seconds to its killer. \u0026lt;img class=\u0027tooltip-icon\u0027 src=\u0027hud/img/icons/Magic.png\u0027 /\u0026gt; Magic ability damage."
+        },
+        {
+            "_id": "council",
+            "name": "Council"
+        },
+        {
+            "_id": "approach_target",
+            "name": "Approach Target"
+        },
+        {
+            "_id": "accept_mythium",
+            "name": "Accept Mythium"
+        },
+        {
+            "_id": "accept_gold",
+            "name": "Accept Gold"
+        },
+        {
+            "_id": "sell_full",
+            "name": "Recall",
+            "tooltip": "Sells this fighter for 100% value"
+        },
+        {
+            "_id": "tower_autoattack",
+            "name": "Tower AutoAttack"
+        },
+        {
+            "_id": "kobra_poison",
+            "name": "Bufotoxin",
+            "tooltip": "Attacks deal 300 Magic damage over 2 seconds"
+        },
+        {
+            "_id": "deflection",
+            "name": "Deflection",
+            "tooltip": "Reduces damage taken from ranged units by 15%"
+        },
+        {
+            "_id": "enhanced_mana_burst",
+            "name": "Asteroid",
+            "tooltip": "Deals 500 \u002B 1% max health damage to a single target. \u0026lt;img class=\u0027tooltip-icon\u0027 src=\u0027hud/img/icons/Pure.png\u0027 /\u0026gt; Pure ability damage."
+        },
+        {
+            "_id": "enhanced_molten_shield",
+            "name": "Prismatic Shield",
+            "tooltip": "Absorbs 80% of incoming damage from each attack"
+        },
+        {
+            "_id": "combustion",
+            "name": "Combustion",
+            "tooltip": "Each attack bounces to 2 nearby enemies, dealing 30 magic ability damage over 1 second. Stacks with itself. Ability damage. "
+        },
+        {
+            "_id": "mark_target",
+            "name": "Mark Target",
+            "tooltip": "Each attack amplifies all damage taken by 1 (0.5 to bosses), stacking up to 10 times."
+        },
+        {
+            "_id": "immolate",
+            "name": "Immolate",
+            "tooltip": "Each attack deals 8% (5% to flying) damage to nearby enemies"
+        },
+        {
+            "_id": "impale",
+            "name": "Impale",
+            "tooltip": "Each attack has a 25% chance to deal 150% damage"
+        },
+        {
+            "_id": "315",
+            "name": "Hell Fire (old)",
+            "tooltip": "Each attack deals 8% (5% to flying) damage to nearby enemies"
+        },
+        {
+            "_id": "reception",
+            "name": "Reception",
+            "tooltip": "Allows for deployment of Mech units"
+        },
+        {
+            "_id": "downgrade",
+            "name": "Downgrade",
+            "tooltip": "Downgrades this fighter for 100% of the original cost of the upgrade"
+        },
+        {
+            "_id": "necromancy",
+            "name": "Necromancy",
+            "tooltip": "Restores 3 mana when a nearby enemy dies, excluding Froggos."
+        },
+        {
+            "_id": "high_voltage",
+            "name": "Magnetic Accelerator",
+            "tooltip": "Restores 0.33 mana with each attack"
+        },
+        {
+            "_id": "sour_flower",
+            "name": "Sour Flower",
+            "tooltip": "Upon death, infects its killer with a poison that deals 3% of its maximum health per second as magic damage for 20 seconds. \u0026lt;br\u0026gt;\u0026lt;br\u0026gt;\u0026lt;span style=\u0027color: #ffcc00\u0027\u0026gt;The poison refreshes on subsequent application. \u0026lt;br\u0026gt;\u0026lt;br\u0026gt;10% effectiveness against the King.\u0026lt;/span\u0026gt;"
+        },
+        {
+            "_id": "boss_status",
+            "name": "Boss Unit",
+            "tooltip": "Reduces the duration or effectiveness of most debuffs"
+        },
+        {
+            "_id": "leech",
+            "name": "Leech"
+        },
+        {
+            "_id": "splash_attack",
+            "name": "Generic Splash Attack",
+            "tooltip": "Each attack deals 50% damage in 200 area."
+        },
+        {
+            "_id": "pyro_splash",
+            "name": "Pyromancy",
+            "tooltip": "Each attack deals 50% (30% to flying) damage to nearby enemies. Ability damage."
+        },
+        {
+            "_id": "legion_lord_splash",
+            "name": "Inferno",
+            "tooltip": "Each attack deals 5% damage to up to 5 nearby enemies"
+        },
+        {
+            "_id": "wither",
+            "name": "Wither",
+            "tooltip": "Decreases attack and movement speed by 10% for every 1% missing health."
+        },
+        {
+            "_id": "royalty",
+            "name": "Indomitable",
+            "tooltip": "Increases damage and reduces damage taken by 10% per stack"
+        },
+        {
+            "_id": "harbinger_ability",
+            "name": "Crushing Blow",
+            "tooltip": "Each attack has a 25% (15% for ranged) chance to stun its target for 1 second (0.50 to bosses)"
+        },
+        {
+            "_id": "giant_slayer",
+            "name": "Giant Slayer",
+            "tooltip": "Attacks deal 12-20% current health Pure damage depending on Upgrade King Attack"
+        },
+        {
+            "_id": "thorns",
+            "name": "Thorns",
+            "tooltip": "Whenever this unit is attacked, it reflects 20 \u002B 15% damage taken back as pierce damage. Ability damage."
+        },
+        {
+            "_id": "noxious_scent_boss",
+            "name": "Noxious Scent"
+        },
+        {
+            "_id": "fragrance_boss",
+            "name": "Fragrance"
+        },
+        {
+            "_id": "mark_target_boss",
+            "name": "Mark Target"
+        },
+        {
+            "_id": "healing_aura_boss",
+            "name": "Healing Aura"
+        },
+        {
+            "_id": "lacerate",
+            "name": "Lacerate",
+            "tooltip": "Each attack amplifies damage taken by 1.5 (1 against bosses), stacking up to 9 times"
+        },
+        {
+            "_id": "lacerate_boss",
+            "name": "Lacerate"
+        },
+        {
+            "_id": "maul_boss",
+            "name": "Maul"
+        },
+        {
+            "_id": "death_stare_boss",
+            "name": "Death Stare"
+        },
+        {
+            "_id": "kraken_poison_boss",
+            "name": "Kraken Poison"
+        },
+        {
+            "_id": "stone_form_new",
+            "name": "Stone Skin",
+            "tooltip": "Takes 1 \u002B 30% reduced damage"
+        },
+        {
+            "_id": "summon_chaos_hounds",
+            "name": "Summon Chaos Hound",
+            "tooltip": "Summons a Chaos Hound"
+        },
+        {
+            "_id": "aerial_command",
+            "name": "Aerial Command"
+        },
+        {
+            "_id": "degeneration",
+            "name": "Pet",
+            "tooltip": "Summoned units degenerate 2% max health per second"
+        },
+        {
+            "_id": "energize_melee",
+            "name": "Energize"
+        },
+        {
+            "_id": "mythium_core_melee",
+            "name": "Mythium Core"
+        },
+        {
+            "_id": "barbs",
+            "name": "Barbs",
+            "tooltip": "Whenever this unit is attacked, it reflects 13 \u002B 10% damage taken back as pierce damage. Ability damage."
+        },
+        {
+            "_id": "spell_resistance",
+            "name": "Spell Resistance",
+            "tooltip": "Reduces damage taken from abilities by 20%"
+        },
+        {
+            "_id": "inferno_air",
+            "name": "Inferno"
+        },
+        {
+            "_id": "berserker_brawler",
+            "name": "Brawler",
+            "tooltip": "Deals 30 (91 to bosses) damage per attack. \u0026lt;img class=\u0027tooltip-icon\u0027 src=\u0027hud/img/icons/Magic.png\u0027 /\u0026gt; Magic ability damage."
+        },
+        {
+            "_id": "duelist",
+            "name": "Duelist",
+            "tooltip": "Deals 80 (240 to bosses) damage per attack. \u0026lt;img class=\u0027tooltip-icon\u0027 src=\u0027hud/img/icons/Magic.png\u0027 /\u0026gt; Magic ability damage."
+        },
+        {
+            "_id": "brawler_boss",
+            "name": "Brawler"
+        },
+        {
+            "_id": "duelist_boss",
+            "name": "Duelist"
+        },
+        {
+            "_id": "pyromancy_air",
+            "name": "Pyromancy"
+        },
+        {
+            "_id": "nature_boss",
+            "name": "Nature\u0027s Touch",
+            "tooltip": "Reduces an enemy\u0027s damage by 10 (5 to bosses), stacking up to 9 times"
+        },
+        {
+            "_id": "new_natures_touch",
+            "name": "Nature\u0027s Touch",
+            "tooltip": "Reduces an enemy\u0027s damage by 10 (5 to bosses), stacking up to 9 times"
+        },
+        {
+            "_id": "new_natures_touch_boss",
+            "name": "Nature\u0027s Touch"
+        },
+        {
+            "_id": "maul_stun",
+            "name": "Maul",
+            "tooltip": "Each attack slows attack speed by 4% (1% against the king), stacking up to 6 times"
+        },
+        {
+            "_id": "enhanced_spell_resistance",
+            "name": "Spell Resistance",
+            "tooltip": "Reduces damage taken from spells by 50%"
+        },
+        {
+            "_id": "granddaddy",
+            "name": "Reconstructive Exoskeleton",
+            "tooltip": "Regenerates 1% max health per second out of combat"
+        },
+        {
+            "_id": "740",
+            "name": "Rare Artifact",
+            "tooltip": "Reduces the duration or effectiveness of most debuffs"
+        },
+        {
+            "_id": "cleave",
+            "name": "Cleave",
+            "tooltip": "Each attack deals 40% damage to up to 3 nearby enemies"
+        },
+        {
+            "_id": "cleave_air",
+            "name": "Cleave"
+        },
+        {
+            "_id": "evasion",
+            "name": "Ghost Walker",
+            "tooltip": "Reduces damage taken from autoattacks (non-ability damage) by 20%"
+        },
+        {
+            "_id": "paraphylaxis",
+            "name": "Paraphylaxis",
+            "tooltip": "Deals 280 damage over 2 seconds to its killer. \u0026lt;img class=\u0027tooltip-icon\u0027 src=\u0027hud/img/icons/Magic.png\u0027 /\u0026gt; Magic ability damage."
+        },
+        {
+            "_id": "leadership_boss",
+            "name": "Leadership Aura"
+        },
+        {
+            "_id": "impale_new",
+            "name": "Impale",
+            "tooltip": "Each attack amplifies damage taken by 3% (1.5% against the king), stacking up to 10 times"
+        },
+        {
+            "_id": "impale_boss",
+            "name": "Impale"
+        },
+        {
+            "_id": "sacrifice",
+            "name": "Sacrifice",
+            "tooltip": "Sells this fighter for 100% value"
+        },
+        {
+            "_id": "savior_heal",
+            "name": "Savior"
+        },
+        {
+            "_id": "hero",
+            "name": "Hero",
+            "tooltip": "Makes this fighter a hero, giving it Heroism Aura.\u0026lt;br\u0026gt;\u0026lt;br\u0026gt;\u0026lt;span style=\u0027color: #ff8800\u0027\u0026gt;Heroism Aura:\u0026lt;/span\u0026gt; Adjacently-built units gain \u002B4.5% damage and damage reduction"
+        },
+        {
+            "_id": "heroism_aura",
+            "name": "Heroism"
+        },
+        {
+            "_id": "villain",
+            "name": "Villain",
+            "tooltip": "Makes this fighter a villain, giving it Villainy.\u0026lt;br\u0026gt;\u0026lt;br\u0026gt;\u0026lt;span style=\u0027color: #ff8800\u0027\u0026gt;Villainy:\u0026lt;/span\u0026gt; Attacks amplify its target\u0027s damage taken by 26% (13% for ranged) (half against bosses) from all sources. Does not work on summons or clones."
+        },
+        {
+            "_id": "villainy",
+            "name": "Villainy",
+            "tooltip": "This unit is a Villain. Attacks amplify its target\u0027s damage taken by 26% (13% for ranged) (half against bosses) from all sources."
+        },
+        {
+            "_id": "villainy_ranged",
+            "name": "Villainy",
+            "tooltip": "This unit is a Villain. Attacks amplify its target\u0027s damage taken by 26% (13% for ranged) (half against bosses) from all sources."
+        },
+        {
+            "_id": "sorcerer",
+            "name": "Sorcerer",
+            "tooltip": "Makes this fighter a sorcerer, giving it Sorcery.\u0026lt;br\u0026gt;\u0026lt;br\u0026gt;\u0026lt;span style=\u0027color: #ff8800\u0027\u0026gt;Sorcery:\u0026lt;/span\u0026gt; Adjacently-built units gain \u002B17% ability damage"
+        },
+        {
+            "_id": "sorcery",
+            "name": "Sorcery"
+        },
+        {
+            "_id": "brawler_ramping",
+            "name": "Brawler",
+            "tooltip": "Deals 5 bonus magic damage for each consecutive attack against the same target. Ability damage."
+        },
+        {
+            "_id": "duelist_ramping",
+            "name": "Death Stare",
+            "tooltip": "Deals 5 bonus magic damage for each consecutive attack against the same target. Ability damage."
+        },
+        {
+            "_id": "death_stare_ramping",
+            "name": "Duelist",
+            "tooltip": "Deals 15 bonus magic damage for each consecutive attack against the same target. Ability damage."
+        },
+        {
+            "_id": "king_accelerator",
+            "name": "Imbue",
+            "tooltip": "Restores 1 mana with each attack"
+        },
+        {
+            "_id": "ambush",
+            "name": "Ambush",
+            "tooltip": "Starts the battle burrowed and unburrows 5 seconds after being aggro\u0027d"
+        },
+        {
+            "_id": "energize_oracle",
+            "name": "Energize",
+            "tooltip": "Grants adjacently-built units \u002B12% attack speed. Does not stack."
+        },
+        {
+            "_id": "harden",
+            "name": "Harden",
+            "tooltip": "Grants 3 \u002B 15% damage reduction for the next wave. The wave after, it recovers and takes 3 \u002B 15% extra damage."
+        },
+        {
+            "_id": "harden_active",
+            "name": "Harden (Active)",
+            "tooltip": "Grants 3 \u002B 15% damage reduction for the next wave. The wave after, it recovers and takes 3 \u002B 15% extra damage."
+        },
+        {
+            "_id": "harden_recovering",
+            "name": "Harden (Recovering)",
+            "tooltip": "Grants 3 \u002B 15% damage reduction for the next wave. The wave after, it recovers and takes 3 \u002B 15% extra damage."
+        },
+        {
+            "_id": "stimpack",
+            "name": "Stimpack",
+            "tooltip": "Boosts this unit\u0027s attack speed by 125% and increases range to 500 for the next wave only"
+        },
+        {
+            "_id": "stimpack_active",
+            "name": "Stimpack",
+            "tooltip": "Boosts this unit\u0027s attack speed by 125% and increases range to 500 for the next wave only"
+        },
+        {
+            "_id": "generator",
+            "name": "Generator",
+            "tooltip": "Starts with 0 mana, but gains mana per second"
+        },
+        {
+            "_id": "ionic_force",
+            "name": "Ionic Force",
+            "tooltip": "Increases damage by 2% for each 1% current mana"
+        },
+        {
+            "_id": "cell_regrowth",
+            "name": "Cell Regrowth",
+            "tooltip": "Starts with 60% health, but regenerates 0.6% of missing health per second"
+        },
+        {
+            "_id": "summon_cerberus",
+            "name": "Summon Cerberus",
+            "tooltip": "Summons a Cerberus"
+        },
+        {
+            "_id": "anti_air_turret",
+            "name": "Machine Gunner",
+            "tooltip": "Shoots a nearby ground enemy for 14 pierce damage every 0.5 seconds. Ability damage."
+        },
+        {
+            "_id": "booster",
+            "name": "Booster",
+            "tooltip": "Boosts this unit\u0027s attack speed by 125% and increases range to 500 for the next wave only"
+        },
+        {
+            "_id": "booster_active",
+            "name": "Booster",
+            "tooltip": "Boosts this unit\u0027s attack speed by 125% and increases range to 500 for the next wave only"
+        },
+        {
+            "_id": "mythium_core_oracle",
+            "name": "Mythium Core",
+            "tooltip": "Grants adjacently-built units \u002B18% attack speed. Does not stack."
+        },
+        {
+            "_id": "amplify_magic_oracle",
+            "name": "Amplify Magic",
+            "tooltip": "Increases the mana regeneration of adjacently-built units by 0.7 per second.  Does not stack."
+        },
+        {
+            "_id": "leech_oracle",
+            "name": "Leech",
+            "tooltip": "Grants 20% lifesteal and ability vamp to adjacently-built units. Does not stack."
+        },
+        {
+            "_id": "cannibalism_oracle",
+            "name": "Cannibalism",
+            "tooltip": "Grants 30% lifesteal and ability vamp to adjacently-built units. Does not stack."
+        },
+        {
+            "_id": "council_oracle",
+            "name": "Council"
+        },
+        {
+            "_id": "heroism_oracle",
+            "name": "Heroism",
+            "tooltip": "This unit is a Hero. Adjacently-built units gain \u002B4.5% damage and damage reduction."
+        },
+        {
+            "_id": "sorcery_oracle",
+            "name": "Sorcery",
+            "tooltip": "This unit is a Sorcerer. Adjacently-built units gain \u002B17% ability damage"
+        },
+        {
+            "_id": "aerial_command_oracle",
+            "name": "Aerial Command",
+            "tooltip": "Increases the damage and ability damage of adjacently-built flying units by 18%, stacking up to 2 times."
+        },
+        {
+            "_id": "delicacy_1",
+            "name": "Delicacy (90%)",
+            "tooltip": "Sells this fighter for 90% of its total cost"
+        },
+        {
+            "_id": "delicacy_2",
+            "name": "Delicacy (80%)",
+            "tooltip": "Sells this fighter for 80% of its total cost"
+        },
+        {
+            "_id": "delicacy_3",
+            "name": "Delicacy (70%)",
+            "tooltip": "Sells this fighter for 70% of its total cost"
+        },
+        {
+            "_id": "delicacy_placeholder",
+            "name": "Delicacy",
+            "tooltip": "May be sold for 90% of its total cost on any wave"
+        },
+        {
+            "_id": "shell_shock",
+            "name": "Shell Shock",
+            "tooltip": "Deals 80 impact damage to nearby enemies and slows their attack speed by 5%. Ability damage."
+        },
+        {
+            "_id": "resonance_oracle",
+            "name": "Resonance",
+            "tooltip": "Grants to adjacently-built units 2.75% missing health regeneration and 12% damage reduction from magic damage. Does not stack."
+        },
+        {
+            "_id": "resonance",
+            "name": "Resonance"
+        },
+        {
+            "_id": "dark_ritual",
+            "name": "Dark Ritual"
+        },
+        {
+            "_id": "explosive_shells",
+            "name": "Explosive Shells",
+            "tooltip": "When dealing the killing blow, deals 30 impact damage to enemies in an area around the dying unit. Ability damage."
+        },
+        {
+            "_id": "explosive_shells_air",
+            "name": "Explosive Shells"
+        },
+        {
+            "_id": "detonation",
+            "name": "Detonation",
+            "tooltip": "When dealing the killing blow, deals 75 impact damage to enemies in an area around the dying unit. Ability damage."
+        },
+        {
+            "_id": "detonation_flying",
+            "name": "Detonation"
+        },
+        {
+            "_id": "thick_hide",
+            "name": "Thick Hide",
+            "tooltip": "Gains an additional 10% damage reduction when built next to a Whitemane."
+        },
+        {
+            "_id": "adapt_into_devilfish",
+            "name": "Adapt (into Devilfish)",
+            "tooltip": "Changes form into a Devilfish. Can only be used during the build phase."
+        },
+        {
+            "_id": "adapt_into_seraphin",
+            "name": "Adapt (into Seraphin)",
+            "tooltip": "Changes form into a Seraphin. Can only be used during the build phase."
+        },
+        {
+            "_id": "maccabeus_ability",
+            "name": "Immolate",
+            "tooltip": "Each attack deals 10% damage to up to 5 nearby enemies"
+        },
+        {
+            "_id": "maccabeus_ability_air",
+            "name": "Immolate"
+        },
+        {
+            "_id": "junior_fisherman",
+            "name": "Junior Fisherman",
+            "tooltip": "Gains \u002B1.2 mana when a nearby enemy dies. \u0026lt;br\u0026gt;\u0026lt;br\u0026gt;\u0026lt;span style=\u0027color: #ffcc00\u0027\u0026gt;Mana carries over when upgraded. Upgraded forms will utilize mana.\u0026lt;/span\u0026gt;"
+        },
+        {
+            "_id": "commercial_fisherman",
+            "name": "Commercial Fisherman",
+            "tooltip": "Gains \u002B0.6 mana when a nearby enemy dies. \u0026lt;br\u0026gt;\u0026lt;br\u0026gt;\u0026lt;span style=\u0027color: #ffcc00\u0027\u0026gt;Mana carries over when upgraded. Upgraded forms will utilize mana.\u0026lt;/span\u0026gt;"
+        },
+        {
+            "_id": "mana_transfer_on_upgrade",
+            "name": "Mana Transfer On Upgrade"
+        },
+        {
+            "_id": "elite_fisherman",
+            "name": "Elite Fisherman",
+            "tooltip": "No longer gains any mana. Gains \u002B25 bonus health and \u002B1.5 bonus damage for every 1 mana gained from previous forms."
+        },
+        {
+            "_id": "big_game_hunter",
+            "name": "Big Game Hunter",
+            "tooltip": "When this unit lands a killing blow, it heals itself for 8% of the target\u0027s max health."
+        },
+        {
+            "_id": "bombardier",
+            "name": "Bombardier",
+            "tooltip": "Shoots a nearby non-flying enemy for 85 pierce damage every 1.5 seconds. Ability damage."
+        },
+        {
+            "_id": "Vampire",
+            "name": "Vampire",
+            "tooltip": "Makes this fighter a vampire, giving it Vampirism Aura.\u0026lt;br\u0026gt;\u0026lt;br\u0026gt;\u0026lt;span style=\u0027color: #ff8800\u0027\u0026gt;Vampirism Aura:\u0026lt;/span\u0026gt; Adjacently-built units gain 24% lifesteal and ability vamp"
+        },
+        {
+            "_id": "vampirism_aura",
+            "name": "Vampirism"
+        },
+        {
+            "_id": "vampirism_oracle",
+            "name": "Vampirism",
+            "tooltip": "This unit is a Vampire. Adjacently-built units gain 24% lifesteal and ability vamp"
+        },
+        {
+            "_id": "intellect",
+            "name": "Intellect",
+            "tooltip": "Killing a unit restores 15% of max mana"
+        },
+        {
+            "_id": "sorcerer_mana_regen",
+            "name": "Magician",
+            "tooltip": "Makes this fighter a magician, giving it Magic Aura.\u0026lt;br\u0026gt;\u0026lt;br\u0026gt;\u0026lt;span style=\u0027color: #ff8800\u0027\u0026gt;Magic Aura:\u0026lt;/span\u0026gt; Adjacently-built units have \u002B0.57 mana regeneration."
+        },
+        {
+            "_id": "sorcery_mana_regen",
+            "name": "Magic Aura"
+        },
+        {
+            "_id": "sorcery_mana_regen_oracle",
+            "name": "Magic Aura",
+            "tooltip": "This unit has bonus mana regen"
+        },
+        {
+            "_id": "delicacy_placeholder_for_80",
+            "name": "Delicacy",
+            "tooltip": "May be sold for 90% of its total cost on any wave"
+        },
+        {
+            "_id": "delicacy_placeholder_for_70",
+            "name": "Delicacy",
+            "tooltip": "May be sold for 90% of its total cost on any wave"
+        },
+        {
+            "_id": "delicacy_placeholder_for_60",
+            "name": "Delicacy",
+            "tooltip": "May be sold for 90% of its total cost on any wave"
+        },
+        {
+            "_id": "incubation",
+            "name": "Incubation",
+            "tooltip": "If killed before hatching naturally, it will hatch with penalized stats. Each stack reduces damage dealt by 17.5% and increases damage taken by 17.5%."
+        },
+        {
+            "_id": "turn_into_hydra",
+            "name": "Turn Into Hydra"
+        },
+        {
+            "_id": "ambernite_shell",
+            "name": "Azurite Shell",
+            "tooltip": "Whenever this unit is attacked, it reflects 10 damage back as damage. \u0026lt;img class=\u0027tooltip-icon\u0027 src=\u0027hud/img/icons/Pure.png\u0027 /\u0026gt; Pure ability damage."
+        },
+        {
+            "_id": "hydralings",
+            "name": "Hydralings",
+            "tooltip": "When this unit dies, it splits into 3 hydralings."
+        },
+        {
+            "_id": "burst_attack",
+            "name": "Burst Attack",
+            "tooltip": "Each attack launches 2 extra missiles, each dealing 100% base damage. Ability damage."
+        },
+        {
+            "_id": "invigorate",
+            "name": "Invigorate",
+            "tooltip": "Increases her attack speed by 100% and heals for 8% missing health/sec for 5 seconds"
+        },
+        {
+            "_id": "echostrike_azeria",
+            "name": "Echostrike",
+            "tooltip": "Each attack launches 2 extra missiles, each dealing 100% base damage plus bonus damage equal to 0.1% target max health. Ability damage."
+        },
+        {
+            "_id": "delicacy_hardcoded",
+            "name": "Delicacy",
+            "tooltip": "May be sold for 90% of its total cost on any wave"
+        },
+        {
+            "_id": "treasure_hunt",
+            "name": "Treasure Hunt",
+            "tooltip": "Your Pack Rat abandons this wave\u0027s battle. When the wave ends, it returns and you gain \u002B11 mythium."
+        },
+        {
+            "_id": "treasure_hunt_effect",
+            "name": "Treasure Hunt",
+            "tooltip": "Your Pack Rat abandons this wave\u0027s battle. When the wave ends, it returns and you gain \u002B11 mythium."
+        },
+        {
+            "_id": "knock_out",
+            "name": "Knock Out",
+            "tooltip": "Its first attack deals 400 bonus damage and stuns its target for 1.5 seconds.\u0026lt;br\u0026gt;\u0026lt;br\u0026gt;\u0026lt;span style=\u0027color: #ffcc00\u0027\u0026gt;If Knock Out kills the target, it can be used again\u0026lt;/span\u0026gt;"
+        },
+        {
+            "_id": "devour",
+            "name": "Devour",
+            "tooltip": "When this unit lands a killing blow, it heals itself for 20% of its max health."
+        },
+        {
+            "_id": "insatiable_hunger",
+            "name": "Insatiable Hunger",
+            "tooltip": "Gains 1% bonus damage and heals by 100 whenever it kills a unit. "
+        },
+        {
+            "_id": "acrobatics",
+            "name": "Acrobatics",
+            "tooltip": "Starts with 0 mana, but gains mana when it moves before entering battle. Each 8 mana increases attack speed by 15%."
+        },
+        {
+            "_id": "crimson_claws",
+            "name": "Crimson Claws",
+            "tooltip": "Restores 0.7 mana with each attack"
+        },
+        {
+            "_id": "summon_froggo",
+            "name": "Summon Froggo",
+            "tooltip": "Summons a Froggo"
+        },
+        {
+            "_id": "booster_undo",
+            "name": "Undo Booster",
+            "tooltip": "Undo"
+        },
+        {
+            "_id": "undo_harden",
+            "name": "Undo Harden",
+            "tooltip": "Undo"
+        },
+        {
+            "_id": "undo_treasure_hunt",
+            "name": "Undo Treasure Hunt",
+            "tooltip": "Undo"
+        },
+        {
+            "_id": "undo_stimpack",
+            "name": "Undo Stimpack",
+            "tooltip": "Undo"
+        },
+        {
+            "_id": "dominion",
+            "name": "Dominion",
+            "tooltip": "Has 20% damage reduction. Damage and damage reduction are decreased by 7% for each adjacently-built unit that is equal or higher total fighter value than Alpha Male (285 value)"
+        },
+        {
+            "_id": "entourage",
+            "name": "Entourage",
+            "tooltip": "Damage and damage reduction are increased by 9% for each adjacently-built unit that is higher total fighter value than Lioness (260 value)"
+        },
+        {
+            "_id": "chain_heal",
+            "name": "Chain Heal",
+            "tooltip": "Heals a nearby ally for 130 health, bouncing to 3 nearby allies"
+        },
+        {
+            "_id": "gaia_shield",
+            "name": "Gaia Shield",
+            "tooltip": "Increases the max health of the forward-most positioned fighter by 1500. Casts once. Stacks with itself."
+        },
+        {
+            "_id": "advanced_necromancy",
+            "name": "Witchcraft",
+            "tooltip": "Restores 3 mana when a nearby unit dies, excluding Froggos"
+        },
+        {
+            "_id": "immolation",
+            "name": "Immolation",
+            "tooltip": "Drains mana to deal Pure damage per second to all nearby enemies"
+        },
+        {
+            "_id": "judgment",
+            "name": "Judgment",
+            "tooltip": "Slams his staff on the ground, dealing Pure damage to all nearby enemies"
+        },
+        {
+            "_id": "decimation",
+            "name": "Decimation",
+            "tooltip": "When dealing the killing blow, deals Pure damage to nearby enemies."
+        },
+        {
+            "_id": "chain_frost",
+            "name": "Chain Frost",
+            "tooltip": "Releases an orb of frost that jumps to nearby enemies, dealing Pure damage and slowing attack speed by 15%."
+        },
+        {
+            "_id": "fury",
+            "name": "Fury",
+            "tooltip": "Deals bonus Pure damage for each consecutive attack against the same target"
+        },
+        {
+            "_id": "permanent_immolation_aura",
+            "name": "Immolation",
+            "tooltip": "Deals damage per second to all nearby enemies"
+        },
+        {
+            "_id": "lightning_hammer",
+            "name": "Lightning Hammer",
+            "tooltip": "Uses mana to unleash bouncing lightning bolts that deal Pure damage."
+        },
+        {
+            "_id": "lightning_hammer_bounce",
+            "name": "Lightning Hammer Bounce",
+            "tooltip": "Each attack bounces to all nearby enemies."
+        },
+        {
+            "_id": "fury_multiplicative",
+            "name": "Fury",
+            "tooltip": "Deals bonus Pure damage for each consecutive attack against the same target"
+        },
+        {
+            "_id": "stampede",
+            "name": "Stampede",
+            "tooltip": "Charges into battle as soon as the wave spawns. After reaching the enemy, deals damage. The further the charge, the more damage it deals. \u0026lt;img class=\u0027tooltip-icon\u0027 src=\u0027hud/img/icons/Impact.png\u0027 /\u0026gt; Impact ability damage."
+        },
+        {
+            "_id": "thunderous_charge",
+            "name": "Thunderous Charge",
+            "tooltip": "Charges into battle as soon as the wave spawns. After reaching the enemy, deals damage. The further the charge, the more damage it deals. \u0026lt;img class=\u0027tooltip-icon\u0027 src=\u0027hud/img/icons/Impact.png\u0027 /\u0026gt; Impact ability damage."
+        },
+        {
+            "_id": "lightning_hammer_cast",
+            "name": "Lightning Hammer Bounce",
+            "tooltip": "Uses mana to unleash bouncing lightning bolts that deal Pure damage."
+        },
+        {
+            "_id": "lightning_hammer_activator",
+            "name": "Lightning Hammer",
+            "tooltip": "Uses mana to unleash bouncing lightning bolts that deal Pure damage."
+        },
+        {
+            "_id": "eggsplosion",
+            "name": "Eggsplosion",
+            "tooltip": "When this unit dies, it explodes, dealing 80 damage to nearby enemies. \u0026lt;img class=\u0027tooltip-icon\u0027 src=\u0027hud/img/icons/Pure.png\u0027 /\u0026gt; Pure ability damage."
+        },
+        {
+            "_id": "ancient_power",
+            "name": "Ancient Power",
+            "tooltip": "Gains \u002B0.9% damage and \u002B0.9% damage reduction based on the current wave number"
+        },
+        {
+            "_id": "spectral_scream",
+            "name": "Spectral Scream",
+            "tooltip": "Each attack hits up to 3 nearby units. Cannot target the same unit twice. Ability damage."
+        },
+        {
+            "_id": "tantrum",
+            "name": "Tantrum",
+            "tooltip": "Every other wave, it has a tantrum, making it attack 20% faster."
+        },
+        {
+            "_id": "tantrum_effect",
+            "name": "Tantrum Effect",
+            "tooltip": "Every other wave, it has a tantrum, making it attack 20% faster."
+        },
+        {
+            "_id": "poison_tipped_pole_active",
+            "name": "Poison-Tipped Pole",
+            "tooltip": "Deals 240 single-target and 20 splash damage every fourth attack. \u0026lt;img class=\u0027tooltip-icon\u0027 src=\u0027hud/img/icons/Magic.png\u0027 /\u0026gt; Magic ability damage."
+        },
+        {
+            "_id": "mana_on_attack",
+            "name": "Mana On Attack"
+        },
+        {
+            "_id": "start_with_0_mana",
+            "name": "Start With 0 Mana"
+        },
+        {
+            "_id": "spirit_offering",
+            "name": "Spirit Offering",
+            "tooltip": "Eat a tasty fish to permanently increase its health by 280 and damage by 15. At max (7) stacks, gains Devour, healing for 1% of its max health each time it gets a kill."
+        },
+        {
+            "_id": "devour_nekomata",
+            "name": "Devour",
+            "tooltip": "When this unit lands a killing blow, it heals itself for 1% of its max health."
+        },
+        {
+            "_id": "arm_with_shuriken",
+            "name": "Arm With Shuriken",
+            "tooltip": "Pay gold to equip with a shuriken for the next wave only. Each shuriken deals 35 bonus damage from range. Ability damage."
+        },
+        {
+            "_id": "throw_shuriken",
+            "name": "Throw Shuriken"
+        },
+        {
+            "_id": "mana_transfer_on_becomes_fighter",
+            "name": "Mana Transfer On Becomes Fighter"
+        },
+        {
+            "_id": "reset_mana_on_becomes_tower",
+            "name": "Reset Mana On Becomes Tower"
+        },
+        {
+            "_id": "granite_skin",
+            "name": "Granite Skin",
+            "tooltip": "Takes 1 \u002B 35% reduced damage"
+        },
+        {
+            "_id": "protector",
+            "name": "Protector",
+            "tooltip": "Designates this fighter as a Protector, increasing its max health by 650 and giving it Protection Aura.\u0026lt;br\u0026gt;\u0026lt;br\u0026gt;\u0026lt;span style=\u0027color: #ff8800\u0027\u0026gt;Protection Aura:\u0026lt;/span\u0026gt; Nearby allies in a large area have 0.8% missing health regeneration while the Protector is alive"
+        },
+        {
+            "_id": "protection_aura_spell",
+            "name": "Protection Aura"
+        },
+        {
+            "_id": "guardian_angel",
+            "name": "Guardian Angel",
+            "tooltip": "Gives this fighter a guardian angel, which brings it back to life after it dies. It will revive with up to 1500 health."
+        },
+        {
+            "_id": "guardian_angel_revive",
+            "name": "Guardian Angel",
+            "tooltip": "Gives this fighter a guardian angel, which brings it back to life after it dies. It will revive with up to 1500 health."
+        },
+        {
+            "_id": "sell_pawn",
+            "name": "Pawn",
+            "tooltip": "Sells this fighter for 90% value"
+        },
+        {
+            "_id": "blobs",
+            "name": "Blobs",
+            "tooltip": "When this unit dies, it spawns a Blob."
+        },
+        {
+            "_id": "shuriken_cyclone",
+            "name": "Shuriken Cyclone",
+            "tooltip": "Pay gold to equip with 3 shurikens for next wave only. Each shuriken deals 35 bonus damage from range and attacks 1.85x as fast. Ability damage."
+        },
+        {
+            "_id": "throw_shuriken_cyclone",
+            "name": "Throw Shuriken Cyclone"
+        },
+        {
+            "_id": "accuracy",
+            "name": "Accuracy",
+            "tooltip": "Deals 5 bonus damage to bosses. \u0026lt;img class=\u0027tooltip-icon\u0027 src=\u0027hud/img/icons/Pure.png\u0027 /\u0026gt; Pure ability damage."
+        },
+        {
+            "_id": "precision",
+            "name": "Precision",
+            "tooltip": "Deals 15 bonus damage to bosses. \u0026lt;img class=\u0027tooltip-icon\u0027 src=\u0027hud/img/icons/Pure.png\u0027 /\u0026gt; Pure ability damage."
+        },
+        {
+            "_id": "devour_maccabeus",
+            "name": "Devour",
+            "tooltip": "When this unit lands a killing blow, it heals itself for 0.5% of its max health."
+        },
+        {
+            "_id": "shallow_grave",
+            "name": "Shallow Grave",
+            "tooltip": "Comes back to life 2 seconds after dying and gains 50% attack speed."
+        },
+        {
+            "_id": "shallow_grave_red",
+            "name": "Shallow Grave",
+            "tooltip": "Comes back to life 2 seconds after dying and gains 50% attack speed."
+        },
+        {
+            "_id": "council_antler",
+            "name": "Council"
+        },
+        {
+            "_id": "council_antler_oracle",
+            "name": "Council",
+            "tooltip": "Adjacently-built units take 5 \u002B 10% (20% for Antlers) reduced damage from all sources.  Does not stack."
+        },
+        {
+            "_id": "ionic_force_aspd",
+            "name": "Ionic Force",
+            "tooltip": "Increases attack speed by 30% for each 10% current mana"
+        },
+        {
+            "_id": "split_shot",
+            "name": "Split Shot",
+            "tooltip": "Fires 2 additional attacks at enemies near its attack target. Multiple strikes can hit the same target. Ability damage."
+        },
+        {
+            "_id": "wintry_touch",
+            "name": "Wintry Touch",
+            "tooltip": "Deals 3 damage per second and reduces the attack speed of nearby enemies by 0.75% in a large area. Stacks with itself. \u0026lt;img class=\u0027tooltip-icon\u0027 src=\u0027hud/img/icons/Pure.png\u0027 /\u0026gt; Pure ability damage."
+        },
+        {
+            "_id": "frozen_veil",
+            "name": "Frozen Veil",
+            "tooltip": "Deals 8 damage per second and reduces the attack speed of nearby enemies by 2% in a large area. Stacks with itself. \u0026lt;img class=\u0027tooltip-icon\u0027 src=\u0027hud/img/icons/Pure.png\u0027 /\u0026gt; Pure ability damage."
+        },
+        {
+            "_id": "frozen_veil_boss",
+            "name": "Frozen Veil"
+        },
+        {
+            "_id": "wintry_touch_boss",
+            "name": "Wintry Touch"
+        },
+        {
+            "_id": "nimble_feet",
+            "name": "Nimble Feet",
+            "tooltip": "Has a 25% chance to dodge each incoming attack."
+        },
+        {
+            "_id": "cell_regrowth_canopie",
+            "name": "Cell Regrowth",
+            "tooltip": "Starts with $1% health, but regenerates $2% of missing health per second"
+        },
+        {
+            "_id": "dimensional_rift",
+            "name": "Dimensional Rift",
+            "tooltip": "Summons a Hellion and Nightcrawler"
+        },
+        {
+            "_id": "dimensional_chasm",
+            "name": "Dimensional Chasm",
+            "tooltip": "Alternates between summoning an Elite Hellion and Elite Nightcrawler"
+        },
+        {
+            "_id": "blood_price",
+            "name": "Blood Price",
+            "tooltip": "Every time it summons a unit, it loses 20% max hp (can kill itself)."
+        },
+        {
+            "_id": "delicacy_perma_90",
+            "name": "Delicacy (90%)",
+            "tooltip": "Sells this fighter for 90% of its total cost"
+        },
+        {
+            "_id": "sell_80",
+            "name": "Undeploy",
+            "tooltip": "Sells this fighter for 60% value"
+        },
+        {
+            "_id": "sell_95",
+            "name": "Undeploy90",
+            "tooltip": "Sells this fighter for 90% value"
+        },
+        {
+            "_id": "knock_out_new",
+            "name": "Knock Out",
+            "tooltip": "Deals 125 Impact damage every third attack. Refreshes on kill."
+        },
+        {
+            "_id": "resonance_gate",
+            "name": "Resonance"
+        },
+        {
+            "_id": "resonance_oracle_gate",
+            "name": "Resonance"
+        },
+        {
+            "_id": "unchained_rage",
+            "name": "Unchained Rage",
+            "tooltip": "Once it reaches 50% life, it attacks 275% faster, but hits random targets."
+        },
+        {
+            "_id": "unchained_rage_activation",
+            "name": "Unchained Rage",
+            "tooltip": "Once it reaches 50% life, it attacks 275% faster, but hits random targets."
+        },
+        {
+            "_id": "mana_on_attack_and_on_kill",
+            "name": "Mana On Attack And Kill"
+        },
+        {
+            "_id": "mana_blessing",
+            "name": "Mana Blessing",
+            "tooltip": "Restore the mana of nearby allies. Each point of mana restores 0.9 mana. Extra mana will bounce to nearby allies. If there are no nearby allies in need of mana, instead boosts its own attack speed and damage reduction by 20% for 5 seconds."
+        },
+        {
+            "_id": "mana_miracle",
+            "name": "Mana Miracle",
+            "tooltip": "Restore the mana of nearby allies. Each point of mana restores 1.5 mana, up to a maximum of 3 per target. Extra mana will bounce to nearby allies. If there are no nearby allies in need of mana, instead boosts its own attack speed and damage reduction by 20% for 5 seconds."
+        },
+        {
+            "_id": "mana_blessing_self_buff",
+            "name": "Mana Blessing"
+        },
+        {
+            "_id": "mana_miracle_self_buff",
+            "name": "Mana Miracle"
+        },
+        {
+            "_id": "acrobatics_harpy",
+            "name": "Acrobatics",
+            "tooltip": "Starts with 0 mana, but gains mana when it moves before entering battle. Each 2 mana increases attack speed by 15%."
+        },
+        {
+            "_id": "Multishot",
+            "name": "Multishot",
+            "tooltip": "Fires 3 additional arrows at enemies near its attack target. Multiple arrows can hit the same target. Ability damage."
+        },
+        {
+            "_id": "necromancy_head_chef",
+            "name": "Necromancy",
+            "tooltip": "Restores 0.5 mana when a nearby unit dies, excluding Froggos"
+        },
+        {
+            "_id": "pulverizer",
+            "name": "Pulverizer",
+            "tooltip": "Makes this fighter a pulverizer, giving it \u002B4% attack speed and Pulverize.\u0026lt;br\u0026gt;\u0026lt;br\u0026gt;\u0026lt;span style=\u0027color: #ff8800\u0027\u0026gt;Pulverize:\u0026lt;/span\u0026gt; Each attack has a 34% (17% for ranged) chance to stun its target for 2 seconds (0.3 to bosses). Does not work on summons or clones."
+        },
+        {
+            "_id": "plunder",
+            "name": "Plunder",
+            "tooltip": "Gains \u002B2-7 gold based on wave number each time it kills a unit."
+        },
+        {
+            "_id": "hypershot",
+            "name": "Hypershot",
+            "tooltip": "Fires 4 additional arrows at enemies near its attack target. Multiple arrows can hit the same target. Ability damage."
+        },
+        {
+            "_id": "titan_effect",
+            "name": "Titan",
+            "tooltip": "This unit is a Titan. It has 1300 bonus health."
+        },
+        {
+            "_id": "pulverize_melee",
+            "name": "Pulverize",
+            "tooltip": "This unit is a Pulverizer. It has \u002B4% attack speed and a 34% (17% for ranged) chance to stun its target for 2 seconds (0.3 to bosses)"
+        },
+        {
+            "_id": "pulverize_ranged",
+            "name": "Pulverize",
+            "tooltip": "This unit is a Pulverizer. It has \u002B4% attack speed and a 34% (17% for ranged) chance to stun its target for 2 seconds (0.3 to bosses)"
+        },
+        {
+            "_id": "titan",
+            "name": "Titan",
+            "tooltip": "Makes this fighter a titan, increasing its max health by 1300."
+        },
+        {
+            "_id": "ionic_force_proton",
+            "name": "Ionic Force",
+            "tooltip": "Increases attack speed by 30% for each 10% current mana"
+        },
+        {
+            "_id": "harden_golem",
+            "name": "Harden",
+            "tooltip": "Grants 3 \u002B 15% damage reduction for the next wave. The wave after, it recovers and takes 3 \u002B 15% extra damage."
+        },
+        {
+            "_id": "harden_active_golem",
+            "name": "Harden (Active)",
+            "tooltip": "Grants 3 \u002B 15% damage reduction for the next wave. The wave after, it recovers and takes 3 \u002B 15% extra damage."
+        },
+        {
+            "_id": "harden_recovering_golem",
+            "name": "Harden (Recovering)",
+            "tooltip": "Grants 3 \u002B 15% damage reduction for the next wave. The wave after, it recovers and takes 3 \u002B 15% extra damage."
+        },
+        {
+            "_id": "undo_harden_golem",
+            "name": "Undo Harden",
+            "tooltip": "Undo"
+        },
+        {
+            "_id": "invigorate_azeria",
+            "name": "Invigorate",
+            "tooltip": "Increases her attack speed by 100% and heals for 8% missing health/sec for 5 seconds"
+        },
+        {
+            "_id": "sorcerer_single_target",
+            "name": "Sorcerer",
+            "tooltip": "Makes this fighter a sorcerer, increasing its ability damage by 57.5%."
+        },
+        {
+            "_id": "sorcerer_single_target_effect",
+            "name": "Sorcerer",
+            "tooltip": "This unit is a sorcerer. It has 57.5% bonus ability damage."
+        },
+        {
+            "_id": "conjure_thanatos",
+            "name": "Conjure Thanatos",
+            "tooltip": "Summons Thanatos (Magic/Arcane)"
+        },
+        {
+            "_id": "solar_flare",
+            "name": "Solar Flare",
+            "tooltip": "Increases attack speed by 100% for 5 seconds, stacking up to 3 times"
+        },
+        {
+            "_id": "solar_flare_arc_of_justice",
+            "name": "Solar Flare",
+            "tooltip": "Increases attack speed by 100% for 5 seconds, stacking up to 3 times"
+        },
+        {
+            "_id": "particle_wave",
+            "name": "Particle Wave",
+            "tooltip": "Deals 9 bonus damage (3 to bosses) for each consecutive attack against the same target. \u0026lt;img class=\u0027tooltip-icon\u0027 src=\u0027hud/img/icons/Pure.png\u0027 /\u0026gt; Pure ability damage."
+        },
+        {
+            "_id": "particle_wave_boss",
+            "name": "Particle Wave"
+        },
+        {
+            "_id": "purification_beam",
+            "name": "Purification Beam",
+            "tooltip": "Deals 24 bonus damage (8 to bosses) for each consecutive attack against the same target. \u0026lt;img class=\u0027tooltip-icon\u0027 src=\u0027hud/img/icons/Pure.png\u0027 /\u0026gt; Pure ability damage."
+        },
+        {
+            "_id": "purification_beam_boss",
+            "name": "Purification Beam"
+        },
+        {
+            "_id": "mana_burn",
+            "name": "Mana Burn",
+            "tooltip": "Burns 5% of the target\u0027s max mana with each attack.\u0026lt;br\u0026gt;\u0026lt;br\u0026gt;\u0026lt;span style=\u0027color: #cccccc\u0027\u0026gt;Only affects units with natural mana regen.\u0026lt;/span\u0026gt;"
+        },
+        {
+            "_id": "diabolic_duo",
+            "name": "Diabolic Duo",
+            "tooltip": "Imps spawn in pairs"
+        },
+        {
+            "_id": "disable_mana_regen",
+            "name": "Disable Mana Regen"
+        },
+        {
+            "_id": "disable_mana_regen_tower_only",
+            "name": "Disable Mana Regen (Tower Only)"
+        },
+        {
+            "_id": "aegis",
+            "name": "Aegis",
+            "tooltip": "Gains mana every time it attacks and is attacked. Each 10% mana increases attack speed by 4% and health by 80. At max mana, attacks deal 25% splash damage in a small radius for 25 attacks."
+        },
+        {
+            "_id": "aegis_maxed",
+            "name": "Aegis Maxed",
+            "tooltip": "Each attack deals 25% damage to nearby enemies. Ability damage."
+        },
+        {
+            "_id": "aegis_maxed_air",
+            "name": "Aegis Maxed"
+        },
+        {
+            "_id": "final_judgment",
+            "name": "Final Judgment",
+            "tooltip": "Gains mana every time it attacks and is attacked. Each 10% mana increases attack speed by 4% and health by 200. At max mana, attacks deal 25% splash damage in a large radius for 25 attacks."
+        },
+        {
+            "_id": "final_judgment_maxed",
+            "name": "Final Judgment Maxed",
+            "tooltip": "Each attack deals 25% damage to nearby enemies. Ability damage."
+        },
+        {
+            "_id": "final_judgment_maxed_flying",
+            "name": "Final Judgment Maxed"
+        },
+        {
+            "_id": "aegis_hidden_effect",
+            "name": "Aegis Mana On Attack"
+        },
+        {
+            "_id": "final_judgment_hidden_effect",
+            "name": "final_judgment_hidden_effect"
+        },
+        {
+            "_id": "full_throttle",
+            "name": "Full Throttle",
+            "tooltip": "Attacks up to 70% faster the closer the target is, but also overheats, taking up to 50% more damage."
+        },
+        {
+            "_id": "bullet_rain",
+            "name": "Bullet Rain",
+            "tooltip": "Attacks up to 90% faster the closer the target is, but also overheats, taking up to 60% more damage."
+        },
+        {
+            "_id": "fragrance_splash_damage",
+            "name": "Fragrance",
+            "tooltip": "Deals 10 \u002B 0.02% max health magic damage to nearby enemies. Stacks with itself. Ability damage. "
+        },
+        {
+            "_id": "fragrance_splash_damage_boss",
+            "name": "Fragrance"
+        },
+        {
+            "_id": "noxious_scent_splash_damage",
+            "name": "Noxious Scent",
+            "tooltip": "Deals 30 \u002B 0.06% max health magic damage to nearby enemies. Stacks with itself. Ability damage. "
+        },
+        {
+            "_id": "noxious_scent_splash_damage_boss",
+            "name": "Noxious Scent"
+        },
+        {
+            "_id": "aerial_command_masks",
+            "name": "Aerial Command"
+        },
+        {
+            "_id": "aerial_command_oracle_masks",
+            "name": "Aerial Command"
+        },
+        {
+            "_id": "aerial_command_hell_raiser_oracle",
+            "name": "Aerial Command"
+        },
+        {
+            "_id": "aerial_command_tantrum_hell_raiser",
+            "name": "Aerial Command"
+        },
+        {
+            "_id": "villain_melee_boss",
+            "name": "Villainy"
+        },
+        {
+            "_id": "villainy_ranged_boss",
+            "name": "Villainy"
+        },
+        {
+            "_id": "life_exchange",
+            "name": "Life Exchange",
+            "tooltip": "Heals a nearby ally for 100 health, but deals 50 damage to itself. Cannot be cast on itself or other Seadragon/Lifebinder."
+        },
+        {
+            "_id": "soul_transfer",
+            "name": "Soul Transfer",
+            "tooltip": "Heals a nearby ally for 300 health, but deals 150 damage to itself. Cannot be cast on itself or other Seadragon/Lifebinder."
+        },
+        {
+            "_id": "hypercarry",
+            "name": "Hypercarry",
+            "tooltip": "Gives a fighter \u002B10% attack speed. Every time it gets a kill, it permanently gains \u002B1% additional attack speed."
+        },
+        {
+            "_id": "hypercarry_attack_speed",
+            "name": "Hypercarry",
+            "tooltip": "Gives a fighter \u002B10% attack speed. Every time it gets a kill, it permanently gains \u002B1% additional attack speed."
+        },
+        {
+            "_id": "divine_blessing",
+            "name": "Divine Blessing",
+            "tooltip": "Gives a fighter \u002B2000 health and \u002B16% attack speed. If the fighter dies, the buff is permanently lost."
+        },
+        {
+            "_id": "divine_blessing_stats",
+            "name": "Divine Blessing",
+            "tooltip": "Gives a fighter \u002B2000 health and \u002B16% attack speed. If the fighter dies, the buff is permanently lost."
+        },
+        {
+            "_id": "divine_blessing_stats_2",
+            "name": "Divine Blessing",
+            "tooltip": "Gives a fighter \u002B2000 health and \u002B16% attack speed. If the fighter dies, the buff is permanently lost."
+        },
+        {
+            "_id": "razor_leaf",
+            "name": "Razor Leaf",
+            "tooltip": "Each attack deals 100% damage to nearby enemies. Ability damage."
+        },
+        {
+            "_id": "early_harvest",
+            "name": "Early Harvest",
+            "tooltip": "If it dies this wave, gain 5 mythium after the wave ends."
+        },
+        {
+            "_id": "superbloom",
+            "name": "Superbloom",
+            "tooltip": "If it survives the wave, gains 110 hp and 8 damage after the wave ends (doubled starting wave 11)."
+        },
+        {
+            "_id": "glacial_touch",
+            "name": "Glacial Touch",
+            "tooltip": "Gives a fighter a chilling attack that slows movement speed by 90% for 3 seconds. If the target dies while chilled, it explodes, dealing 50 pure damage in a small area."
+        },
+        {
+            "_id": "glacial_touch_stats",
+            "name": "Glacial Touch",
+            "tooltip": "Gives a fighter a chilling attack that slows movement speed by 90% for 3 seconds. If the target dies while chilled, it explodes, dealing 50 pure damage in a small area."
+        },
+        {
+            "_id": "spirit_barrage_burst_attack",
+            "name": "Burst Attack",
+            "tooltip": "Each attack launches 2 extra missiles, each dealing 100% base damage. Ability damage."
+        },
+        {
+            "_id": "iron_hail",
+            "name": "Iron Hail",
+            "tooltip": "Unleashes a volley of cursed swords, dealing 20x3 Pierce damage in a small area around the target. Ability damage."
+        },
+        {
+            "_id": "sword_rain",
+            "name": "Sword Rain",
+            "tooltip": "Unleashes a volley of cursed swords, dealing 35x3 Pierce damage in a small area around the target. Ability damage."
+        },
+        {
+            "_id": "blade_storm",
+            "name": "Blade Storm",
+            "tooltip": "Unleashes a volley of cursed swords, dealing 43x3 Pierce damage in a small area around the target. Ability damage. Also reduces damage of units hit by the swords by 1 for 3 seconds, stacking up to 10 times. Ability damage."
+        },
+        {
+            "_id": "soul_gate_reduced_healing",
+            "name": "Soul Gate Reduced Healing"
+        },
+        {
+            "_id": "dragon_breath",
+            "name": "Dragon Breath",
+            "tooltip": "Deals splash damage."
+        },
+        {
+            "_id": "cobra_venom",
+            "name": "Cobra Venom",
+            "tooltip": "Each attack slows attack speed by 5% (1% against the king), stacking up to 6 times"
+        },
+        {
+            "_id": "annihilator_mythium_on_attack",
+            "name": "Annihilator Mythium On Attack"
+        },
+        {
+            "_id": "plasma_bolts",
+            "name": "Plasma Bolts",
+            "tooltip": "Attacks at full speed at any range."
+        },
+        {
+            "_id": "plasma_bolts_upgrade",
+            "name": "Plasma Bolts",
+            "tooltip": "Attacks at full speed at any range."
+        },
+        {
+            "_id": "megafauna_bonus_damage",
+            "name": "Megafauna",
+            "tooltip": "Bosses and mini-bosses have \u002B55% damage and health. Sven\u0027s units deal 200% bonus damage to bosses and mini-bosses."
+        },
+        {
+            "_id": "mini_slime",
+            "name": "Mini Slime",
+            "tooltip": "When this unit dies, it leaves behind a Mini Slime."
+        },
+        {
+            "_id": "slime_propagation",
+            "name": "Slime Propagation",
+            "tooltip": "Gains mana whenever it attacks or is attacked. When this unit dies, it leaves behind a Slime Larva. If its mana is maxed, it spawns 3 Slime Larva."
+        },
+        {
+            "_id": "slime_propagation_mana",
+            "name": "Slime Propagation Mana On Attacked"
+        },
+        {
+            "_id": "slime_propagation_mana_on_attack",
+            "name": "Slime Propagation Mana On Attack"
+        },
+        {
+            "_id": "dual_shot",
+            "name": "Dual Shot",
+            "tooltip": "Fires an additional attack at an enemy near its attack target. Multiple strikes can hit the same target. Ability damage."
+        },
+        {
+            "_id": "dual_shot_giant_quadrapus",
+            "name": "Dual Shot",
+            "tooltip": "Fires an additional attack at an enemy near its attack target. Multiple strikes can hit the same target. Ability damage."
+        },
+        {
+            "_id": "gigantism_bonus_damage",
+            "name": "Gigantism",
+            "tooltip": "Bosses and mini-bosses have \u002B20% damage and health. Sven\u0027s units deal 33% bonus damage to bosses and mini-bosses."
+        },
+        {
+            "_id": "annihilator_mythium_on_attack_normal",
+            "name": "Annihilator Mythium On Attack Normal"
+        },
+        {
+            "_id": "dominion_hidden",
+            "name": "Dominion"
+        },
+        {
+            "_id": "hydra_hidden",
+            "name": "Hydra"
+        },
+        {
+            "_id": "gatling_hidden",
+            "name": "Gatling Gun"
+        },
+        {
+            "_id": "vulcan_hidden",
+            "name": "Vulcan Cannon"
+        },
+        {
+            "_id": "needle_spray",
+            "name": "Needle Spray",
+            "tooltip": "Fires 2 additional needles at enemies near its attack target. Multiple needles can hit the same target. Also, gains 1 mana when it kills a unit."
+        },
+        {
+            "_id": "rapid_fire",
+            "name": "Rapid Fire",
+            "tooltip": "Gains 35% attack speed for 5 seconds. Stacks with itself."
+        },
+        {
+            "_id": "needler_mana_on_kill",
+            "name": "Needler Mana On Kill"
+        },
+        {
+            "_id": "hatebreeder",
+            "name": "Hatebreeder",
+            "tooltip": "Creates a clone of itself every 5 attacks that deal 25% damage as Magic damage and spawns with 25% health. Clones cannot clone themselves."
+        },
+        {
+            "_id": "intellect_pet",
+            "name": "Intellect",
+            "tooltip": "Killing a unit restores 8% of its summoner\u0027s mana"
+        },
+        {
+            "_id": "shadowbreeder",
+            "name": "Shadowbreeder",
+            "tooltip": "Creates a clone of itself every 6 attacks that deal 25% damage as Magic damage and spawns with 25% health. Clones cannot clone themselves."
+        },
+        {
+            "_id": "tenacity",
+            "name": "Tenacity",
+            "tooltip": "Gains 1.3% damage reduction for every 1% damage taken this wave."
+        },
+        {
+            "_id": "intellect_lod",
+            "name": "Intellect",
+            "tooltip": "Killing a unit restores 8% mana"
+        },
+        {
+            "_id": "intellect_hades",
+            "name": "Intellect",
+            "tooltip": "Killing a unit restores 8% mana"
+        },
+        {
+            "_id": "intellect_thanatos",
+            "name": "Intellect",
+            "tooltip": "Killing a unit restores 8% of its summoner\u0027s mana"
+        },
+        {
+            "_id": "exuberance",
+            "name": "Exuberance",
+            "tooltip": "Starts off with \u002B20% damage |amp damage reduction, but this bonus decreases by 5% after each wave until the bonus is lost."
+        },
+        {
+            "_id": "devotion",
+            "name": "Devotion",
+            "tooltip": "Grants 4.75% missing health regeneration to the unit built directly behind it."
+        },
+        {
+            "_id": "forbidden_fruit",
+            "name": "Forbidden Fruit",
+            "tooltip": "Gains mana every time it attacks and is attacked. When this unit dies or reaches max mana, deals up to 600 damage to nearby enemies, based on its current mana. \u0026lt;img class=\u0027tooltip-icon\u0027 src=\u0027hud/img/icons/Magic.png\u0027 /\u0026gt; Magic ability damage."
+        },
+        {
+            "_id": "forbidden_fruit_mana_on_attack",
+            "name": "Forbidden Fruit Mana On Attack"
+        },
+        {
+            "_id": "forbidden_fruit_mana_on_attacked",
+            "name": "Forbidden Fruit Mana On Attacked"
+        },
+        {
+            "_id": "wolf_pack",
+            "name": "Wolf Pack",
+            "tooltip": "Each attack applies a stack of Wolf Prey for 3 seconds (stacking up to 10 times). Deals 6% (3% to bosses) bonus damage for each stack of Wolf Prey on its attack target."
+        },
+        {
+            "_id": "impale_villain",
+            "name": "Impale",
+            "tooltip": "Each attack amplifies damage taken by 3% (1.5% against the king), stacking up to 10 times"
+        },
+        {
+            "_id": "emp",
+            "name": "EMP",
+            "tooltip": "Every attack splits its damage equally among enemies near the target. Deals 25% more damage for each enemy hit."
+        },
+        {
+            "_id": "summon_crabling",
+            "name": "Summon Crabling",
+            "tooltip": "Summons a Tanky melee pet"
+        },
+        {
+            "_id": "summon_pincer",
+            "name": "Summon Pincer",
+            "tooltip": "Summons a Tanky melee pet"
+        },
+        {
+            "_id": "short_selling_undo",
+            "name": "Undo Short Selling",
+            "tooltip": "Undo"
+        },
+        {
+            "_id": "stone_legs",
+            "name": "Stone Legs",
+            "tooltip": "Has 25% damage reduction, but moves 80% slower than other fighters."
+        },
+        {
+            "_id": "short_selling_active",
+            "name": "Short Selling",
+            "tooltip": "Does not gain mana or gold from Aggressive Portfolio this wave, but also does not lose mana if it dies."
+        },
+        {
+            "_id": "pot_o_honey",
+            "name": "Pot O Honey",
+            "tooltip": "When he dies, he spills his pot of honey, which heals 500 health split among nearby injured allies. Total amount healed is increased by 20% per injured ally."
+        },
+        {
+            "_id": "secret_stash_placeholder",
+            "name": "Secret Stash",
+            "tooltip": "Sells this fighter for 90% of its total cost"
+        },
+        {
+            "_id": "short_selling",
+            "name": "Short Selling",
+            "tooltip": "Does not gain mana or gold from Aggressive Portfolio this wave, but also does not lose mana if it dies."
+        },
+        {
+            "_id": "secret_stash",
+            "name": "Secret Stash",
+            "tooltip": "Sells this fighter for 90% of its total cost"
+        },
+        {
+            "_id": "compound_interest",
+            "name": "Compound Interest",
+            "tooltip": "If it survives the wave, it gains 1-6 mana based on the wave number and earns \u0026lt;img class=\u0027tooltip-icon\u0027 src=\u0027hud/img/icons/Gold.png\u0027 /\u0026gt; 1 per mana. If it dies, it loses 25% mana. Mana transfers when upgraded."
+        },
+        {
+            "_id": "aggressive_portfolio",
+            "name": "Aggressive Portfolio",
+            "tooltip": "If it survives the wave, it gains 1-6 mana based on the wave number and earns \u0026lt;img class=\u0027tooltip-icon\u0027 src=\u0027hud/img/icons/Gold.png\u0027 /\u0026gt; 3 per mana. If it dies, it loses 50% mana."
+        },
+        {
+            "_id": "giga_boomstick",
+            "name": "Giga Boomstick",
+            "tooltip": "Every 3 attacks or whenever it gets a kill, its next attack fires an oversized rocket that deals 100 \u0026lt;img class=\u0027tooltip-icon\u0027 src=\u0027hud/img/icons/Impact.png\u0027 /\u0026gt; Impact damage."
+        },
+        {
+            "_id": "plasma_decay",
+            "name": "Plasma Decay",
+            "tooltip": "Reduces an enemy\u0027s damage by 10 (5 to bosses), stacking up to 15 times"
+        },
+        {
+            "_id": "unyielding_spirit",
+            "name": "Unyielding Spirit",
+            "tooltip": "After not being attacked for 3 seconds, Regenerates 2% max health per second"
+        },
+        {
+            "_id": "plasma_burst",
+            "name": "Plasma Burst",
+            "tooltip": "Each attack launches 2 extra missiles, each dealing 100% base damage. Ability damage."
+        },
+        {
+            "_id": "boss_killer",
+            "name": "Boss Killer",
+            "tooltip": "Chrono Dragon campaign bonus: deals 100% bonus damage to bosses and mini-bosses."
+        }
+    ]
+}

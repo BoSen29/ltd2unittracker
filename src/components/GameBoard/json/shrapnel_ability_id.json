@@ -1,0 +1,10 @@
+{
+    "_id":  "shrapnel_ability_id",
+    "baseDamage":  "35.0000",
+    "category":  "abilities",
+    "description":  "Each attack hits up to $1 nearby non-flying enemies for $2 Pierce damage",
+    "descriptionId":  "shrapnel_description",
+    "iconPath":  "Icons/Shrapnel.png",
+    "name":  "Shrapnel",
+    "tooltip":  "Each attack hits up to 3 nearby non-flying enemies for 35 Pierce damage"
+}

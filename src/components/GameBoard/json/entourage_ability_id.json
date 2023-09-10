@@ -1,0 +1,10 @@
+{
+    "_id":  "entourage_ability_id",
+    "aoeRange":  "120",
+    "category":  "abilities",
+    "description":  "Damage and damage reduction are increased by $1% for each adjacently-built unit that is higher total fighter value than Lioness ($2 value)",
+    "descriptionId":  "entourage_description",
+    "iconPath":  "Icons/Entourage.png",
+    "name":  "Entourage",
+    "tooltip":  "Damage and damage reduction are increased by 9% for each adjacently-built unit that is higher total fighter value than Lioness (260 value)"
+}

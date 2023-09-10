@@ -1,0 +1,11 @@
+{
+    "_id":  "Multishot_ability_id",
+    "bounces":  "0",
+    "category":  "abilities",
+    "cooldown":  "0.10000",
+    "description":  "Fires $1 additional arrows at enemies near its attack target. Multiple arrows can hit the same target. Ability damage.",
+    "descriptionId":  "multishot_description",
+    "iconPath":  "Icons/Multishot.png",
+    "name":  "Multishot",
+    "tooltip":  "Fires 3 additional arrows at enemies near its attack target. Multiple arrows can hit the same target. Ability damage."
+}

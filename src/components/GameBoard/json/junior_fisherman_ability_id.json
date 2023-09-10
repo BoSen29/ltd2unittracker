@@ -1,0 +1,10 @@
+{
+    "_id":  "junior_fisherman_ability_id",
+    "aoeRange":  "800",
+    "category":  "abilities",
+    "description":  "Gains +$1 mana when a nearby enemy dies. |n|n|c(ffcc00):Mana carries over when upgraded. Upgraded forms will utilize mana.|r",
+    "descriptionId":  "junior_fisherman_description",
+    "iconPath":  "Icons/JuniorFisherman.png",
+    "name":  "Junior Fisherman",
+    "tooltip":  "Gains +1.2 mana when a nearby enemy dies. \u0026lt;br\u0026gt;\u0026lt;br\u0026gt;\u0026lt;span style=\u0027color: #ffcc00\u0027\u0026gt;Mana carries over when upgraded. Upgraded forms will utilize mana.\u0026lt;/span\u0026gt;"
+}

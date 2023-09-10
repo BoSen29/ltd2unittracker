@@ -1,0 +1,10 @@
+{
+    "_id":  "ancient_power_ability_id",
+    "aoeRange":  "150",
+    "category":  "abilities",
+    "description":  "Gains +$1% damage and +$2% damage reduction based on the current wave number",
+    "descriptionId":  "ancient_power_description",
+    "iconPath":  "Icons/AncientPower.png",
+    "name":  "Ancient Power",
+    "tooltip":  "Gains +0.9% damage and +0.9% damage reduction based on the current wave number"
+}

@@ -1,0 +1,11 @@
+{
+    "_id":  "impale_new_ability_id",
+    "bounces":  "0",
+    "category":  "abilities",
+    "description":  "Each attack amplifies damage taken by $1% ($2% against the king), stacking up to $3 times",
+    "descriptionId":  "impale_description",
+    "duration":  "3.000",
+    "iconPath":  "Icons/Impale.png",
+    "name":  "Impale",
+    "tooltip":  "Each attack amplifies damage taken by 3% (1.5% against the king), stacking up to 10 times"
+}

@@ -1,0 +1,10 @@
+{
+    "_id":  "impale_ability_id",
+    "baseDamage":  "20.00000",
+    "category":  "abilities",
+    "description":  "Each attack has a $1% chance to deal $2% damage",
+    "descriptionId":  "impale_crit_description",
+    "iconPath":  "Icons/Impale.png",
+    "name":  "Impale",
+    "tooltip":  "Each attack has a 25% chance to deal 150% damage"
+}

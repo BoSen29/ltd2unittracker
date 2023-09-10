@@ -1,0 +1,10 @@
+{
+    "_id":  "final_judgment_maxed_ability_id",
+    "aoeRange":  "500",
+    "category":  "abilities",
+    "description":  "Each attack deals $1% damage to nearby enemies. Ability damage.",
+    "descriptionId":  "final_judgment_maxed_description",
+    "iconPath":  "Icons/FinalJudgmentMaxed.png",
+    "name":  "Final Judgment Maxed",
+    "tooltip":  "Each attack deals 25% damage to nearby enemies. Ability damage."
+}

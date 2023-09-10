@@ -1,0 +1,10 @@
+{
+    "_id":  "ambernite_shell_ability_id",
+    "baseDamage":  "10.00000",
+    "category":  "abilities",
+    "description":  "Whenever this unit is attacked, it reflects $1 damage back as damage. |img(icons/Pure.png) |proper(PureAttack) ability damage.",
+    "descriptionId":  "azurite_shell_description",
+    "iconPath":  "Icons/AzuriteShell.png",
+    "name":  "Azurite Shell",
+    "tooltip":  "Whenever this unit is attacked, it reflects 10 damage back as damage. \u0026lt;img class=\u0027tooltip-icon\u0027 src=\u0027hud/img/icons/Pure.png\u0027 /\u0026gt; Pure ability damage."
+}

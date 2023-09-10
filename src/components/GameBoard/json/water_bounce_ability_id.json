@@ -1,0 +1,10 @@
+{
+    "_id":  "water_bounce_ability_id",
+    "bounces":  "1",
+    "category":  "abilities",
+    "description":  "Each attack bounces to a nearby enemy. Ability damage.",
+    "descriptionId":  "water_bounce_description",
+    "iconPath":  "Icons/WaterBounce.png",
+    "name":  "Water Bounce",
+    "tooltip":  "Each attack bounces to a nearby enemy. Ability damage."
+}

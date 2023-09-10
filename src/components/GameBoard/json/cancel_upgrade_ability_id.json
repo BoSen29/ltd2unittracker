@@ -1,0 +1,7 @@
+{
+    "_id":  "cancel_upgrade_ability_id",
+    "category":  "abilities",
+    "descriptionId":  "none_description",
+    "iconPath":  "Icons/CancelUpgrade.png",
+    "name":  "Cancel Upgrade"
+}

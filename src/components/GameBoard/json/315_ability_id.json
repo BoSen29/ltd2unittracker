@@ -1,0 +1,10 @@
+{
+    "_id":  "315_ability_id",
+    "bounces":  "1",
+    "category":  "abilities",
+    "description":  "Each attack deals $1% ($2% to flying) damage to nearby enemies",
+    "descriptionId":  "firebounce_description",
+    "iconPath":  "Icons/HellFire(old).png",
+    "name":  "Hell Fire (old)",
+    "tooltip":  "Each attack deals 8% (5% to flying) damage to nearby enemies"
+}

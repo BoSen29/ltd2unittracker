@@ -1,0 +1,10 @@
+{
+    "_id":  "frozen_veil_ability_id",
+    "aoeRange":  "500",
+    "category":  "abilities",
+    "description":  "Deals $1 damage per second and reduces the attack speed of nearby enemies by $2% in a large area. Stacks with itself. |img(icons/Pure.png) |proper(PureAttack) ability damage.",
+    "descriptionId":  "frozen_veil_description",
+    "iconPath":  "Icons/FrozenVeil.png",
+    "name":  "Frozen Veil",
+    "tooltip":  "Deals 8 damage per second and reduces the attack speed of nearby enemies by 2% in a large area. Stacks with itself. \u0026lt;img class=\u0027tooltip-icon\u0027 src=\u0027hud/img/icons/Pure.png\u0027 /\u0026gt; Pure ability damage."
+}

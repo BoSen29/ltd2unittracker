@@ -1,0 +1,11 @@
+{
+    "_id":  "needle_spray_ability_id",
+    "bounces":  "0",
+    "category":  "abilities",
+    "cooldown":  "0.10000",
+    "description":  "Fires $1 additional needles at enemies near its attack target. Multiple needles can hit the same target. Also, gains $2 mana when it kills a unit.",
+    "descriptionId":  "needle_spray_description",
+    "iconPath":  "Icons/NeedleSpray.png",
+    "name":  "Needle Spray",
+    "tooltip":  "Fires 2 additional needles at enemies near its attack target. Multiple needles can hit the same target. Also, gains 1 mana when it kills a unit."
+}

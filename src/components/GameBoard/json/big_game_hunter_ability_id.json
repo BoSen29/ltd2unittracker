@@ -1,0 +1,9 @@
+{
+    "_id":  "big_game_hunter_ability_id",
+    "category":  "abilities",
+    "description":  "When this unit lands a killing blow, it heals itself for $1% of the target\u0027s max health.",
+    "descriptionId":  "big_game_hunter_description",
+    "iconPath":  "Icons/BigGameHunter.png",
+    "name":  "Big Game Hunter",
+    "tooltip":  "When this unit lands a killing blow, it heals itself for 8% of the target\u0027s max health."
+}

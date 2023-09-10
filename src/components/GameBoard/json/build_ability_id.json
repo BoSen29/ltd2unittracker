@@ -1,0 +1,7 @@
+{
+    "_id":  "build_ability_id",
+    "category":  "abilities",
+    "descriptionId":  "none_description",
+    "iconPath":  "Icons/Build.png",
+    "name":  "Build"
+}

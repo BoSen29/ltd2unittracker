@@ -1,0 +1,7 @@
+{
+    "_id":  "lacerate_boss_ability_id",
+    "category":  "abilities",
+    "duration":  "3.000",
+    "iconPath":  "Icons/Lacerate.png",
+    "name":  "Lacerate"
+}

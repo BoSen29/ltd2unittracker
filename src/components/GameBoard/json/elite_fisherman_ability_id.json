@@ -1,0 +1,10 @@
+{
+    "_id":  "elite_fisherman_ability_id",
+    "baseDamage":  "1.50000",
+    "category":  "abilities",
+    "description":  "No longer gains any mana. Gains +$3 bonus health and +$1 bonus damage for every $2 mana gained from previous forms.",
+    "descriptionId":  "elite_fisherman_description",
+    "iconPath":  "Icons/EliteFisherman.png",
+    "name":  "Elite Fisherman",
+    "tooltip":  "No longer gains any mana. Gains +25 bonus health and +1.5 bonus damage for every 1 mana gained from previous forms."
+}

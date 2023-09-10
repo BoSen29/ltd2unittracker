@@ -1,0 +1,10 @@
+{
+    "_id":  "knock_out_new_ability_id",
+    "baseDamage":  "125.00000",
+    "category":  "abilities",
+    "description":  "Deals $1 Impact damage every third attack. Refreshes on kill.",
+    "descriptionId":  "knock_out_new_description",
+    "iconPath":  "Icons/KnockOut.png",
+    "name":  "Knock Out",
+    "tooltip":  "Deals 125 Impact damage every third attack. Refreshes on kill."
+}

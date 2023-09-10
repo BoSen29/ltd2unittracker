@@ -1,0 +1,8 @@
+{
+    "_id":  "needler_mana_on_kill_ability_id",
+    "aoeRange":  "800",
+    "category":  "abilities",
+    "descriptionId":  "none_description",
+    "iconPath":  "Icons/NeedlerManaOnKill.png",
+    "name":  "Needler Mana On Kill"
+}

@@ -1,0 +1,10 @@
+{
+    "_id":  "vampirism_oracle_ability_id",
+    "aoeRange":  "120",
+    "category":  "abilities",
+    "description":  "This unit is a Vampire. Adjacently-built units gain $3% lifesteal and ability vamp",
+    "descriptionId":  "vampirism_aura_description",
+    "iconPath":  "Icons/Vampirism.png",
+    "name":  "Vampirism",
+    "tooltip":  "This unit is a Vampire. Adjacently-built units gain 24% lifesteal and ability vamp"
+}

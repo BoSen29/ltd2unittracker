@@ -1,0 +1,10 @@
+{
+    "_id":  "tribal_warfare_ability_id",
+    "bounces":  "0",
+    "category":  "abilities",
+    "description":  "Attacks up to $1 units at once but can still strike the same unit with multiple bananas. Ability damage.",
+    "descriptionId":  "tribal_warfare_description",
+    "iconPath":  "Icons/TribalWarfare.png",
+    "name":  "Tribal Warfare",
+    "tooltip":  "Attacks up to 3 units at once but can still strike the same unit with multiple bananas. Ability damage."
+}

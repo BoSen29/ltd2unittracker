@@ -1,0 +1,11 @@
+{
+    "_id":  "immolation_ability_id",
+    "aoeRange":  "775",
+    "category":  "abilities",
+    "cooldown":  "3.00000",
+    "description":  "Drains mana to deal Pure damage per second to all nearby enemies",
+    "descriptionId":  "immolation_description",
+    "iconPath":  "Icons/Immolation.png",
+    "name":  "Immolation",
+    "tooltip":  "Drains mana to deal Pure damage per second to all nearby enemies"
+}

@@ -1,0 +1,10 @@
+{
+    "_id":  "summon_froggo_ability_id",
+    "category":  "abilities",
+    "description":  "Summons a Froggo",
+    "descriptionId":  "summon_froggo_description",
+    "duration":  "180.0000",
+    "iconPath":  "Icons/SummonFroggo.png",
+    "name":  "Summon Froggo",
+    "tooltip":  "Summons a Froggo"
+}

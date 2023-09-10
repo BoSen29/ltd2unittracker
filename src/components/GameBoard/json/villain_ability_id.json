@@ -1,0 +1,9 @@
+{
+    "_id":  "villain_ability_id",
+    "category":  "abilities",
+    "description":  "Makes this fighter a villain, giving it Villainy.|n|n|c(ff8800):Villainy:|r Attacks amplify its target\u0027s damage taken by $2% ($3% for ranged) (half against bosses) from all sources. Does not work on summons or clones.",
+    "descriptionId":  "villain_description",
+    "iconPath":  "Icons/Villain.png",
+    "name":  "Villain",
+    "tooltip":  "Makes this fighter a villain, giving it Villainy.\u0026lt;br\u0026gt;\u0026lt;br\u0026gt;\u0026lt;span style=\u0027color: #ff8800\u0027\u0026gt;Villainy:\u0026lt;/span\u0026gt; Attacks amplify its target\u0027s damage taken by 26% (13% for ranged) (half against bosses) from all sources. Does not work on summons or clones."
+}

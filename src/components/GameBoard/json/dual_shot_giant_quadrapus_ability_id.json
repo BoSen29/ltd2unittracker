@@ -1,0 +1,10 @@
+{
+    "_id":  "dual_shot_giant_quadrapus_ability_id",
+    "bounces":  "0",
+    "category":  "abilities",
+    "description":  "Fires an additional attack at an enemy near its attack target. Multiple strikes can hit the same target. Ability damage.",
+    "descriptionId":  "dual_shot_description",
+    "iconPath":  "Icons/DualShot.png",
+    "name":  "Dual Shot",
+    "tooltip":  "Fires an additional attack at an enemy near its attack target. Multiple strikes can hit the same target. Ability damage."
+}

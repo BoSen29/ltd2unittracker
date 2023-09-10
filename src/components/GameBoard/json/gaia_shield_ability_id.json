@@ -1,0 +1,10 @@
+{
+    "_id":  "gaia_shield_ability_id",
+    "category":  "abilities",
+    "description":  "Increases the max health of the forward-most positioned fighter by $1. Casts once. Stacks with itself.",
+    "descriptionId":  "gaia_shield_description",
+    "duration":  "9999.0000",
+    "iconPath":  "Icons/GaiaShield.png",
+    "name":  "Gaia Shield",
+    "tooltip":  "Increases the max health of the forward-most positioned fighter by 1500. Casts once. Stacks with itself."
+}

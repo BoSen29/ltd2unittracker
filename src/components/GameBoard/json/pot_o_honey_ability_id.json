@@ -1,0 +1,10 @@
+{
+    "_id":  "pot_o_honey_ability_id",
+    "aoeRange":  "400",
+    "category":  "abilities",
+    "description":  "When he dies, he spills his pot of honey, which heals $1 health split among nearby injured allies. Total amount healed is increased by $2 per injured ally.",
+    "descriptionId":  "pot_o_honey_description",
+    "iconPath":  "Icons/PotOHoney.png",
+    "name":  "Pot O Honey",
+    "tooltip":  "When he dies, he spills his pot of honey, which heals 500 health split among nearby injured allies. Total amount healed is increased by 20% per injured ally."
+}

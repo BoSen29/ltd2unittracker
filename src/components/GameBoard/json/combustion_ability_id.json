@@ -1,0 +1,11 @@
+{
+    "_id":  "combustion_ability_id",
+    "bounces":  "2",
+    "category":  "abilities",
+    "description":  "Each attack bounces to $3 nearby enemies, dealing $1 magic ability damage over $2 second. Stacks with itself. Ability damage. ",
+    "descriptionId":  "combustion_description",
+    "duration":  "1.00000",
+    "iconPath":  "Icons/Combustion.png",
+    "name":  "Combustion",
+    "tooltip":  "Each attack bounces to 2 nearby enemies, dealing 30 magic ability damage over 1 second. Stacks with itself. Ability damage. "
+}

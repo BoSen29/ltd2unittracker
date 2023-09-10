@@ -1,0 +1,10 @@
+{
+    "_id":  "paraphylaxis_ability_id",
+    "category":  "abilities",
+    "description":  "|desc(anaphylaxis,280,2)",
+    "descriptionId":  "paraphylaxis_description",
+    "duration":  "2.0000",
+    "iconPath":  "Icons/Paraphylaxis.png",
+    "name":  "Paraphylaxis",
+    "tooltip":  "Deals 280 damage over 2 seconds to its killer. \u0026lt;img class=\u0027tooltip-icon\u0027 src=\u0027hud/img/icons/Magic.png\u0027 /\u0026gt; Magic ability damage."
+}

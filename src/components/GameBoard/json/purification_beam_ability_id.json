@@ -1,0 +1,10 @@
+{
+    "_id":  "purification_beam_ability_id",
+    "baseDamage":  "24.00000",
+    "category":  "abilities",
+    "description":  "|desc(particle_wave,24,8)",
+    "descriptionId":  "purification_beam_description",
+    "iconPath":  "Icons/PurificationBeam.png",
+    "name":  "Purification Beam",
+    "tooltip":  "Deals 24 bonus damage (8 to bosses) for each consecutive attack against the same target. \u0026lt;img class=\u0027tooltip-icon\u0027 src=\u0027hud/img/icons/Pure.png\u0027 /\u0026gt; Pure ability damage."
+}

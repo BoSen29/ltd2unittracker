@@ -1,0 +1,9 @@
+{
+    "_id":  "blobs_ability_id",
+    "category":  "abilities",
+    "description":  "When this unit dies, it spawns a Blob.",
+    "descriptionId":  "blobs_description",
+    "iconPath":  "Icons/Blobs.png",
+    "name":  "Blobs",
+    "tooltip":  "When this unit dies, it spawns a Blob."
+}

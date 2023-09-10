@@ -1,0 +1,9 @@
+{
+    "_id":  "undo_treasure_hunt_ability_id",
+    "category":  "abilities",
+    "description":  "Undo",
+    "descriptionId":  "undo_description",
+    "iconPath":  "Icons/UndoTreasureHunt.png",
+    "name":  "Undo Treasure Hunt",
+    "tooltip":  "Undo"
+}

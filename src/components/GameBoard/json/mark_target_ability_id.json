@@ -1,0 +1,11 @@
+{
+    "_id":  "mark_target_ability_id",
+    "bounces":  "0",
+    "category":  "abilities",
+    "description":  "Each attack amplifies all damage taken by $1 ($2 to bosses), stacking up to $3 times.",
+    "descriptionId":  "mark_target_description",
+    "duration":  "3.000",
+    "iconPath":  "Icons/MarkTarget.png",
+    "name":  "Mark Target",
+    "tooltip":  "Each attack amplifies all damage taken by 1 (0.5 to bosses), stacking up to 10 times."
+}

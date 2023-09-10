@@ -1,0 +1,7 @@
+{
+    "_id":  "noxious_scent_boss_ability_id",
+    "aoeRange":  "250",
+    "category":  "abilities",
+    "iconPath":  "Icons/NoxiousScent.png",
+    "name":  "Noxious Scent"
+}

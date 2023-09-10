@@ -1,0 +1,10 @@
+{
+    "_id":  "solar_flare_arc_of_justice_ability_id",
+    "category":  "abilities",
+    "description":  "Increases attack speed by $1% for $2 seconds, stacking up to $3 times",
+    "descriptionId":  "solar_flare_description",
+    "duration":  "5.0000",
+    "iconPath":  "Icons/SolarFlare.png",
+    "name":  "Solar Flare",
+    "tooltip":  "Increases attack speed by 100% for 5 seconds, stacking up to 3 times"
+}

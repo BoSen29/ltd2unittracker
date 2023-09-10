@@ -1,0 +1,10 @@
+{
+    "_id":  "hydralings_ability_id",
+    "category":  "abilities",
+    "description":  "When this unit dies, it splits into $1 hydralings.",
+    "descriptionId":  "hydralings_description",
+    "iconPath":  "Icons/Hydralings.png",
+    "name":  "Hydralings",
+    "tooltip":  "When this unit dies, it splits into 3 hydralings.",
+    "duration":  "2.00000"
+}

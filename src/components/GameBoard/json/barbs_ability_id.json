@@ -1,0 +1,10 @@
+{
+    "_id":  "barbs_ability_id",
+    "baseDamage":  "13.00000",
+    "category":  "abilities",
+    "description":  "|desc(thorns,13,10)",
+    "descriptionId":  "barbs_description",
+    "iconPath":  "Icons/Barbs.png",
+    "name":  "Barbs",
+    "tooltip":  "Whenever this unit is attacked, it reflects 13 + 10% damage taken back as pierce damage. Ability damage."
+}

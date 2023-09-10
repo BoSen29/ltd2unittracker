@@ -1,0 +1,10 @@
+{
+    "_id":  "final_judgment_ability_id",
+    "category":  "abilities",
+    "description":  "Gains mana every time it attacks and is attacked. Each $2% mana increases attack speed by $3% and health by $1. At max mana, attacks deal $4% splash damage in a large radius for $5 attacks.",
+    "descriptionId":  "final_judgment_description",
+    "duration":  "25.00000",
+    "iconPath":  "Icons/FinalJudgment.png",
+    "name":  "Final Judgment",
+    "tooltip":  "Gains mana every time it attacks and is attacked. Each 10% mana increases attack speed by 4% and health by 200. At max mana, attacks deal 25% splash damage in a large radius for 25 attacks."
+}

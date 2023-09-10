@@ -1,0 +1,10 @@
+{
+    "_id":  "leadership_ability_id",
+    "aoeRange":  "1000",
+    "category":  "abilities",
+    "description":  "Increases the attack damage of nearby allies by $1 ($2 for bosses). Does not stack.",
+    "descriptionId":  "leadership_description",
+    "iconPath":  "Icons/LeadershipAura.png",
+    "name":  "Leadership Aura",
+    "tooltip":  "Increases the attack damage of nearby allies by 5 (15 for bosses). Does not stack."
+}

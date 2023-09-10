@@ -1,0 +1,10 @@
+{
+    "_id":  "natures_touch_ability_id",
+    "category":  "abilities",
+    "description":  "Reduces an enemy\u0027s damage by $1 ($2 to bosses), stacking up to $3 times",
+    "descriptionId":  "natures_touch_description",
+    "duration":  "5.0000",
+    "iconPath":  "Icons/NaturesTouch.png",
+    "name":  "Nature\u0027s Touch",
+    "tooltip":  "Reduces an enemy\u0027s damage by 10 (5 to bosses), stacking up to 9 times"
+}

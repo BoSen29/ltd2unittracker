@@ -1,0 +1,10 @@
+{
+    "_id":  "heroism_oracle_ability_id",
+    "aoeRange":  "120",
+    "category":  "abilities",
+    "description":  "This unit is a Hero. Adjacently-built units gain +$2% damage and damage reduction.",
+    "descriptionId":  "heroism_aura_description",
+    "iconPath":  "Icons/Heroism.png",
+    "name":  "Heroism",
+    "tooltip":  "This unit is a Hero. Adjacently-built units gain +4.5% damage and damage reduction."
+}

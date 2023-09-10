@@ -1,0 +1,10 @@
+{
+    "_id":  "slime_propagation_ability_id",
+    "category":  "abilities",
+    "description":  "Gains mana whenever it attacks or is attacked. When this unit dies, it leaves behind a |proper(slime_larva_unit). If its mana is maxed, it spawns 3 |proper(slime_larva_unit).",
+    "descriptionId":  "slime_propagation_description",
+    "duration":  "2.00000",
+    "iconPath":  "Icons/SlimePropagation.png",
+    "name":  "Slime Propagation",
+    "tooltip":  "Gains mana whenever it attacks or is attacked. When this unit dies, it leaves behind a Slime Larva. If its mana is maxed, it spawns 3 Slime Larva."
+}

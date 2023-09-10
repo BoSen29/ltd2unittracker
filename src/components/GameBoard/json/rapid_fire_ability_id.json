@@ -1,0 +1,10 @@
+{
+    "_id":  "rapid_fire_ability_id",
+    "category":  "abilities",
+    "description":  "Gains $1 attack speed for $2 seconds. Stacks with itself.",
+    "descriptionId":  "rapid_fire_description",
+    "duration":  "5.00000",
+    "iconPath":  "Icons/RapidFire.png",
+    "name":  "Rapid Fire",
+    "tooltip":  "Gains 35% attack speed for 5 seconds. Stacks with itself."
+}

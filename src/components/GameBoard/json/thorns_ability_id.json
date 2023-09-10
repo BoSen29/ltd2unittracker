@@ -1,0 +1,10 @@
+{
+    "_id":  "thorns_ability_id",
+    "baseDamage":  "20.00000",
+    "category":  "abilities",
+    "description":  "Whenever this unit is attacked, it reflects $1 + $2% damage taken back as pierce damage. Ability damage.",
+    "descriptionId":  "thorns_description",
+    "iconPath":  "Icons/Thorns.png",
+    "name":  "Thorns",
+    "tooltip":  "Whenever this unit is attacked, it reflects 20 + 15% damage taken back as pierce damage. Ability damage."
+}

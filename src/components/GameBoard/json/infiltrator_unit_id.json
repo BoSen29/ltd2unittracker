@@ -1,0 +1,100 @@
+{
+    "_id":  "64d15d106ccdd3ad6b6d3f42",
+    "unitId":  "infiltrator_unit_id",
+    "version":  "10.07",
+    "abilities":  [
+                      {
+                          "_id":  "arm_with_shuriken_ability_id",
+                          "category":  "abilities",
+                          "description":  "Pay gold to equip with a shuriken for the next wave only. Each shuriken deals $1 bonus damage from range. Ability damage.",
+                          "descriptionId":  "arm_with_shuriken_description",
+                          "iconPath":  "Icons/ArmWithShuriken.png",
+                          "name":  "Arm With Shuriken",
+                          "tooltip":  "Pay gold to equip with a shuriken for the next wave only. Each shuriken deals 35 bonus damage from range. Ability damage."
+                      },
+                      {
+                          "_id":  "throw_shuriken_ability_id",
+                          "baseDamage":  "35.00000",
+                          "category":  "abilities",
+                          "iconPath":  "Icons/ThrowShuriken.png",
+                          "name":  "Throw Shuriken"
+                      },
+                      {
+                          "_id":  "mana_transfer_on_becomes_fighter_ability_id",
+                          "category":  "abilities",
+                          "iconPath":  "Icons/ManaTransferOnBecomesFighter.png",
+                          "name":  "Mana Transfer On Becomes Fighter"
+                      },
+                      {
+                          "_id":  "reset_mana_on_becomes_tower_ability_id",
+                          "category":  "abilities",
+                          "iconPath":  "Icons/ResetManaOnBecomesTower.png",
+                          "name":  "Reset Mana On Becomes Tower"
+                      },
+                      {
+                          "_id":  "start_with_0_mana_ability_id",
+                          "category":  "abilities",
+                          "iconPath":  "Icons/StartWith0Mana.png",
+                          "name":  "Start With 0 Mana"
+                      },
+                      {
+                          "_id":  "disable_mana_regen_ability_id",
+                          "category":  "abilities",
+                          "iconPath":  "Icons/DisableManaRegen.png",
+                          "name":  "Disable Mana Regen"
+                      }
+                  ],
+    "armorType":  "Swift",
+    "aspdInverted":  "1.05",
+    "attackMode":  "Melee",
+    "attackRange":  "100",
+    "attackSpeed":  "0.95500",
+    "attackType":  "Magic",
+    "avgAspd":  "1.02",
+    "avgAspdDiff":  "2.70",
+    "avgCost":  "90.45",
+    "avgCostDiff":  "-11.56",
+    "avgDmg":  "41.64",
+    "avgDmgDiff":  "-6.33",
+    "avgHp":  "833.64",
+    "avgHpDiff":  "-13.63",
+    "avgMspd":  "275.81",
+    "avgMspdDiff":  "8.77",
+    "categoryClass":  "Standard",
+    "description":  "You can pay gold to activate Arm With Shuriken, which powers it up for the next wave only.",
+    "descriptionId":  "infiltrator_unit_description",
+    "dmgBase":  "39",
+    "dmgExpected":  "39.00",
+    "dmgMax":  "39",
+    "dps":  "40.84",
+    "flags":  "flags_ground,flags_organic",
+    "goldBounty":  "",
+    "goldCost":  "80",
+    "goldValue":  "",
+    "hp":  "720",
+    "iconPath":  "Icons/Infiltrator.png",
+    "incomeBonus":  "",
+    "infoSketchfab":  "https://sketchfab.com/models/4620dab62fa84038ba2ac99f78e522fa",
+    "infoTier":  "Tier-3",
+    "isEnabled":  true,
+    "legionId":  "shrine_legion_id",
+    "modelScale":  "0.79000",
+    "moveSpeed":  "300",
+    "moveType":  "Ground",
+    "mp":  "4",
+    "mspdText":  "Average",
+    "mythiumCost":  "",
+    "name":  "Infiltrator",
+    "radius":  "Tiny",
+    "rangeText":  "Melee",
+    "sortOrder":  "shrine_legion_id.T3.80.Infiltrator",
+    "splashPath":  "Splashes/Infiltrator.png",
+    "stockMax":  "",
+    "stockTime":  "",
+    "tooltip":  "You can pay gold to activate Arm With Shuriken, which powers it up for the next wave only.",
+    "totalValue":  "80",
+    "unitClass":  "Fighter",
+    "upgradesFrom":  [
+
+                     ]
+}

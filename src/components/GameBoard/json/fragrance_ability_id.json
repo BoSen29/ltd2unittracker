@@ -1,0 +1,10 @@
+{
+    "_id":  "fragrance_ability_id",
+    "aoeRange":  "250",
+    "category":  "abilities",
+    "description":  "Deals $1 + $2% max health magic damage to nearby enemies. Stacks with itself. Ability damage. ",
+    "descriptionId":  "fragrance_description",
+    "iconPath":  "Icons/Fragrance.png",
+    "name":  "Fragrance",
+    "tooltip":  "Deals 10 + 0.02% max health magic damage to nearby enemies. Stacks with itself. Ability damage. "
+}

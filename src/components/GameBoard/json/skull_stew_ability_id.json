@@ -1,0 +1,10 @@
+{
+    "_id":  "skull_stew_ability_id",
+    "category":  "abilities",
+    "description":  "Heals a nearby ally for $1 health over $2 seconds",
+    "descriptionId":  "skull_stew_description",
+    "duration":  "1.0000",
+    "iconPath":  "Icons/SkullStew.png",
+    "name":  "Skull Stew",
+    "tooltip":  "Heals a nearby ally for 200 health over 1 seconds"
+}

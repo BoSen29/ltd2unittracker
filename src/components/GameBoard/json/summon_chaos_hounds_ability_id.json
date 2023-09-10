@@ -1,0 +1,10 @@
+{
+    "_id":  "summon_chaos_hounds_ability_id",
+    "category":  "abilities",
+    "description":  "Summons a Chaos Hound",
+    "descriptionId":  "summon_chaos_hounds_description",
+    "duration":  "180.0000",
+    "iconPath":  "Icons/SummonChaosHound.png",
+    "name":  "Summon Chaos Hound",
+    "tooltip":  "Summons a Chaos Hound"
+}

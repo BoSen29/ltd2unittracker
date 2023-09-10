@@ -1,0 +1,10 @@
+{
+    "_id":  "enhanced_mana_burst_ability_id",
+    "baseDamage":  "500.00000",
+    "category":  "abilities",
+    "description":  "Deals $1 + $2% max health damage to a single target. |img(icons/Pure.png) |proper(PureAttack) ability damage.",
+    "descriptionId":  "enhanced_mana_burst_description",
+    "iconPath":  "Icons/Asteroid.png",
+    "name":  "Asteroid",
+    "tooltip":  "Deals 500 + 1% max health damage to a single target. \u0026lt;img class=\u0027tooltip-icon\u0027 src=\u0027hud/img/icons/Pure.png\u0027 /\u0026gt; Pure ability damage."
+}

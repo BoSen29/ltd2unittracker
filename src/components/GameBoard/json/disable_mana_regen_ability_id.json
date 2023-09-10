@@ -1,0 +1,6 @@
+{
+    "_id":  "disable_mana_regen_ability_id",
+    "category":  "abilities",
+    "iconPath":  "Icons/DisableManaRegen.png",
+    "name":  "Disable Mana Regen"
+}

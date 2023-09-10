@@ -1,0 +1,10 @@
+{
+    "_id":  "sorcery_oracle_ability_id",
+    "aoeRange":  "120",
+    "category":  "abilities",
+    "description":  "This unit is a Sorcerer. Adjacently-built units gain +$2% ability damage",
+    "descriptionId":  "sorcery_description",
+    "iconPath":  "Icons/Sorcery.png",
+    "name":  "Sorcery",
+    "tooltip":  "This unit is a Sorcerer. Adjacently-built units gain +17% ability damage"
+}

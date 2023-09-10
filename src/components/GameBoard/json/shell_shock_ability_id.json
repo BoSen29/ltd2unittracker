@@ -1,0 +1,12 @@
+{
+    "_id":  "shell_shock_ability_id",
+    "aoeRange":  "250",
+    "baseDamage":  "80.00000",
+    "category":  "abilities",
+    "description":  "Deals $1 impact damage to nearby enemies and slows their attack speed by $3%. Ability damage.",
+    "descriptionId":  "shell_shock_description",
+    "duration":  "3.0000",
+    "iconPath":  "Icons/ShellShock.png",
+    "name":  "Shell Shock",
+    "tooltip":  "Deals 80 impact damage to nearby enemies and slows their attack speed by 5%. Ability damage."
+}

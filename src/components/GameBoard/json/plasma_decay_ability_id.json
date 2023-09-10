@@ -1,0 +1,11 @@
+{
+    "_id":  "plasma_decay_ability_id",
+    "bounces":  "0",
+    "category":  "abilities",
+    "description":  "Reduces an enemy\u0027s damage by $1 ($2 to bosses), stacking up to $3 times",
+    "descriptionId":  "plasma_decay_description",
+    "duration":  "3.000",
+    "iconPath":  "Icons/PlasmaDecay.png",
+    "name":  "Plasma Decay",
+    "tooltip":  "Reduces an enemy\u0027s damage by 10 (5 to bosses), stacking up to 15 times"
+}

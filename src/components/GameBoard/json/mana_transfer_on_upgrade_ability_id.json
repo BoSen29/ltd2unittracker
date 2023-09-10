@@ -1,0 +1,6 @@
+{
+    "_id":  "mana_transfer_on_upgrade_ability_id",
+    "category":  "abilities",
+    "iconPath":  "Icons/ManaTransferOnUpgrade.png",
+    "name":  "Mana Transfer On Upgrade"
+}

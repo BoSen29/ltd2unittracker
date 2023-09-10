@@ -1,0 +1,11 @@
+{
+    "_id":  "sword_rain_ability_id",
+    "aoeRange":  "150",
+    "baseDamage":  "35.00000",
+    "category":  "abilities",
+    "description":  "|desc(iron_hail,$1)",
+    "descriptionId":  "sword_rain_description",
+    "iconPath":  "Icons/SwordRain.png",
+    "name":  "Sword Rain",
+    "tooltip":  "Unleashes a volley of cursed swords, dealing 35x3 Pierce damage in a small area around the target. Ability damage."
+}

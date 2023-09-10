@@ -1,0 +1,10 @@
+{
+    "_id":  "soul_transfer_ability_id",
+    "bounces":  "0",
+    "category":  "abilities",
+    "description":  "|desc(life_exchange,300,150)",
+    "descriptionId":  "soul_transfer_description",
+    "iconPath":  "Icons/SoulTransfer.png",
+    "name":  "Soul Transfer",
+    "tooltip":  "Heals a nearby ally for 300 health, but deals 150 damage to itself. Cannot be cast on itself or other Seadragon/Lifebinder."
+}

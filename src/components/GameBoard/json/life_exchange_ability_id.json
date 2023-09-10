@@ -1,0 +1,10 @@
+{
+    "_id":  "life_exchange_ability_id",
+    "bounces":  "0",
+    "category":  "abilities",
+    "description":  "Heals a nearby ally for $1 health, but deals $2 damage to itself. Cannot be cast on itself or other |proper(seadragon_unit)/|proper(lifebinder_unit).",
+    "descriptionId":  "life_exchange_description",
+    "iconPath":  "Icons/LifeExchange.png",
+    "name":  "Life Exchange",
+    "tooltip":  "Heals a nearby ally for 100 health, but deals 50 damage to itself. Cannot be cast on itself or other Seadragon/Lifebinder."
+}

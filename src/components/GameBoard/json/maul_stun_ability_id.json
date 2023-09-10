@@ -1,0 +1,10 @@
+{
+    "_id":  "maul_stun_ability_id",
+    "category":  "abilities",
+    "description":  "Each attack slows attack speed by $1% ($2% against the king), stacking up to $3 times",
+    "descriptionId":  "maul_description",
+    "duration":  "1.000",
+    "iconPath":  "Icons/Maul.png",
+    "name":  "Maul",
+    "tooltip":  "Each attack slows attack speed by 4% (1% against the king), stacking up to 6 times"
+}

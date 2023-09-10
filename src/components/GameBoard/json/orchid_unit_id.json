@@ -1,0 +1,100 @@
+{
+    "_id":  "64d15d106ccdd3ad6b6d3f44",
+    "unitId":  "orchid_unit_id",
+    "version":  "10.07",
+    "abilities":  [
+                      {
+                          "_id":  "shuriken_cyclone_ability_id",
+                          "category":  "abilities",
+                          "description":  "Pay gold to equip with $1 shurikens for next wave only. Each shuriken deals $2 bonus damage from range and attacks $3x as fast. Ability damage.",
+                          "descriptionId":  "shuriken_cyclone_description",
+                          "iconPath":  "Icons/ShurikenCyclone.png",
+                          "name":  "Shuriken Cyclone",
+                          "tooltip":  "Pay gold to equip with 3 shurikens for next wave only. Each shuriken deals 35 bonus damage from range and attacks 1.85x as fast. Ability damage."
+                      },
+                      {
+                          "_id":  "throw_shuriken_cyclone_ability_id",
+                          "baseDamage":  "35.00000",
+                          "category":  "abilities",
+                          "iconPath":  "Icons/ThrowShurikenCyclone.png",
+                          "name":  "Throw Shuriken Cyclone"
+                      },
+                      {
+                          "_id":  "mana_transfer_on_becomes_fighter_ability_id",
+                          "category":  "abilities",
+                          "iconPath":  "Icons/ManaTransferOnBecomesFighter.png",
+                          "name":  "Mana Transfer On Becomes Fighter"
+                      },
+                      {
+                          "_id":  "reset_mana_on_becomes_tower_ability_id",
+                          "category":  "abilities",
+                          "iconPath":  "Icons/ResetManaOnBecomesTower.png",
+                          "name":  "Reset Mana On Becomes Tower"
+                      },
+                      {
+                          "_id":  "start_with_0_mana_ability_id",
+                          "category":  "abilities",
+                          "iconPath":  "Icons/StartWith0Mana.png",
+                          "name":  "Start With 0 Mana"
+                      },
+                      {
+                          "_id":  "disable_mana_regen_ability_id",
+                          "category":  "abilities",
+                          "iconPath":  "Icons/DisableManaRegen.png",
+                          "name":  "Disable Mana Regen"
+                      }
+                  ],
+    "armorType":  "Swift",
+    "aspdInverted":  "1.05",
+    "attackMode":  "Melee",
+    "attackRange":  "100",
+    "attackSpeed":  "0.95500",
+    "attackType":  "Magic",
+    "avgAspd":  "1.02",
+    "avgAspdDiff":  "2.70",
+    "avgCost":  "278.85",
+    "avgCostDiff":  ".41",
+    "avgDmg":  "119.46",
+    "avgDmgDiff":  "13.01",
+    "avgHp":  "2384.62",
+    "avgHpDiff":  "4.84",
+    "avgMspd":  "275.81",
+    "avgMspdDiff":  "8.77",
+    "categoryClass":  "Standard",
+    "description":  "Now throws three times as many shurikens in the same amount of time.",
+    "descriptionId":  "orchid_unit_description",
+    "dmgBase":  "135",
+    "dmgExpected":  "135.00",
+    "dmgMax":  "135",
+    "dps":  "141.36",
+    "flags":  "flags_ground,flags_organic",
+    "goldBounty":  "",
+    "goldCost":  "200",
+    "goldValue":  "",
+    "hp":  "2500",
+    "iconPath":  "Icons/Orchid.png",
+    "incomeBonus":  "",
+    "infoSketchfab":  "https://sketchfab.com/models/0c99ca43b3134b0ca6c061d3ce43f13a",
+    "infoTier":  "Tier-3",
+    "isEnabled":  true,
+    "legionId":  "shrine_legion_id",
+    "modelScale":  "0.85000",
+    "moveSpeed":  "300",
+    "moveType":  "Ground",
+    "mp":  "12",
+    "mspdText":  "Average",
+    "mythiumCost":  "",
+    "name":  "Orchid",
+    "radius":  "Tiny",
+    "rangeText":  "Melee",
+    "sortOrder":  "shrine_legion_id.T3U.200.Orchid",
+    "splashPath":  "Splashes/Orchid.png",
+    "stockMax":  "",
+    "stockTime":  "",
+    "tooltip":  "Now throws three times as many shurikens in the same amount of time.",
+    "totalValue":  "280",
+    "unitClass":  "Fighter",
+    "upgradesFrom":  [
+                         "units infiltrator_unit_id"
+                     ]
+}

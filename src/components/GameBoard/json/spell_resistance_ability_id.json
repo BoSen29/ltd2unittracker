@@ -1,0 +1,9 @@
+{
+    "_id":  "spell_resistance_ability_id",
+    "category":  "abilities",
+    "description":  "Reduces damage taken from abilities by $1%",
+    "descriptionId":  "spell_resistance_description",
+    "iconPath":  "Icons/SpellResistance.png",
+    "name":  "Spell Resistance",
+    "tooltip":  "Reduces damage taken from abilities by 20%"
+}

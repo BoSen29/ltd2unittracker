@@ -1,0 +1,6 @@
+{
+    "_id":  "mana_on_attack_ability_id",
+    "category":  "abilities",
+    "iconPath":  "Icons/ManaOnAttack.png",
+    "name":  "Mana On Attack"
+}

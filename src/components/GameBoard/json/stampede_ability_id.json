@@ -1,0 +1,12 @@
+{
+    "_id":  "stampede_ability_id",
+    "aoeRange":  "400",
+    "baseDamage":  "10.50000",
+    "category":  "abilities",
+    "description":  "Charges into battle as soon as the wave spawns. After reaching the enemy, deals damage. The further the charge, the more damage it deals. |img(icons/Impact.png) |proper(ImpactAttack) ability damage.",
+    "descriptionId":  "stampede_description",
+    "duration":  "3.00000",
+    "iconPath":  "Icons/Stampede.png",
+    "name":  "Stampede",
+    "tooltip":  "Charges into battle as soon as the wave spawns. After reaching the enemy, deals damage. The further the charge, the more damage it deals. \u0026lt;img class=\u0027tooltip-icon\u0027 src=\u0027hud/img/icons/Impact.png\u0027 /\u0026gt; Impact ability damage."
+}
