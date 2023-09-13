@@ -10,6 +10,7 @@ import Authentication from './utils/auth'
 import { getEloImage, isDev, resturcturePlayerData, is2v2, isStandalone} from './utils/misc'
 import {fetchWave, fetchCurrentMatch, fetchMatch} from './utils/api'
 import MatchHistoryOverlay from './components/MatchHistoryOverlay'
+import { useUnits, getUnitTooltips } from './stores/units'
 
 function App() {
   const [authStatus, setAuthStatus] = useState(false)
@@ -27,7 +28,7 @@ function App() {
   const [hidden, setHidden] = useState(true)
   const [availableWaves, setAvailableWaves] = useState([])
   const [showGuide, setShowGuide] = useState(false)
-
+  const unitDetails = useUnits()
   const setWave = async (wave) => {
     try {
       setIsTailing(false)
@@ -269,6 +270,8 @@ function App() {
       </div>
     </>
   }
+
+  const tooltips = getUnitTooltips(unitDetails)
   return (
     <div className='app'>
       {
@@ -312,7 +315,9 @@ function App() {
                             recceived={waveData?.recceivedAmount?.filter(ra => ra.player === player.player) || []}
                             leaks={waveData?.leaks?.filter(l => l.player === player.player) || []}
                             postGameStats={waveData?.postGameStats?.filter(pgs => pgs.player === player.player) || []}
-                            key={player.player}/>
+                            key={player.player}
+                            unitDetails={unitDetails}
+                            />
                 })
               }
             </div>
@@ -328,6 +333,9 @@ function App() {
         setHidden(d => !d)
         setShowGuide(false)
       }}>{hidden ? "Show": "Hide"}</button>
+      {
+        tooltips
+      }
     </div>
   )
 }

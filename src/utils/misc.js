@@ -101,3 +101,7 @@ export const getLegionImage = (legion) => {
     return 'nothing.png'
   }
 }
+
+export const getUnit = (unit, units) => {
+  return units.filter(u => u.name === unit.name)
+}

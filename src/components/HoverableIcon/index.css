@@ -1,0 +1,9 @@
+.hover__container {
+    min-width: 10vw;
+    background-color: black;
+    border: 1px solid darkgray;
+    min-height: 2.5vh;
+    position: relative;
+    color: white;
+    font-size: 2vh;
+}

@@ -1,8 +1,10 @@
 import './index.css'
-import {useEffect, useRef, useState} from 'react'
-import {getLeakDangerLevel } from '../../utils/misc'
+import { useEffect, useRef, useState } from 'react'
+import { getLeakDangerLevel } from '../../utils/misc'
+import { HoverableIcon } from '../HoverableIcon'
+import { getTooltipNameFromImage } from '../../stores/units'
 
-export default function GameBoard({player, units, mercsReceived = [], wave, recceived = [], leaks = [], postGameStats = [], idx}) {
+export default function GameBoard({ player, units, mercsReceived = [], wave, recceived = [], leaks = [], postGameStats = [], idx, unitDetails }) {
   const [clipboardData, setClipboardData] = useState("")
   const [showClipboard, setShowClipboard] = useState(false)
   const [leakedCreeps, setLeakedCreeps] = useState(false)
@@ -10,7 +12,7 @@ export default function GameBoard({player, units, mercsReceived = [], wave, recc
 
   const copyToClipboard = () => {
     setShowClipboard(true)
-    const value = {Towers: [], Wave: wave}
+    const value = { Towers: [], Wave: wave }
     value.Towers = units.map((unit) => {
       return {
         T: unit.displayName,
@@ -28,7 +30,7 @@ export default function GameBoard({player, units, mercsReceived = [], wave, recc
     }, 10000)
 
     return () => clearTimeout(timeOut)
-    
+
     //await navigator.clipboard.writeText(JSON.stringify(value))
   }
   let recceivedNum = recceived?.map(r => r.amount)
@@ -40,111 +42,114 @@ export default function GameBoard({player, units, mercsReceived = [], wave, recc
   return (
     <div className='game-board__container' key={idx}>
       <div className='game-board__header'>
-        <img src={player.image} title="Avatar" className='header__icon'/>
+        <img src={player.image} title="Avatar" className='header__icon' />
         <div className='player-info__container'>
-          <img src={player.countryFlag} title={player.countryName} className='country__icon'/>
-          <div className={'player'+player.player}>
+          <img src={player.countryFlag} title={player.countryName} className='country__icon' />
+          <div className={'player' + player.player}>
             {
               player.name || 'Player ' + player.player
             }
           </div>
         </div>
-        <img src={player.ratingIcon} title={player.rating} className='header__icon'/>
+        <img src={player.ratingIcon} title={player.rating} className='header__icon' />
       </div>
       {
         !isNaN(wave) && <span className='game-board-body'>
-        <div className='myth__region__container'>
-        <div className='sends__container'>
-          {
-            mercsReceived?.map((merc, idx) => {
-              return (
-                <span className='send__icon__container'>
-                  <img src={`https://cdn.legiontd2.com/${merc.image}`} className='send__icon' key={idx}/>
-                  <span className='sends__count'>{merc.count}</span>
-                </span>
-                
-              )
-            })
-          }
-        </div>
-        <div className='stats__container'>
-          {
-            pgs?.workers? <span className='stats__entry'>
-              <span className='workers__text stats__text'>
-                  { pgs?.workers}
-              </span>
-              <img src={`https://cdn.legiontd2.com/Icons/Worker.png`} className='stats__icon' key={'stats'}/>
-            </span>: <span className='stats__entry'/>
-          }
-          {
-            pgs?.fighterValue ? 
-            <span className='stats__entry' onMouseEnter={() => setShowValueCalc(true)} onMouseLeave={() => setShowValueCalc(false)}>
-              <span hidden={!showValueCalc}>
-                <span className='value__calc'>
+          <div className='myth__region__container'>
+            <div className='sends__container'>
+              {
+                mercsReceived?.map((merc, idx) => {
+                  return (
+                    <span className={`unit_${getTooltipNameFromImage(merc.image, unitDetails)}_image send__icon__container`}>
+                      <img src={`https://cdn.legiontd2.com/${merc.image}`} className={`send__icon`} key={idx} />
+                      <span className='sends__count'>{merc.count}</span>
+                    </span>
+                  )
+                })
+              }
+            </div>
+            <div className='stats__container'>
+              {
+                pgs?.workers ? <span className='stats__entry'>
+                  <span className='workers__text stats__text'>
+                    {pgs?.workers}
+                  </span>
+                  <img src={`https://cdn.legiontd2.com/Icons/Worker.png`} className='stats__icon' key={'stats'} />
+                </span> : <span className='stats__entry' />
+              }
+              {
+                pgs?.fighterValue ?
+                  <span className='stats__entry' onMouseEnter={() => setShowValueCalc(true)} onMouseLeave={() => setShowValueCalc(false)}>
+                    <span hidden={!showValueCalc}>
+                      <span className='value__calc'>
+                        {
+                          pgs?.fighterValue - pgs?.recommendedValue > 0 ? <span>{pgs?.recommendedValue}(+{pgs?.fighterValue - pgs?.recommendedValue})</span> : <span>{pgs?.recommendedValue}({pgs?.fighterValue - pgs?.recommendedValue})</span>
+                        }
+                      </span>
+                    </span>
+                    <span className='stats__text'>
+                      {
+                        pgs?.fighterValue
+                      }
+                    </span>
+                    <img src={`https://cdn.legiontd2.com/Icons/Value.png`} className='stats__icon' key={'figherValue'} />
+                  </span> : <span className='stats__entry' />
+              }
+              <span className='stats__entry'>
+                <span className='mythium__text stats__text'>
                   {
-                    pgs?.fighterValue -pgs?.recommendedValue > 0 ? <span>{pgs?.recommendedValue}(+{pgs?.fighterValue -pgs?.recommendedValue})</span> : <span>{pgs?.recommendedValue}({pgs?.fighterValue -pgs?.recommendedValue})</span>
+                    recceivedNum
                   }
                 </span>
+                <img src={`https://cdn.legiontd2.com/Icons/Mythium.png`} className='myth__icon' key={"mythium"} />
               </span>
-              <span className='stats__text'>
-                {
-                  pgs?.fighterValue
-                }
-              </span>
-              <img src={`https://cdn.legiontd2.com/Icons/Value.png`} className='stats__icon' key={'figherValue'}/>
-            </span>: <span className='stats__entry'/>
-          }
-          <span className='stats__entry'>
-          <span className='mythium__text stats__text'>
+            </div>
+          </div>
           {
-            recceivedNum
-          }
-          </span>
-            <img src={`https://cdn.legiontd2.com/Icons/Mythium.png`} className='myth__icon' key={"mythium"}/>
-          </span>
-        </div>
-      </div>
-      {
-        showClipboard? 
-      <div className='clipboard'>
-        <textarea value={clipboardData} readOnly onMouseEnter={(e) => e.target.select()} onMouseLeave={(e) => setShowClipboard(false)}/>
-      </div> :
-      <div className='game-board'>
-        {
-          units?.map((unit, idx) => {
-            return (
-              // we need to "fix" the row start since the data is in format of an actual coordinate system starting bottom left
-              <img src={`https://cdn.legiontd2.com/${unit.name}`} className='unit__icon' style={{gridColumnStart: unit.x, gridRowStart: 28 - unit.y}} key={idx} title={unit.name.split('/')[1].replace(".png",'')}/>
-            )
-          })
-        }
-      </div>
-      }
-      <div className={['player__color-marker', 'player'+player.player+'__background'].join(' ')}/>
-      <div className='game-board__footer'>
-        <div className='leak__container'>
-          {
-            leakedNum > 0 && <span onMouseEnter={() => setLeakedCreeps(true)} onMouseLeave={() => setLeakedCreeps(false)}>
-              <span hidden={!leakedCreeps}>
-                <span className='leaked__creeps__container'>
+            showClipboard ?
+              <div className='clipboard'>
+                <textarea value={clipboardData} readOnly onMouseEnter={(e) => e.target.select()} onMouseLeave={(e) => setShowClipboard(false)} />
+              </div> :
+              <div className='game-board'>
                 {
-                  pgs?.unitsLeaked?.map(l => {
-                    return <img src={`https://cdn.legiontd2.com/${l.replace('hud/img/', '')}`} className='img__leaked__unit'/>
-                  }) 
+                  units?.map((unit, idx) => {
+                    return (
+                      // we need to "fix" the row start since the data is in format of an actual coordinate system starting bottom left
+                      <HoverableIcon
+                        unit={unit}
+                        className={'unit__icon'}
+                        idx={idx}
+                      />
+                    )
+                  })
                 }
+              </div>
+          }
+          <div className={['player__color-marker', 'player' + player.player + '__background'].join(' ')} />
+          <div className='game-board__footer'>
+            <div className='leak__container'>
+              {
+                leakedNum > 0 && <span onMouseEnter={() => setLeakedCreeps(true)} onMouseLeave={() => setLeakedCreeps(false)}>
+                  <span hidden={!leakedCreeps}>
+                    <span className='leaked__creeps__container'>
+                      {
+                        pgs?.unitsLeaked?.map(l => {
+                          return <img src={`https://cdn.legiontd2.com/${l.replace('hud/img/', '')}`} className={`unit_${getTooltipNameFromImage(l.replace('hud/img/', ''), unitDetails)}_image img__leaked__unit`}/>
+                        })
+                      }
+                    </span>
+                  </span>
+                  <div style={{ color: getLeakDangerLevel(leakedNum) }} className='leak__number'>{leakedNum}% leak {!!pgs?.unitsLeaked ? '↑' : ''}</div>
                 </span>
-              </span>
-              <div style={{color: getLeakDangerLevel(leakedNum)}} className='leak__number'>{leakedNum}% leak {!!pgs?.unitsLeaked ? '↑': ''}</div>
-            </span>
-          }
-        </div>
-        {
-          !showClipboard ? <div className={'copy-button'} onClick={copyToClipboard}>{'Copy build'}</div>:
-          <div className={'copy-button'} onClick={() => setShowClipboard(false)}>{'Hide'}</div>
-        }
-      </div></span>
+              }
+            </div>
+            {
+              !showClipboard ? <div className={'copy-button'} onClick={copyToClipboard}>{'Copy build'}</div> :
+                <div className={'copy-button'} onClick={() => setShowClipboard(false)}>{'Hide'}</div>
+            }
+          </div></span>
       }
-      
+
     </div>
   )
 }
