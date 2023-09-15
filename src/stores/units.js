@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import { fetchUnits } from '../utils/api'
-import { Tooltip } from 'react-tooltip'
 
 export const useUnits = () => {
     let [units, setUnits] = useState([])
@@ -27,13 +26,13 @@ export const getToolTip = (units, unit = '', image = '') => {
     </div>
     return <div className='tooltip__container'>
         <div>
-            <img src={`https://cdn.legiontd2.com/${u.iconPath}`} className='tooltip__header__icon'/>
+            <img src={`https://cdn.legiontd2.com/${u.iconPath}`} className='tooltip__header__icon' />
 
         </div>
-        <span style={{ fontWeight: "bold", marginBottom: "3px", textAlign: "center"}} className='tooltip__header__title'>{u.name}</span>
-        
+        <span style={{ fontWeight: "bold", marginBottom: "3px", textAlign: "center" }} className='tooltip__header__title'>{u.name}</span>
+
         {
-            !!u.tooltip && <span style={{ fontSize: "14px", fontStyle: 'italic', marginBottom: '9px'}}>
+            !!u.tooltip && <span style={{ fontSize: "14px", fontStyle: 'italic', marginBottom: '9px' }}>
                 {
                     u.tooltip
                 }
