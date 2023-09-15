@@ -26,7 +26,7 @@ export const getToolTip = (units, unit = '', image = '') => {
         </span>
     </div>
     return <div className='tooltip__container'>
-        <span style={{ "font-weight": "bold", "margin-bottom": "3px", "text-align": "center" }}>{u.name}</span>
+        <span style={{ fontWeight: "bold", marginBottom: "3px", textAlign: "center" }}>{u.name}</span>
         {
             !!u.tooltip && <span style={{ fontSize: "14px", fontStyle: 'italic', marginBottom: '3px' }}>
                 {
@@ -86,7 +86,7 @@ export const getToolTip = (units, unit = '', image = '') => {
 }
 
 export const getUnitTooltip = (unit, units) => {
-    
+
 }
 
 export const getTooltipNameFromImage = (imagePath, units) => {
