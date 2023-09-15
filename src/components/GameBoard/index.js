@@ -4,7 +4,7 @@ import { getLeakDangerLevel } from '../../utils/misc'
 import { HoverableIcon } from '../HoverableIcon'
 import { getTooltipNameFromImage } from '../../stores/units'
 
-export default function GameBoard({ player, units, mercsReceived = [], wave, recceived = [], leaks = [], postGameStats = [], idx, unitDetails }) {
+export default function GameBoard({ player, units, mercsReceived = [], wave, recceived = [], leaks = [], postGameStats = [], idx}) {
   const [clipboardData, setClipboardData] = useState("")
   const [showClipboard, setShowClipboard] = useState(false)
   const [leakedCreeps, setLeakedCreeps] = useState(false)
@@ -60,7 +60,11 @@ export default function GameBoard({ player, units, mercsReceived = [], wave, rec
               {
                 mercsReceived?.map((merc, idx) => {
                   return (
-                    <span className={`unit_${getTooltipNameFromImage(merc.image, unitDetails)}_image send__icon__container`}>
+                    <span 
+                      className={`send__icon__container`}
+                      data-tooltip-id='Tooltipper'
+                      data-unit-image={merc.image}
+                      >
                       <img src={`https://cdn.legiontd2.com/${merc.image}`} className={`send__icon`} key={idx} />
                       <span className='sends__count'>{merc.count}</span>
                     </span>
@@ -134,7 +138,12 @@ export default function GameBoard({ player, units, mercsReceived = [], wave, rec
                     <span className='leaked__creeps__container'>
                       {
                         pgs?.unitsLeaked?.map(l => {
-                          return <img src={`https://cdn.legiontd2.com/${l.replace('hud/img/', '')}`} className={`unit_${getTooltipNameFromImage(l.replace('hud/img/', ''), unitDetails)}_image img__leaked__unit`}/>
+                          return <img 
+                            src={`https://cdn.legiontd2.com/${l.replace('hud/img/', '')}`} 
+                            className={`img__leaked__unit`}
+                            data-tooltip-id='Tooltipper'
+                            data-unit-image={l.replace('hud/img/', '')}
+                            />
                         })
                       }
                     </span>

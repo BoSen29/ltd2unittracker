@@ -10,7 +10,8 @@ import Authentication from './utils/auth'
 import { getEloImage, isDev, resturcturePlayerData, is2v2, isStandalone} from './utils/misc'
 import {fetchWave, fetchCurrentMatch, fetchMatch} from './utils/api'
 import MatchHistoryOverlay from './components/MatchHistoryOverlay'
-import { useUnits, getUnitTooltips } from './stores/units'
+import { useUnits, getToolTip } from './stores/units'
+import { Tooltip } from 'react-tooltip'
 
 function App() {
   const [authStatus, setAuthStatus] = useState(false)
@@ -270,8 +271,6 @@ function App() {
       </div>
     </>
   }
-
-  const tooltips = getUnitTooltips(unitDetails)
   return (
     <div className='app'>
       {
@@ -324,7 +323,7 @@ function App() {
           </>
       }
       {
-        !is2v2(playerData.players) && <button className='button_bottomrow button_showEastToggle' onClick={() => setShowEast(e => !e)}>Swap</button>
+        !is2v2(playerData.players) && !hidden && <button className='button_bottomrow button_showEastToggle' onClick={() => setShowEast(e => !e)}>Swap</button>
       }
       {
         !isTailing && !hidden && <button className='button__toggle_tailing button_bottomrow' onClick={() => setIsTailing(e => !e)}>{"To live"}</button>
@@ -333,9 +332,12 @@ function App() {
         setHidden(d => !d)
         setShowGuide(false)
       }}>{hidden ? "Show": "Hide"}</button>
-      {
-        tooltips
-      }
+      <Tooltip
+        id="Tooltipper"
+        render={({content, activeAnchor}) => (
+          getToolTip(unitDetails, activeAnchor?.getAttribute('data-unit-id'), activeAnchor?.getAttribute('data-unit-image'))
+        )}
+        />
     </div>
   )
 }
