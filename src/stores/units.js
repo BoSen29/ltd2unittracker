@@ -26,9 +26,14 @@ export const getToolTip = (units, unit = '', image = '') => {
         </span>
     </div>
     return <div className='tooltip__container'>
-        <span style={{ fontWeight: "bold", marginBottom: "3px", textAlign: "center" }}>{u.name}</span>
+        <div>
+            <img src={`https://cdn.legiontd2.com/${u.iconPath}`} className='tooltip__header__icon'/>
+
+        </div>
+        <span style={{ fontWeight: "bold", marginBottom: "3px", textAlign: "center"}} className='tooltip__header__title'>{u.name}</span>
+        
         {
-            !!u.tooltip && <span style={{ fontSize: "14px", fontStyle: 'italic', marginBottom: '3px' }}>
+            !!u.tooltip && <span style={{ fontSize: "14px", fontStyle: 'italic', marginBottom: '9px'}}>
                 {
                     u.tooltip
                 }
@@ -83,13 +88,4 @@ export const getToolTip = (units, unit = '', image = '') => {
             </span>
         }
     </div>
-}
-
-export const getUnitTooltip = (unit, units) => {
-
-}
-
-export const getTooltipNameFromImage = (imagePath, units) => {
-    let tempUnit = units?.find(u => u.iconPath.toLowerCase() === imagePath.toLowerCase())
-    return tempUnit?.unitId || tempUnit?._id || ''
 }

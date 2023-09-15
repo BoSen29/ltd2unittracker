@@ -140,3 +140,9 @@ img {
   -o-user-drag: none;
   user-drag: none;
 }
+
+.tooltip__header__icon {
+  width: 25px !important;
+  height: 25px;
+  position: absolute;
+}
