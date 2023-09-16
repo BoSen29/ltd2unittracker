@@ -25,11 +25,11 @@ export const getToolTip = (units, unit = '', image = '') => {
         </span>
     </div>
     return <div className='tooltip__container'>
-        <div>
+        <div className='tooltip__header__container'>
             <img src={`https://cdn.legiontd2.com/${u.iconPath}`} className='tooltip__header__icon' />
-
+            <span style={{ fontWeight: "bold", marginBottom: "3px", textAlign: "center" }} className='tooltip__header__title'>{u.name}</span>
         </div>
-        <span style={{ fontWeight: "bold", marginBottom: "3px", textAlign: "center" }} className='tooltip__header__title'>{u.name}</span>
+        
 
         {
             !!u.tooltip && <span style={{ fontSize: "14px", fontStyle: 'italic', marginBottom: '9px' }}>

@@ -124,6 +124,12 @@ body {
   font-size: 18px;
 }
 
+.tooltip__header__container {
+  display: grid;
+  grid-template-columns: 25px auto 25px;
+  grid-template-rows: 25px;
+}
+
 .tooltip__container > span > img {
   width: 18px;
 }
@@ -143,10 +149,7 @@ img {
 .tooltip__header__icon {
   width: 25px !important;
   height: 25px;
-  position: absolute;
 }
 
 .tooltip__header__title {
-  margin-left:'25px';
-  margin-right:'25px';
 }

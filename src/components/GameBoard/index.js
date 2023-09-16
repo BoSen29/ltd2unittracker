@@ -28,8 +28,6 @@ export default function GameBoard({ player, units, mercsReceived = [], wave, rec
     }, 10000)
 
     return () => clearTimeout(timeOut)
-
-    //await navigator.clipboard.writeText(JSON.stringify(value))
   }
   let recceivedNum = recceived?.map(r => r.amount)
   let leakedNum = leaks?.map(l => l.percentage)
@@ -138,35 +136,35 @@ export default function GameBoard({ player, units, mercsReceived = [], wave, rec
               </div>
           }
           <div className={['player__color-marker', 'player' + player.player + '__background'].join(' ')} />
-          <div className='game-board__footer'>
-            <div className='leak__container'>
-              {
-                leakedNum > 0 && <span onMouseEnter={() => setLeakedCreeps(true)} onMouseLeave={() => setLeakedCreeps(false)}>
-                  <span hidden={!leakedCreeps}>
-                    <span className='leaked__creeps__container'>
-                      {
-                        pgs?.unitsLeaked?.map(l => {
-                          return <img
-                            src={`https://cdn.legiontd2.com/${l.replace('hud/img/', '')}`}
-                            className={`img__leaked__unit`}
-                            data-tooltip-id='Tooltipper'
-                            data-unit-image={l.replace('hud/img/', '')}
-                          />
-                        })
-                      }
-                    </span>
-                  </span>
-                  <div style={{ color: getLeakDangerLevel(leakedNum) }} className='leak__number'>{leakedNum}% leak {!!pgs?.unitsLeaked ? '↑' : ''}</div>
-                </span>
-              }
-            </div>
-            {
-              !showClipboard ? <div className={'copy-button'} onClick={copyToClipboard}>{'Copy build'}</div> :
-                <div className={'copy-button'} onClick={() => setShowClipboard(false)}>{'Hide'}</div>
-            }
-          </div></span>
+        </span>
       }
-
+      <div className='game-board__footer'>
+        <div className='leak__container'>
+          {
+            leakedNum > 0 && <span onMouseEnter={() => setLeakedCreeps(true)} onMouseLeave={() => setLeakedCreeps(false)}>
+              <span hidden={!leakedCreeps}>
+                <span className='leaked__creeps__container'>
+                  {
+                    pgs?.unitsLeaked?.map(l => {
+                      return <img
+                        src={`https://cdn.legiontd2.com/${l.replace('hud/img/', '')}`}
+                        className={`img__leaked__unit`}
+                        data-tooltip-id='Tooltipper'
+                        data-unit-image={l.replace('hud/img/', '')}
+                      />
+                    })
+                  }
+                </span>
+              </span>
+              <div style={{ color: getLeakDangerLevel(leakedNum) }} className='leak__number'>{leakedNum}% leak {!!pgs?.unitsLeaked ? '↑' : ''}</div>
+            </span>
+          }
+        </div>
+        {
+          !showClipboard ? <div className={'copy-button'} onClick={copyToClipboard}>{'Copy build'}</div> :
+            <div className={'copy-button'} onClick={() => setShowClipboard(false)}>{'Hide'}</div>
+        }
+      </div>
     </div>
   )
 }
