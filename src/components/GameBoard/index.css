@@ -1,14 +1,9 @@
 .game-board__container {
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.7);
-    border: 1px solid black;
-    
-}
-
-.game-board-body {
-    height: 79vh;
+    max-width: 23vw;
+    max-height: 79vh;
+    aspect-ratio: 9/18;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .game-board__header {
@@ -16,11 +11,26 @@
     justify-content: space-between;
     display: flex;
     width: 100%;
+    height: 5%;
+}
 
+.game-board__rolls {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    height: 5%;
+    margin-top: 1%;
+}
+
+.img__roll {
+    height: calc(100% - 2px);
+    margin: 1px;
+    aspect-ratio: 1/1;
 }
 
 .header__icon {
-    height: calc(23vw*1.555555/14 - 2px);
+    height: 100%;
     aspect-ratio: 1/1;
 }
 
@@ -69,37 +79,35 @@
     color: var(--player8);
 }
 
-.header__icon {
-    height: 4vh;
-    max-height: 4vh;
-    aspect-ratio: inherit;
-}
-
 .game-board {
-    width: 23vw;
-    height: calc(23vw*1.555555);
+    width: 100%;
+    aspect-ratio: 9/14;
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-rows: repeat(28, calc((23vw * 1.555555) / 28));
-    grid-template-columns: repeat(18, calc(23vw / 18));
-    background-size: calc(23vw/9) calc(23vw*1.555555/14);
-    border-right: 1px solid darkgrey;
-    border-bottom: 1px solid darkgrey;
+    grid-template-rows: repeat(28, calc(100% / 28));
+    grid-template-columns: repeat(18, calc(100% / 18));
+    background-size: calc(100%/9) calc(100%/14);
+    border-right: 1px solid #484848;
+    border-bottom: 1px solid #484848;
     background-image:
-            linear-gradient(to right, darkgrey 1px, transparent 1px),
-            linear-gradient(to bottom, darkgrey 1px, transparent 1px);
-    margin-top: 0.5vh;
-    background-color: rgba(0, 0, 0, 0.6);
+            linear-gradient(to right, #484848 1px, transparent 1px),
+            linear-gradient(to bottom, #484848 1px, transparent 1px);
+    margin-top: 0.5%;
 }
 
+.game-board-body {
+    height: 89%;
+}
+
+
 .clipboard {
-    width: 23vw;
-    height: calc(23vw*1.555555);
+    width: 100%;
+    aspect-ratio: 9/14;
     margin: 0;
     padding: 0;
-    display: block;
-    margin-top: 0.5vh;
+    border:none;
+    margin-top: 0.5%;
     background-color: rgba(0, 0, 0, 0.6);
 }
 
@@ -116,14 +124,19 @@
 }
 
 .unit__icon {
-    width:  calc(23vw/9 - 2px);
-    height: calc(23vw*1.555555/14 - 2px);
-    margin: 1px 1px;
+    width:  100%;
+    height: 100%;
+}
+
+.unit__icon__container {
+    width: calc(200% - 2px);
+    height: calc(200% - 2px);
+    margin: 1px 1px 1px 1px;
 }
 
 .player__color-marker {
     width: 100%;
-    height: 1.25vh;
+    height: 1%;
 }
 
 .player1__background {
@@ -183,34 +196,36 @@
 }
 
 .sends__container {
-    margin:  0;
-    width: 18.5vw;
-    height: 7vh;
+    width: 74%;
+    height: 100%;
     display: flex;
-    flex-wrap: wrap-reverse;
     overflow: hidden;
-    margin: 0px;
+    margin-left: 1%;
+    align-content: flex-start;
+    align-items: flex-start;
+	flex-wrap: wrap-reverse; 
 }
 
 .stats__container {
-    margin: 12px 0;
-    width: 4.5vw;
-    height: 8vh;
+    width: 25%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     margin: 0px;
+    align-items: flex-start;
+	flex-wrap: wrap-reverse; 
+    justify-content: flex-end;
 }
 
-.sends__container span {
-    width: calc(3.4vh);
-    height: calc(3.4vh);
-    margin: 0.1vh 0.1vh;
+.send__icon__container {
+    width: 11.5%;
     aspect-ratio: 1/1;
+    height: 32.3%;
 }
 
 .sends__container span img {
     width: 100%;
-    height: 100%;
+    aspect-ratio: 1;
 }
 
 .sends__count {
@@ -225,49 +240,47 @@
 
 .stats__icon {
     aspect-ratio: 1/1;
-    height: 1.5vw;
+    height: 100%;
 }
 
 .stats__entry {
-    width: 100%;
-    height: 2.66666vh;
-    font-size: 1.8vh;
-    position: relative;
+    height: 25%;
+    margin-top: 2px;
+    display: flex;
 }
 
 .stats__entry img {
-    height: 2vh;
-    margin-top: 0.5vh;
+    height: 100%;
 }
 
 .myth__region__container {
-    width: 23vw;
-    height: 8vh;
+    width: 100%;
+    height: 14%;
     display: flex;
     flex-wrap: wrap-reverse;
+    align-content: flex-start;
+    justify-content: flex-start;
     overflow: hidden;
     margin: 0px;
 }
 
 .stats__text {
-    aspect-ratio: 1/1;
     font-size: 1.8vh !important;
     font-weight: 500;
-    width: 3.1vw !important;
     margin: 0;
-    display: inline-block;
     text-align: right;
-    margin-right: 0.15vw;
+    display: inline-block;
+    align-self: center;
 }
 
 .game-board__footer {
-    width: 23vw;
+    width: 100%;
     display: inline-flex;
-    height: 6vh;
+    height: 10%;
 }
 
 .leak__container {
-    width: 11.5vw;
+    width: 100%;
     text-align: center;
     position: relative;
 }

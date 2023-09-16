@@ -1,14 +1,12 @@
 import './index.css'
-import { useEffect, useRef, useState } from 'react'
+import { useState } from 'react'
 import { getLeakDangerLevel } from '../../utils/misc'
 import { HoverableIcon } from '../HoverableIcon'
-import { getTooltipNameFromImage } from '../../stores/units'
 
-export default function GameBoard({ player, units, mercsReceived = [], wave, recceived = [], leaks = [], postGameStats = [], idx}) {
+export default function GameBoard({ player, units, mercsReceived = [], wave, recceived = [], leaks = [], postGameStats = [], idx }) {
   const [clipboardData, setClipboardData] = useState("")
   const [showClipboard, setShowClipboard] = useState(false)
   const [leakedCreeps, setLeakedCreeps] = useState(false)
-  const [showValueCalc, setShowValueCalc] = useState(false)
 
   const copyToClipboard = () => {
     setShowClipboard(true)
@@ -38,6 +36,7 @@ export default function GameBoard({ player, units, mercsReceived = [], wave, rec
   if (!!!player.name) { return }
 
   let pgs = postGameStats[0] || null
+  const fictionalRoll = ['Icons/ChainedFist.png', "Icons/Gargoyle.png", "Icons/Warg.png", "Icons/Butcher.png", "Icons/Nightmare.png", "Icons/Eggsack.png"]
 
   return (
     <div className='game-board__container' key={idx}>
@@ -53,6 +52,18 @@ export default function GameBoard({ player, units, mercsReceived = [], wave, rec
         </div>
         <img src={player.ratingIcon} title={player.rating} className='header__icon' />
       </div>
+      <div className='game-board__rolls'>
+        {
+          fictionalRoll.map(u => {
+            return <img
+              src={`https://cdn.legiontd2.com/${u}`}
+              className={`img__roll`}
+              data-tooltip-id='Tooltipper'
+              data-unit-image={u}
+            />
+          })
+        }
+      </div>
       {
         !isNaN(wave) && <span className='game-board-body'>
           <div className='myth__region__container'>
@@ -60,11 +71,11 @@ export default function GameBoard({ player, units, mercsReceived = [], wave, rec
               {
                 mercsReceived?.map((merc, idx) => {
                   return (
-                    <span 
+                    <span
                       className={`send__icon__container`}
                       data-tooltip-id='Tooltipper'
                       data-unit-image={merc.image}
-                      >
+                    >
                       <img src={`https://cdn.legiontd2.com/${merc.image}`} className={`send__icon`} key={idx} />
                       <span className='sends__count'>{merc.count}</span>
                     </span>
@@ -83,14 +94,11 @@ export default function GameBoard({ player, units, mercsReceived = [], wave, rec
               }
               {
                 pgs?.fighterValue ?
-                  <span className='stats__entry' onMouseEnter={() => setShowValueCalc(true)} onMouseLeave={() => setShowValueCalc(false)}>
-                    <span hidden={!showValueCalc}>
-                      <span className='value__calc'>
-                        {
-                          pgs?.fighterValue - pgs?.recommendedValue > 0 ? <span>{pgs?.recommendedValue}(+{pgs?.fighterValue - pgs?.recommendedValue})</span> : <span>{pgs?.recommendedValue}({pgs?.fighterValue - pgs?.recommendedValue})</span>
-                        }
-                      </span>
-                    </span>
+                  <span className='stats__entry'
+                    data-tooltip-id='ValueTipper'
+                    data-fightervalue={pgs?.fighterValue}
+                    data-recommended-value={pgs?.recommendedValue}
+                  >
                     <span className='stats__text'>
                       {
                         pgs?.fighterValue
@@ -138,12 +146,12 @@ export default function GameBoard({ player, units, mercsReceived = [], wave, rec
                     <span className='leaked__creeps__container'>
                       {
                         pgs?.unitsLeaked?.map(l => {
-                          return <img 
-                            src={`https://cdn.legiontd2.com/${l.replace('hud/img/', '')}`} 
+                          return <img
+                            src={`https://cdn.legiontd2.com/${l.replace('hud/img/', '')}`}
                             className={`img__leaked__unit`}
                             data-tooltip-id='Tooltipper'
                             data-unit-image={l.replace('hud/img/', '')}
-                            />
+                          />
                         })
                       }
                     </span>

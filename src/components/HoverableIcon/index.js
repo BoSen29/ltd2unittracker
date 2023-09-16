@@ -3,7 +3,7 @@ import './index.css'
 export const HoverableIcon = (props) => {
     return <div
         style={{ gridColumnStart: props.unit.x, gridRowStart: 28 - props.unit.y }}
-        className={`unit_${props.unit.displayName}_image`}
+        className={`unit_${props.unit.displayName}_image unit__icon__container`}
         data-tooltip-id='Tooltipper'
         data-unit-id={props.unit.displayName}
         >

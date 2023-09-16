@@ -1,7 +1,6 @@
 .app {
   min-height: 100%;
   min-width: 100%;
-  font-size: calc(3px + 2.5vmin);
   color: white;
   display: flex;
   flex-direction: column;

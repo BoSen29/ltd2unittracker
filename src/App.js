@@ -10,7 +10,7 @@ import Authentication from './utils/auth'
 import { isDev, resturcturePlayerData, is2v2, isStandalone} from './utils/misc'
 import {fetchWave, fetchCurrentMatch, fetchMatch} from './utils/api'
 import MatchHistoryOverlay from './components/MatchHistoryOverlay'
-import { useUnits, getToolTip } from './stores/units'
+import { useUnits, getToolTip, getValueToolTip } from './stores/units'
 import { Tooltip } from 'react-tooltip'
 
 function App() {
@@ -336,6 +336,12 @@ function App() {
         id="Tooltipper"
         render={({content, activeAnchor}) => (
           getToolTip(unitDetails, activeAnchor?.getAttribute('data-unit-id'), activeAnchor?.getAttribute('data-unit-image'))
+        )}
+        />
+      <Tooltip
+        id="ValueTipper"
+        render={({content, activeAnchor}) => (
+          getValueToolTip(activeAnchor?.getAttribute('data-fightervalue'), activeAnchor?.getAttribute('data-recommended-value')) 
         )}
         />
     </div>

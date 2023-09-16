@@ -88,3 +88,14 @@ export const getToolTip = (units, unit = '', image = '') => {
         }
     </div>
 }
+
+export const getValueToolTip = (value = 0, reccomendedValue = 0) => {
+    return <div className='tooltip__container'>
+        <span style={{ "font-weight": "bold", "margin-bottom": "3px", "text-align": "center" }}>Recommended Value</span>
+        <span style={{ fontSize: "14px", fontStyle: 'italic', marginBottom: '3px' }}>
+            {
+                value - reccomendedValue > 0 ? <span>{reccomendedValue}(+{value - reccomendedValue})</span> : <span>{reccomendedValue}({value - reccomendedValue})</span>
+            }
+        </span>
+    </div>
+}
