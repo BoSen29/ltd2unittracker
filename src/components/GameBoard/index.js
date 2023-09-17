@@ -34,7 +34,6 @@ export default function GameBoard({ player, units, mercsReceived = [], wave, rec
   if (!!!player.name) { return }
 
   let pgs = postGameStats[0] || null
-  const fictionalRoll = ['Icons/ChainedFist.png', "Icons/Gargoyle.png", "Icons/Warg.png", "Icons/Butcher.png", "Icons/Nightmare.png", "Icons/Eggsack.png"]
   return (
     <div className='game-board__container' key={idx}>
       <div className='game-board__header'>

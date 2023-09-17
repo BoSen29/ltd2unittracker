@@ -153,3 +153,20 @@ img {
 
 .tooltip__header__title {
 }
+
+.img__powerup {
+  width: 2vw;
+  aspect-ratio: 1/1;
+  border-radius: 0.12em;
+  color: #ffffff;
+  text-align: center;
+  transition: all 0.2s;
+  background-color: rgba(0, 0, 0, 0.4);
+  bottom: 5vh;
+  padding: 1px;
+}
+
+.powerup__container {
+  bottom: 5vh;
+  position: absolute;
+}
