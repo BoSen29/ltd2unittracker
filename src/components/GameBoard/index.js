@@ -35,7 +35,6 @@ export default function GameBoard({ player, units, mercsReceived = [], wave, rec
 
   let pgs = postGameStats[0] || null
   const fictionalRoll = ['Icons/ChainedFist.png', "Icons/Gargoyle.png", "Icons/Warg.png", "Icons/Butcher.png", "Icons/Nightmare.png", "Icons/Eggsack.png"]
-
   return (
     <div className='game-board__container' key={idx}>
       <div className='game-board__header'>
@@ -50,18 +49,20 @@ export default function GameBoard({ player, units, mercsReceived = [], wave, rec
         </div>
         <img src={player.ratingIcon} title={player.rating} className='header__icon' />
       </div>
-      <div className='game-board__rolls'>
-        {
-          fictionalRoll.map(u => {
-            return <img
-              src={`https://cdn.legiontd2.com/${u}`}
-              className={`img__roll`}
-              data-tooltip-id='Tooltipper'
-              data-unit-image={u}
-            />
-          })
-        }
-      </div>
+      {
+        !!pgs?.rolls && pgs?.rolls?.length > 0 && <div className='game-board__rolls'>
+          {
+            pgs?.rolls.map(u => {
+              return <img
+                src={`https://cdn.legiontd2.com/${u}`}
+                className={`img__roll`}
+                data-tooltip-id='Tooltipper'
+                data-unit-image={u}
+              />
+            })
+          }
+        </div>
+      }
       {
         !isNaN(wave) && <span className='game-board-body'>
           <div className='myth__region__container'>
