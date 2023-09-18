@@ -170,3 +170,7 @@ img {
   bottom: 5vh;
   position: absolute;
 }
+
+.floor_me {
+  bottom: 5px !important;
+}

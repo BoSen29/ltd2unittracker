@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { getLeakDangerLevel } from '../../utils/misc'
 import { HoverableIcon } from '../HoverableIcon'
 
-export default function GameBoard({ player, units, mercsReceived = [], wave, recceived = [], leaks = [], postGameStats = [], idx }) {
+export default function GameBoard({ player, units, mercsReceived = [], wave, recceived = [], leaks = [], postGameStats = [], idx, MMAndSpell = [] }) {
   const [clipboardData, setClipboardData] = useState("")
   const [showClipboard, setShowClipboard] = useState(false)
   const [leakedCreeps, setLeakedCreeps] = useState(false)
@@ -32,7 +32,6 @@ export default function GameBoard({ player, units, mercsReceived = [], wave, rec
   let recceivedNum = recceived?.map(r => r.amount)
   let leakedNum = leaks?.map(l => l.percentage)
   if (!!!player.name) { return }
-
   let pgs = postGameStats[0] || null
   return (
     <div className='game-board__container' key={idx}>
@@ -51,15 +50,35 @@ export default function GameBoard({ player, units, mercsReceived = [], wave, rec
       {
         !!pgs?.rolls && pgs?.rolls?.length > 0 && <div className='game-board__rolls'>
           {
-            pgs?.rolls.map(u => {
+            pgs?.rolls.map((u, i) => {
               return <img
                 src={`https://cdn.legiontd2.com/${u}`}
                 className={`img__roll`}
                 data-tooltip-id='Tooltipper'
                 data-unit-image={u}
+                key={i}
               />
             })
           }
+          {
+            !!MMAndSpell[0] && MMAndSpell[0].playstyleIcon && <img
+              src={`https://cdn.legiontd2.com/${MMAndSpell[0].playstyleIcon}`}
+              className={`img__mm`}
+              data-tooltip-id='Tooltipper'
+              data-unit-image={MMAndSpell[0].playstyleIcon}
+              key={7}
+            />
+          }
+          {
+            !!MMAndSpell[0] && MMAndSpell[0].spellIcon && <img
+              src={`https://cdn.legiontd2.com/${MMAndSpell[0].spellIcon}`}
+              className={`img__spellchoice`}
+              data-tooltip-id='Tooltipper'
+              data-unit-image={MMAndSpell[0].spellIcon}
+              key={7}
+            />
+          }
+
         </div>
       }
       {

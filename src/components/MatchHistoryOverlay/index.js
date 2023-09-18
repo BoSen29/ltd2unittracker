@@ -2,6 +2,7 @@ import './index.css'
 import { useState, useEffect } from 'react'
 import {fetchMatches} from '../../utils/api'
 import MatchHistoryEntry from './MatchHistoryEntry'
+import { isStandalone } from '../../utils/misc'
 
 export default function MatchHistoryOverlay({isOpen, player, setOpen, setMatchUUID}) {
 
@@ -22,7 +23,7 @@ export default function MatchHistoryOverlay({isOpen, player, setOpen, setMatchUU
       </div>
     </div>
   } else {
-    return <button className='drawer__button button_bottomrow' onClick={() => setOpen(true)}>
+    return <button className={`drawer__button button_bottomrow ${isStandalone() ? 'floor_me' :''}`} onClick={() => setOpen(true)}>
       Matches
     </button>
   }

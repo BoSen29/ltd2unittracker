@@ -30,6 +30,7 @@ function App() {
   const [availableWaves, setAvailableWaves] = useState([])
   const [showGuide, setShowGuide] = useState(false)
   const [powerUps, setPowerUps] = useState([])
+  const [mmandSpell, setMMandSpell] = useState([])
   const unitDetails = useUnits()
   const setWave = async (wave) => {
     try {
@@ -172,6 +173,7 @@ function App() {
         if (waveData?.length > 0) {
           setWaveData(waveData[0].waves[0])
           setPowerUps(waveData[0].powerupChoices || [])
+          setMMandSpell(waveData[0].players || [])
           setAvailableWaves(i => {
             if (i?.indexOf(waveNumber) != -1) {
               return i
@@ -317,7 +319,7 @@ function App() {
                         leaks={waveData?.leaks?.filter(l => l.player === player.player) || []}
                         postGameStats={waveData?.postGameStats?.filter(pgs => pgs.player === player.player) || []}
                         key={player.player}
-                        unitDetails={unitDetails}
+                        MMAndSpell={mmandSpell?.filter(m => m.player === player.player) || []}
                       />
                     })
                 }
@@ -325,17 +327,17 @@ function App() {
             </>
       }
       {
-        !is2v2(playerData.players) && !hidden && <button className='button_bottomrow button_showEastToggle' onClick={() => setShowEast(e => !e)}>Swap</button>
+        !is2v2(playerData.players) && !hidden && <button className={`button_bottomrow button_showEastToggle ${isStandalone() ? 'floor_me' :''}`} onClick={() => setShowEast(e => !e)}>Swap</button>
       }
       {
-        !isTailing && !hidden && <button className='button__toggle_tailing button_bottomrow' onClick={() => setIsTailing(e => !e)}>{"To live"}</button>
+        !isTailing && !hidden && <button className={`button__toggle_tailing button_bottomrow ${isStandalone() ? 'floor_me' :''}`} onClick={() => setIsTailing(e => !e)}>{"To live"}</button>
       }
-      <button className='button__toggle_visibility button_bottomrow' hidden={isStandalone() || isConfig} onClick={() => {
+      <button className={`button__toggle_visibility button_bottomrow ${isStandalone() ? 'floor_me' :''}`} hidden={isStandalone() || isConfig} onClick={() => {
         setHidden(d => !d)
         setShowGuide(false)
       }}>{hidden ? "Show" : "Hide"}</button>
       {
-        !hidden && !!powerUps && powerUps.length > 0 && <div className='powerup__container'>
+        !hidden && !!powerUps && powerUps.length > 0 && <div className={`powerup__container ${isStandalone() ? 'floor_me' :''}`}>
           {
             powerUps.map(p => {
               return <img
