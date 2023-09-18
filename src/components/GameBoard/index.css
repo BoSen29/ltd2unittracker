@@ -1,6 +1,6 @@
 .game-board__container {
     align-items: center;
-    max-width: 21vw;
+    width: 18vw;
     max-height: 79vh;
     aspect-ratio: 9/18;
     background-color: rgba(0, 0, 0, 0.6);

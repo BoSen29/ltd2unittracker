@@ -12,6 +12,7 @@ import { fetchWave, fetchCurrentMatch, fetchMatch } from './utils/api'
 import MatchHistoryOverlay from './components/MatchHistoryOverlay'
 import { useUnits, getToolTip, getValueToolTip } from './stores/units'
 import { Tooltip } from 'react-tooltip'
+import { io } from 'socket.io-client'
 
 function App() {
   const [authStatus, setAuthStatus] = useState(false)
@@ -239,24 +240,20 @@ function App() {
 
   useEffect(() => {
     if (streamer?.length > 0) {
-      const { csocket } = require('./utils/sock')
-      let socket = csocket()
+      const socket = io("https://ltd2.krettur.no/")
+
+      socket.on("connect", (d) => {
+        console.log("Socket connected")
+      })
       console.log("Subscribing to " + streamer)
       socket.emit('join', streamer)
       socket.on('newGame', newGameHandler)
       socket.on('newWave', newWaveHandler)
       socket.on('gameEnded', gameEndedHandler)
-
       setIsTailing(true)
-
       return () => {
-        //twitch.unlisten('broadcast', () => console.log('Removed listeners'))
-        const { csocket } = require('./utils/sock')
-        let socket = csocket()
-        socket.off('newWave')
-        socket.off('newGame')
-        socket.off('gameEnded')
-        socket.off('connect')
+        socket.disconnect()
+        console.log("socket disconnected")
       }
     }
   }, [streamer])
@@ -327,17 +324,17 @@ function App() {
             </>
       }
       {
-        !is2v2(playerData.players) && !hidden && <button className={`button_bottomrow button_showEastToggle ${isStandalone() ? 'floor_me' :''}`} onClick={() => setShowEast(e => !e)}>Swap</button>
+        !is2v2(playerData.players) && !hidden && <button className={`button_bottomrow button_showEastToggle ${isStandalone() ? 'floor_me' : ''}`} onClick={() => setShowEast(e => !e)}>Swap</button>
       }
       {
-        !isTailing && !hidden && <button className={`button__toggle_tailing button_bottomrow ${isStandalone() ? 'floor_me' :''}`} onClick={() => setIsTailing(e => !e)}>{"To live"}</button>
+        !isTailing && !hidden && <button className={`button__toggle_tailing button_bottomrow ${isStandalone() ? 'floor_me' : ''}`} onClick={() => setIsTailing(e => !e)}>{"To live"}</button>
       }
-      <button className={`button__toggle_visibility button_bottomrow ${isStandalone() ? 'floor_me' :''}`} hidden={isStandalone() || isConfig} onClick={() => {
+      <button className={`button__toggle_visibility button_bottomrow ${isStandalone() ? 'floor_me' : ''}`} hidden={isStandalone() || isConfig} onClick={() => {
         setHidden(d => !d)
         setShowGuide(false)
       }}>{hidden ? "Show" : "Hide"}</button>
       {
-        !hidden && !!powerUps && powerUps.length > 0 && <div className={`powerup__container ${isStandalone() ? 'floor_me' :''}`}>
+        !hidden && !!powerUps && powerUps.length > 0 && <div className={`powerup__container ${isStandalone() ? 'floor_me' : ''}`}>
           {
             powerUps.map(p => {
               return <img
